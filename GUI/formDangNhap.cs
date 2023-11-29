@@ -12,6 +12,7 @@ namespace QLTV
 {
     public partial class formLogin : Form
     {
+        private readonly DataContext _dataContext = new DataContext();
         public formLogin()
         {
             InitializeComponent();
@@ -20,6 +21,8 @@ namespace QLTV
         private void btn_login_Click(object sender, EventArgs e)
         {
             Form f = new formGiaoDien();
+            var author = _dataContext.authors.Select(p=>p.fullname).FirstOrDefault();
+
             f.Show();
         }
     }
