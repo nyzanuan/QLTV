@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLTV.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,8 @@ namespace QLTV
         private void btn_login_Click(object sender, EventArgs e)
         {
             Form f = new formGiaoDien();
+            DataContext data = new DataContext();
+            var author =data.authors.ToArray();
             f.Show();
         }
     }
