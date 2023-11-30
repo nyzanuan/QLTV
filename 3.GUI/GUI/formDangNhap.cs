@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _1.DAL.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,6 @@ namespace QLTV
         private void btn_login_Click(object sender, EventArgs e)
         {
             Form f = new formGiaoDien();
-            var author = _dataContext.authors.Select(p=>p.fullname).FirstOrDefault();
 
             f.Show();
         }
