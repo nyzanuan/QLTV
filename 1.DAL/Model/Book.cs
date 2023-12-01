@@ -26,6 +26,10 @@ namespace _1.DAL.Model
         public int BorrowedCopies { get; set; }
         public BookStatus Status { get; set; }
         public LoanAvailability Availability { get; set; }
+        public byte[]? Image { get; set; }
+        public int? LanguageId { get; set; }
+
+        public Language? Language { get; set; }
         public List<LoanReceipt> LoanReceipts { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace QLTV
             InitializeComponent();
             _userService = new UserService();
         }
-
+        bool isClose = true;
         private void btn_login_Click(object sender, EventArgs e)
         {
             ValueReturn result = _userService.Validate(txtAccount.Text, txtPassword.Text);
@@ -23,24 +23,24 @@ namespace QLTV
             {
                 Form f = new formGiaoDien();
                 f.ShowDialog();
-
+                this.Hide();
             }
             else
             {
                 lblNoti.Text = result.Message;
                 System.Windows.Forms.Timer notificationTimer = new System.Windows.Forms.Timer();
-                notificationTimer.Interval = 2000; 
+                notificationTimer.Interval = 2000;
                 notificationTimer.Tick += (sender, e) =>
                 {
                     lblNoti.Text = "";
                     notificationTimer.Stop();
-                    notificationTimer.Dispose(); 
+                    notificationTimer.Dispose();
                 };
 
-                
+
                 notificationTimer.Start();
                 User user = (User)result.Value;
-                UserInfo.Instance.SetUserInfo(txtUsername.Text);
+                UserInfo.Instance.SetUserInfo(user.Username, user.IsAdmin);
 
             }
         }
@@ -48,6 +48,11 @@ namespace QLTV
         private void formLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

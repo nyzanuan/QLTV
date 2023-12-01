@@ -15,6 +15,8 @@ namespace _1.DAL.Model
         [Key]
         public int AuthorId { get; set; }
         public string Name { get; set; }
+        public byte[]? Image { get; set; }
+
         public List<Book> Books { get; set; }
     }
 }

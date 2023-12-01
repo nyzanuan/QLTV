@@ -14,6 +14,7 @@ namespace _1.DAL.Model
         [Key]
         public int CustomerId { get; set; }
         public string Name { get; set; }
+        public byte[]? Image { get; set; }
 
         public DateTime CreateAt { get; set; }
         public List<LoanReceipt> LoanReceipts { get; set; }

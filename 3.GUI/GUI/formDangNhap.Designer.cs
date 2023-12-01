@@ -37,19 +37,24 @@ namespace QLTV
             pictureBox3 = new PictureBox();
             txtPassword = new TextBox();
             lblNoti = new Label();
+            pictureBox4 = new PictureBox();
+            btnThoat = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // btn_login
             // 
             btn_login.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_login.Location = new Point(209, 406);
+            btn_login.ImageAlign = ContentAlignment.MiddleRight;
+            btn_login.Location = new Point(111, 402);
             btn_login.Name = "btn_login";
-            btn_login.Size = new Size(155, 55);
+            btn_login.Size = new Size(178, 55);
             btn_login.TabIndex = 0;
             btn_login.Text = "Đăng nhập";
+            btn_login.TextAlign = ContentAlignment.MiddleLeft;
             btn_login.UseVisualStyleBackColor = true;
             btn_login.Click += btn_login_Click;
             // 
@@ -67,7 +72,7 @@ namespace QLTV
             pictureBox2.Location = new Point(127, 247);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(36, 41);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 6;
             pictureBox2.TabStop = false;
             // 
@@ -77,7 +82,7 @@ namespace QLTV
             pictureBox1.Location = new Point(181, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(233, 196);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
@@ -87,7 +92,7 @@ namespace QLTV
             pictureBox3.Location = new Point(127, 312);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(36, 41);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 8;
             pictureBox3.TabStop = false;
             // 
@@ -96,6 +101,7 @@ namespace QLTV
             txtPassword.Location = new Point(191, 312);
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(247, 41);
             txtPassword.TabIndex = 7;
             // 
@@ -110,11 +116,34 @@ namespace QLTV
             lblNoti.TabIndex = 9;
             lblNoti.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = _3.GUI.Properties.Resources.login1;
+            pictureBox4.Location = new Point(236, 414);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(39, 31);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 10;
+            pictureBox4.TabStop = false;
+            // 
+            // btnThoat
+            // 
+            btnThoat.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnThoat.ImageAlign = ContentAlignment.MiddleRight;
+            btnThoat.Location = new Point(306, 402);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(122, 55);
+            btnThoat.TabIndex = 11;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
+            // 
             // formLogin
             // 
-            AutoScaleDimensions = new SizeF(13F, 27F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(561, 492);
+            Controls.Add(btnThoat);
+            Controls.Add(pictureBox4);
             Controls.Add(lblNoti);
             Controls.Add(pictureBox3);
             Controls.Add(txtPassword);
@@ -131,6 +160,7 @@ namespace QLTV
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -144,6 +174,8 @@ namespace QLTV
         private PictureBox pictureBox3;
         private TextBox txtPassword;
         private Label lblNoti;
+        private PictureBox pictureBox4;
+        private Button btnThoat;
     }
 }
 

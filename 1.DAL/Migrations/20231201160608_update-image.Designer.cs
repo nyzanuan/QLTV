@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using _1.DAL.Data;
 
@@ -11,9 +12,10 @@ using _1.DAL.Data;
 namespace _1.DAL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20231201160608_update-image")]
+    partial class updateimage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,9 +70,6 @@ namespace _1.DAL.Migrations
                     b.Property<byte[]>("Image")
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<int?>("LanguageId")
-                        .HasColumnType("int");
-
                     b.Property<int>("PublisherId")
                         .HasColumnType("int");
 
@@ -89,8 +88,6 @@ namespace _1.DAL.Migrations
                     b.HasIndex("AuthorId");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("LanguageId");
 
                     b.HasIndex("PublisherId");
 
@@ -135,23 +132,6 @@ namespace _1.DAL.Migrations
                     b.HasKey("CustomerId");
 
                     b.ToTable("Customer", (string)null);
-                });
-
-            modelBuilder.Entity("_1.DAL.Model.Language", b =>
-                {
-                    b.Property<int>("LanguageId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LanguageId"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("LanguageId");
-
-                    b.ToTable("Language");
                 });
 
             modelBuilder.Entity("_1.DAL.Model.LoanReceipt", b =>
@@ -261,11 +241,6 @@ namespace _1.DAL.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("_1.DAL.Model.Language", "Language")
-                        .WithMany("Book")
-                        .HasForeignKey("LanguageId")
-                        .OnDelete(DeleteBehavior.SetNull);
-
                     b.HasOne("_1.DAL.Model.Publisher", "Publisher")
                         .WithMany("Books")
                         .HasForeignKey("PublisherId")
@@ -275,8 +250,6 @@ namespace _1.DAL.Migrations
                     b.Navigation("Author");
 
                     b.Navigation("Category");
-
-                    b.Navigation("Language");
 
                     b.Navigation("Publisher");
                 });
@@ -326,11 +299,6 @@ namespace _1.DAL.Migrations
             modelBuilder.Entity("_1.DAL.Model.Customer", b =>
                 {
                     b.Navigation("LoanReceipts");
-                });
-
-            modelBuilder.Entity("_1.DAL.Model.Language", b =>
-                {
-                    b.Navigation("Book");
                 });
 
             modelBuilder.Entity("_1.DAL.Model.Publisher", b =>

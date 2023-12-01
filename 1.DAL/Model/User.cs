@@ -28,6 +28,8 @@ namespace _1.DAL.Model
 
 
         public bool IsAdmin { get; set; }
+        public byte[]? Image { get; set; }
+
 
         public List<LoanReceipt> LoanReceipts { get; set; }
     }
