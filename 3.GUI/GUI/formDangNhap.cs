@@ -1,5 +1,7 @@
-﻿using _2.BUS.IService;
+﻿using _1.DAL.Model;
+using _2.BUS.IService;
 using _2.BUS.Service;
+using _3.GUI.Data;
 using Sharing.ReturnModel;
 
 
@@ -16,9 +18,6 @@ namespace QLTV
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-
-
-
             ValueReturn result = _userService.Validate(txtAccount.Text, txtPassword.Text);
             if (result.Status)
             {
@@ -40,6 +39,9 @@ namespace QLTV
 
                 
                 notificationTimer.Start();
+                User user = (User)result.Value;
+                UserInfo.Instance.SetUserInfo(txtUsername.Text);
+
             }
         }
 
