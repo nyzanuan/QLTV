@@ -1,11 +1,7 @@
 ﻿using _1.DAL.Data;
 using _1.DAL.IRepository;
 using _1.DAL.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Sharing.ReturnModel;
 
 namespace _1.DAL.Repository
 {
@@ -13,9 +9,9 @@ namespace _1.DAL.Repository
     {
         public readonly DataContext _dataContext;
 
-        public UserRepository(DataContext dataContext)
+        public UserRepository()
         {
-            _dataContext = dataContext;
+            _dataContext = new DataContext();
         }
 
         public bool AddUser(User user)
@@ -41,6 +37,27 @@ namespace _1.DAL.Repository
         public bool UpdateUser(User user)
         {
             throw new NotImplementedException();
+        }
+
+        public ValueReturn GetUser(string username, string password)
+        {
+            try
+            {
+                var user = _dataContext.User.FirstOrDefault(x => x.Username == username && x.Password==password);
+                if(user == null)
+                {
+                    return new ValueReturn { Status= false, Message = "Đăng nhập thất bại" };
+
+                }
+                else
+                {
+                    return new ValueReturn { Status = true, Value = user};
+                }
+            }
+            catch
+            {
+                return new ValueReturn { Status = false, Message="Lỗi do server" };
+            }
         }
     }
 }

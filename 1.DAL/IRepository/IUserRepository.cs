@@ -1,4 +1,5 @@
 ﻿using _1.DAL.Model;
+using Sharing.ReturnModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace _1.DAL.IRepository
         bool AddUser(User user);
         bool DeletedUser(User user);
         bool UpdateUser(User user);
-
+        ValueReturn GetUser (string username, string password);
         ICollection<User> GetAllUsers();
     }
 }

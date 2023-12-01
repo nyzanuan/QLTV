@@ -29,81 +29,121 @@ namespace QLTV
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_login = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_account = new System.Windows.Forms.TextBox();
-            this.txt_password = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLogin));
+            btn_login = new Button();
+            txtAccount = new TextBox();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            txtPassword = new TextBox();
+            lblNoti = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            SuspendLayout();
             // 
             // btn_login
             // 
-            this.btn_login.Location = new System.Drawing.Point(177, 231);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(155, 55);
-            this.btn_login.TabIndex = 0;
-            this.btn_login.Text = "Đăng nhập";
-            this.btn_login.UseVisualStyleBackColor = true;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            btn_login.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_login.Location = new Point(209, 406);
+            btn_login.Name = "btn_login";
+            btn_login.Size = new Size(155, 55);
+            btn_login.TabIndex = 0;
+            btn_login.Text = "Đăng nhập";
+            btn_login.UseVisualStyleBackColor = true;
+            btn_login.Click += btn_login_Click;
             // 
-            // label1
+            // txtAccount
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tài khoản";
+            txtAccount.Location = new Point(191, 247);
+            txtAccount.Multiline = true;
+            txtAccount.Name = "txtAccount";
+            txtAccount.Size = new Size(247, 41);
+            txtAccount.TabIndex = 3;
             // 
-            // label2
+            // pictureBox2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 143);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Mật khẩu";
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(127, 247);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(36, 41);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
             // 
-            // txt_account
+            // pictureBox1
             // 
-            this.txt_account.Location = new System.Drawing.Point(160, 53);
-            this.txt_account.Name = "txt_account";
-            this.txt_account.Size = new System.Drawing.Size(247, 29);
-            this.txt_account.TabIndex = 3;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(181, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(233, 196);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
             // 
-            // txt_password
+            // pictureBox3
             // 
-            this.txt_password.Location = new System.Drawing.Point(160, 135);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(247, 29);
-            this.txt_password.TabIndex = 4;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(127, 312);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(36, 41);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 8;
+            pictureBox3.TabStop = false;
             // 
-            // fromLogin
+            // txtPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 321);
-            this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txt_account);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_login);
-            this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "fromLogin";
-            this.Text = "Đăng nhập";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            txtPassword.Location = new Point(191, 312);
+            txtPassword.Multiline = true;
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(247, 41);
+            txtPassword.TabIndex = 7;
+            // 
+            // lblNoti
+            // 
+            lblNoti.AutoSize = true;
+            lblNoti.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNoti.ForeColor = Color.IndianRed;
+            lblNoti.Location = new Point(91, 377);
+            lblNoti.Name = "lblNoti";
+            lblNoti.Size = new Size(0, 26);
+            lblNoti.TabIndex = 9;
+            lblNoti.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // formLogin
+            // 
+            AutoScaleDimensions = new SizeF(13F, 27F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(561, 492);
+            Controls.Add(lblNoti);
+            Controls.Add(pictureBox3);
+            Controls.Add(txtPassword);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(txtAccount);
+            Controls.Add(btn_login);
+            Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(5);
+            Name = "formLogin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Đăng nhập";
+            Load += formLogin_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btn_login;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_account;
-        private System.Windows.Forms.TextBox txt_password;
+        private Button btn_login;
+        private TextBox txtAccount;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox3;
+        private TextBox txtPassword;
+        private Label lblNoti;
     }
 }
 

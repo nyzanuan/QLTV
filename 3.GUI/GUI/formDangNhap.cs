@@ -1,29 +1,51 @@
-﻿using _1.DAL.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using _2.BUS.IService;
+using _2.BUS.Service;
+using Sharing.ReturnModel;
+
 
 namespace QLTV
 {
     public partial class formLogin : Form
     {
-        private readonly DataContext _dataContext = new DataContext();
+        private readonly IUserService _userService;
         public formLogin()
         {
             InitializeComponent();
+            _userService = new UserService();
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            Form f = new formGiaoDien();
 
-            f.Show();
+
+
+            ValueReturn result = _userService.Validate(txtAccount.Text, txtPassword.Text);
+            if (result.Status)
+            {
+                Form f = new formGiaoDien();
+                f.ShowDialog();
+
+            }
+            else
+            {
+                lblNoti.Text = result.Message;
+                System.Windows.Forms.Timer notificationTimer = new System.Windows.Forms.Timer();
+                notificationTimer.Interval = 2000; 
+                notificationTimer.Tick += (sender, e) =>
+                {
+                    lblNoti.Text = "";
+                    notificationTimer.Stop();
+                    notificationTimer.Dispose(); 
+                };
+
+                
+                notificationTimer.Start();
+            }
+        }
+
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
