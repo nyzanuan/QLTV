@@ -110,7 +110,7 @@ namespace QLTV
             lblNoti.AutoSize = true;
             lblNoti.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblNoti.ForeColor = Color.IndianRed;
-            lblNoti.Location = new Point(91, 377);
+            lblNoti.Location = new Point(127, 373);
             lblNoti.Name = "lblNoti";
             lblNoti.Size = new Size(0, 26);
             lblNoti.TabIndex = 9;

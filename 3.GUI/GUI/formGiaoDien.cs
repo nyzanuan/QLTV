@@ -16,6 +16,8 @@ namespace QLTV
         {
             InitializeComponent();
         }
+        public bool isClose = true;
+
 
         Form currentChildForm = null;
         private void OpenForm(Form ChildForm)
@@ -50,6 +52,31 @@ namespace QLTV
         private void danhMuc_toolStripMenu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void độcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formDocGia = new formDocGia();
+            OpenForm(formDocGia);
+        }
+
+        private void formGiaoDien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public event EventHandler DangXuat;
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DangXuat(this, new EventArgs());
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if (isClose)
+            {
+                Application.Exit();
+            }
         }
     }
 }

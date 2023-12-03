@@ -47,6 +47,7 @@ namespace QLTV
             baoCao_StripMenu = new ToolStripMenuItem();
             dateTimePicker1 = new DateTimePicker();
             panel1 = new Panel();
+            btnThoat = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,6 +76,7 @@ namespace QLTV
             đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
             đăngXuấtToolStripMenuItem.Size = new Size(224, 32);
             đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            đăngXuấtToolStripMenuItem.Click += đăngXuấtToolStripMenuItem_Click;
             // 
             // thoátToolStripMenuItem
             // 
@@ -115,6 +117,7 @@ namespace QLTV
             độcGiảToolStripMenuItem.Name = "độcGiảToolStripMenuItem";
             độcGiảToolStripMenuItem.Size = new Size(223, 32);
             độcGiảToolStripMenuItem.Text = "Độc giả";
+            độcGiảToolStripMenuItem.Click += độcGiảToolStripMenuItem_Click;
             // 
             // nhânViênToolStripMenuItem
             // 
@@ -180,14 +183,26 @@ namespace QLTV
             panel1.Location = new Point(0, 55);
             panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1402, 957);
+            panel1.Size = new Size(1402, 886);
             panel1.TabIndex = 2;
+            // 
+            // btnThoat
+            // 
+            btnThoat.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnThoat.Location = new Point(1262, 949);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(123, 35);
+            btnThoat.TabIndex = 3;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // formGiaoDien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1403, 995);
+            Controls.Add(btnThoat);
             Controls.Add(panel1);
             Controls.Add(dateTimePicker1);
             Controls.Add(menuStrip1);
@@ -195,6 +210,7 @@ namespace QLTV
             Margin = new Padding(4, 5, 4, 5);
             Name = "formGiaoDien";
             Text = "Giao diện";
+            Load += formGiaoDien_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -221,5 +237,6 @@ namespace QLTV
         private Panel panel1;
         private ToolStripMenuItem nhânViênToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem1;
+        private Button btnThoat;
     }
 }

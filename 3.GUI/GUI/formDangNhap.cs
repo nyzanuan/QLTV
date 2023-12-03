@@ -2,6 +2,7 @@
 using _2.BUS.IService;
 using _2.BUS.Service;
 using _3.GUI.Data;
+using Microsoft.VisualBasic.ApplicationServices;
 using Sharing.ReturnModel;
 
 
@@ -15,15 +16,22 @@ namespace QLTV
             InitializeComponent();
             _userService = new UserService();
         }
-        bool isClose = true;
         private void btn_login_Click(object sender, EventArgs e)
         {
             ValueReturn result = _userService.Validate(txtAccount.Text, txtPassword.Text);
             if (result.Status)
             {
-                Form f = new formGiaoDien();
-                f.ShowDialog();
+                User user = (User)result.Value;
+                UserInfo.Instance.SetUserInfo(user.Username, user.IsAdmin);
+                formGiaoDien f = new formGiaoDien();
+                f.DangXuat += F_DangXuat; 
+                f.Show();
                 this.Hide();
+                txtAccount.Text = "";
+
+                txtPassword.Text = "";
+
+
             }
             else
             {
@@ -39,10 +47,18 @@ namespace QLTV
 
 
                 notificationTimer.Start();
-                User user = (User)result.Value;
-                UserInfo.Instance.SetUserInfo(user.Username, user.IsAdmin);
+
 
             }
+        }
+
+        private void F_DangXuat(object sender, EventArgs e)
+        {
+            (sender as formGiaoDien).isClose = false;
+            (sender as formGiaoDien).Close();
+            UserInfo.Instance.SetUserInfo("", false);
+
+            this.Show();
         }
 
         private void formLogin_Load(object sender, EventArgs e)
