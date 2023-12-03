@@ -78,5 +78,28 @@ namespace QLTV
                 Application.Exit();
             }
         }
+
+        private void menuTacGia_Click(object sender, EventArgs e)
+        {
+            formTacGia formTacGia = new formTacGia();
+            OpenForm(formTacGia);
+        }
+
+        private void formGiaoDien_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void formGiaoDien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc là muốn thoát chương trình không", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

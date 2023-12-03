@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace QLTV
 {
-    public partial class formTacGiac : Form
+    public partial class formTacGia : Form
     {
-        public formTacGiac()
+        public formTacGia()
         {
             InitializeComponent();
         }
 
-        
+
     }
 }
