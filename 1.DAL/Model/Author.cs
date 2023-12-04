@@ -17,6 +17,7 @@ namespace _1.DAL.Model
         public string Name { get; set; }
         public byte[]? Image { get; set; }
 
+        public DateTime BirthDay { get; set; }  
         public List<Book> Books { get; set; }
     }
 }
