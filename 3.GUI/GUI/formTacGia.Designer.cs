@@ -106,6 +106,7 @@ namespace QLTV
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(276, 35);
             txtSearch.TabIndex = 13;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // label4
             // 
@@ -151,6 +152,7 @@ namespace QLTV
             btnHuy.TabIndex = 25;
             btnHuy.Text = "Hủy";
             btnHuy.UseVisualStyleBackColor = true;
+            btnHuy.Click += btnHuy_Click;
             // 
             // btnLuu
             // 
@@ -179,6 +181,7 @@ namespace QLTV
             // dtpNgaySinh
             // 
             dtpNgaySinh.CalendarFont = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpNgaySinh.Enabled = false;
             dtpNgaySinh.Format = DateTimePickerFormat.Short;
             dtpNgaySinh.Location = new Point(372, 137);
             dtpNgaySinh.Name = "dtpNgaySinh";
@@ -209,6 +212,7 @@ namespace QLTV
             // 
             // txtMaTacGia
             // 
+            txtMaTacGia.Enabled = false;
             txtMaTacGia.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtMaTacGia.Location = new Point(370, 28);
             txtMaTacGia.Margin = new Padding(4, 5, 4, 5);
@@ -218,6 +222,7 @@ namespace QLTV
             // 
             // txtTenTacGia
             // 
+            txtTenTacGia.Enabled = false;
             txtTenTacGia.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtTenTacGia.Location = new Point(370, 88);
             txtTenTacGia.Margin = new Padding(4, 5, 4, 5);
