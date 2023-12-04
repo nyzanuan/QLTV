@@ -1,5 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.SymbolStore;
+using System.Threading.Channels;
 
 namespace _1.DAL.Model
 {
@@ -20,6 +23,8 @@ namespace _1.DAL.Model
         public User Borrower { get; set; }
 
         public string Note { get; set; }
+
+        
 
     }
 }

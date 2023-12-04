@@ -29,221 +29,295 @@ namespace QLTV
         /// </summary>
         private void InitializeComponent()
         {
-            this.book_dataGridView = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_name = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_del = new System.Windows.Forms.Button();
-            this.btn_update = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_email = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_id = new System.Windows.Forms.TextBox();
-            this.txt_phone = new System.Windows.Forms.TextBox();
-            this.cBox_gioiTinh = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.book_dataGridView)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            book_dataGridView = new DataGridView();
+            panel1 = new Panel();
+            label8 = new Label();
+            groupBox1 = new GroupBox();
+            label2 = new Label();
+            txt_name = new TextBox();
+            label1 = new Label();
+            label3 = new Label();
+            label5 = new Label();
+            txt_email = new TextBox();
+            label6 = new Label();
+            txt_id = new TextBox();
+            txt_phone = new TextBox();
+            cBox_gioiTinh = new ComboBox();
+            groupBox2 = new GroupBox();
+            btn_del = new Button();
+            btn_update = new Button();
+            btn_add = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)book_dataGridView).BeginInit();
+            panel1.SuspendLayout();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            SuspendLayout();
             // 
             // book_dataGridView
             // 
-            this.book_dataGridView.AllowUserToAddRows = false;
-            this.book_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.book_dataGridView.Location = new System.Drawing.Point(-3, 257);
-            this.book_dataGridView.Name = "book_dataGridView";
-            this.book_dataGridView.Size = new System.Drawing.Size(1059, 393);
-            this.book_dataGridView.TabIndex = 23;
+            book_dataGridView.AllowUserToAddRows = false;
+            book_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            book_dataGridView.Location = new Point(-4, 395);
+            book_dataGridView.Margin = new Padding(4, 5, 4, 5);
+            book_dataGridView.Name = "book_dataGridView";
+            book_dataGridView.RowHeadersWidth = 51;
+            book_dataGridView.Size = new Size(1412, 605);
+            book_dataGridView.TabIndex = 23;
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txt_name);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btn_del);
-            this.panel1.Controls.Add(this.btn_update);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btn_add);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txt_email);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txt_id);
-            this.panel1.Controls.Add(this.txt_phone);
-            this.panel1.Controls.Add(this.cBox_gioiTinh);
-            this.panel1.Location = new System.Drawing.Point(-3, -4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1059, 267);
-            this.panel1.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(394, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 21);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Email";
-            // 
-            // txt_name
-            // 
-            this.txt_name.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.Location = new System.Drawing.Point(499, 65);
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(281, 29);
-            this.txt_name.TabIndex = 9;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(groupBox2);
+            panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(label8);
+            panel1.Location = new Point(-4, 4);
+            panel1.Margin = new Padding(4, 5, 4, 5);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1411, 400);
+            panel1.TabIndex = 22;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(362, 8);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(418, 42);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Quản lý thông tin độc giả";
+            label8.AutoSize = true;
+            label8.Font = new Font("Times New Roman", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(483, 12);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(536, 53);
+            label8.TabIndex = 19;
+            label8.Text = "Quản lý thông tin độc giả";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(txt_name);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(txt_email);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(txt_id);
+            groupBox1.Controls.Add(txt_phone);
+            groupBox1.Controls.Add(cBox_gioiTinh);
+            groupBox1.Location = new Point(15, 138);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1116, 244);
+            groupBox1.TabIndex = 20;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "groupBox1";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(528, 160);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(68, 27);
+            label2.TabIndex = 30;
+            label2.Text = "Email";
+            // 
+            // txt_name
+            // 
+            txt_name.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_name.Location = new Point(574, 54);
+            txt_name.Margin = new Padding(4, 5, 4, 5);
+            txt_name.Name = "txt_name";
+            txt_name.Size = new Size(373, 35);
+            txt_name.TabIndex = 26;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã độc giả";
-            // 
-            // btn_del
-            // 
-            this.btn_del.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_del.Location = new System.Drawing.Point(629, 208);
-            this.btn_del.Name = "btn_del";
-            this.btn_del.Size = new System.Drawing.Size(109, 34);
-            this.btn_del.TabIndex = 18;
-            this.btn_del.Text = "Xóa";
-            this.btn_del.UseVisualStyleBackColor = true;
-            // 
-            // btn_update
-            // 
-            this.btn_update.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.Location = new System.Drawing.Point(456, 208);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(109, 34);
-            this.btn_update.TabIndex = 17;
-            this.btn_update.Text = "Cập nhật";
-            this.btn_update.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(7, 57);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(119, 27);
+            label1.TabIndex = 21;
+            label1.Text = "Mã độc giả";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(394, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tên độc giả";
-            // 
-            // btn_add
-            // 
-            this.btn_add.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(271, 208);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(109, 34);
-            this.btn_add.TabIndex = 16;
-            this.btn_add.Text = "Thêm";
-            this.btn_add.UseVisualStyleBackColor = true;
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(442, 57);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(124, 27);
+            label3.TabIndex = 22;
+            label3.Text = "Tên độc giả";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(40, 134);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 21);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Số điện thoại";
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(7, 148);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(137, 27);
+            label5.TabIndex = 23;
+            label5.Text = "Số điện thoại";
             // 
             // txt_email
             // 
-            this.txt_email.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.Location = new System.Drawing.Point(499, 126);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(281, 29);
-            this.txt_email.TabIndex = 15;
+            txt_email.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_email.Location = new Point(668, 148);
+            txt_email.Margin = new Padding(4, 5, 4, 5);
+            txt_email.Name = "txt_email";
+            txt_email.Size = new Size(373, 35);
+            txt_email.TabIndex = 29;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(822, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 21);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Giới tính";
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(1099, 66);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(97, 27);
+            label6.TabIndex = 24;
+            label6.Text = "Giới tính";
             // 
             // txt_id
             // 
-            this.txt_id.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id.Location = new System.Drawing.Point(154, 65);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(226, 29);
-            this.txt_id.TabIndex = 8;
+            txt_id.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_id.Location = new Point(134, 54);
+            txt_id.Margin = new Padding(4, 5, 4, 5);
+            txt_id.Name = "txt_id";
+            txt_id.Size = new Size(300, 35);
+            txt_id.TabIndex = 25;
             // 
             // txt_phone
             // 
-            this.txt_phone.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phone.Location = new System.Drawing.Point(154, 126);
-            this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(226, 29);
-            this.txt_phone.TabIndex = 12;
+            txt_phone.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_phone.Location = new Point(208, 148);
+            txt_phone.Margin = new Padding(4, 5, 4, 5);
+            txt_phone.Name = "txt_phone";
+            txt_phone.Size = new Size(300, 35);
+            txt_phone.TabIndex = 28;
             // 
             // cBox_gioiTinh
             // 
-            this.cBox_gioiTinh.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBox_gioiTinh.FormattingEnabled = true;
-            this.cBox_gioiTinh.Location = new System.Drawing.Point(912, 65);
-            this.cBox_gioiTinh.Name = "cBox_gioiTinh";
-            this.cBox_gioiTinh.Size = new System.Drawing.Size(78, 29);
-            this.cBox_gioiTinh.TabIndex = 10;
+            cBox_gioiTinh.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cBox_gioiTinh.FormattingEnabled = true;
+            cBox_gioiTinh.Location = new Point(1219, 54);
+            cBox_gioiTinh.Margin = new Padding(4, 5, 4, 5);
+            cBox_gioiTinh.Name = "cBox_gioiTinh";
+            cBox_gioiTinh.Size = new Size(103, 35);
+            cBox_gioiTinh.TabIndex = 27;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(button2);
+            groupBox2.Controls.Add(button1);
+            groupBox2.Controls.Add(btn_del);
+            groupBox2.Controls.Add(btn_update);
+            groupBox2.Controls.Add(btn_add);
+            groupBox2.Location = new Point(22, 44);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(1008, 88);
+            groupBox2.TabIndex = 21;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "groupBox2";
+            // 
+            // btn_del
+            // 
+            btn_del.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_del.Location = new Point(261, 17);
+            btn_del.Margin = new Padding(4, 5, 4, 5);
+            btn_del.Name = "btn_del";
+            btn_del.Size = new Size(113, 44);
+            btn_del.TabIndex = 21;
+            btn_del.Text = "Xóa";
+            btn_del.UseVisualStyleBackColor = true;
+            // 
+            // btn_update
+            // 
+            btn_update.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_update.Location = new Point(140, 17);
+            btn_update.Margin = new Padding(4, 5, 4, 5);
+            btn_update.Name = "btn_update";
+            btn_update.Size = new Size(113, 44);
+            btn_update.TabIndex = 20;
+            btn_update.Text = "Cập nhật";
+            btn_update.UseVisualStyleBackColor = true;
+            // 
+            // btn_add
+            // 
+            btn_add.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_add.Location = new Point(19, 17);
+            btn_add.Margin = new Padding(4, 5, 4, 5);
+            btn_add.Name = "btn_add";
+            btn_add.Size = new Size(113, 44);
+            btn_add.TabIndex = 19;
+            btn_add.Text = "Thêm";
+            btn_add.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(503, 17);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(113, 44);
+            button1.TabIndex = 23;
+            button1.Text = "Huy";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(382, 17);
+            button2.Margin = new Padding(4, 5, 4, 5);
+            button2.Name = "button2";
+            button2.Size = new Size(113, 44);
+            button2.TabIndex = 22;
+            button2.Text = "Luu";
+            button2.UseVisualStyleBackColor = true;
             // 
             // formDocGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 647);
-            this.Controls.Add(this.book_dataGridView);
-            this.Controls.Add(this.panel1);
-            this.Name = "formDocGia";
-            this.Text = "formDocGia";
-            ((System.ComponentModel.ISupportInitialize)(this.book_dataGridView)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1403, 995);
+            Controls.Add(book_dataGridView);
+            Controls.Add(panel1);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "formDocGia";
+            Text = "formDocGia";
+            ((System.ComponentModel.ISupportInitialize)book_dataGridView).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView book_dataGridView;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txt_name;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_del;
-        private System.Windows.Forms.Button btn_update;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_email;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_id;
-        private System.Windows.Forms.TextBox txt_phone;
-        private System.Windows.Forms.ComboBox cBox_gioiTinh;
-        private System.Windows.Forms.Label label2;
+        private DataGridView book_dataGridView;
+        private Panel panel1;
+        private Label label8;
+        private GroupBox groupBox1;
+        private Label label2;
+        private TextBox txt_name;
+        private Label label1;
+        private Label label3;
+        private Label label5;
+        private TextBox txt_email;
+        private Label label6;
+        private TextBox txt_id;
+        private TextBox txt_phone;
+        private ComboBox cBox_gioiTinh;
+        private GroupBox groupBox2;
+        private Button button2;
+        private Button button1;
+        private Button btn_del;
+        private Button btn_update;
+        private Button btn_add;
     }
 }

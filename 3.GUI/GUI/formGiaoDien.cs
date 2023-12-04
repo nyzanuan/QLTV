@@ -87,18 +87,22 @@ namespace QLTV
 
         private void formGiaoDien_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if(isClose) 
             Application.Exit();
         }
 
         private void formGiaoDien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc là muốn thoát chương trình không", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (isClose)
             {
-                e.Cancel = false;
-            }
-            else
-            {
-                e.Cancel = true;
+                if (MessageBox.Show("Bạn có chắc là muốn thoát chương trình không", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    e.Cancel = false;
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
     }
