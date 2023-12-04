@@ -1,4 +1,5 @@
 ﻿using _1.DAL.IRepository;
+using _1.DAL.Model;
 using _1.DAL.Repository;
 using _2.BUS.IService;
 using Sharing.ReturnModel;
@@ -16,6 +17,17 @@ namespace _2.BUS.Service
         public AuthorService() {
             _authorRepository = new AuthorRepository();
         }
+
+        public bool AddAuthor(Author newTacgia)
+        {
+            return _authorRepository.AddAuthor(newTacgia);
+        }
+
+        public bool DeleteAuthor(int maTacGia)
+        {
+            return _authorRepository.DeleteAuthor(maTacGia);
+        }
+
         public ValueReturn GetAllAuthor(int pageIndex, int pageSize, string? search)
         {
             try
@@ -32,6 +44,12 @@ namespace _2.BUS.Service
                     
                 };
             }
+        }
+
+        public bool UpdateAuthor(Author author)
+        {
+            return _authorRepository.UpdateAuthor(author);
+
         }
     }
 }

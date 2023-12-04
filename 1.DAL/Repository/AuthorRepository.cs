@@ -2,11 +2,8 @@
 using _1.DAL.IRepository;
 using _1.DAL.Model;
 using Sharing.ReturnModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BinaryAnalysis.UnidecodeSharp;
+
 
 namespace _1.DAL.Repository
 {
@@ -17,6 +14,34 @@ namespace _1.DAL.Repository
         {
             _dataContext = new DataContext();
         }
+
+        public bool AddAuthor(Author newTacgia)
+        {
+            try
+            {
+                _dataContext.Author.Add(newTacgia);
+                return SaveData();
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteAuthor(int maTacGia)
+        {
+            try
+            {
+                var author = _dataContext.Author.FirstOrDefault(p => p.AuthorId == maTacGia);
+                _dataContext.Author.Remove(author);
+                return SaveData();
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public ValueReturn GetAllAuthor(int pageIndex, int pageSize, string? search)
         {
             try
@@ -25,7 +50,11 @@ namespace _1.DAL.Repository
                 if (search != null && search != "")
                 {
 
-                    query = query.Where(p=>p.Name.ToLower().Contains(search.ToLower()));
+                    string searchWithoutDiacritics = search.ToLower();
+
+                    query = query.Where(p =>
+                        p.Name.ToLower().Contains(searchWithoutDiacritics)
+                    );
 
                 }
                 return new ValueReturn()
@@ -43,6 +72,34 @@ namespace _1.DAL.Repository
                     Value = Array.Empty<Author>()
                 };
             }
+        }
+
+        public bool SaveData()
+        {
+            var result = _dataContext.SaveChanges() > 0;
+            return result ;
+        }
+
+        public bool UpdateAuthor(Author author)
+        {
+            try
+            {
+                var authorData = _dataContext.Author.FirstOrDefault(p => p.AuthorId == author.AuthorId);
+                if (authorData != null)
+                {
+                    authorData.BirthDay = author.BirthDay;
+                    authorData.Name = author.Name;
+                    authorData.Image = author.Image;
+                    return SaveData();
+                }
+                else
+                {
+                    return false;
+                }
+            }
+      
+            catch { return false; }
+            
         }
     }
 }

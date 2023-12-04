@@ -47,8 +47,8 @@ namespace QLTV
             txtTenTacGia = new TextBox();
             btnThemTacGia = new Button();
             label3 = new Label();
-            btn_del = new Button();
-            btn_update = new Button();
+            btnXoa = new Button();
+            btnUpdate = new Button();
             label2 = new Label();
             label8 = new Label();
             btnLastPage = new Button();
@@ -66,14 +66,17 @@ namespace QLTV
             // dgvTacGia
             // 
             dgvTacGia.AllowUserToAddRows = false;
+            dgvTacGia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTacGia.BackgroundColor = SystemColors.ActiveCaption;
             dgvTacGia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTacGia.Location = new Point(13, 414);
             dgvTacGia.Margin = new Padding(4, 5, 4, 5);
             dgvTacGia.Name = "dgvTacGia";
             dgvTacGia.RowHeadersWidth = 51;
+            dgvTacGia.RowTemplate.Height = 100;
             dgvTacGia.Size = new Size(1377, 419);
             dgvTacGia.TabIndex = 23;
+            dgvTacGia.CellClick += dgvTacGia_CellContentClick;
             // 
             // panel1
             // 
@@ -131,8 +134,8 @@ namespace QLTV
             groupBox1.Controls.Add(txtTenTacGia);
             groupBox1.Controls.Add(btnThemTacGia);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(btn_del);
-            groupBox1.Controls.Add(btn_update);
+            groupBox1.Controls.Add(btnXoa);
+            groupBox1.Controls.Add(btnUpdate);
             groupBox1.Controls.Add(label2);
             groupBox1.Location = new Point(25, 74);
             groupBox1.Name = "groupBox1";
@@ -165,6 +168,7 @@ namespace QLTV
             btnLuu.TabIndex = 24;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = true;
+            btnLuu.Click += btnLuu_Click;
             // 
             // btnChonAnh
             // 
@@ -177,6 +181,7 @@ namespace QLTV
             btnChonAnh.Text = "Chọn ảnh";
             btnChonAnh.UseVisualStyleBackColor = true;
             btnChonAnh.Visible = false;
+            btnChonAnh.Click += btnChonAnh_Click;
             // 
             // dtpNgaySinh
             // 
@@ -253,29 +258,31 @@ namespace QLTV
             label3.TabIndex = 2;
             label3.Text = "Mã tác giả";
             // 
-            // btn_del
+            // btnXoa
             // 
-            btn_del.Enabled = false;
-            btn_del.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_del.Location = new Point(232, 234);
-            btn_del.Margin = new Padding(4, 5, 4, 5);
-            btn_del.Name = "btn_del";
-            btn_del.Size = new Size(92, 44);
-            btn_del.TabIndex = 18;
-            btn_del.Text = "Xóa";
-            btn_del.UseVisualStyleBackColor = true;
+            btnXoa.Enabled = false;
+            btnXoa.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnXoa.Location = new Point(232, 234);
+            btnXoa.Margin = new Padding(4, 5, 4, 5);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(92, 44);
+            btnXoa.TabIndex = 18;
+            btnXoa.Text = "Xóa";
+            btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
-            // btn_update
+            // btnUpdate
             // 
-            btn_update.Enabled = false;
-            btn_update.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_update.Location = new Point(132, 234);
-            btn_update.Margin = new Padding(4, 5, 4, 5);
-            btn_update.Name = "btn_update";
-            btn_update.Size = new Size(92, 44);
-            btn_update.TabIndex = 17;
-            btn_update.Text = "Cập nhật";
-            btn_update.UseVisualStyleBackColor = true;
+            btnUpdate.Enabled = false;
+            btnUpdate.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUpdate.Location = new Point(132, 234);
+            btnUpdate.Margin = new Padding(4, 5, 4, 5);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(92, 44);
+            btnUpdate.TabIndex = 17;
+            btnUpdate.Text = "Cập nhật";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // label2
             // 
@@ -393,9 +400,9 @@ namespace QLTV
         private Panel panel1;
         private TextBox txtTenTacGia;
         private Label label8;
-        private Button btn_del;
+        private Button btnXoa;
         private Label label2;
-        private Button btn_update;
+        private Button btnUpdate;
         private Label label3;
         private Button btnThemTacGia;
         private TextBox txtMaTacGia;
