@@ -51,7 +51,12 @@ namespace _1.DAL.Repository
                 }
                 else
                 {
-                    return new ValueReturn { Status = true, Value = user};
+                    return new ValueReturn { Status = true, Value  = new DataReturn
+                    {
+                        TotalElemnent = 1,
+                        ListElemnent = user,
+                    } 
+                    };
                 }
             }
             catch

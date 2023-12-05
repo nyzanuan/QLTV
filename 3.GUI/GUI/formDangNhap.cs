@@ -20,7 +20,7 @@ namespace QLTV
             ValueReturn result = _userService.Validate(txtAccount.Text, txtPassword.Text);
             if (result.Status)
             {
-                User user = (User)result.Value;
+                User user = (User)result.Value.ListElemnent;
                 UserInfo.Instance.SetUserInfo(user.Username, user.IsAdmin);
                 formGiaoDien f = new formGiaoDien();
                 f.DangXuat += F_DangXuat; 

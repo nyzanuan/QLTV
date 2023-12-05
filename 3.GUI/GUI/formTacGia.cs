@@ -2,6 +2,7 @@
 using _2.BUS.IService;
 using _2.BUS.Service;
 using _3.GUI.Helper;
+using Sharing.ReturnModel;
 using System.Data.Common;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
@@ -12,8 +13,12 @@ namespace QLTV
     public partial class formTacGia : Form
     {
         int pageNow = 1;
-        int pageSize = 10;
+        int pageSize = 2;
+        int totalPage = 0;
+        int totalElement = 0;
         private Timer searchTimer;
+        private readonly IAuthorService _authorService;
+
 
         public formTacGia()
         {
@@ -24,16 +29,45 @@ namespace QLTV
             searchTimer.Tick += SearchTimer_Tick;
 
         }
-        private void SearchTimer_Tick(object sender, EventArgs e)
-        {
-            searchTimer.Stop();
-            dgvTacGia.DataSource = _authorService.GetAllAuthor(1, int.MaxValue, txtSearch.Text).Value;
-        }
-        private readonly IAuthorService _authorService;
         void EditInput(bool status)
         {
             txtTenTacGia.Enabled = status;
             dtpNgaySinh.Enabled = status;
+        }
+        void updateNumberPage()
+        {
+            txtNumberPage.Text = pageNow + "/" + totalPage;
+            if (pageNow == 1)
+            {
+                btnFirstPage.Enabled = false;
+                btnPrePage.Enabled = false;
+
+            }
+            else
+            {
+                btnFirstPage.Enabled = true;
+                btnPrePage.Enabled = true;
+            }
+            if (pageNow == totalPage)
+            {
+                btnLastPage.Enabled = false;
+                btnNextPage.Enabled = false;
+
+            }
+            else
+            {
+                btnLastPage.Enabled = true;
+                btnNextPage.Enabled = true;
+            }
+        }
+        private void LoadData()
+        {
+            ValueReturn result = _authorService.GetAllAuthor(pageNow, pageSize, txtSearch.Text);
+            dgvTacGia.DataSource = result.Value.ListElemnent;
+            totalElement = result.Value.TotalElemnent;
+            totalPage = (int)(Math.Ceiling((float)totalElement / pageSize));
+            updateNumberPage();
+
         }
         private void btnThemTacGia_Click(object sender, EventArgs e)
         {
@@ -47,11 +81,7 @@ namespace QLTV
             btnThemTacGia.Enabled = false;
 
         }
-        private void LoadData()
-        {
-            dgvTacGia.DataSource = _authorService.GetAllAuthor(pageNow, pageSize, null).Value;
 
-        }
         private void formTacGia_Load(object sender, EventArgs e)
         {
             LoadData();
@@ -65,6 +95,13 @@ namespace QLTV
             searchTimer.Stop();
             searchTimer.Start();
         }
+        private void SearchTimer_Tick(object sender, EventArgs e)
+        {
+            searchTimer.Stop();
+            pageNow = 1;
+            LoadData();
+        }
+
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
@@ -148,7 +185,7 @@ namespace QLTV
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(txtMaTacGia.Text=="Mã sinh tự động")
+            if (txtMaTacGia.Text == "Mã sinh tự động")
             {
                 Author newTacgia = new Author()
                 {
@@ -195,7 +232,7 @@ namespace QLTV
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            
+
             if (int.TryParse(txtMaTacGia.Text, out int maTacGia))
             {
                 bool result = _authorService.DeleteAuthor(maTacGia);
@@ -214,6 +251,42 @@ namespace QLTV
                 MessageBox.Show("Kiểm tra lại Id", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btnFirstPage_Click(object sender, EventArgs e)
+        {
+            if (pageNow != 1)
+            {
+                pageNow = 1;
+                LoadData();
+            }
+        }
+
+        private void btnLastPage_Click(object sender, EventArgs e)
+        {
+            if (pageNow != totalPage)
+            {
+                pageNow = totalPage;
+                LoadData();
+            }
+        }
+
+        private void btnPrePage_Click(object sender, EventArgs e)
+        {
+            if (pageNow - 1 > 0)
+            {
+                pageNow = pageNow - 1;
+                LoadData();
+            }
+        }
+
+        private void btnNextPage_Click(object sender, EventArgs e)
+        {
+            if (pageNow + 1 <= totalPage)
+            {
+                pageNow = pageNow + 1;
+                LoadData();
+            }
         }
     }
 }

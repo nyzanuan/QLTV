@@ -60,7 +60,13 @@ namespace _1.DAL.Repository
                 return new ValueReturn()
                 {
                     Status = true,
-                    Value = query.Skip((pageIndex-1)*pageSize).Take(pageSize).ToList(),
+                    Value = new DataReturn()
+                    {
+                        ListElemnent = query.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList(),
+                        TotalElemnent = query.Count()
+
+                    }
+                    
                 };
             }
             catch (Exception ex)
@@ -69,7 +75,12 @@ namespace _1.DAL.Repository
                 {
                     Message = ex.Message,
                     Status = false,
-                    Value = Array.Empty<Author>()
+                    Value = new DataReturn()
+                    {
+                        ListElemnent = Array.Empty<Author>(),
+                        TotalElemnent =0
+                         
+                    }
                 };
             }
         }

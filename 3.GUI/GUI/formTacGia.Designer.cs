@@ -55,7 +55,7 @@ namespace QLTV
             btnNextPage = new Button();
             btnFirstPage = new Button();
             btnPrePage = new Button();
-            textBox1 = new TextBox();
+            txtNumberPage = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvTacGia).BeginInit();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -308,8 +308,7 @@ namespace QLTV
             // 
             // btnLastPage
             // 
-            btnLastPage.Enabled = false;
-            btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLastPage.Location = new Point(869, 843);
             btnLastPage.Margin = new Padding(4, 5, 4, 5);
             btnLastPage.Name = "btnLastPage";
@@ -317,11 +316,11 @@ namespace QLTV
             btnLastPage.TabIndex = 30;
             btnLastPage.Text = ">|";
             btnLastPage.UseVisualStyleBackColor = true;
+            btnLastPage.Click += btnLastPage_Click;
             // 
             // btnNextPage
             // 
-            btnNextPage.Enabled = false;
-            btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnNextPage.Location = new Point(769, 843);
             btnNextPage.Margin = new Padding(4, 5, 4, 5);
             btnNextPage.Name = "btnNextPage";
@@ -329,10 +328,11 @@ namespace QLTV
             btnNextPage.TabIndex = 29;
             btnNextPage.Text = ">>";
             btnNextPage.UseVisualStyleBackColor = true;
+            btnNextPage.Click += btnNextPage_Click;
             // 
             // btnFirstPage
             // 
-            btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnFirstPage.Location = new Point(470, 843);
             btnFirstPage.Margin = new Padding(4, 5, 4, 5);
             btnFirstPage.Name = "btnFirstPage";
@@ -340,11 +340,11 @@ namespace QLTV
             btnFirstPage.TabIndex = 26;
             btnFirstPage.Text = "|<";
             btnFirstPage.UseVisualStyleBackColor = true;
+            btnFirstPage.Click += btnFirstPage_Click;
             // 
             // btnPrePage
             // 
-            btnPrePage.Enabled = false;
-            btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnPrePage.Location = new Point(570, 843);
             btnPrePage.Margin = new Padding(4, 5, 4, 5);
             btnPrePage.Name = "btnPrePage";
@@ -352,25 +352,27 @@ namespace QLTV
             btnPrePage.TabIndex = 27;
             btnPrePage.Text = "<<";
             btnPrePage.UseVisualStyleBackColor = true;
+            btnPrePage.Click += btnPrePage_Click;
             // 
-            // textBox1
+            // txtNumberPage
             // 
-            textBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(686, 847);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(75, 40);
-            textBox1.TabIndex = 31;
-            textBox1.Text = "0/0";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            txtNumberPage.Enabled = false;
+            txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            txtNumberPage.Location = new Point(686, 847);
+            txtNumberPage.Margin = new Padding(4, 5, 4, 5);
+            txtNumberPage.Multiline = true;
+            txtNumberPage.Name = "txtNumberPage";
+            txtNumberPage.Size = new Size(75, 40);
+            txtNumberPage.TabIndex = 31;
+            txtNumberPage.Text = "0/0";
+            txtNumberPage.TextAlign = HorizontalAlignment.Center;
             // 
             // formTacGia
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1403, 891);
-            Controls.Add(textBox1);
+            Controls.Add(txtNumberPage);
             Controls.Add(btnLastPage);
             Controls.Add(btnNextPage);
             Controls.Add(btnFirstPage);
@@ -420,6 +422,6 @@ namespace QLTV
         private Button btnNextPage;
         private Button btnFirstPage;
         private Button btnPrePage;
-        private TextBox textBox1;
+        private TextBox txtNumberPage;
     }
 }

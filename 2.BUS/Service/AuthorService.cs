@@ -40,7 +40,11 @@ namespace _2.BUS.Service
                 {
                     Message = ex.Message,
                     Status = false,
-                    Value = Array.Empty<AuthorRepository>(),
+                    Value = new DataReturn
+                    {
+                        TotalElemnent = 0,
+                        ListElemnent = Array.Empty<Author>(),
+                    }
                     
                 };
             }
