@@ -71,7 +71,6 @@ namespace QLTV
             DangXuat(this, new EventArgs());
         }
 
-
         private void menuTacGia_Click(object sender, EventArgs e)
         {
             formTacGia formTacGia = new formTacGia();
