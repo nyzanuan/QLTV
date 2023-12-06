@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -120,21 +120,6 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnThoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAehJREFUSEvdlMtOwlAQhnkIWnCFJgTjJdraQjRcqkQJIBBjrMpTaHgwdUFcSVSM
-        L9CzaGLiTqpFRSjsxw62Su2FasJC/6Rpctp+/z9zTifw/6SVqsF+pVrDu7E0Vi1OCLbZTA3vxpKzNFGk
-        BuVDqV86gF5hXx4UxbDxyFUKk6LajCCpS2l4WkjK6nzc+RtMPKhUCcK14j5o+T3o5naJlhcp4xWbhnA2
-        QxCuLibhaW4VlFiCtGKcvRJsyyi8l9uF7uYOdLMVoqXyNhMn+ONsApQoD63IyrHx2pewgl5B1BNb4PC2
-        XoZOumgx8YI/TLPOFaCwHXpbJAs8sw2dZAFeV7dkNS6ER3tug88wshpx2QNTQxO9LRb4Wg5eEpvQ5rLE
-        K7kSZVz3yyJsRye9LY3Cn/kstFkBfp38u9DkZS0nTQRuSmHy1DO/IU0EjvLa0LsIc39GL93WqV+n94af
-        BJfVOsXCBc3Jlz818Qtv0Bw0Qzw0ad6/ybhzfkov31jg5kVzpBkec0z9/ETnOqRBcZIF/mniUYkxcn39
-        RJh0mNjRhCOXUw6jQofX/MBNeZlc07x92GEF6kKS+IGbcjRxqwClRFOUEotLoz03HrlqaBLiP/bEz2nC
-        UduaZo5cR66DMPEVzR+5Jv/DCgTeAeO/G4Qc99ciAAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

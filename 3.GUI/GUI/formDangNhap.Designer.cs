@@ -104,6 +104,7 @@ namespace QLTV
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(247, 41);
             txtPassword.TabIndex = 7;
+            txtPassword.Enter += btn_login_Click;
             // 
             // lblNoti
             // 
@@ -112,7 +113,7 @@ namespace QLTV
             lblNoti.ForeColor = Color.IndianRed;
             lblNoti.Location = new Point(127, 373);
             lblNoti.Name = "lblNoti";
-            lblNoti.Size = new Size(0, 26);
+            lblNoti.Size = new Size(0, 21);
             lblNoti.TabIndex = 9;
             lblNoti.TextAlign = ContentAlignment.MiddleCenter;
             // 

@@ -71,13 +71,6 @@ namespace QLTV
             DangXuat(this, new EventArgs());
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            if (isClose)
-            {
-                Application.Exit();
-            }
-        }
 
         private void menuTacGia_Click(object sender, EventArgs e)
         {
@@ -87,8 +80,8 @@ namespace QLTV
 
         private void formGiaoDien_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(isClose) 
-            Application.Exit();
+            if (isClose)
+                Application.Exit();
         }
 
         private void formGiaoDien_FormClosing(object sender, FormClosingEventArgs e)
@@ -104,6 +97,37 @@ namespace QLTV
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (isClose)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void tìmKiếmĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formTimKiemDocGia formTimKiemDocGia = new formTimKiemDocGia();
+            OpenForm(formTimKiemDocGia);
+        }
+
+        private void mượnSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formMuonSach formMuonSach = new formMuonSach();
+            OpenForm(formMuonSach);
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formNhanVien formNhanVien = new formNhanVien();
+            OpenForm(formNhanVien);
+        }
+
+        private void baoCao_StripMenu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

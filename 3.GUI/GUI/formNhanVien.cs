@@ -16,5 +16,10 @@ namespace QLTV
         {
             InitializeComponent();
         }
+
+        private void formNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
