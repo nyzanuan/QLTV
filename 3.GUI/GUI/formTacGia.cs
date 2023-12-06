@@ -233,8 +233,8 @@ namespace QLTV
         private void btnXoa_Click(object sender, EventArgs e)
         {
 
-          if(MessageBox.Show("Bạn có chắc chắn rầng bạn muốn xóa không","Cảnh báo", MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
-          {
+            if (MessageBox.Show("Bạn có chắc chắn rầng bạn muốn xóa không", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
                 if (int.TryParse(txtMaTacGia.Text, out int maTacGia))
                 {
                     bool result = _authorService.DeleteAuthor(maTacGia);
@@ -291,5 +291,7 @@ namespace QLTV
                 LoadData();
             }
         }
+
+        
     }
 }

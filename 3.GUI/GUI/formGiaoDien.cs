@@ -107,5 +107,24 @@ namespace QLTV
                 Application.Exit();
             }
         }
+
+        private void mượnSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formMuonSach formMuonSach = new formMuonSach();
+            OpenForm(formMuonSach);
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formNhanVien formNhanVien = new formNhanVien();
+            OpenForm(formNhanVien);
+
+        }
+
+        private void tìmKiếmĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formTimKiemDocGia formTimKiemDocGia = new formTimKiemDocGia();
+            OpenForm(formTimKiemDocGia);
+        }
     }
 }
