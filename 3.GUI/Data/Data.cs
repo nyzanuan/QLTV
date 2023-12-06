@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sharing.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace _3.GUI.Data
 
         public string Username { get; private set; }
         public string Password { get; private set; }
-        public bool isAdmin { get; private set; }
+        public UserRole Role { get; private set; }
 
         private UserInfo() { }
 
@@ -29,10 +30,10 @@ namespace _3.GUI.Data
             }
         }
 
-        public void SetUserInfo(string username, bool isAdmin)
+        public void SetUserInfo(string username, UserRole role)
         {
             Username = username;
-            this.isAdmin = isAdmin;
+            this.Role = role;
         }
     }
 

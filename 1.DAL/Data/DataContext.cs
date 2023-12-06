@@ -45,6 +45,7 @@ namespace _1.DAL.Data
 
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<User>().HasMany(p => p.LoanReceipts).WithOne(p => p.Borrower).HasForeignKey(p => p.BorrowerId).OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<User>().HasMany(p=>p.CustomerCreated).WithOne(p => p.UserCreate).HasForeignKey(p => p.UserIdCreate).OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Book>().HasMany(p => p.LoanReceipts).WithOne(p => p.Book).HasForeignKey(p => p.BookId).OnDelete(DeleteBehavior.Cascade);
 

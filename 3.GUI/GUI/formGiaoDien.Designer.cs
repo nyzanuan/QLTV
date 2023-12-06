@@ -29,12 +29,11 @@ namespace QLTV
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formGiaoDien));
             menuStrip1 = new MenuStrip();
             heThong_StripMenu = new ToolStripMenuItem();
             đăngXuấtToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
-            thoátToolStripMenuItem1 = new ToolStripMenuItem();
+            btnThoat = new ToolStripMenuItem();
             danhMuc_toolStripMenu = new ToolStripMenuItem();
             quảnLýSáchToolStripMenuItem = new ToolStripMenuItem();
             menuTacGia = new ToolStripMenuItem();
@@ -48,7 +47,6 @@ namespace QLTV
             baoCao_StripMenu = new ToolStripMenuItem();
             dateTimePicker1 = new DateTimePicker();
             panel1 = new Panel();
-            btnThoat = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,7 +63,7 @@ namespace QLTV
             // 
             // heThong_StripMenu
             // 
-            heThong_StripMenu.DropDownItems.AddRange(new ToolStripItem[] { đăngXuấtToolStripMenuItem, thoátToolStripMenuItem, thoátToolStripMenuItem1 });
+            heThong_StripMenu.DropDownItems.AddRange(new ToolStripItem[] { đăngXuấtToolStripMenuItem, thoátToolStripMenuItem, btnThoat });
             heThong_StripMenu.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             heThong_StripMenu.Name = "heThong_StripMenu";
             heThong_StripMenu.Size = new Size(114, 31);
@@ -85,11 +83,12 @@ namespace QLTV
             thoátToolStripMenuItem.Size = new Size(197, 32);
             thoátToolStripMenuItem.Text = "Tài khoản";
             // 
-            // thoátToolStripMenuItem1
+            // btnThoat
             // 
-            thoátToolStripMenuItem1.Name = "thoátToolStripMenuItem1";
-            thoátToolStripMenuItem1.Size = new Size(197, 32);
-            thoátToolStripMenuItem1.Text = "Thoát";
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(197, 32);
+            btnThoat.Text = "Thoát";
+            btnThoat.Click += btnThoat_Click_1;
             // 
             // danhMuc_toolStripMenu
             // 
@@ -103,21 +102,21 @@ namespace QLTV
             // quảnLýSáchToolStripMenuItem
             // 
             quảnLýSáchToolStripMenuItem.Name = "quảnLýSáchToolStripMenuItem";
-            quảnLýSáchToolStripMenuItem.Size = new Size(249, 32);
+            quảnLýSáchToolStripMenuItem.Size = new Size(274, 32);
             quảnLýSáchToolStripMenuItem.Text = "Quản lý sách";
             quảnLýSáchToolStripMenuItem.Click += quảnLýSáchToolStripMenuItem_Click;
             // 
             // menuTacGia
             // 
             menuTacGia.Name = "menuTacGia";
-            menuTacGia.Size = new Size(249, 32);
+            menuTacGia.Size = new Size(274, 32);
             menuTacGia.Text = "Quản lý tác giả";
             menuTacGia.Click += menuTacGia_Click;
             // 
             // độcGiảToolStripMenuItem
             // 
             độcGiảToolStripMenuItem.Name = "độcGiảToolStripMenuItem";
-            độcGiảToolStripMenuItem.Size = new Size(249, 32);
+            độcGiảToolStripMenuItem.Size = new Size(274, 32);
             độcGiảToolStripMenuItem.Text = "Quản lý độc giả";
             độcGiảToolStripMenuItem.Click += độcGiảToolStripMenuItem_Click;
             // 
@@ -181,33 +180,19 @@ namespace QLTV
             // 
             // panel1
             // 
+            panel1.AutoScroll = true;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Location = new Point(13, 55);
             panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1377, 764);
+            panel1.Size = new Size(1377, 845);
             panel1.TabIndex = 2;
-            // 
-            // btnThoat
-            // 
-            btnThoat.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThoat.Image = (Image)resources.GetObject("btnThoat.Image");
-            btnThoat.ImageAlign = ContentAlignment.MiddleRight;
-            btnThoat.Location = new Point(1224, 841);
-            btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(106, 48);
-            btnThoat.TabIndex = 3;
-            btnThoat.Text = "Thoát";
-            btnThoat.TextAlign = ContentAlignment.MiddleLeft;
-            btnThoat.UseVisualStyleBackColor = true;
-            btnThoat.Click += btnThoat_Click;
             // 
             // formGiaoDien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1403, 914);
-            Controls.Add(btnThoat);
             Controls.Add(panel1);
             Controls.Add(dateTimePicker1);
             Controls.Add(menuStrip1);
@@ -244,7 +229,6 @@ namespace QLTV
         private ToolStripMenuItem tìmKiếmĐộcGiảToolStripMenuItem;
         private Panel panel1;
         private ToolStripMenuItem nhânViênToolStripMenuItem;
-        private ToolStripMenuItem thoátToolStripMenuItem1;
-        private Button btnThoat;
+        private ToolStripMenuItem btnThoat;
     }
 }

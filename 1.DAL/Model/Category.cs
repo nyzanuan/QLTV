@@ -14,6 +14,8 @@ namespace _1.DAL.Model
         [Key]
         public int CategoryId { get; set; }
         public string Name { get; set; }
+        public byte[]? Image { get; set; }
+
         public List<Book> Books { get; set; }
     }
 

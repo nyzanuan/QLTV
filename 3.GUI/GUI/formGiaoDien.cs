@@ -71,13 +71,7 @@ namespace QLTV
             DangXuat(this, new EventArgs());
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            if (isClose)
-            {
-                Application.Exit();
-            }
-        }
+
 
         private void menuTacGia_Click(object sender, EventArgs e)
         {
@@ -87,8 +81,8 @@ namespace QLTV
 
         private void formGiaoDien_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(isClose) 
-            Application.Exit();
+            if (isClose)
+                Application.Exit();
         }
 
         private void formGiaoDien_FormClosing(object sender, FormClosingEventArgs e)
@@ -103,6 +97,14 @@ namespace QLTV
                 {
                     e.Cancel = true;
                 }
+            }
+        }
+
+        private void btnThoat_Click_1(object sender, EventArgs e)
+        {
+            if (isClose)
+            {
+                Application.Exit();
             }
         }
     }

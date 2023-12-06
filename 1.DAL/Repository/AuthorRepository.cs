@@ -47,7 +47,7 @@ namespace _1.DAL.Repository
             try
             {
                 var query = _dataContext.Author.AsQueryable();
-                if (search != null && search != "")
+                if (!string.IsNullOrEmpty(search))
                 {
 
                     string searchWithoutDiacritics = search.ToLower();

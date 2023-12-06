@@ -16,10 +16,39 @@ namespace _2.BUS.Service
             _userRepository = new UserRepository();
         }
 
-        public bool AddUser(User user)
+        public async Task<ValueReturn> AddUser(User user)
         {
-            return _userRepository.AddUser(user);
+            return await _userRepository.AddUser(user);
         }
+
+        public bool DeleteUser(int maTacGia)
+        {
+            return _userRepository.DeletedUser(maTacGia);
+        }
+
+        public ValueReturn GetAllUser(int pageNow, int pageSize, string? search, int isAdmin)
+        {
+            return _userRepository.GetAllUsers(pageNow,  pageSize,  search,  isAdmin);
+        }
+
+        public async Task<ValueReturn> UpdateUser(User user)
+        {
+            string message = string.Empty;
+            if(Convert.ToInt16(user.Role) == -1)
+            {
+                message += " .Vui lòng chọn Vai trò";
+            }
+            if (Convert.ToInt16(user.Gender) == -1)
+            {
+                message += " .Vui lòng chọn giới tính";
+            }
+            if (message !="")
+            {
+                return new ValueReturn { Message = message , Status =false};
+            }
+            return await _userRepository.UpdateUser(user);
+        }
+
         public ValueReturn Validate(string userName, string password)
         {
             if(userName.Trim() != "" && password.Trim() != "") { 

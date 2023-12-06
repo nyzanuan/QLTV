@@ -233,22 +233,25 @@ namespace QLTV
         private void btnXoa_Click(object sender, EventArgs e)
         {
 
-            if (int.TryParse(txtMaTacGia.Text, out int maTacGia))
-            {
-                bool result = _authorService.DeleteAuthor(maTacGia);
-                if (result)
+          if(MessageBox.Show("Bạn có chắc chắn rầng bạn muốn xóa không","Cảnh báo", MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
+          {
+                if (int.TryParse(txtMaTacGia.Text, out int maTacGia))
                 {
-                    MessageBox.Show("Xóa thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
+                    bool result = _authorService.DeleteAuthor(maTacGia);
+                    if (result)
+                    {
+                        MessageBox.Show("Xóa thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Xóa thất bại ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Kiểm tra lại Id", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Kiểm tra lại Id", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

@@ -10,10 +10,10 @@ namespace _1.DAL.IRepository
 {
     public interface IUserRepository
     {
-        bool AddUser(User user);
-        bool DeletedUser(User user);
-        bool UpdateUser(User user);
+        Task<ValueReturn> AddUser(User user);
+        bool DeletedUser(int userId);
+        Task<ValueReturn> UpdateUser(User user);
         ValueReturn GetUser (string username, string password);
-        ICollection<User> GetAllUsers();
+        ValueReturn GetAllUsers(int pageNow, int pageSize, string? search, int isAdmin);
     }
 }

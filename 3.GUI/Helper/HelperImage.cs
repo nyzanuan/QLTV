@@ -10,9 +10,16 @@ namespace _3.GUI.Helper
     {
         public static byte[] ChangeImageToByte(PictureBox pictureBox)
         {
-            MemoryStream stream = new MemoryStream();
-            pictureBox.Image.Save(stream, pictureBox.Image.RawFormat);
-            return stream.ToArray();
+            if (pictureBox.Image == null)
+            {
+                return new byte[0];
+            }
+
+            using (MemoryStream stream = new MemoryStream())
+            {
+                pictureBox.Image.Save(stream, pictureBox.Image.RawFormat);
+                return stream.ToArray();
+            }
         }
     }
 }

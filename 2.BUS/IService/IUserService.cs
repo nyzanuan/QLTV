@@ -10,7 +10,10 @@ namespace _2.BUS.IService
 {
     public interface IUserService
     {
-        bool AddUser(User user);
+        Task<ValueReturn> AddUser(User user);
+        bool DeleteUser(int maTacGia);
+        ValueReturn GetAllUser(int pageNow, int pageSize, string? search, int isAdmin);
+        Task<ValueReturn> UpdateUser(User user);
         ValueReturn Validate(string userName, string password);
 
     }
