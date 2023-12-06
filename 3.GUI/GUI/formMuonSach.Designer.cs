@@ -54,6 +54,7 @@ namespace QLTV
             label3 = new Label();
             txt_user_id = new TextBox();
             label8 = new Label();
+            checkBox1 = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)book_dataGridView).BeginInit();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -171,6 +172,7 @@ namespace QLTV
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(checkBox1);
             groupBox1.Controls.Add(btnHuy);
             groupBox1.Controls.Add(btnLuu);
             groupBox1.Controls.Add(btnXoa);
@@ -255,7 +257,7 @@ namespace QLTV
             refund_dateTimePicker.CustomFormat = "dddd, MMMM dd, yyyy ";
             refund_dateTimePicker.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             refund_dateTimePicker.Format = DateTimePickerFormat.Custom;
-            refund_dateTimePicker.Location = new Point(717, 76);
+            refund_dateTimePicker.Location = new Point(669, 77);
             refund_dateTimePicker.Margin = new Padding(4, 3, 4, 3);
             refund_dateTimePicker.Name = "refund_dateTimePicker";
             refund_dateTimePicker.Size = new Size(293, 29);
@@ -266,7 +268,7 @@ namespace QLTV
             borrow_dateTimePicker.CustomFormat = "dddd, MMMM dd, yyyy ";
             borrow_dateTimePicker.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             borrow_dateTimePicker.Format = DateTimePickerFormat.Custom;
-            borrow_dateTimePicker.Location = new Point(239, 82);
+            borrow_dateTimePicker.Location = new Point(191, 83);
             borrow_dateTimePicker.Margin = new Padding(4, 3, 4, 3);
             borrow_dateTimePicker.Name = "borrow_dateTimePicker";
             borrow_dateTimePicker.Size = new Size(293, 29);
@@ -276,7 +278,7 @@ namespace QLTV
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(622, 82);
+            label4.Location = new Point(574, 83);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(73, 21);
@@ -286,7 +288,7 @@ namespace QLTV
             // txt_book_name
             // 
             txt_book_name.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_book_name.Location = new Point(717, 22);
+            txt_book_name.Location = new Point(669, 23);
             txt_book_name.Margin = new Padding(4, 3, 4, 3);
             txt_book_name.Name = "txt_book_name";
             txt_book_name.Size = new Size(293, 29);
@@ -296,7 +298,7 @@ namespace QLTV
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(122, 31);
+            label1.Location = new Point(74, 32);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(94, 21);
@@ -307,7 +309,7 @@ namespace QLTV
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(619, 31);
+            label2.Location = new Point(571, 32);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(78, 21);
@@ -318,7 +320,7 @@ namespace QLTV
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(123, 89);
+            label3.Location = new Point(75, 90);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(97, 21);
@@ -328,7 +330,7 @@ namespace QLTV
             // txt_user_id
             // 
             txt_user_id.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_user_id.Location = new Point(239, 22);
+            txt_user_id.Location = new Point(191, 23);
             txt_user_id.Margin = new Padding(4, 3, 4, 3);
             txt_user_id.Name = "txt_user_id";
             txt_user_id.Size = new Size(293, 29);
@@ -344,6 +346,17 @@ namespace QLTV
             label8.Size = new Size(325, 42);
             label8.TabIndex = 19;
             label8.Text = "Quản lý mượn sách";
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox1.Location = new Point(1017, 81);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(75, 25);
+            checkBox1.TabIndex = 35;
+            checkBox1.Text = "Đã trả";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // formMuonSach
             // 
@@ -398,5 +411,6 @@ namespace QLTV
         private Label label3;
         private TextBox txt_user_id;
         private Label label8;
+        private CheckBox checkBox1;
     }
 }
