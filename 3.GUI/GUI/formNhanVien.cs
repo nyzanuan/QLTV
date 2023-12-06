@@ -373,5 +373,7 @@ namespace QLTV
             searchTimer.Stop();
             searchTimer.Start();
         }
+
+        
     }
 }
