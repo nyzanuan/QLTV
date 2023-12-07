@@ -46,7 +46,8 @@ namespace QLTV
             baoCao_StripMenu = new ToolStripMenuItem();
             dateTimePicker1 = new DateTimePicker();
             panel1 = new Panel();
-            trảSáchToolStripMenuItem = new ToolStripMenuItem();
+            mượnSáchToolStripMenuItem = new ToolStripMenuItem();
+            trảSáchToolStripMenuItem = new ToolStripMenuItem();            
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -190,6 +191,15 @@ namespace QLTV
             trảSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
             trảSáchToolStripMenuItem.Size = new Size(180, 26);
             trảSáchToolStripMenuItem.Text = "Trả sách";
+
+            // 
+            // mượnSáchToolStripMenuItem
+            // 
+            mượnSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
+            mượnSáchToolStripMenuItem.Size = new Size(180, 26);
+            mượnSáchToolStripMenuItem.Text = "Mượn sách";
+            
+
             // 
             // formGiaoDien
             // 
@@ -233,5 +243,6 @@ namespace QLTV
         private ToolStripMenuItem btnThoat;
         private Panel panel1;
         private ToolStripMenuItem trảSáchToolStripMenuItem;
+        private ToolStripMenuItem mượnSáchToolStripMenuItem;
     }
 }
