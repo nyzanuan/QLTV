@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _3.GUI.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -127,6 +128,34 @@ namespace QLTV
             OpenForm(formTimKiemDocGia);
         }
 
+        private void baoCao_StripMenu_Click(object sender, EventArgs e)
+        {
+            formBaoCao formBaoCao = new formBaoCao();
+            OpenForm(formBaoCao);
+        }
 
+        private void thểLoạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formTheLoai formTheLoai = new formTheLoai();
+            OpenForm(formTheLoai);
+        }
+
+        private void nhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formNXB formNXB = new formNXB();
+            OpenForm(formNXB);
+        }
+
+        private void mượnSáchToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            formMuonSach formMuonSach = new formMuonSach();
+            OpenForm(formMuonSach);
+        }
+
+        private void trảSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formTraSach formTraSach = new formTraSach();   
+            OpenForm(formTraSach);
+        }
     }
 }
