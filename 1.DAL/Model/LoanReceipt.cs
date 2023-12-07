@@ -22,8 +22,10 @@ namespace _1.DAL.Model
         public int BorrowerId { get; set; }
         public User Borrower { get; set; }
 
-        public string Note { get; set; }
+        public string? Note { get; set; }
 
+
+        public ICollection<LoanStatus> StatusList { get; set; }
         
 
     }

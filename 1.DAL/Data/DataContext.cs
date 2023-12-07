@@ -19,6 +19,8 @@ namespace _1.DAL.Data
         public virtual DbSet<Publisher> Publisher { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Language> Language { get; set; }
+        
+        public virtual DbSet<LoanStatus> LoanReceiptStatuse { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -52,6 +54,10 @@ namespace _1.DAL.Data
             modelBuilder.Entity<LoanReceipt>().HasKey(p=>p.LoanReceiptId);
 
             modelBuilder.Entity<Language>().HasMany(p => p.Book).WithOne(p => p.Language).HasForeignKey(p => p.LanguageId).OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<LoanStatus>().ToTable("LoanReceiptStatus").HasKey(p => p.StatusId);
+
+            modelBuilder.Entity<LoanStatus>().HasOne(p => p.LoanReceipt).WithMany(p => p.StatusList).HasForeignKey(p => p.LoanReceiptId).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

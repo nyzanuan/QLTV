@@ -34,28 +34,30 @@ namespace QLTV
             btnNextPage = new Button();
             btnFirstPage = new Button();
             btnPrePage = new Button();
-            book_dataGridView = new DataGridView();
+            dgvMuonSach = new DataGridView();
             panel1 = new Panel();
             groupBox2 = new GroupBox();
             label5 = new Label();
-            txt_search = new TextBox();
+            txtSearch = new TextBox();
             groupBox1 = new GroupBox();
+            cmbSach = new ComboBox();
+            cmbDocGia = new ComboBox();
             checkBox1 = new CheckBox();
             btnHuy = new Button();
             btnLuu = new Button();
             btnXoa = new Button();
             btnUpdate = new Button();
-            btnThemTacGia = new Button();
-            refund_dateTimePicker = new DateTimePicker();
-            borrow_dateTimePicker = new DateTimePicker();
+            btnThem = new Button();
+            dtpNgayTra = new DateTimePicker();
+            dtpNgayMuon = new DateTimePicker();
             label4 = new Label();
-            txt_book_name = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            txt_user_id = new TextBox();
             label8 = new Label();
-            ((System.ComponentModel.ISupportInitialize)book_dataGridView).BeginInit();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)dgvMuonSach).BeginInit();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -84,6 +86,7 @@ namespace QLTV
             btnLastPage.TabIndex = 47;
             btnLastPage.Text = ">|";
             btnLastPage.UseVisualStyleBackColor = true;
+            btnLastPage.Click += btnLastPage_Click;
             // 
             // btnNextPage
             // 
@@ -95,6 +98,7 @@ namespace QLTV
             btnNextPage.TabIndex = 46;
             btnNextPage.Text = ">>";
             btnNextPage.UseVisualStyleBackColor = true;
+            btnNextPage.Click += btnNextPage_Click;
             // 
             // btnFirstPage
             // 
@@ -106,6 +110,7 @@ namespace QLTV
             btnFirstPage.TabIndex = 44;
             btnFirstPage.Text = "|<";
             btnFirstPage.UseVisualStyleBackColor = true;
+            btnFirstPage.Click += btnFirstPage_Click;
             // 
             // btnPrePage
             // 
@@ -117,23 +122,25 @@ namespace QLTV
             btnPrePage.TabIndex = 45;
             btnPrePage.Text = "<<";
             btnPrePage.UseVisualStyleBackColor = true;
+            btnPrePage.Click += btnPrePage_Click;
             // 
-            // book_dataGridView
+            // dgvMuonSach
             // 
-            book_dataGridView.AllowUserToAddRows = false;
-            book_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            book_dataGridView.Location = new Point(-6, 333);
-            book_dataGridView.Margin = new Padding(5, 4, 5, 4);
-            book_dataGridView.Name = "book_dataGridView";
-            book_dataGridView.RowHeadersWidth = 51;
-            book_dataGridView.Size = new Size(1414, 407);
-            book_dataGridView.TabIndex = 43;
+            dgvMuonSach.AllowUserToAddRows = false;
+            dgvMuonSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMuonSach.Location = new Point(0, 333);
+            dgvMuonSach.Margin = new Padding(5, 4, 5, 4);
+            dgvMuonSach.Name = "dgvMuonSach";
+            dgvMuonSach.RowHeadersWidth = 51;
+            dgvMuonSach.Size = new Size(1408, 407);
+            dgvMuonSach.TabIndex = 43;
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(groupBox2);
             panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(checkBox1);
             panel1.Controls.Add(label8);
             panel1.Location = new Point(-6, -1);
             panel1.Margin = new Padding(5, 4, 5, 4);
@@ -144,7 +151,7 @@ namespace QLTV
             // groupBox2
             // 
             groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(txt_search);
+            groupBox2.Controls.Add(txtSearch);
             groupBox2.Location = new Point(1017, -3);
             groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
@@ -164,45 +171,64 @@ namespace QLTV
             label5.TabIndex = 24;
             label5.Text = "Tìm kiếm";
             // 
-            // txt_search
+            // txtSearch
             // 
-            txt_search.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_search.Location = new Point(120, 23);
-            txt_search.Margin = new Padding(5, 4, 5, 4);
-            txt_search.Name = "txt_search";
-            txt_search.Size = new Size(233, 32);
-            txt_search.TabIndex = 23;
+            txtSearch.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearch.Location = new Point(120, 23);
+            txtSearch.Margin = new Padding(5, 4, 5, 4);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(233, 32);
+            txtSearch.TabIndex = 23;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(checkBox1);
+            groupBox1.Controls.Add(panel3);
+            groupBox1.Controls.Add(panel2);
+            groupBox1.Controls.Add(cmbSach);
+            groupBox1.Controls.Add(cmbDocGia);
             groupBox1.Controls.Add(btnHuy);
             groupBox1.Controls.Add(btnLuu);
             groupBox1.Controls.Add(btnXoa);
             groupBox1.Controls.Add(btnUpdate);
-            groupBox1.Controls.Add(btnThemTacGia);
-            groupBox1.Controls.Add(refund_dateTimePicker);
-            groupBox1.Controls.Add(borrow_dateTimePicker);
+            groupBox1.Controls.Add(btnThem);
+            groupBox1.Controls.Add(dtpNgayTra);
+            groupBox1.Controls.Add(dtpNgayMuon);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(txt_book_name);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(txt_user_id);
             groupBox1.Location = new Point(27, 75);
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(1306, 247);
+            groupBox1.Size = new Size(1351, 247);
             groupBox1.TabIndex = 35;
             groupBox1.TabStop = false;
             groupBox1.Text = "Chức năng";
+            // 
+            // cmbSach
+            // 
+            cmbSach.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbSach.FormattingEnabled = true;
+            cmbSach.Location = new Point(838, 43);
+            cmbSach.Name = "cmbSach";
+            cmbSach.Size = new Size(334, 39);
+            cmbSach.TabIndex = 37;
+            // 
+            // cmbDocGia
+            // 
+            cmbDocGia.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbDocGia.FormattingEnabled = true;
+            cmbDocGia.Location = new Point(191, 43);
+            cmbDocGia.Name = "cmbDocGia";
+            cmbDocGia.Size = new Size(334, 39);
+            cmbDocGia.TabIndex = 36;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            checkBox1.Location = new Point(1162, 108);
+            checkBox1.Location = new Point(355, 36);
             checkBox1.Margin = new Padding(3, 4, 3, 4);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(94, 31);
@@ -258,100 +284,83 @@ namespace QLTV
             btnUpdate.Text = "Cập nhật";
             btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // btnThemTacGia
+            // btnThem
             // 
-            btnThemTacGia.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnThemTacGia.Location = new Point(434, 184);
-            btnThemTacGia.Margin = new Padding(5);
-            btnThemTacGia.Name = "btnThemTacGia";
-            btnThemTacGia.Size = new Size(91, 44);
-            btnThemTacGia.TabIndex = 30;
-            btnThemTacGia.Text = "Thêm";
-            btnThemTacGia.UseVisualStyleBackColor = true;
+            btnThem.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnThem.Location = new Point(434, 184);
+            btnThem.Margin = new Padding(5);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(91, 44);
+            btnThem.TabIndex = 30;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
-            // refund_dateTimePicker
+            // dtpNgayTra
             // 
-            refund_dateTimePicker.CustomFormat = "dddd, MMMM dd, yyyy ";
-            refund_dateTimePicker.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            refund_dateTimePicker.Format = DateTimePickerFormat.Short;
-            refund_dateTimePicker.Location = new Point(765, 103);
-            refund_dateTimePicker.Margin = new Padding(5, 4, 5, 4);
-            refund_dateTimePicker.Name = "refund_dateTimePicker";
-            refund_dateTimePicker.Size = new Size(334, 35);
-            refund_dateTimePicker.TabIndex = 22;
+            dtpNgayTra.CustomFormat = "dddd, MMMM dd, yyyy ";
+            dtpNgayTra.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpNgayTra.Format = DateTimePickerFormat.Short;
+            dtpNgayTra.Location = new Point(838, 115);
+            dtpNgayTra.Margin = new Padding(5, 4, 5, 4);
+            dtpNgayTra.Name = "dtpNgayTra";
+            dtpNgayTra.Size = new Size(334, 35);
+            dtpNgayTra.TabIndex = 22;
             // 
-            // borrow_dateTimePicker
+            // dtpNgayMuon
             // 
-            borrow_dateTimePicker.CustomFormat = "dddd, MMMM dd, yyyy ";
-            borrow_dateTimePicker.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            borrow_dateTimePicker.Format = DateTimePickerFormat.Short;
-            borrow_dateTimePicker.Location = new Point(218, 111);
-            borrow_dateTimePicker.Margin = new Padding(5, 4, 5, 4);
-            borrow_dateTimePicker.Name = "borrow_dateTimePicker";
-            borrow_dateTimePicker.Size = new Size(334, 35);
-            borrow_dateTimePicker.TabIndex = 21;
+            dtpNgayMuon.CustomFormat = "dddd, MMMM dd, yyyy ";
+            dtpNgayMuon.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpNgayMuon.Format = DateTimePickerFormat.Short;
+            dtpNgayMuon.Location = new Point(191, 111);
+            dtpNgayMuon.Margin = new Padding(5, 4, 5, 4);
+            dtpNgayMuon.Name = "dtpNgayMuon";
+            dtpNgayMuon.Size = new Size(334, 35);
+            dtpNgayMuon.TabIndex = 21;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(656, 111);
+            label4.Location = new Point(718, 123);
             label4.Margin = new Padding(5, 0, 5, 0);
             label4.Name = "label4";
             label4.Size = new Size(95, 27);
             label4.TabIndex = 20;
             label4.Text = "Ngày trả";
             // 
-            // txt_book_name
-            // 
-            txt_book_name.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_book_name.Location = new Point(765, 31);
-            txt_book_name.Margin = new Padding(5, 4, 5, 4);
-            txt_book_name.Name = "txt_book_name";
-            txt_book_name.Size = new Size(334, 35);
-            txt_book_name.TabIndex = 9;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(85, 43);
+            label1.Location = new Point(23, 43);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(119, 27);
+            label1.Size = new Size(139, 27);
             label1.TabIndex = 0;
-            label1.Text = "Mã độc giả";
+            label1.Text = "Chọn độc giả";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(653, 43);
+            label2.Location = new Point(718, 55);
             label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(98, 27);
+            label2.Size = new Size(113, 27);
             label2.TabIndex = 1;
-            label2.Text = "Tên sách";
+            label2.Text = "Chọn sách";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(86, 120);
+            label3.Location = new Point(24, 120);
             label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
             label3.Size = new Size(125, 27);
             label3.TabIndex = 2;
             label3.Text = "Ngày mượn";
-            // 
-            // txt_user_id
-            // 
-            txt_user_id.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_user_id.Location = new Point(218, 31);
-            txt_user_id.Margin = new Padding(5, 4, 5, 4);
-            txt_user_id.Name = "txt_user_id";
-            txt_user_id.Size = new Size(334, 35);
-            txt_user_id.TabIndex = 8;
             // 
             // label8
             // 
@@ -364,6 +373,20 @@ namespace QLTV
             label8.TabIndex = 19;
             label8.Text = "Quản lý mượn sách";
             // 
+            // panel2
+            // 
+            panel2.Location = new Point(561, 24);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(138, 140);
+            panel2.TabIndex = 38;
+            // 
+            // panel3
+            // 
+            panel3.Location = new Point(1186, 27);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(138, 140);
+            panel3.TabIndex = 39;
+            // 
             // formMuonSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -374,12 +397,14 @@ namespace QLTV
             Controls.Add(btnNextPage);
             Controls.Add(btnFirstPage);
             Controls.Add(btnPrePage);
-            Controls.Add(book_dataGridView);
+            Controls.Add(dgvMuonSach);
             Controls.Add(panel1);
             Margin = new Padding(5, 4, 5, 4);
             Name = "formMuonSach";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "formMuonSach";
-            ((System.ComponentModel.ISupportInitialize)book_dataGridView).EndInit();
+            Load += formMuonSach_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvMuonSach).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -397,26 +422,28 @@ namespace QLTV
         private Button btnNextPage;
         private Button btnFirstPage;
         private Button btnPrePage;
-        private DataGridView book_dataGridView;
+        private DataGridView dgvMuonSach;
         private Panel panel1;
         private GroupBox groupBox2;
         private Label label5;
-        private TextBox txt_search;
+        private TextBox txtSearch;
         private GroupBox groupBox1;
         private Button btnHuy;
         private Button btnLuu;
         private Button btnXoa;
         private Button btnUpdate;
-        private Button btnThemTacGia;
-        private DateTimePicker refund_dateTimePicker;
-        private DateTimePicker borrow_dateTimePicker;
+        private Button btnThem;
+        private DateTimePicker dtpNgayTra;
+        private DateTimePicker dtpNgayMuon;
         private Label label4;
-        private TextBox txt_book_name;
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox txt_user_id;
         private Label label8;
         private CheckBox checkBox1;
+        private ComboBox cmbSach;
+        private ComboBox cmbDocGia;
+        private Panel panel2;
+        private Panel panel3;
     }
 }

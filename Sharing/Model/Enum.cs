@@ -45,4 +45,11 @@ namespace Sharing.Model
         Available,
         NotAvailable
     }
+    public enum LoanReceiptStatus
+    {
+        Borrowed,
+        Returned,
+        Overdue,
+        Lost, 
+    }
 }

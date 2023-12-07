@@ -9,7 +9,8 @@ namespace _1.DAL.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int BookId { get; set; }
-        public string Title { get; set; }
+        public string Name { get; set; }
+        public string? Title { get; set; }
         public int AuthorId { get; set; }
         public Author Author { get; set; }
         public int CategoryId { get; set; }
