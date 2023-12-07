@@ -46,6 +46,7 @@ namespace QLTV
             baoCao_StripMenu = new ToolStripMenuItem();
             dateTimePicker1 = new DateTimePicker();
             panel1 = new Panel();
+            trảSáchToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -128,7 +129,7 @@ namespace QLTV
             // 
             // muonSach_StripMenu
             // 
-            muonSach_StripMenu.DropDownItems.AddRange(new ToolStripItem[] { mượnSáchToolStripMenuItem });
+            muonSach_StripMenu.DropDownItems.AddRange(new ToolStripItem[] { mượnSáchToolStripMenuItem, trảSáchToolStripMenuItem });
             muonSach_StripMenu.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             muonSach_StripMenu.Name = "muonSach_StripMenu";
             muonSach_StripMenu.Size = new Size(130, 25);
@@ -184,6 +185,12 @@ namespace QLTV
             panel1.Size = new Size(1228, 845);
             panel1.TabIndex = 2;
             // 
+            // trảSáchToolStripMenuItem
+            // 
+            trảSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
+            trảSáchToolStripMenuItem.Size = new Size(180, 26);
+            trảSáchToolStripMenuItem.Text = "Trả sách";
+            // 
             // formGiaoDien
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -225,5 +232,6 @@ namespace QLTV
         private ToolStripMenuItem nhânViênToolStripMenuItem;
         private ToolStripMenuItem btnThoat;
         private Panel panel1;
+        private ToolStripMenuItem trảSáchToolStripMenuItem;
     }
 }
