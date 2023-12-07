@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLTV
+namespace _3.GUI.GUI
 {
-    public partial class formQuanLySach : Form
+    public partial class formNXB : Form
     {
-        public formQuanLySach()
+        public formNXB()
         {
             InitializeComponent();
-        }
-
-        private void formQuanLySach_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_quantity_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

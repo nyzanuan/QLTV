@@ -29,17 +29,20 @@ namespace QLTV
         /// </summary>
         private void InitializeComponent()
         {
-            book_dataGridView = new DataGridView();
+            dgvSach = new DataGridView();
             panel1 = new Panel();
-            groupBox2 = new GroupBox();
-            label4 = new Label();
-            txtTimKiem = new TextBox();
+            groupBox3 = new GroupBox();
             btnHuy = new Button();
             btnLuu = new Button();
             btnXoa = new Button();
             btnUpdate = new Button();
             btnThemTacGia = new Button();
+            groupBox2 = new GroupBox();
+            label4 = new Label();
+            txtTimKiem = new TextBox();
             groupBox1 = new GroupBox();
+            comboBox2 = new ComboBox();
+            label5 = new Label();
             comboBox1 = new ComboBox();
             txt_book_name = new TextBox();
             label1 = new Label();
@@ -56,31 +59,28 @@ namespace QLTV
             btnNextPage = new Button();
             btnFirstPage = new Button();
             btnPrePage = new Button();
-            ((System.ComponentModel.ISupportInitialize)book_dataGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSach).BeginInit();
             panel1.SuspendLayout();
+            groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // book_dataGridView
+            // dgvSach
             // 
-            book_dataGridView.AllowUserToAddRows = false;
-            book_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            book_dataGridView.Location = new Point(-5, 248);
-            book_dataGridView.Margin = new Padding(4, 3, 4, 3);
-            book_dataGridView.Name = "book_dataGridView";
-            book_dataGridView.Size = new Size(1237, 314);
-            book_dataGridView.TabIndex = 38;
+            dgvSach.AllowUserToAddRows = false;
+            dgvSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSach.Location = new Point(-5, 248);
+            dgvSach.Margin = new Padding(4, 3, 4, 3);
+            dgvSach.Name = "dgvSach";
+            dgvSach.Size = new Size(1237, 314);
+            dgvSach.TabIndex = 38;
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(groupBox3);
             panel1.Controls.Add(groupBox2);
-            panel1.Controls.Add(btnHuy);
-            panel1.Controls.Add(btnLuu);
-            panel1.Controls.Add(btnXoa);
-            panel1.Controls.Add(btnUpdate);
-            panel1.Controls.Add(btnThemTacGia);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(label8);
             panel1.Location = new Point(-5, 0);
@@ -88,6 +88,78 @@ namespace QLTV
             panel1.Name = "panel1";
             panel1.Size = new Size(1235, 258);
             panel1.TabIndex = 37;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(btnHuy);
+            groupBox3.Controls.Add(btnLuu);
+            groupBox3.Controls.Add(btnXoa);
+            groupBox3.Controls.Add(btnUpdate);
+            groupBox3.Controls.Add(btnThemTacGia);
+            groupBox3.Location = new Point(378, 182);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(504, 59);
+            groupBox3.TabIndex = 31;
+            groupBox3.TabStop = false;
+            // 
+            // btnHuy
+            // 
+            btnHuy.Enabled = false;
+            btnHuy.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnHuy.Location = new Point(410, 17);
+            btnHuy.Margin = new Padding(4);
+            btnHuy.Name = "btnHuy";
+            btnHuy.Size = new Size(80, 33);
+            btnHuy.TabIndex = 29;
+            btnHuy.Text = "Hủy";
+            btnHuy.UseVisualStyleBackColor = true;
+            // 
+            // btnLuu
+            // 
+            btnLuu.Enabled = false;
+            btnLuu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLuu.Location = new Point(309, 17);
+            btnLuu.Margin = new Padding(4);
+            btnLuu.Name = "btnLuu";
+            btnLuu.Size = new Size(80, 33);
+            btnLuu.TabIndex = 28;
+            btnLuu.Text = "Lưu";
+            btnLuu.UseVisualStyleBackColor = true;
+            // 
+            // btnXoa
+            // 
+            btnXoa.Enabled = false;
+            btnXoa.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnXoa.Location = new Point(207, 17);
+            btnXoa.Margin = new Padding(4);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(80, 33);
+            btnXoa.TabIndex = 27;
+            btnXoa.Text = "Xóa";
+            btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Enabled = false;
+            btnUpdate.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUpdate.Location = new Point(109, 17);
+            btnUpdate.Margin = new Padding(4);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(80, 33);
+            btnUpdate.TabIndex = 26;
+            btnUpdate.Text = "Cập nhật";
+            btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnThemTacGia
+            // 
+            btnThemTacGia.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnThemTacGia.Location = new Point(7, 17);
+            btnThemTacGia.Margin = new Padding(4);
+            btnThemTacGia.Name = "btnThemTacGia";
+            btnThemTacGia.Size = new Size(80, 33);
+            btnThemTacGia.TabIndex = 17;
+            btnThemTacGia.Text = "Thêm";
+            btnThemTacGia.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -119,67 +191,10 @@ namespace QLTV
             txtTimKiem.Size = new Size(200, 29);
             txtTimKiem.TabIndex = 17;
             // 
-            // btnHuy
-            // 
-            btnHuy.Enabled = false;
-            btnHuy.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnHuy.Location = new Point(788, 198);
-            btnHuy.Margin = new Padding(4);
-            btnHuy.Name = "btnHuy";
-            btnHuy.Size = new Size(80, 33);
-            btnHuy.TabIndex = 29;
-            btnHuy.Text = "Hủy";
-            btnHuy.UseVisualStyleBackColor = true;
-            // 
-            // btnLuu
-            // 
-            btnLuu.Enabled = false;
-            btnLuu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLuu.Location = new Point(687, 198);
-            btnLuu.Margin = new Padding(4);
-            btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(80, 33);
-            btnLuu.TabIndex = 28;
-            btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            btnXoa.Enabled = false;
-            btnXoa.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnXoa.Location = new Point(585, 198);
-            btnXoa.Margin = new Padding(4);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(80, 33);
-            btnXoa.TabIndex = 27;
-            btnXoa.Text = "Xóa";
-            btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdate
-            // 
-            btnUpdate.Enabled = false;
-            btnUpdate.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUpdate.Location = new Point(487, 198);
-            btnUpdate.Margin = new Padding(4);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(80, 33);
-            btnUpdate.TabIndex = 26;
-            btnUpdate.Text = "Cập nhật";
-            btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnThemTacGia
-            // 
-            btnThemTacGia.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnThemTacGia.Location = new Point(385, 198);
-            btnThemTacGia.Margin = new Padding(4);
-            btnThemTacGia.Name = "btnThemTacGia";
-            btnThemTacGia.Size = new Size(80, 33);
-            btnThemTacGia.TabIndex = 17;
-            btnThemTacGia.Text = "Thêm";
-            btnThemTacGia.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(comboBox2);
+            groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(txt_book_name);
             groupBox1.Controls.Add(label1);
@@ -195,7 +210,27 @@ namespace QLTV
             groupBox1.Size = new Size(1188, 133);
             groupBox1.TabIndex = 20;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Chức năng";
+            // 
+            // comboBox2
+            // 
+            comboBox2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(472, 84);
+            comboBox2.Margin = new Padding(4, 3, 4, 3);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(160, 29);
+            comboBox2.TabIndex = 18;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(367, 92);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(70, 21);
+            label5.TabIndex = 17;
+            label5.Text = "Thể loại";
             // 
             // comboBox1
             // 
@@ -252,17 +287,18 @@ namespace QLTV
             // txt_quantity
             // 
             txt_quantity.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_quantity.Location = new Point(471, 84);
+            txt_quantity.Location = new Point(794, 84);
             txt_quantity.Margin = new Padding(4, 3, 4, 3);
             txt_quantity.Name = "txt_quantity";
-            txt_quantity.Size = new Size(76, 29);
+            txt_quantity.Size = new Size(86, 29);
             txt_quantity.TabIndex = 15;
+            txt_quantity.TextChanged += txt_quantity_TextChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(373, 93);
+            label7.Location = new Point(693, 93);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(78, 21);
@@ -377,15 +413,16 @@ namespace QLTV
             Controls.Add(btnNextPage);
             Controls.Add(btnFirstPage);
             Controls.Add(btnPrePage);
-            Controls.Add(book_dataGridView);
+            Controls.Add(dgvSach);
             Controls.Add(panel1);
             Margin = new Padding(4, 3, 4, 3);
             Name = "formQuanLySach";
             Text = "Quản lý sách";
             Load += formQuanLySach_Load;
-            ((System.ComponentModel.ISupportInitialize)book_dataGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSach).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            groupBox3.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -395,7 +432,7 @@ namespace QLTV
         }
 
         #endregion
-        private DataGridView book_dataGridView;
+        private DataGridView dgvSach;
         private Panel panel1;
         private GroupBox groupBox2;
         private Label label4;
@@ -422,5 +459,8 @@ namespace QLTV
         private Button btnNextPage;
         private Button btnFirstPage;
         private Button btnPrePage;
+        private ComboBox comboBox2;
+        private Label label5;
+        private GroupBox groupBox3;
     }
 }

@@ -68,11 +68,13 @@ namespace QLTV
             btnNextPage = new Button();
             btnFirstPage = new Button();
             btnPrePage = new Button();
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
             group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbChonAnh).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // dgvNhanVien
@@ -82,7 +84,7 @@ namespace QLTV
             dgvNhanVien.BackgroundColor = SystemColors.ActiveCaption;
             dgvNhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvNhanVien.Location = new Point(-3, 264);
-            dgvNhanVien.Margin = new Padding(4, 4, 4, 4);
+            dgvNhanVien.Margin = new Padding(4);
             dgvNhanVien.Name = "dgvNhanVien";
             dgvNhanVien.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             dgvNhanVien.RowTemplate.Height = 100;
@@ -97,7 +99,7 @@ namespace QLTV
             panel1.Controls.Add(group);
             panel1.Controls.Add(label8);
             panel1.Location = new Point(-7, -1);
-            panel1.Margin = new Padding(4, 4, 4, 4);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
             panel1.Size = new Size(1241, 268);
             panel1.TabIndex = 24;
@@ -123,7 +125,7 @@ namespace QLTV
             cmbSearchRole.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbSearchRole.FormattingEnabled = true;
             cmbSearchRole.Location = new Point(46, 137);
-            cmbSearchRole.Margin = new Padding(4, 4, 4, 4);
+            cmbSearchRole.Margin = new Padding(4);
             cmbSearchRole.Name = "cmbSearchRole";
             cmbSearchRole.Size = new Size(263, 27);
             cmbSearchRole.TabIndex = 48;
@@ -144,7 +146,7 @@ namespace QLTV
             // 
             txtSearch.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtSearch.Location = new Point(46, 68);
-            txtSearch.Margin = new Padding(4, 4, 4, 4);
+            txtSearch.Margin = new Padding(4);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(263, 26);
             txtSearch.TabIndex = 38;
@@ -163,17 +165,13 @@ namespace QLTV
             // 
             // group
             // 
+            group.Controls.Add(groupBox1);
             group.Controls.Add(txtMatKhau);
             group.Controls.Add(label11);
             group.Controls.Add(txtTenNhanVien);
             group.Controls.Add(label10);
             group.Controls.Add(btnChonAnh);
-            group.Controls.Add(btnHuy);
             group.Controls.Add(ptbChonAnh);
-            group.Controls.Add(btnLuu);
-            group.Controls.Add(btnThem);
-            group.Controls.Add(btnXoa);
-            group.Controls.Add(btnUpdate);
             group.Controls.Add(label4);
             group.Controls.Add(cmbVaiTro);
             group.Controls.Add(label2);
@@ -193,7 +191,6 @@ namespace QLTV
             group.Size = new Size(811, 214);
             group.TabIndex = 20;
             group.TabStop = false;
-            group.Text = "Khu vực chỉnh sửa";
             // 
             // txtMatKhau
             // 
@@ -201,7 +198,7 @@ namespace QLTV
             txtMatKhau.Enabled = false;
             txtMatKhau.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtMatKhau.Location = new Point(243, 112);
-            txtMatKhau.Margin = new Padding(4, 4, 4, 4);
+            txtMatKhau.Margin = new Padding(4);
             txtMatKhau.Name = "txtMatKhau";
             txtMatKhau.Size = new Size(212, 26);
             txtMatKhau.TabIndex = 53;
@@ -223,7 +220,7 @@ namespace QLTV
             txtTenNhanVien.Enabled = false;
             txtTenNhanVien.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtTenNhanVien.Location = new Point(243, 75);
-            txtTenNhanVien.Margin = new Padding(4, 4, 4, 4);
+            txtTenNhanVien.Margin = new Padding(4);
             txtTenNhanVien.Name = "txtTenNhanVien";
             txtTenNhanVien.Size = new Size(212, 26);
             txtTenNhanVien.TabIndex = 51;
@@ -243,7 +240,7 @@ namespace QLTV
             // 
             btnChonAnh.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             btnChonAnh.Location = new Point(39, 110);
-            btnChonAnh.Margin = new Padding(4, 4, 4, 4);
+            btnChonAnh.Margin = new Padding(4);
             btnChonAnh.Name = "btnChonAnh";
             btnChonAnh.Size = new Size(80, 25);
             btnChonAnh.TabIndex = 49;
@@ -256,8 +253,8 @@ namespace QLTV
             // 
             btnHuy.Enabled = false;
             btnHuy.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnHuy.Location = new Point(707, 162);
-            btnHuy.Margin = new Padding(4, 4, 4, 4);
+            btnHuy.Location = new Point(390, 21);
+            btnHuy.Margin = new Padding(4);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(80, 33);
             btnHuy.TabIndex = 47;
@@ -280,8 +277,8 @@ namespace QLTV
             // 
             btnLuu.Enabled = false;
             btnLuu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLuu.Location = new Point(620, 162);
-            btnLuu.Margin = new Padding(4, 4, 4, 4);
+            btnLuu.Location = new Point(295, 21);
+            btnLuu.Margin = new Padding(4);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(80, 33);
             btnLuu.TabIndex = 46;
@@ -292,8 +289,8 @@ namespace QLTV
             // btnThem
             // 
             btnThem.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnThem.Location = new Point(358, 162);
-            btnThem.Margin = new Padding(4, 4, 4, 4);
+            btnThem.Location = new Point(22, 21);
+            btnThem.Margin = new Padding(4);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(80, 33);
             btnThem.TabIndex = 43;
@@ -305,8 +302,8 @@ namespace QLTV
             // 
             btnXoa.Enabled = false;
             btnXoa.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnXoa.Location = new Point(533, 162);
-            btnXoa.Margin = new Padding(4, 4, 4, 4);
+            btnXoa.Location = new Point(204, 21);
+            btnXoa.Margin = new Padding(4);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(80, 33);
             btnXoa.TabIndex = 45;
@@ -318,8 +315,8 @@ namespace QLTV
             // 
             btnUpdate.Enabled = false;
             btnUpdate.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUpdate.Location = new Point(445, 162);
-            btnUpdate.Margin = new Padding(4, 4, 4, 4);
+            btnUpdate.Location = new Point(112, 21);
+            btnUpdate.Margin = new Padding(4);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(80, 33);
             btnUpdate.TabIndex = 44;
@@ -345,7 +342,7 @@ namespace QLTV
             cmbVaiTro.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbVaiTro.FormattingEnabled = true;
             cmbVaiTro.Location = new Point(584, 110);
-            cmbVaiTro.Margin = new Padding(4, 4, 4, 4);
+            cmbVaiTro.Margin = new Padding(4);
             cmbVaiTro.Name = "cmbVaiTro";
             cmbVaiTro.Size = new Size(221, 27);
             cmbVaiTro.TabIndex = 42;
@@ -367,7 +364,7 @@ namespace QLTV
             txtUserName.Enabled = false;
             txtUserName.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtUserName.Location = new Point(243, 44);
-            txtUserName.Margin = new Padding(4, 4, 4, 4);
+            txtUserName.Margin = new Padding(4);
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(212, 26);
             txtUserName.TabIndex = 36;
@@ -411,7 +408,7 @@ namespace QLTV
             txtEmail.Enabled = false;
             txtEmail.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtEmail.Location = new Point(584, 42);
-            txtEmail.Margin = new Padding(4, 4, 4, 4);
+            txtEmail.Margin = new Padding(4);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(221, 26);
             txtEmail.TabIndex = 39;
@@ -433,7 +430,7 @@ namespace QLTV
             txtMaNhanVien.Enabled = false;
             txtMaNhanVien.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtMaNhanVien.Location = new Point(243, 13);
-            txtMaNhanVien.Margin = new Padding(4, 4, 4, 4);
+            txtMaNhanVien.Margin = new Padding(4);
             txtMaNhanVien.Name = "txtMaNhanVien";
             txtMaNhanVien.Size = new Size(212, 26);
             txtMaNhanVien.TabIndex = 35;
@@ -444,7 +441,7 @@ namespace QLTV
             txtSoDienThoai.Enabled = false;
             txtSoDienThoai.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtSoDienThoai.Location = new Point(584, 12);
-            txtSoDienThoai.Margin = new Padding(4, 4, 4, 4);
+            txtSoDienThoai.Margin = new Padding(4);
             txtSoDienThoai.Name = "txtSoDienThoai";
             txtSoDienThoai.Size = new Size(221, 26);
             txtSoDienThoai.TabIndex = 38;
@@ -456,7 +453,7 @@ namespace QLTV
             cmbGioiTinh.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbGioiTinh.FormattingEnabled = true;
             cmbGioiTinh.Location = new Point(584, 74);
-            cmbGioiTinh.Margin = new Padding(4, 4, 4, 4);
+            cmbGioiTinh.Margin = new Padding(4);
             cmbGioiTinh.Name = "cmbGioiTinh";
             cmbGioiTinh.Size = new Size(221, 27);
             cmbGioiTinh.TabIndex = 37;
@@ -529,6 +526,19 @@ namespace QLTV
             btnPrePage.Text = "<<";
             btnPrePage.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(btnHuy);
+            groupBox1.Controls.Add(btnLuu);
+            groupBox1.Controls.Add(btnThem);
+            groupBox1.Controls.Add(btnXoa);
+            groupBox1.Controls.Add(btnUpdate);
+            groupBox1.Location = new Point(219, 144);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(501, 65);
+            groupBox1.TabIndex = 54;
+            groupBox1.TabStop = false;
+            // 
             // formNhanVien
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -541,10 +551,10 @@ namespace QLTV
             Controls.Add(btnPrePage);
             Controls.Add(dgvNhanVien);
             Controls.Add(panel1);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "formNhanVien";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "formNhanVien";
+            Text = "Nhân viên";
             Load += formNhanVien_Load;
             ((System.ComponentModel.ISupportInitialize)dgvNhanVien).EndInit();
             panel1.ResumeLayout(false);
@@ -554,6 +564,7 @@ namespace QLTV
             group.ResumeLayout(false);
             group.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbChonAnh).EndInit();
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -597,5 +608,6 @@ namespace QLTV
         private Button btnNextPage;
         private Button btnFirstPage;
         private Button btnPrePage;
+        private GroupBox groupBox1;
     }
 }
