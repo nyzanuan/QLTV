@@ -61,7 +61,6 @@ namespace QLTV
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
-            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // txtNumberPage
@@ -410,7 +409,6 @@ namespace QLTV
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            groupBox3.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }

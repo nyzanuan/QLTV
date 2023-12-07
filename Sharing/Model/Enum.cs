@@ -9,7 +9,7 @@ namespace Sharing.Model
     public enum Gender
     {
         Nam,
-        Nu,
+        Nữ,
         
 
     }
