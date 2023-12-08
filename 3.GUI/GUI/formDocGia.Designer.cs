@@ -35,12 +35,6 @@ namespace QLTV
             btnFirstPage = new Button();
             btnPrePage = new Button();
             dgvDocGia = new DataGridView();
-            COL_ID = new DataGridViewTextBoxColumn();
-            COL_NAME = new DataGridViewTextBoxColumn();
-            COL_GENDER = new DataGridViewTextBoxColumn();
-            COL_PHONE = new DataGridViewTextBoxColumn();
-            COL_EMAIL = new DataGridViewTextBoxColumn();
-            COL_CREATEAT = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
             groupBox2 = new GroupBox();
             label4 = new Label();
@@ -65,6 +59,13 @@ namespace QLTV
             txt_phone = new TextBox();
             cBox_gioiTinh = new ComboBox();
             label8 = new Label();
+            COL_ID = new DataGridViewTextBoxColumn();
+            COL_IMAGE = new DataGridViewImageColumn();
+            COL_NAME = new DataGridViewTextBoxColumn();
+            COL_GENDER = new DataGridViewTextBoxColumn();
+            COL_PHONE = new DataGridViewTextBoxColumn();
+            COL_EMAIL = new DataGridViewTextBoxColumn();
+            COL_CREATEAT = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvDocGia).BeginInit();
             panel1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -145,7 +146,7 @@ namespace QLTV
             dgvDocGia.AllowUserToDeleteRows = false;
             dgvDocGia.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvDocGia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDocGia.Columns.AddRange(new DataGridViewColumn[] { COL_ID, COL_NAME, COL_GENDER, COL_PHONE, COL_EMAIL, COL_CREATEAT });
+            dgvDocGia.Columns.AddRange(new DataGridViewColumn[] { COL_ID, COL_IMAGE, COL_NAME, COL_GENDER, COL_PHONE, COL_EMAIL, COL_CREATEAT });
             dgvDocGia.Location = new Point(-5, 344);
             dgvDocGia.Margin = new Padding(5);
             dgvDocGia.MultiSelect = false;
@@ -155,60 +156,6 @@ namespace QLTV
             dgvDocGia.Size = new Size(1414, 425);
             dgvDocGia.TabIndex = 38;
             dgvDocGia.CellClick += dgvDocGia_CellClick;
-            // 
-            // COL_ID
-            // 
-            COL_ID.DataPropertyName = "CustomerId";
-            COL_ID.HeaderText = "Mã";
-            COL_ID.MinimumWidth = 20;
-            COL_ID.Name = "COL_ID";
-            COL_ID.ReadOnly = true;
-            COL_ID.Width = 125;
-            // 
-            // COL_NAME
-            // 
-            COL_NAME.DataPropertyName = "Name";
-            COL_NAME.HeaderText = "Tên";
-            COL_NAME.MinimumWidth = 100;
-            COL_NAME.Name = "COL_NAME";
-            COL_NAME.ReadOnly = true;
-            COL_NAME.Width = 200;
-            // 
-            // COL_GENDER
-            // 
-            COL_GENDER.DataPropertyName = "Gender";
-            COL_GENDER.HeaderText = "Giới tính";
-            COL_GENDER.MinimumWidth = 50;
-            COL_GENDER.Name = "COL_GENDER";
-            COL_GENDER.ReadOnly = true;
-            COL_GENDER.Width = 125;
-            // 
-            // COL_PHONE
-            // 
-            COL_PHONE.DataPropertyName = "Phone";
-            COL_PHONE.HeaderText = "Số điện thoại";
-            COL_PHONE.MinimumWidth = 6;
-            COL_PHONE.Name = "COL_PHONE";
-            COL_PHONE.ReadOnly = true;
-            COL_PHONE.Width = 125;
-            // 
-            // COL_EMAIL
-            // 
-            COL_EMAIL.DataPropertyName = "Email";
-            COL_EMAIL.HeaderText = "Email";
-            COL_EMAIL.MinimumWidth = 100;
-            COL_EMAIL.Name = "COL_EMAIL";
-            COL_EMAIL.ReadOnly = true;
-            COL_EMAIL.Width = 250;
-            // 
-            // COL_CREATEAT
-            // 
-            COL_CREATEAT.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            COL_CREATEAT.DataPropertyName = "CreateAt";
-            COL_CREATEAT.HeaderText = "Ngày đăng ký";
-            COL_CREATEAT.MinimumWidth = 6;
-            COL_CREATEAT.Name = "COL_CREATEAT";
-            COL_CREATEAT.ReadOnly = true;
             // 
             // panel1
             // 
@@ -247,6 +194,7 @@ namespace QLTV
             label4.Size = new Size(103, 27);
             label4.TabIndex = 38;
             label4.Text = "Tìm kiếm";
+            label4.Click += label4_Click;
             // 
             // txtTimKiem
             // 
@@ -502,6 +450,69 @@ namespace QLTV
             label8.Text = "Quản lý thông tin độc giả";
             label8.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // COL_ID
+            // 
+            COL_ID.DataPropertyName = "CustomerId";
+            COL_ID.HeaderText = "Mã";
+            COL_ID.MinimumWidth = 20;
+            COL_ID.Name = "COL_ID";
+            COL_ID.ReadOnly = true;
+            COL_ID.Width = 125;
+            // 
+            // COL_IMAGE
+            // 
+            COL_IMAGE.DataPropertyName = "Image";
+            COL_IMAGE.HeaderText = "hình";
+            COL_IMAGE.MinimumWidth = 6;
+            COL_IMAGE.Name = "COL_IMAGE";
+            COL_IMAGE.ReadOnly = true;
+            COL_IMAGE.Width = 125;
+            // 
+            // COL_NAME
+            // 
+            COL_NAME.DataPropertyName = "Name";
+            COL_NAME.HeaderText = "Tên";
+            COL_NAME.MinimumWidth = 100;
+            COL_NAME.Name = "COL_NAME";
+            COL_NAME.ReadOnly = true;
+            COL_NAME.Width = 200;
+            // 
+            // COL_GENDER
+            // 
+            COL_GENDER.DataPropertyName = "Gender";
+            COL_GENDER.HeaderText = "Giới tính";
+            COL_GENDER.MinimumWidth = 50;
+            COL_GENDER.Name = "COL_GENDER";
+            COL_GENDER.ReadOnly = true;
+            COL_GENDER.Width = 125;
+            // 
+            // COL_PHONE
+            // 
+            COL_PHONE.DataPropertyName = "Phone";
+            COL_PHONE.HeaderText = "Số điện thoại";
+            COL_PHONE.MinimumWidth = 6;
+            COL_PHONE.Name = "COL_PHONE";
+            COL_PHONE.ReadOnly = true;
+            COL_PHONE.Width = 125;
+            // 
+            // COL_EMAIL
+            // 
+            COL_EMAIL.DataPropertyName = "Email";
+            COL_EMAIL.HeaderText = "Email";
+            COL_EMAIL.MinimumWidth = 100;
+            COL_EMAIL.Name = "COL_EMAIL";
+            COL_EMAIL.ReadOnly = true;
+            COL_EMAIL.Width = 250;
+            // 
+            // COL_CREATEAT
+            // 
+            COL_CREATEAT.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            COL_CREATEAT.DataPropertyName = "CreateAt";
+            COL_CREATEAT.HeaderText = "Ngày đăng ký";
+            COL_CREATEAT.MinimumWidth = 6;
+            COL_CREATEAT.Name = "COL_CREATEAT";
+            COL_CREATEAT.ReadOnly = true;
+            // 
             // formDocGia
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -564,6 +575,7 @@ namespace QLTV
         private Button btnChonAnh;
         private _3.GUI.Helper.RoundedPictureBox ptbChonAnh;
         private DataGridViewTextBoxColumn COL_ID;
+        private DataGridViewImageColumn COL_IMAGE;
         private DataGridViewTextBoxColumn COL_NAME;
         private DataGridViewTextBoxColumn COL_GENDER;
         private DataGridViewTextBoxColumn COL_PHONE;
