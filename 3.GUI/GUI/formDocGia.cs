@@ -213,6 +213,7 @@ namespace QLTV
                     {
                         MessageBox.Show("Xóa thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         loadData();
+                        refreshField();
                     }
                     else
                     {
@@ -288,10 +289,14 @@ namespace QLTV
                 txt_name.Text = customer.Name;
                 txt_phone.Text = customer.Phone;
                 txt_email.Text = customer.Email;
-                //settingUpd_Del(true);
                 setting(false, false, true);
 
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
