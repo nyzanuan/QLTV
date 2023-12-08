@@ -75,9 +75,10 @@ namespace QLTV
             // 
             // txtNumberPage
             // 
+            txtNumberPage.Anchor = AnchorStyles.Bottom;
             txtNumberPage.Enabled = false;
             txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            txtNumberPage.Location = new Point(687, 781);
+            txtNumberPage.Location = new Point(679, 783);
             txtNumberPage.Margin = new Padding(5);
             txtNumberPage.Multiline = true;
             txtNumberPage.Name = "txtNumberPage";
@@ -88,8 +89,9 @@ namespace QLTV
             // 
             // btnLastPage
             // 
+            btnLastPage.Anchor = AnchorStyles.Bottom;
             btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLastPage.Location = new Point(875, 780);
+            btnLastPage.Location = new Point(865, 779);
             btnLastPage.Margin = new Padding(5);
             btnLastPage.Name = "btnLastPage";
             btnLastPage.Size = new Size(91, 31);
@@ -100,8 +102,9 @@ namespace QLTV
             // 
             // btnNextPage
             // 
+            btnNextPage.Anchor = AnchorStyles.Bottom;
             btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNextPage.Location = new Point(776, 780);
+            btnNextPage.Location = new Point(764, 779);
             btnNextPage.Margin = new Padding(5);
             btnNextPage.Name = "btnNextPage";
             btnNextPage.Size = new Size(91, 31);
@@ -112,8 +115,9 @@ namespace QLTV
             // 
             // btnFirstPage
             // 
+            btnFirstPage.Anchor = AnchorStyles.Bottom;
             btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFirstPage.Location = new Point(477, 780);
+            btnFirstPage.Location = new Point(478, 779);
             btnFirstPage.Margin = new Padding(5);
             btnFirstPage.Name = "btnFirstPage";
             btnFirstPage.Size = new Size(91, 31);
@@ -124,8 +128,9 @@ namespace QLTV
             // 
             // btnPrePage
             // 
+            btnPrePage.Anchor = AnchorStyles.Bottom;
             btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPrePage.Location = new Point(577, 780);
+            btnPrePage.Location = new Point(578, 779);
             btnPrePage.Margin = new Padding(5);
             btnPrePage.Name = "btnPrePage";
             btnPrePage.Size = new Size(91, 31);
@@ -138,6 +143,7 @@ namespace QLTV
             // 
             dgvDocGia.AllowUserToAddRows = false;
             dgvDocGia.AllowUserToDeleteRows = false;
+            dgvDocGia.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvDocGia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDocGia.Columns.AddRange(new DataGridViewColumn[] { COL_ID, COL_NAME, COL_GENDER, COL_PHONE, COL_EMAIL, COL_CREATEAT });
             dgvDocGia.Location = new Point(-5, 344);
@@ -146,7 +152,7 @@ namespace QLTV
             dgvDocGia.Name = "dgvDocGia";
             dgvDocGia.ReadOnly = true;
             dgvDocGia.RowHeadersWidth = 51;
-            dgvDocGia.Size = new Size(1414, 419);
+            dgvDocGia.Size = new Size(1414, 425);
             dgvDocGia.TabIndex = 38;
             dgvDocGia.CellClick += dgvDocGia_CellClick;
             // 
@@ -206,6 +212,7 @@ namespace QLTV
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(groupBox2);
             panel1.Controls.Add(groupBox1);
@@ -218,6 +225,7 @@ namespace QLTV
             // 
             // groupBox2
             // 
+            groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(txtTimKiem);
             groupBox2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -252,6 +260,7 @@ namespace QLTV
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.Controls.Add(btnChonAnh);
             groupBox1.Controls.Add(ptbChonAnh);
             groupBox1.Controls.Add(groupBox3);
@@ -482,14 +491,16 @@ namespace QLTV
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.Top;
             label8.AutoSize = true;
             label8.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(505, 5);
+            label8.Location = new Point(470, -1);
             label8.Margin = new Padding(5, 0, 5, 0);
             label8.Name = "label8";
             label8.Size = new Size(444, 45);
             label8.TabIndex = 19;
             label8.Text = "Quản lý thông tin độc giả";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // formDocGia
             // 

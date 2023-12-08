@@ -12,6 +12,7 @@ namespace _3.GUI.Data
     {
         private static UserInfo instance;
 
+        public int Id { get; private set; }
         public string Username { get; private set; }
         public string Password { get; private set; }
         public UserRole Role { get; private set; }
@@ -30,10 +31,11 @@ namespace _3.GUI.Data
             }
         }
 
-        public void SetUserInfo(string username, UserRole role)
+        public void SetUserInfo(string username, UserRole role, int id)
         {
             Username = username;
             this.Role = role;
+            Id = id;
         }
     }
 

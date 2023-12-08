@@ -17,8 +17,13 @@ namespace _3.GUI.Helper
 
             using (MemoryStream stream = new MemoryStream())
             {
-                pictureBox.Image.Save(stream, pictureBox.Image.RawFormat);
-                return stream.ToArray();
+                using (Bitmap bitmap = new Bitmap(pictureBox.Image))
+                {
+                    bitmap.Save(stream, pictureBox.Image.RawFormat);
+                    return stream.ToArray();
+                }
+                //pictureBox.Image.Save(stream, pictureBox.Image.RawFormat);
+                //return stream.ToArray();
             }
         }
     }

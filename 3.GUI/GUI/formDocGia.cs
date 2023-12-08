@@ -1,6 +1,7 @@
 ﻿using _1.DAL.Model;
 using _2.BUS.IService;
 using _2.BUS.Service;
+using _3.GUI.Data;
 using _3.GUI.Helper;
 using Sharing.Model;
 using Sharing.ReturnModel;
@@ -80,50 +81,22 @@ namespace QLTV
             loadData();
 
         }
-        private void settingAdd(bool bl_add)
+        private void setting(bool bl_readOnly, bool bl_add, bool bl_upd_del)
         {
             txt_name.ReadOnly =
             txt_phone.ReadOnly =
-            txt_email.ReadOnly = !bl_add;
-
+            txt_email.ReadOnly = bl_readOnly;
             cBox_gioiTinh.Enabled =
-            btnChonAnh.Enabled =
-            btnLuu.Enabled =
-            btnHuy.Enabled = bl_add;
+            btnChonAnh.Enabled = !bl_readOnly;
 
-            btnThem.Enabled =
+            btnHuy.Enabled = bl_add || bl_upd_del;
+
+            btnLuu.Enabled = bl_add;
+            btnThem.Enabled = bl_readOnly;
+
             btnUpdate.Enabled =
-            btnXoa.Enabled = !bl_add;
-        }
-        private void settingUpd_Del(bool bl_upd_del)
-        {
-            txt_name.ReadOnly =
-            txt_phone.ReadOnly =
-            txt_email.ReadOnly = !bl_upd_del;
+            btnXoa.Enabled = bl_upd_del;
 
-            cBox_gioiTinh.Enabled =
-            btnChonAnh.Enabled =
-            btnUpdate.Enabled =
-            btnXoa.Enabled =
-            btnLuu.Enabled =
-            btnHuy.Enabled = bl_upd_del;
-
-            btnThem.Enabled = !bl_upd_del;
-        }
-        private void settingCancel(bool bl_cancel)
-        {
-            txt_name.ReadOnly =
-            txt_phone.ReadOnly =
-            txt_email.ReadOnly = bl_cancel;
-
-            cBox_gioiTinh.Enabled =
-            btnChonAnh.Enabled =
-            btnUpdate.Enabled =
-            btnXoa.Enabled =
-            btnLuu.Enabled =
-            btnHuy.Enabled = !bl_cancel;
-
-            btnThem.Enabled = bl_cancel;
         }
         private void refreshField()
         {
@@ -138,7 +111,7 @@ namespace QLTV
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            settingAdd(true);
+            setting(false, true, false);
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -150,7 +123,8 @@ namespace QLTV
                 Email = txt_email.Text,
                 Gender = (Gender)cBox_gioiTinh.SelectedItem,
                 CreateAt = DateTime.Now,
-            };
+                UserIdCreate = UserInfo.Instance.Id
+        };
             if (ptbChonAnh.Image != null)
             {
                 customer.Image = HelperImage.ChangeImageToByte(ptbChonAnh);
@@ -169,7 +143,7 @@ namespace QLTV
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            settingCancel(true);
+            setting(true, false, false);
             refreshField();
         }
 
@@ -295,7 +269,7 @@ namespace QLTV
                 int id = Convert.ToInt16(dgvDocGia.Rows[e.RowIndex].Cells[0].Value.ToString());
                 Customer customer = _customerService.GetCustomer(id);
 
-                if (customer.Image != null && customer.Image.Length>0)
+                if (customer.Image != null && customer.Image.Length > 0)
                 {
                     if (customer.Image is byte[] imageBytes)
                     {
@@ -314,7 +288,8 @@ namespace QLTV
                 txt_name.Text = customer.Name;
                 txt_phone.Text = customer.Phone;
                 txt_email.Text = customer.Email;
-                settingUpd_Del(true);
+                //settingUpd_Del(true);
+                setting(false, false, true);
 
             }
         }
