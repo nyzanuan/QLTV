@@ -37,11 +37,11 @@ namespace QLTV
             dgvBaoCao = new DataGridView();
             panel1 = new Panel();
             groupBox1 = new GroupBox();
+            cbLuaChon = new ComboBox();
             groupBox3 = new GroupBox();
             btnPDF = new Button();
             btnUpdate = new Button();
             label8 = new Label();
-            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvBaoCao).BeginInit();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -113,6 +113,7 @@ namespace QLTV
             dgvBaoCao.Margin = new Padding(4);
             dgvBaoCao.Name = "dgvBaoCao";
             dgvBaoCao.RowHeadersWidth = 51;
+            dgvBaoCao.ScrollBars = ScrollBars.Horizontal;
             dgvBaoCao.Size = new Size(1237, 349);
             dgvBaoCao.TabIndex = 52;
             // 
@@ -129,7 +130,7 @@ namespace QLTV
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(cbLuaChon);
             groupBox1.Controls.Add(groupBox3);
             groupBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.Location = new Point(164, 63);
@@ -140,6 +141,14 @@ namespace QLTV
             groupBox1.TabIndex = 20;
             groupBox1.TabStop = false;
             groupBox1.Text = "Tùy chọn";
+            // 
+            // cbLuaChon
+            // 
+            cbLuaChon.FormattingEnabled = true;
+            cbLuaChon.Location = new Point(198, 41);
+            cbLuaChon.Name = "cbLuaChon";
+            cbLuaChon.Size = new Size(262, 29);
+            cbLuaChon.TabIndex = 37;
             // 
             // groupBox3
             // 
@@ -161,6 +170,7 @@ namespace QLTV
             btnPDF.TabIndex = 31;
             btnPDF.Text = "Tạo file PDF";
             btnPDF.UseVisualStyleBackColor = true;
+            btnPDF.Click += btnPDF_Click;
             // 
             // btnUpdate
             // 
@@ -184,14 +194,6 @@ namespace QLTV
             label8.Size = new Size(142, 42);
             label8.TabIndex = 19;
             label8.Text = "Báo cáo";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(198, 41);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(262, 29);
-            comboBox1.TabIndex = 37;
             // 
             // formBaoCao
             // 
@@ -238,6 +240,6 @@ namespace QLTV
         private Label label3;
         private TextBox txt_id;
         private Label label8;
-        private ComboBox comboBox1;
+        private ComboBox cbLuaChon;
     }
 }

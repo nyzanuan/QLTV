@@ -124,7 +124,7 @@ namespace QLTV
                 Gender = (Gender)cBox_gioiTinh.SelectedItem,
                 CreateAt = DateTime.Now,
                 UserIdCreate = UserInfo.Instance.Id
-        };
+             };
             if (ptbChonAnh.Image != null)
             {
                 customer.Image = HelperImage.ChangeImageToByte(ptbChonAnh);
