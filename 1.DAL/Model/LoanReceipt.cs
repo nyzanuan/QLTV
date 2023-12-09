@@ -12,7 +12,6 @@ namespace _1.DAL.Model
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LoanReceiptId { get; set; }
-        public int ReceiptId { get; set; }
         public int BookId { get; set; }
         public Book Book { get; set; }
         public int CustomerId { get; set; }

@@ -20,7 +20,7 @@ namespace QLTV
         {
             InitializeComponent();
             _userService = new UserService();
-           
+
             searchTimer = new Timer();
             searchTimer.Interval = 500;
             searchTimer.Tick += SearchTimer_Tick;
@@ -138,7 +138,7 @@ namespace QLTV
                 Gender = (Gender)cmbGioiTinh.SelectedValue,
                 Image = ptbChonAnh.Image != null ? HelperImage.ChangeImageToByte(ptbChonAnh) : null,
             };
-            ValueReturn result =  await _userService.UpdateUser(user);
+            ValueReturn result = await _userService.UpdateUser(user);
             if (result.Status)
             {
                 MessageBox.Show("Cập nhật thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -183,11 +183,11 @@ namespace QLTV
                     Username = txtUserName.Text,
                     Phone = txtSoDienThoai.Text,
                     FullName = txtTenNhanVien.Text,
-                    Gender =(Gender) cmbGioiTinh.SelectedValue,
+                    Gender = (Gender)cmbGioiTinh.SelectedValue,
                     Role = (UserRole)cmbVaiTro.SelectedValue,
                     Email = txtEmail.Text,
                     Password = txtMatKhau.Text,
-                    
+
                 };
                 if (ptbChonAnh.Image != null)
                 {
@@ -234,7 +234,7 @@ namespace QLTV
             btnThem.Enabled = true;
             btnXoa.Enabled = false;
 
-            
+
         }
 
         private void btnFirstPage_Click(object sender, EventArgs e)
@@ -364,6 +364,6 @@ namespace QLTV
             searchTimer.Start();
         }
 
-        
+
     }
 }

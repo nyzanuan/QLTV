@@ -1,17 +1,12 @@
 ﻿using Sharing.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _3.GUI.Data
 {
-   
+
     public class UserInfo
     {
         private static UserInfo instance;
-
+        public int UserId { get; set; }
         public string Username { get; private set; }
         public string Password { get; private set; }
         public UserRole Role { get; private set; }

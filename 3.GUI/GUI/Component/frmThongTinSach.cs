@@ -1,36 +1,48 @@
-﻿using _1.DAL.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+﻿
 namespace _3.GUI.GUI.Component
 {
     public partial class frmThongTinSach : Form
     {
-       
-        public frmThongTinSach(Book book)
+        private Size panelSize;
+        public frmThongTinSach(byte[]? ImagePar, string title, Size panelSize)
         {
             InitializeComponent();
 
-            if (book.Image != null && book.Image.Length > 0)
+
+
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+
+
+
+            ptbHinhAnh.SizeMode = PictureBoxSizeMode.Zoom;
+
+
+            lblTitle.Text = title;
+
+            tableLayoutPanel1.Controls.Add(ptbHinhAnh, 0, 0);
+            tableLayoutPanel1.Controls.Add(lblTitle, 0, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            if (ImagePar != null && ImagePar.Length > 0)
             {
-                using (MemoryStream ms = new MemoryStream(book.Image))
+                using (MemoryStream ms = new MemoryStream(ImagePar))
                 {
                     Image image = Image.FromStream(ms);
                     ptbHinhAnh.Image = image;
                 }
             }
+
+
+            Controls.Add(tableLayoutPanel1);
+
+
+            this.panelSize = panelSize;
+            lblTitle.MaximumSize = new Size(this.panelSize.Width, 20);
+            Size = new Size(this.panelSize.Width, this.panelSize.Height);
         }
 
         private void frmThongTinSach_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

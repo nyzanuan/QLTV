@@ -1,15 +1,16 @@
-﻿using Sharing.Model;
+﻿using _1.DAL.Model;
+using Sharing.Model;
 using Sharing.ReturnModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _1.DAL.IRepository
 {
     public interface IReceiptRepository
     {
+        Task<ValueReturn> AddLoanReceipt(LoanReceipt newLoan);
+        bool DeleteLoanReceipt(int loanId);
+        List<Book> getAllBook(string? search);
+        List<Customer> getAllCustomer(string? search);
         ValueReturn GetAllReceipt(int pageIndex, int pageSize, string? search, LoanReceiptStatus? loanReceiptStatus);
+        Task<ValueReturn> UpdateLoanReceipt(LoanReceipt newLoan);
     }
 }

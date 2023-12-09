@@ -28,60 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongTinSach));
+            tableLayoutPanel1 = new TableLayoutPanel();
+            lblTitle = new Label();
             ptbHinhAnh = new PictureBox();
-            lblTenSach = new Label();
-            panel1.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbHinhAnh).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // tableLayoutPanel1
             // 
-            panel1.Controls.Add(lblTenSach);
-            panel1.Controls.Add(ptbHinhAnh);
-            panel1.Location = new Point(9, 8);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(256, 349);
-            panel1.TabIndex = 0;
+            tableLayoutPanel1.AutoSize = true;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(lblTitle, 0, 1);
+            tableLayoutPanel1.Controls.Add(ptbHinhAnh, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel1.Size = new Size(301, 365);
+            tableLayoutPanel1.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            lblTitle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 7.8F, FontStyle.Italic, GraphicsUnit.Point);
+            lblTitle.Location = new Point(20, 325);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(261, 40);
+            lblTitle.TabIndex = 1;
+            lblTitle.Text = "Sách về tình yêu tuổi học trò, xin chao cacac ";
             // 
             // ptbHinhAnh
             // 
-            ptbHinhAnh.Location = new Point(9, 6);
+            ptbHinhAnh.Dock = DockStyle.Fill;
+            ptbHinhAnh.Image = (Image)resources.GetObject("ptbHinhAnh.Image");
+            ptbHinhAnh.Location = new Point(3, 3);
             ptbHinhAnh.Name = "ptbHinhAnh";
-            ptbHinhAnh.Size = new Size(240, 287);
+            ptbHinhAnh.Size = new Size(295, 319);
+            ptbHinhAnh.SizeMode = PictureBoxSizeMode.Zoom;
             ptbHinhAnh.TabIndex = 0;
             ptbHinhAnh.TabStop = false;
-            // 
-            // lblTenSach
-            // 
-            lblTenSach.AutoSize = true;
-            lblTenSach.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTenSach.Location = new Point(82, 311);
-            lblTenSach.Name = "lblTenSach";
-            lblTenSach.Size = new Size(84, 28);
-            lblTenSach.TabIndex = 1;
-            lblTenSach.Text = "Tên sách";
-            lblTenSach.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // frmThongTinSach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(274, 365);
-            Controls.Add(panel1);
+            ClientSize = new Size(301, 365);
+            Controls.Add(tableLayoutPanel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmThongTinSach";
             Text = "frmThongTinSach";
             Load += frmThongTinSach_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbHinhAnh).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
-        private Label lblTenSach;
+        private TableLayoutPanel tableLayoutPanel1;
         private PictureBox ptbHinhAnh;
+        private Label lblTitle;
     }
 }
