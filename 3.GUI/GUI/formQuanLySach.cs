@@ -1,19 +1,9 @@
 ﻿using _1.DAL.Model;
 using _2.BUS.IService;
 using _2.BUS.Service;
-using _3.GUI.Data;
 using _3.GUI.Helper;
 using Sharing.Model;
 using Sharing.ReturnModel;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 namespace QLTV
 {
@@ -173,7 +163,7 @@ namespace QLTV
                 Name = txt_book_name.Text,
                 Title = txt_title.Text,
                 AvailableCopies = Convert.ToInt16(txt_quantity.Text),
-                TotalCopies = Convert.ToInt16(txt_quantity.Text)+borrowedCopies,
+                TotalCopies = Convert.ToInt16(txt_quantity.Text) + borrowedCopies,
                 Status = (BookStatus)cBox_Status.SelectedItem,
                 AuthorId = Convert.ToInt16(cBox_Author.SelectedValue),
                 LanguageId = Convert.ToInt16(cBox_language.SelectedValue),

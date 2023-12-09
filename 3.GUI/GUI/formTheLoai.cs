@@ -1,19 +1,8 @@
 ﻿using _1.DAL.Model;
 using _2.BUS.IService;
 using _2.BUS.Service;
-using _3.GUI.Data;
 using _3.GUI.Helper;
-using Sharing.Model;
 using Sharing.ReturnModel;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
 namespace _3.GUI.GUI

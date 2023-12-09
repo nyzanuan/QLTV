@@ -1,4 +1,3 @@
-using _3.GUI.GUI;
 using QLTV;
 
 namespace _3.GUI
@@ -14,7 +13,7 @@ namespace _3.GUI
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new formQuanLySach());
+            Application.Run(new formLogin());
         }
     }
 }
