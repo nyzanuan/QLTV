@@ -5,15 +5,6 @@ using _3.GUI.Data;
 using _3.GUI.Helper;
 using Sharing.Model;
 using Sharing.ReturnModel;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
 namespace QLTV
@@ -123,8 +114,8 @@ namespace QLTV
                 Email = txt_email.Text,
                 Gender = (Gender)cBox_gioiTinh.SelectedItem,
                 CreateAt = DateTime.Now,
-                UserIdCreate = UserInfo.Instance.Id
-             };
+                UserIdCreate = UserInfo.Instance.UserId,
+            };
             if (ptbChonAnh.Image != null)
             {
                 customer.Image = HelperImage.ChangeImageToByte(ptbChonAnh);
