@@ -154,8 +154,14 @@ namespace QLTV
 
         private void trảSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formTraSach formTraSach = new formTraSach();   
+            formTraSach formTraSach = new formTraSach();
             OpenForm(formTraSach);
+        }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            formTaiKhoan formTaiKhoan = new formTaiKhoan();
+            OpenForm(formTaiKhoan);
         }
     }
 }

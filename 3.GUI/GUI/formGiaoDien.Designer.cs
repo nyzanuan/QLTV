@@ -29,10 +29,12 @@ namespace QLTV
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
+            btnMuonSach = new ToolStripMenuItem();
+            dateTimePicker1 = new DateTimePicker();
+            panel1 = new Panel();
             heThong_StripMenu = new ToolStripMenuItem();
-            btnDangXuat = new ToolStripMenuItem();
             btnTaiKhoan = new ToolStripMenuItem();
+            btnDangXuat = new ToolStripMenuItem();
             btnThoat = new ToolStripMenuItem();
             danhMuc_toolStripMenu = new ToolStripMenuItem();
             btnQuanLySach = new ToolStripMenuItem();
@@ -47,49 +49,66 @@ namespace QLTV
             timKiem_StripMenu = new ToolStripMenuItem();
             btnTimKiemDocGia = new ToolStripMenuItem();
             baoCao_StripMenu = new ToolStripMenuItem();
-            btnMuonSach = new ToolStripMenuItem();
-            dateTimePicker1 = new DateTimePicker();
-            panel1 = new Panel();
+            menuStrip1 = new MenuStrip();
+            toolStripTextBox1 = new ToolStripTextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // menuStrip1
+            // btnMuonSach
             // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { heThong_StripMenu, danhMuc_toolStripMenu, muonSach_StripMenu, timKiem_StripMenu, baoCao_StripMenu });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 2, 0, 2);
-            menuStrip1.Size = new Size(1222, 29);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            btnMuonSach.Name = "btnMuonSach";
+            btnMuonSach.Size = new Size(224, 32);
+            btnMuonSach.Text = "Mượn sách";
+            btnMuonSach.Click += mượnSáchToolStripMenuItem_Click;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.CustomFormat = "dddd, MMMM dd, yyyy HH:mm tt";
+            dateTimePicker1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.Location = new Point(850, 4);
+            dateTimePicker1.Margin = new Padding(4);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(366, 29);
+            dateTimePicker1.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            panel1.AutoScroll = true;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Location = new Point(0, 37);
+            panel1.Margin = new Padding(4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1228, 845);
+            panel1.TabIndex = 2;
             // 
             // heThong_StripMenu
             // 
-            heThong_StripMenu.DropDownItems.AddRange(new ToolStripItem[] { btnDangXuat, btnTaiKhoan, btnThoat });
+            heThong_StripMenu.DropDownItems.AddRange(new ToolStripItem[] { btnTaiKhoan, btnDangXuat, btnThoat });
             heThong_StripMenu.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             heThong_StripMenu.Name = "heThong_StripMenu";
             heThong_StripMenu.Size = new Size(90, 25);
             heThong_StripMenu.Text = "Hệ thống";
             // 
+            // btnTaiKhoan
+            // 
+            btnTaiKhoan.Name = "btnTaiKhoan";
+            btnTaiKhoan.Size = new Size(160, 26);
+            btnTaiKhoan.Text = "Tài khoản";
+            btnTaiKhoan.Click += btnTaiKhoan_Click;
+            // 
             // btnDangXuat
             // 
             btnDangXuat.Image = _3.GUI.Properties.Resources.account_25;
             btnDangXuat.Name = "btnDangXuat";
-            btnDangXuat.Size = new Size(156, 26);
+            btnDangXuat.Size = new Size(160, 26);
             btnDangXuat.Text = "Đăng xuất";
             btnDangXuat.Click += đăngXuấtToolStripMenuItem_Click;
-            // 
-            // btnTaiKhoan
-            // 
-            btnTaiKhoan.Name = "btnTaiKhoan";
-            btnTaiKhoan.Size = new Size(156, 26);
-            btnTaiKhoan.Text = "Tài khoản";
             // 
             // btnThoat
             // 
             btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(156, 26);
+            btnThoat.Size = new Size(160, 26);
             btnThoat.Text = "Thoát";
             btnThoat.Click += btnThoat_Click;
             // 
@@ -155,14 +174,14 @@ namespace QLTV
             // mượnSáchToolStripMenuItem
             // 
             mượnSáchToolStripMenuItem.Name = "mượnSáchToolStripMenuItem";
-            mượnSáchToolStripMenuItem.Size = new Size(180, 26);
+            mượnSáchToolStripMenuItem.Size = new Size(164, 26);
             mượnSáchToolStripMenuItem.Text = "Mượn sách";
             mượnSáchToolStripMenuItem.Click += mượnSáchToolStripMenuItem_Click_1;
             // 
             // trảSáchToolStripMenuItem
             // 
             trảSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
-            trảSáchToolStripMenuItem.Size = new Size(180, 26);
+            trảSáchToolStripMenuItem.Size = new Size(164, 26);
             trảSáchToolStripMenuItem.Text = "Trả sách";
             trảSáchToolStripMenuItem.Click += trảSáchToolStripMenuItem_Click;
             // 
@@ -189,33 +208,23 @@ namespace QLTV
             baoCao_StripMenu.Text = "Báo cáo";
             baoCao_StripMenu.Click += baoCao_StripMenu_Click;
             // 
-            // btnMuonSach
+            // menuStrip1
             // 
-            btnMuonSach.Name = "btnMuonSach";
-            btnMuonSach.Size = new Size(224, 32);
-            btnMuonSach.Text = "Mượn sách";
-            btnMuonSach.Click += mượnSáchToolStripMenuItem_Click;
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { heThong_StripMenu, danhMuc_toolStripMenu, muonSach_StripMenu, timKiem_StripMenu, baoCao_StripMenu, toolStripTextBox1 });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(7, 2, 0, 2);
+            menuStrip1.Size = new Size(1222, 29);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            menuStrip1.UseWaitCursor = true;
             // 
-            // dateTimePicker1
+            // toolStripTextBox1
             // 
-            dateTimePicker1.CustomFormat = "dddd, MMMM dd, yyyy HH:mm tt";
-            dateTimePicker1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(788, 4);
-            dateTimePicker1.Margin = new Padding(4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(425, 29);
-            dateTimePicker1.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            panel1.AutoScroll = true;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Location = new Point(0, 37);
-            panel1.Margin = new Padding(4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1228, 845);
-            panel1.TabIndex = 2;
+            toolStripTextBox1.BorderStyle = BorderStyle.FixedSingle;
+            toolStripTextBox1.Name = "toolStripTextBox1";
+            toolStripTextBox1.Size = new Size(100, 25);
             // 
             // formGiaoDien
             // 
@@ -240,27 +249,27 @@ namespace QLTV
         }
 
         #endregion
-
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem heThong_StripMenu;
-        private ToolStripMenuItem danhMuc_toolStripMenu;
-        private ToolStripMenuItem muonSach_StripMenu;
-        private ToolStripMenuItem timKiem_StripMenu;
-        private ToolStripMenuItem baoCao_StripMenu;
         private DateTimePicker dateTimePicker1;
+        private ToolStripMenuItem btnMuonSach;
+        private Panel panel1;
+        private ToolStripMenuItem heThong_StripMenu;
+        private ToolStripMenuItem btnTaiKhoan;
+        private ToolStripMenuItem btnDangXuat;
+        private ToolStripMenuItem btnThoat;
+        private ToolStripMenuItem danhMuc_toolStripMenu;
         private ToolStripMenuItem btnQuanLySach;
         private ToolStripMenuItem btnQuanLyTacGia;
-        private ToolStripMenuItem btnDangXuat;
-        private ToolStripMenuItem btnTaiKhoan;
         private ToolStripMenuItem btnQuanLyDocGia;
-        private ToolStripMenuItem btnMuonSach;
-        private ToolStripMenuItem btnTimKiemDocGia;
         private ToolStripMenuItem btnQuanLyNhanVien;
-        private ToolStripMenuItem btnThoat;
-        private Panel panel1;
-        private ToolStripMenuItem trảSáchToolStripMenuItem;
-        private ToolStripMenuItem mượnSáchToolStripMenuItem;
         private ToolStripMenuItem thểLoạiToolStripMenuItem;
         private ToolStripMenuItem nhàXuấtBảnToolStripMenuItem;
+        private ToolStripMenuItem muonSach_StripMenu;
+        private ToolStripMenuItem mượnSáchToolStripMenuItem;
+        private ToolStripMenuItem trảSáchToolStripMenuItem;
+        private ToolStripMenuItem timKiem_StripMenu;
+        private ToolStripMenuItem btnTimKiemDocGia;
+        private ToolStripMenuItem baoCao_StripMenu;
+        private MenuStrip menuStrip1;
+        private ToolStripTextBox toolStripTextBox1;
     }
 }

@@ -1,6 +1,4 @@
-﻿using Sharing.Model;
-
-namespace _3.GUI.Data
+﻿namespace _3.GUI.Data
 {
 
     public class UserInfo
@@ -25,10 +23,11 @@ namespace _3.GUI.Data
             }
         }
 
-        public void SetUserInfo(string username, UserRole role)
+        public void SetUserInfo(string username, UserRole role, int id)
         {
             Username = username;
             this.Role = role;
+            Id = id;
         }
     }
 

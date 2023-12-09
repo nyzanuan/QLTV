@@ -22,7 +22,7 @@ namespace QLTV
             if (result.Status)
             {
                 User user = (User)result.Value.ListElemnent;
-                UserInfo.Instance.SetUserInfo(user.Username, user.Role);
+                UserInfo.Instance.SetUserInfo(user.Username, user.Role, user.UserId);
                 formGiaoDien f = new formGiaoDien();
                 f.DangXuat += F_DangXuat; 
                 f.Show();
@@ -56,7 +56,7 @@ namespace QLTV
         {
             (sender as formGiaoDien).isClose = false;
             (sender as formGiaoDien).Close();
-            UserInfo.Instance.SetUserInfo("", UserRole.User);
+            UserInfo.Instance.SetUserInfo("", UserRole.User, -1);
 
             this.Show();
         }
