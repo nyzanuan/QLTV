@@ -34,11 +34,10 @@
             btnFirstPage = new Button();
             btnPrePage = new Button();
             dgvNXB = new DataGridView();
-            panel1 = new Panel();
-            groupBox2 = new GroupBox();
+            panelTop = new Panel();
             label4 = new Label();
             txtTimKiem = new TextBox();
-            groupBox1 = new GroupBox();
+            label8 = new Label();
             label2 = new Label();
             txtDiaChi = new TextBox();
             btnHuy = new Button();
@@ -50,18 +49,19 @@
             label1 = new Label();
             label3 = new Label();
             txtMa = new TextBox();
-            label8 = new Label();
+            panelMid = new Panel();
+            panelBot = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgvNXB).BeginInit();
-            panel1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox1.SuspendLayout();
+            panelTop.SuspendLayout();
+            panelMid.SuspendLayout();
+            panelBot.SuspendLayout();
             SuspendLayout();
             // 
             // txtNumberPage
             // 
             txtNumberPage.Enabled = false;
             txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            txtNumberPage.Location = new Point(593, 586);
+            txtNumberPage.Location = new Point(530, 339);
             txtNumberPage.Margin = new Padding(4);
             txtNumberPage.Multiline = true;
             txtNumberPage.Name = "txtNumberPage";
@@ -73,7 +73,7 @@
             // btnLastPage
             // 
             btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLastPage.Location = new Point(758, 585);
+            btnLastPage.Location = new Point(695, 338);
             btnLastPage.Margin = new Padding(4);
             btnLastPage.Name = "btnLastPage";
             btnLastPage.Size = new Size(80, 23);
@@ -84,7 +84,7 @@
             // btnNextPage
             // 
             btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNextPage.Location = new Point(671, 585);
+            btnNextPage.Location = new Point(608, 338);
             btnNextPage.Margin = new Padding(4);
             btnNextPage.Name = "btnNextPage";
             btnNextPage.Size = new Size(80, 23);
@@ -95,7 +95,7 @@
             // btnFirstPage
             // 
             btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFirstPage.Location = new Point(409, 585);
+            btnFirstPage.Location = new Point(346, 338);
             btnFirstPage.Margin = new Padding(4);
             btnFirstPage.Name = "btnFirstPage";
             btnFirstPage.Size = new Size(80, 23);
@@ -106,7 +106,7 @@
             // btnPrePage
             // 
             btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPrePage.Location = new Point(497, 585);
+            btnPrePage.Location = new Point(434, 338);
             btnPrePage.Margin = new Padding(4);
             btnPrePage.Name = "btnPrePage";
             btnPrePage.Size = new Size(80, 23);
@@ -118,41 +118,30 @@
             // 
             dgvNXB.AllowUserToAddRows = false;
             dgvNXB.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvNXB.Location = new Point(-12, 258);
+            dgvNXB.Location = new Point(0, 0);
             dgvNXB.Margin = new Padding(4);
             dgvNXB.Name = "dgvNXB";
             dgvNXB.RowHeadersWidth = 51;
-            dgvNXB.Size = new Size(1237, 314);
+            dgvNXB.Size = new Size(1063, 327);
             dgvNXB.TabIndex = 52;
             // 
-            // panel1
+            // panelTop
             // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(groupBox2);
-            panel1.Controls.Add(groupBox1);
-            panel1.Controls.Add(label8);
-            panel1.Location = new Point(-10, 0);
-            panel1.Margin = new Padding(4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1235, 257);
-            panel1.TabIndex = 51;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(txtTimKiem);
-            groupBox2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(880, 13);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(329, 49);
-            groupBox2.TabIndex = 39;
-            groupBox2.TabStop = false;
+            panelTop.Controls.Add(label4);
+            panelTop.Controls.Add(txtTimKiem);
+            panelTop.Controls.Add(label8);
+            panelTop.Dock = DockStyle.Top;
+            panelTop.Location = new Point(0, 0);
+            panelTop.Margin = new Padding(4);
+            panelTop.Name = "panelTop";
+            panelTop.Size = new Size(1063, 42);
+            panelTop.TabIndex = 51;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(26, 21);
+            label4.Location = new Point(782, 12);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(82, 21);
@@ -162,39 +151,28 @@
             // txtTimKiem
             // 
             txtTimKiem.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTimKiem.Location = new Point(126, 13);
+            txtTimKiem.Location = new Point(882, 4);
             txtTimKiem.Margin = new Padding(4);
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.Size = new Size(171, 29);
             txtTimKiem.TabIndex = 37;
             // 
-            // groupBox1
+            // label8
             // 
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtDiaChi);
-            groupBox1.Controls.Add(btnHuy);
-            groupBox1.Controls.Add(btnLuu);
-            groupBox1.Controls.Add(btnThem);
-            groupBox1.Controls.Add(btnXoa);
-            groupBox1.Controls.Add(btnUpdate);
-            groupBox1.Controls.Add(txtTen);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(txtMa);
-            groupBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(91, 67);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(1065, 175);
-            groupBox1.TabIndex = 20;
-            groupBox1.TabStop = false;
+            label8.AutoSize = true;
+            label8.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(375, 2);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(313, 36);
+            label8.TabIndex = 19;
+            label8.Text = "Quản lý nhà xuất bản";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(156, 84);
+            label2.Location = new Point(166, 83);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(65, 21);
@@ -204,7 +182,7 @@
             // txtDiaChi
             // 
             txtDiaChi.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDiaChi.Location = new Point(297, 76);
+            txtDiaChi.Location = new Point(307, 75);
             txtDiaChi.Margin = new Padding(4);
             txtDiaChi.Name = "txtDiaChi";
             txtDiaChi.Size = new Size(600, 29);
@@ -214,7 +192,7 @@
             // 
             btnHuy.Enabled = false;
             btnHuy.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnHuy.Location = new Point(734, 125);
+            btnHuy.Location = new Point(744, 124);
             btnHuy.Margin = new Padding(4);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(80, 33);
@@ -226,7 +204,7 @@
             // 
             btnLuu.Enabled = false;
             btnLuu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLuu.Location = new Point(626, 125);
+            btnLuu.Location = new Point(636, 124);
             btnLuu.Margin = new Padding(4);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(80, 33);
@@ -237,7 +215,7 @@
             // btnThem
             // 
             btnThem.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnThem.Location = new Point(304, 125);
+            btnThem.Location = new Point(314, 124);
             btnThem.Margin = new Padding(4);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(80, 33);
@@ -249,7 +227,7 @@
             // 
             btnXoa.Enabled = false;
             btnXoa.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnXoa.Location = new Point(520, 125);
+            btnXoa.Location = new Point(530, 124);
             btnXoa.Margin = new Padding(4);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(80, 33);
@@ -261,7 +239,7 @@
             // 
             btnUpdate.Enabled = false;
             btnUpdate.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUpdate.Location = new Point(412, 125);
+            btnUpdate.Location = new Point(422, 124);
             btnUpdate.Margin = new Padding(4);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(80, 33);
@@ -272,7 +250,7 @@
             // txtTen
             // 
             txtTen.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTen.Location = new Point(666, 28);
+            txtTen.Location = new Point(676, 27);
             txtTen.Margin = new Padding(4);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(231, 29);
@@ -282,7 +260,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(156, 39);
+            label1.Location = new Point(166, 38);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(133, 21);
@@ -293,7 +271,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(520, 37);
+            label3.Location = new Point(530, 36);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(138, 21);
@@ -303,46 +281,63 @@
             // txtMa
             // 
             txtMa.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMa.Location = new Point(297, 28);
+            txtMa.Location = new Point(307, 27);
             txtMa.Margin = new Padding(4);
             txtMa.Name = "txtMa";
             txtMa.Size = new Size(171, 29);
             txtMa.TabIndex = 25;
             // 
-            // label8
+            // panelMid
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(442, 4);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(313, 36);
-            label8.TabIndex = 19;
-            label8.Text = "Quản lý nhà xuất bản";
+            panelMid.Controls.Add(label2);
+            panelMid.Controls.Add(txtTen);
+            panelMid.Controls.Add(txtDiaChi);
+            panelMid.Controls.Add(txtMa);
+            panelMid.Controls.Add(btnHuy);
+            panelMid.Controls.Add(label3);
+            panelMid.Controls.Add(btnLuu);
+            panelMid.Controls.Add(label1);
+            panelMid.Controls.Add(btnThem);
+            panelMid.Controls.Add(btnUpdate);
+            panelMid.Controls.Add(btnXoa);
+            panelMid.Dock = DockStyle.Top;
+            panelMid.Location = new Point(0, 42);
+            panelMid.Name = "panelMid";
+            panelMid.Size = new Size(1063, 172);
+            panelMid.TabIndex = 58;
+            // 
+            // panelBot
+            // 
+            panelBot.Controls.Add(dgvNXB);
+            panelBot.Controls.Add(btnLastPage);
+            panelBot.Controls.Add(txtNumberPage);
+            panelBot.Controls.Add(btnPrePage);
+            panelBot.Controls.Add(btnFirstPage);
+            panelBot.Controls.Add(btnNextPage);
+            panelBot.Dock = DockStyle.Top;
+            panelBot.Location = new Point(0, 214);
+            panelBot.Name = "panelBot";
+            panelBot.Size = new Size(1063, 370);
+            panelBot.TabIndex = 59;
             // 
             // formNXB
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1212, 618);
-            Controls.Add(txtNumberPage);
-            Controls.Add(btnLastPage);
-            Controls.Add(btnNextPage);
-            Controls.Add(btnFirstPage);
-            Controls.Add(btnPrePage);
-            Controls.Add(dgvNXB);
-            Controls.Add(panel1);
+            ClientSize = new Size(1063, 592);
+            Controls.Add(panelBot);
+            Controls.Add(panelMid);
+            Controls.Add(panelTop);
             Name = "formNXB";
             Text = "Nhà xuất bản";
             ((System.ComponentModel.ISupportInitialize)dgvNXB).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            panelTop.ResumeLayout(false);
+            panelTop.PerformLayout();
+            panelMid.ResumeLayout(false);
+            panelMid.PerformLayout();
+            panelBot.ResumeLayout(false);
+            panelBot.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -353,11 +348,9 @@
         private Button btnFirstPage;
         private Button btnPrePage;
         private DataGridView dgvNXB;
-        private Panel panel1;
-        private GroupBox groupBox2;
+        private Panel panelTop;
         private Label label4;
         private TextBox txtTimKiem;
-        private GroupBox groupBox1;
         private Label label2;
         private TextBox txtDiaChi;
         private Button btnHuy;
@@ -370,5 +363,7 @@
         private Label label3;
         private TextBox txtMa;
         private Label label8;
+        private Panel panelMid;
+        private Panel panelBot;
     }
 }

@@ -289,5 +289,10 @@ namespace QLTV
         {
 
         }
+
+        private void panelBot_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

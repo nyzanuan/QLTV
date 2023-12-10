@@ -91,5 +91,15 @@ namespace QLTV
 
             }
         }
+
+        private void formBaoCao_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelBot_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

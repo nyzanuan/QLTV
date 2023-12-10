@@ -16,11 +16,14 @@ namespace QLTV
         public formGiaoDien()
         {
             InitializeComponent();
+            hideMenuCon();
         }
         public bool isClose = true;
 
 
         Form currentChildForm = null;
+
+
         private void OpenForm(Form ChildForm)
         {
             // Đóng form con hiện tại (nếu có)
@@ -28,57 +31,24 @@ namespace QLTV
             {
                 currentChildForm.Dispose();
                 currentChildForm = null;
-                panel1.Controls.Clear();
+                panelMain.Controls.Clear();
             }
 
             currentChildForm = ChildForm;
             ChildForm.TopLevel = false;
             ChildForm.FormBorderStyle = FormBorderStyle.None;
             ChildForm.Dock = DockStyle.Fill;
-            panel1.Controls.Add(ChildForm);
+            panelMain.Controls.Add(ChildForm);
             ChildForm.Show();
 
         }
-        private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form formQuanLySach = new formQuanLySach();
-            OpenForm(formQuanLySach);
-        }
-
-        private void danhMuc_toolStripMenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void độcGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form formDocGia = new formDocGia();
-            OpenForm(formDocGia);
-        }
-
         private void formGiaoDien_Load(object sender, EventArgs e)
         {
 
         }
 
         public event EventHandler DangXuat;
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DangXuat(this, new EventArgs());
-        }
 
-
-
-        private void menuTacGia_Click(object sender, EventArgs e)
-        {
-            formTacGia formTacGia = new formTacGia();
-            OpenForm(formTacGia);
-        }
 
         private void formGiaoDien_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -101,67 +71,107 @@ namespace QLTV
             }
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
-            if (isClose)
+
+        }
+
+
+        private void hideMenuCon()
+        {
+
+            panelDanhMucCon.Visible = false;
+            panelMuonSachCon.Visible = false;
+
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
             {
-                Application.Exit();
+                hideMenuCon();
+                subMenu.Visible = true;
             }
+            else
+
+                subMenu.Visible = false;
         }
 
-        private void mượnSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnDanhMuc_Click(object sender, EventArgs e)
         {
-            formMuonSach formMuonSach = new formMuonSach();
-            OpenForm(formMuonSach);
+            showSubMenu(panelDanhMucCon);
         }
 
-        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
+
+            formDocGia formDocGia = new formDocGia();
+            OpenForm(formDocGia);
+            hideMenuCon();
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+
             formNhanVien formNhanVien = new formNhanVien();
             OpenForm(formNhanVien);
-
+            hideMenuCon();
         }
 
-        private void tìmKiếmĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnTacGia_Click(object sender, EventArgs e)
         {
-            formTimKiemDocGia formTimKiemDocGia = new formTimKiemDocGia();
-            OpenForm(formTimKiemDocGia);
+
+            formTacGia formTacGia = new formTacGia();
+            OpenForm(formTacGia);
+            hideMenuCon();
         }
 
-        private void baoCao_StripMenu_Click(object sender, EventArgs e)
-        {
-            formBaoCao formBaoCao = new formBaoCao();
-            OpenForm(formBaoCao);
-        }
-
-        private void thểLoạiToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnTheLoaiSach_Click(object sender, EventArgs e)
         {
             formTheLoai formTheLoai = new formTheLoai();
             OpenForm(formTheLoai);
+            hideMenuCon();
+
         }
 
-        private void nhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnNXB_Click(object sender, EventArgs e)
         {
             formNXB formNXB = new formNXB();
             OpenForm(formNXB);
+            hideMenuCon();
         }
 
-        private void mượnSáchToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void btnQuanLySach_Click(object sender, EventArgs e)
+        {
+            formQuanLySach formQuanLySach = new formQuanLySach();
+            OpenForm(formQuanLySach);
+            hideMenuCon();
+        }
+
+        private void btnMuonSach_Click(object sender, EventArgs e)
         {
             formMuonSach formMuonSach = new formMuonSach();
             OpenForm(formMuonSach);
+            hideMenuCon();
         }
 
-        private void trảSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnTraSach_Click(object sender, EventArgs e)
         {
             formTraSach formTraSach = new formTraSach();
             OpenForm(formTraSach);
+            hideMenuCon();
         }
 
-        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        private void btnMTSach_Click(object sender, EventArgs e)
         {
-            formTaiKhoan formTaiKhoan = new formTaiKhoan();
-            OpenForm(formTaiKhoan);
+            showSubMenu(panelMuonSachCon);
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            formBaoCao formBaoCao = new formBaoCao();
+            OpenForm(formBaoCao);
+            hideMenuCon();
         }
     }
 }

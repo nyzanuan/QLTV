@@ -22,9 +22,6 @@ namespace QLTV
 
         }
 
-        private void txt_quantity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -82,7 +82,7 @@ namespace _3.GUI.GUI
         private void setting(bool bl_readOnly, bool bl_add, bool bl_upd_del)
         {
             txt_name.ReadOnly = bl_readOnly;
-            btnChonAnh.Enabled = !bl_readOnly;
+           
 
             btnHuy.Enabled = bl_add || bl_upd_del;
 
@@ -96,7 +96,7 @@ namespace _3.GUI.GUI
         {
             txt_id.Text =
             txt_name.Text = "";
-            ptbChonAnh.Image = null;
+            
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -110,7 +110,7 @@ namespace _3.GUI.GUI
             {
                 CategoryId = int.Parse(txt_id.Text),
                 Name = txt_name.Text,
-                Image = HelperImage.ChangeImageToByte(ptbChonAnh)
+                
             };
             bool result = _categoryService.UpdateCategory(category);
             if (result)
@@ -120,7 +120,7 @@ namespace _3.GUI.GUI
             }
             else
             {
-                MessageBox.Show("Cập nhật thất bại, có thể do lỗi hoặc do không có ựu thay đổi ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cập nhật thất bại, có thể do lỗi hoặc do không có sự thay đổi ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -155,10 +155,7 @@ namespace _3.GUI.GUI
             {
                 Name = txt_name.Text,
             };
-            if (ptbChonAnh.Image != null)
-            {
-                category.Image = HelperImage.ChangeImageToByte(ptbChonAnh);
-            }
+            
             bool result = _categoryService.AddCategory(category);
             if (result)
             {
@@ -177,31 +174,7 @@ namespace _3.GUI.GUI
             refreshField();
         }
 
-        private void btnChonAnh_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.Title = "Chọn hình ảnh";
-            openFileDialog.Filter = "Tệp hình ảnh|*.bmp;*.jpg;*.jpeg;*.png;*.gif|Tất cả các tệp|*.*";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.RestoreDirectory = true;
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                if (!string.IsNullOrWhiteSpace(openFileDialog.FileName))
-                {
-                    string[] imageExtensions = { ".bmp", ".jpg", ".jpeg", ".png", ".gif" };
-                    if (Array.Exists(imageExtensions, ext => ext.Equals(System.IO.Path.GetExtension(openFileDialog.FileName), StringComparison.OrdinalIgnoreCase)))
-                    {
-                        ptbChonAnh.Image = Image.FromFile(openFileDialog.FileName);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Vui lòng chọn một tệp hình ảnh.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-        }
+        
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
@@ -259,19 +232,21 @@ namespace _3.GUI.GUI
                         using (MemoryStream stream = new MemoryStream(imageBytes))
                         {
                             stream.Seek(0, SeekOrigin.Begin);
-                            ptbChonAnh.Image = Image.FromStream(stream);
+                           
                         }
                     }
                 }
-                else
-                {
-                    ptbChonAnh.Image = null;
-                }
+                
                 txt_id.Text = id.ToString();
                 txt_name.Text = category.Name;
                 setting(false, false, true);
 
             }
+        }
+
+        private void dgvTheLoai_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -34,43 +34,43 @@
             btnFirstPage = new Button();
             btnPrePage = new Button();
             book_dataGridView = new DataGridView();
-            panel1 = new Panel();
-            groupBox2 = new GroupBox();
+            panelTop = new Panel();
+            btnHuy = new Button();
+            btnTraSach = new Button();
+            btnGiaHan = new Button();
+            btnLuu = new Button();
+            groupBox3 = new GroupBox();
+            label7 = new Label();
+            borrow_dateTimePicker = new DateTimePicker();
+            refund_dateTimePicker = new DateTimePicker();
+            extend_dateTimePicker = new DateTimePicker();
+            label3 = new Label();
+            label4 = new Label();
             label5 = new Label();
             txt_search = new TextBox();
             groupBox1 = new GroupBox();
             label6 = new Label();
             comboBox1 = new ComboBox();
-            btnHuy = new Button();
-            btnLuu = new Button();
-            btnGiaHan = new Button();
-            btnTraSach = new Button();
-            refund_dateTimePicker = new DateTimePicker();
-            extend_dateTimePicker = new DateTimePicker();
-            label4 = new Label();
             txt_book_name = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             txt_user_id = new TextBox();
             label8 = new Label();
-            groupBox3 = new GroupBox();
-            groupBox4 = new GroupBox();
-            borrow_dateTimePicker = new DateTimePicker();
-            label7 = new Label();
+            panelMid = new Panel();
+            panelBot = new Panel();
             ((System.ComponentModel.ISupportInitialize)book_dataGridView).BeginInit();
-            panel1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox1.SuspendLayout();
+            panelTop.SuspendLayout();
             groupBox3.SuspendLayout();
-            groupBox4.SuspendLayout();
+            groupBox1.SuspendLayout();
+            panelMid.SuspendLayout();
+            panelBot.SuspendLayout();
             SuspendLayout();
             // 
             // txtNumberPage
             // 
             txtNumberPage.Enabled = false;
             txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            txtNumberPage.Location = new Point(595, 571);
+            txtNumberPage.Location = new Point(509, 299);
             txtNumberPage.Margin = new Padding(4);
             txtNumberPage.Multiline = true;
             txtNumberPage.Name = "txtNumberPage";
@@ -82,7 +82,7 @@
             // btnLastPage
             // 
             btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLastPage.Location = new Point(760, 570);
+            btnLastPage.Location = new Point(674, 298);
             btnLastPage.Margin = new Padding(4);
             btnLastPage.Name = "btnLastPage";
             btnLastPage.Size = new Size(80, 23);
@@ -93,7 +93,7 @@
             // btnNextPage
             // 
             btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNextPage.Location = new Point(673, 570);
+            btnNextPage.Location = new Point(587, 298);
             btnNextPage.Margin = new Padding(4);
             btnNextPage.Name = "btnNextPage";
             btnNextPage.Size = new Size(80, 23);
@@ -104,7 +104,7 @@
             // btnFirstPage
             // 
             btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFirstPage.Location = new Point(411, 570);
+            btnFirstPage.Location = new Point(325, 298);
             btnFirstPage.Margin = new Padding(4);
             btnFirstPage.Name = "btnFirstPage";
             btnFirstPage.Size = new Size(80, 23);
@@ -115,7 +115,7 @@
             // btnPrePage
             // 
             btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPrePage.Location = new Point(499, 570);
+            btnPrePage.Location = new Point(413, 298);
             btnPrePage.Margin = new Padding(4);
             btnPrePage.Name = "btnPrePage";
             btnPrePage.Size = new Size(80, 23);
@@ -127,97 +127,29 @@
             // 
             book_dataGridView.AllowUserToAddRows = false;
             book_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            book_dataGridView.Location = new Point(-12, 250);
+            book_dataGridView.Location = new Point(0, 1);
             book_dataGridView.Margin = new Padding(4, 3, 4, 3);
             book_dataGridView.Name = "book_dataGridView";
-            book_dataGridView.Size = new Size(1237, 305);
+            book_dataGridView.Size = new Size(1063, 290);
             book_dataGridView.TabIndex = 50;
             // 
-            // panel1
+            // panelTop
             // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(groupBox4);
-            panel1.Controls.Add(groupBox3);
-            panel1.Controls.Add(groupBox2);
-            panel1.Controls.Add(groupBox1);
-            panel1.Controls.Add(label8);
-            panel1.Location = new Point(-12, -1);
-            panel1.Margin = new Padding(4, 3, 4, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1235, 252);
-            panel1.TabIndex = 49;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(txt_search);
-            groupBox2.Location = new Point(890, -6);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(322, 46);
-            groupBox2.TabIndex = 36;
-            groupBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(15, 17);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(82, 21);
-            label5.TabIndex = 24;
-            label5.Text = "Tìm kiếm";
-            // 
-            // txt_search
-            // 
-            txt_search.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_search.Location = new Point(105, 11);
-            txt_search.Margin = new Padding(4, 3, 4, 3);
-            txt_search.Name = "txt_search";
-            txt_search.Size = new Size(204, 27);
-            txt_search.TabIndex = 23;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(txt_book_name);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txt_user_id);
-            groupBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(138, 36);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(390, 158);
-            groupBox1.TabIndex = 35;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Trả sách";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(15, 32);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(121, 21);
-            label6.TabIndex = 36;
-            label6.Text = "Mã mượn sách";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(141, 23);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(158, 29);
-            comboBox1.TabIndex = 35;
+            panelTop.Controls.Add(label5);
+            panelTop.Controls.Add(label8);
+            panelTop.Controls.Add(txt_search);
+            panelTop.Dock = DockStyle.Top;
+            panelTop.Location = new Point(0, 0);
+            panelTop.Margin = new Padding(4, 3, 4, 3);
+            panelTop.Name = "panelTop";
+            panelTop.Size = new Size(1063, 42);
+            panelTop.TabIndex = 49;
             // 
             // btnHuy
             // 
             btnHuy.Enabled = false;
             btnHuy.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnHuy.Location = new Point(303, 16);
+            btnHuy.Location = new Point(649, 178);
             btnHuy.Margin = new Padding(4);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(77, 33);
@@ -225,23 +157,23 @@
             btnHuy.Text = "Hủy";
             btnHuy.UseVisualStyleBackColor = true;
             // 
-            // btnLuu
+            // btnTraSach
             // 
-            btnLuu.Enabled = false;
-            btnLuu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLuu.Location = new Point(208, 16);
-            btnLuu.Margin = new Padding(4);
-            btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(80, 33);
-            btnLuu.TabIndex = 33;
-            btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = true;
+            btnTraSach.Enabled = false;
+            btnTraSach.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTraSach.Location = new Point(359, 178);
+            btnTraSach.Margin = new Padding(4);
+            btnTraSach.Name = "btnTraSach";
+            btnTraSach.Size = new Size(80, 33);
+            btnTraSach.TabIndex = 31;
+            btnTraSach.Text = "Trả sách";
+            btnTraSach.UseVisualStyleBackColor = true;
             // 
             // btnGiaHan
             // 
             btnGiaHan.Enabled = false;
             btnGiaHan.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGiaHan.Location = new Point(112, 16);
+            btnGiaHan.Location = new Point(458, 178);
             btnGiaHan.Margin = new Padding(4);
             btnGiaHan.Name = "btnGiaHan";
             btnGiaHan.Size = new Size(80, 33);
@@ -249,17 +181,51 @@
             btnGiaHan.Text = "Gia Hạn";
             btnGiaHan.UseVisualStyleBackColor = true;
             // 
-            // btnTraSach
+            // btnLuu
             // 
-            btnTraSach.Enabled = false;
-            btnTraSach.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnTraSach.Location = new Point(13, 16);
-            btnTraSach.Margin = new Padding(4);
-            btnTraSach.Name = "btnTraSach";
-            btnTraSach.Size = new Size(80, 33);
-            btnTraSach.TabIndex = 31;
-            btnTraSach.Text = "Trả sách";
-            btnTraSach.UseVisualStyleBackColor = true;
+            btnLuu.Enabled = false;
+            btnLuu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLuu.Location = new Point(554, 178);
+            btnLuu.Margin = new Padding(4);
+            btnLuu.Name = "btnLuu";
+            btnLuu.Size = new Size(80, 33);
+            btnLuu.TabIndex = 33;
+            btnLuu.Text = "Lưu";
+            btnLuu.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(label7);
+            groupBox3.Controls.Add(borrow_dateTimePicker);
+            groupBox3.Controls.Add(refund_dateTimePicker);
+            groupBox3.Controls.Add(extend_dateTimePicker);
+            groupBox3.Controls.Add(label3);
+            groupBox3.Controls.Add(label4);
+            groupBox3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox3.Location = new Point(585, 6);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(475, 158);
+            groupBox3.TabIndex = 37;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Gia hạn";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(18, 34);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(97, 21);
+            label7.TabIndex = 24;
+            label7.Text = "Ngày mượn";
+            // 
+            // borrow_dateTimePicker
+            // 
+            borrow_dateTimePicker.Location = new Point(158, 26);
+            borrow_dateTimePicker.Name = "borrow_dateTimePicker";
+            borrow_dateTimePicker.Size = new Size(292, 29);
+            borrow_dateTimePicker.TabIndex = 23;
             // 
             // refund_dateTimePicker
             // 
@@ -283,6 +249,17 @@
             extend_dateTimePicker.Size = new Size(293, 29);
             extend_dateTimePicker.TabIndex = 21;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(18, 128);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(106, 21);
+            label3.TabIndex = 2;
+            label3.Text = "Ngày gia hạn";
+            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -293,6 +270,62 @@
             label4.Size = new Size(73, 21);
             label4.TabIndex = 20;
             label4.Text = "Ngày trả";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(782, 12);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(82, 21);
+            label5.TabIndex = 24;
+            label5.Text = "Tìm kiếm";
+            // 
+            // txt_search
+            // 
+            txt_search.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_search.Location = new Point(882, 4);
+            txt_search.Margin = new Padding(4, 3, 4, 3);
+            txt_search.Name = "txt_search";
+            txt_search.Size = new Size(168, 27);
+            txt_search.TabIndex = 23;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(txt_book_name);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(txt_user_id);
+            groupBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox1.Location = new Point(101, 6);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(418, 158);
+            groupBox1.TabIndex = 35;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Trả sách";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(15, 32);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(121, 21);
+            label6.TabIndex = 36;
+            label6.Text = "Mã mượn sách";
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(141, 23);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(158, 29);
+            comboBox1.TabIndex = 35;
             // 
             // txt_book_name
             // 
@@ -325,17 +358,6 @@
             label2.TabIndex = 1;
             label2.Text = "Tên sách";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(18, 128);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(106, 21);
-            label3.TabIndex = 2;
-            label3.Text = "Ngày gia hạn";
-            // 
             // txt_user_id
             // 
             txt_user_id.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -349,85 +371,62 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(503, -2);
+            label8.Location = new Point(461, 0);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new Size(241, 36);
             label8.TabIndex = 19;
             label8.Text = "Quản lý trả sách";
             // 
-            // groupBox3
+            // panelMid
             // 
-            groupBox3.Controls.Add(label7);
-            groupBox3.Controls.Add(borrow_dateTimePicker);
-            groupBox3.Controls.Add(refund_dateTimePicker);
-            groupBox3.Controls.Add(extend_dateTimePicker);
-            groupBox3.Controls.Add(label3);
-            groupBox3.Controls.Add(label4);
-            groupBox3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox3.Location = new Point(718, 36);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(475, 158);
-            groupBox3.TabIndex = 37;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Gia hạn";
+            panelMid.Controls.Add(btnHuy);
+            panelMid.Controls.Add(btnTraSach);
+            panelMid.Controls.Add(groupBox3);
+            panelMid.Controls.Add(groupBox1);
+            panelMid.Controls.Add(btnGiaHan);
+            panelMid.Controls.Add(btnLuu);
+            panelMid.Dock = DockStyle.Top;
+            panelMid.Location = new Point(0, 42);
+            panelMid.Name = "panelMid";
+            panelMid.Size = new Size(1063, 222);
+            panelMid.TabIndex = 56;
             // 
-            // groupBox4
+            // panelBot
             // 
-            groupBox4.Controls.Add(btnHuy);
-            groupBox4.Controls.Add(btnTraSach);
-            groupBox4.Controls.Add(btnGiaHan);
-            groupBox4.Controls.Add(btnLuu);
-            groupBox4.Location = new Point(397, 194);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(394, 54);
-            groupBox4.TabIndex = 38;
-            groupBox4.TabStop = false;
-            // 
-            // borrow_dateTimePicker
-            // 
-            borrow_dateTimePicker.Location = new Point(158, 26);
-            borrow_dateTimePicker.Name = "borrow_dateTimePicker";
-            borrow_dateTimePicker.Size = new Size(292, 29);
-            borrow_dateTimePicker.TabIndex = 23;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(18, 34);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(97, 21);
-            label7.TabIndex = 24;
-            label7.Text = "Ngày mượn";
+            panelBot.Controls.Add(book_dataGridView);
+            panelBot.Controls.Add(txtNumberPage);
+            panelBot.Controls.Add(btnPrePage);
+            panelBot.Controls.Add(btnLastPage);
+            panelBot.Controls.Add(btnFirstPage);
+            panelBot.Controls.Add(btnNextPage);
+            panelBot.Dock = DockStyle.Top;
+            panelBot.Location = new Point(0, 264);
+            panelBot.Name = "panelBot";
+            panelBot.Size = new Size(1063, 340);
+            panelBot.TabIndex = 57;
             // 
             // formTraSach
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1212, 602);
-            Controls.Add(txtNumberPage);
-            Controls.Add(btnLastPage);
-            Controls.Add(btnNextPage);
-            Controls.Add(btnFirstPage);
-            Controls.Add(btnPrePage);
-            Controls.Add(book_dataGridView);
-            Controls.Add(panel1);
+            ClientSize = new Size(1063, 592);
+            Controls.Add(panelBot);
+            Controls.Add(panelMid);
+            Controls.Add(panelTop);
             Name = "formTraSach";
             Text = "formTraSach";
             ((System.ComponentModel.ISupportInitialize)book_dataGridView).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            panelTop.ResumeLayout(false);
+            panelTop.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            groupBox4.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            panelMid.ResumeLayout(false);
+            panelBot.ResumeLayout(false);
+            panelBot.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -438,8 +437,7 @@
         private Button btnFirstPage;
         private Button btnPrePage;
         private DataGridView book_dataGridView;
-        private Panel panel1;
-        private GroupBox groupBox2;
+        private Panel panelTop;
         private Label label5;
         private TextBox txt_search;
         private GroupBox groupBox1;
@@ -458,9 +456,10 @@
         private Label label8;
         private Label label6;
         private ComboBox comboBox1;
-        private GroupBox groupBox4;
         private GroupBox groupBox3;
         private DateTimePicker borrow_dateTimePicker;
         private Label label7;
+        private Panel panelMid;
+        private Panel panelBot;
     }
 }
