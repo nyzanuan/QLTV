@@ -3,8 +3,6 @@ using _2.BUS.IService;
 using _2.BUS.Service;
 using _3.GUI.Helper;
 using Sharing.ReturnModel;
-using System.Data.Common;
-using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
 namespace QLTV
