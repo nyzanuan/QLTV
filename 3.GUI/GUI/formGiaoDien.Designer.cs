@@ -82,24 +82,30 @@ namespace QLTV
             // 
             // panelOut
             // 
-            dateTimePicker1.CustomFormat = "dddd, MMMM dd, yyyy HH:mm tt";
-            dateTimePicker1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(850, 4);
-            dateTimePicker1.Margin = new Padding(4);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(366, 29);
-            dateTimePicker1.TabIndex = 1;
+            panelOut.Controls.Add(btnThoat);
+            panelOut.Controls.Add(btnDangXuat);
+            panelOut.Dock = DockStyle.Top;
+            panelOut.Location = new Point(0, 527);
+            panelOut.Name = "panelOut";
+            panelOut.Size = new Size(188, 77);
+            panelOut.TabIndex = 33;
             // 
             // btnThoat
             // 
-            panel1.AutoScroll = true;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Location = new Point(0, 37);
-            panel1.Margin = new Padding(4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1228, 845);
-            panel1.TabIndex = 2;
+            btnThoat.BackColor = Color.PaleTurquoise;
+            btnThoat.Dock = DockStyle.Top;
+            btnThoat.FlatAppearance.BorderSize = 0;
+            btnThoat.FlatStyle = FlatStyle.Flat;
+            btnThoat.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnThoat.ForeColor = SystemColors.ControlText;
+            btnThoat.Location = new Point(0, 38);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Padding = new Padding(10, 0, 0, 0);
+            btnThoat.Size = new Size(188, 38);
+            btnThoat.TabIndex = 26;
+            btnThoat.Text = "Thoát";
+            btnThoat.TextAlign = ContentAlignment.MiddleLeft;
+            btnThoat.UseVisualStyleBackColor = false;
             // 
             // btnDangXuat
             // 
@@ -111,141 +117,285 @@ namespace QLTV
             btnDangXuat.ForeColor = SystemColors.ControlText;
             btnDangXuat.Location = new Point(0, 0);
             btnDangXuat.Name = "btnDangXuat";
-            btnDangXuat.Size = new Size(160, 26);
+            btnDangXuat.Padding = new Padding(10, 0, 0, 0);
+            btnDangXuat.Size = new Size(188, 38);
+            btnDangXuat.TabIndex = 25;
             btnDangXuat.Text = "Đăng xuất";
             btnDangXuat.TextAlign = ContentAlignment.MiddleLeft;
             btnDangXuat.UseVisualStyleBackColor = false;
+
             // 
             // txtPhanQuyen
             // 
-            btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(160, 26);
-            btnThoat.Text = "Thoát";
-            btnThoat.Click += btnThoat_Click;
+            txtPhanQuyen.BackColor = Color.PaleTurquoise;
+            txtPhanQuyen.Dock = DockStyle.Top;
+            txtPhanQuyen.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPhanQuyen.ForeColor = SystemColors.MenuText;
+            txtPhanQuyen.Location = new Point(0, 498);
+            txtPhanQuyen.Name = "txtPhanQuyen";
+            txtPhanQuyen.PlaceholderText = "Phân quyền";
+            txtPhanQuyen.Size = new Size(188, 29);
+            txtPhanQuyen.TabIndex = 32;
             // 
             // btnBaoCao
             // 
-            danhMuc_toolStripMenu.DropDownItems.AddRange(new ToolStripItem[] { btnQuanLySach, btnQuanLyTacGia, btnQuanLyDocGia, btnQuanLyNhanVien, thểLoạiToolStripMenuItem, nhàXuấtBảnToolStripMenuItem });
-            danhMuc_toolStripMenu.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            danhMuc_toolStripMenu.Name = "danhMuc_toolStripMenu";
-            danhMuc_toolStripMenu.Size = new Size(98, 25);
-            danhMuc_toolStripMenu.Text = "Danh mục";
-            danhMuc_toolStripMenu.Click += danhMuc_toolStripMenu_Click;
+            btnBaoCao.BackColor = Color.PaleTurquoise;
+            btnBaoCao.Dock = DockStyle.Top;
+            btnBaoCao.FlatAppearance.BorderSize = 0;
+            btnBaoCao.FlatStyle = FlatStyle.Flat;
+            btnBaoCao.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBaoCao.ForeColor = SystemColors.ControlText;
+            btnBaoCao.Location = new Point(0, 460);
+            btnBaoCao.Name = "btnBaoCao";
+            btnBaoCao.Padding = new Padding(10, 0, 0, 0);
+            btnBaoCao.Size = new Size(188, 38);
+            btnBaoCao.TabIndex = 23;
+            btnBaoCao.Text = "Báo cáo";
+            btnBaoCao.TextAlign = ContentAlignment.MiddleLeft;
+            btnBaoCao.UseVisualStyleBackColor = false;
+            btnBaoCao.Click += btnBaoCao_Click;
             // 
             // panelMuonSachCon
             // 
-            btnQuanLySach.Name = "btnQuanLySach";
-            btnQuanLySach.Size = new Size(213, 26);
-            btnQuanLySach.Text = "Quản lý sách";
-            btnQuanLySach.Click += quảnLýSáchToolStripMenuItem_Click;
+            panelMuonSachCon.Controls.Add(btnTraSach);
+            panelMuonSachCon.Controls.Add(btnMuonSach);
+            panelMuonSachCon.Dock = DockStyle.Top;
+            panelMuonSachCon.Location = new Point(0, 388);
+            panelMuonSachCon.Name = "panelMuonSachCon";
+            panelMuonSachCon.Size = new Size(188, 72);
+            panelMuonSachCon.TabIndex = 29;
             // 
             // btnTraSach
             // 
-            btnQuanLyTacGia.Name = "btnQuanLyTacGia";
-            btnQuanLyTacGia.Size = new Size(213, 26);
-            btnQuanLyTacGia.Text = "Quản lý tác giả";
-            btnQuanLyTacGia.Click += menuTacGia_Click;
+            btnTraSach.BackColor = Color.FromArgb(192, 255, 255);
+            btnTraSach.Dock = DockStyle.Top;
+            btnTraSach.FlatAppearance.BorderSize = 0;
+            btnTraSach.FlatStyle = FlatStyle.Flat;
+            btnTraSach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTraSach.ForeColor = SystemColors.Desktop;
+            btnTraSach.Location = new Point(0, 38);
+            btnTraSach.Name = "btnTraSach";
+            btnTraSach.Padding = new Padding(30, 0, 0, 0);
+            btnTraSach.RightToLeft = RightToLeft.No;
+            btnTraSach.Size = new Size(188, 37);
+            btnTraSach.TabIndex = 12;
+            btnTraSach.Text = "Trả sách";
+            btnTraSach.TextAlign = ContentAlignment.MiddleLeft;
+            btnTraSach.UseVisualStyleBackColor = false;
+            btnTraSach.Click += btnTraSach_Click;
             // 
             // btnMuonSach
             // 
-            btnQuanLyDocGia.Name = "btnQuanLyDocGia";
-            btnQuanLyDocGia.Size = new Size(213, 26);
-            btnQuanLyDocGia.Text = "Quản lý độc giả";
-            btnQuanLyDocGia.Click += độcGiảToolStripMenuItem_Click;
+            btnMuonSach.BackColor = Color.FromArgb(192, 255, 255);
+            btnMuonSach.Dock = DockStyle.Top;
+            btnMuonSach.FlatAppearance.BorderSize = 0;
+            btnMuonSach.FlatStyle = FlatStyle.Flat;
+            btnMuonSach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMuonSach.ForeColor = SystemColors.Desktop;
+            btnMuonSach.Location = new Point(0, 0);
+            btnMuonSach.Name = "btnMuonSach";
+            btnMuonSach.Padding = new Padding(30, 0, 0, 0);
+            btnMuonSach.Size = new Size(188, 38);
+            btnMuonSach.TabIndex = 11;
+            btnMuonSach.Text = "Mượn sách";
+            btnMuonSach.TextAlign = ContentAlignment.MiddleLeft;
+            btnMuonSach.UseVisualStyleBackColor = false;
+            btnMuonSach.Click += btnMuonSach_Click;
             // 
             // btnMTSach
             // 
-            btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
-            btnQuanLyNhanVien.Size = new Size(213, 26);
-            btnQuanLyNhanVien.Text = "Quản lý nhân viên";
-            btnQuanLyNhanVien.Click += nhânViênToolStripMenuItem_Click;
+            btnMTSach.BackColor = Color.PaleTurquoise;
+            btnMTSach.Dock = DockStyle.Top;
+            btnMTSach.FlatAppearance.BorderSize = 0;
+            btnMTSach.FlatStyle = FlatStyle.Flat;
+            btnMTSach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMTSach.ForeColor = SystemColors.ControlText;
+            btnMTSach.Location = new Point(0, 350);
+            btnMTSach.Name = "btnMTSach";
+            btnMTSach.Padding = new Padding(10, 0, 0, 0);
+            btnMTSach.Size = new Size(188, 38);
+            btnMTSach.TabIndex = 28;
+            btnMTSach.Text = "Mượn trả sách";
+            btnMTSach.TextAlign = ContentAlignment.MiddleLeft;
+            btnMTSach.UseVisualStyleBackColor = false;
+            btnMTSach.Click += btnMTSach_Click;
+            // 
+            // panelDanhMucCon
+            // 
+            panelDanhMucCon.BackColor = Color.Teal;
+            panelDanhMucCon.Controls.Add(btnQuanLySach);
+            panelDanhMucCon.Controls.Add(btnNXB);
+            panelDanhMucCon.Controls.Add(btnTheLoaiSach);
+            panelDanhMucCon.Controls.Add(btnTacGia);
+            panelDanhMucCon.Controls.Add(btnNhanVien);
+            panelDanhMucCon.Controls.Add(btnDocGia);
+            panelDanhMucCon.Dock = DockStyle.Top;
+            panelDanhMucCon.Location = new Point(0, 126);
+            panelDanhMucCon.Name = "panelDanhMucCon";
+            panelDanhMucCon.Size = new Size(188, 224);
+            panelDanhMucCon.TabIndex = 27;
             // 
             // btnQuanLySach
             // 
-            thểLoạiToolStripMenuItem.Name = "thểLoạiToolStripMenuItem";
-            thểLoạiToolStripMenuItem.Size = new Size(213, 26);
-            thểLoạiToolStripMenuItem.Text = "Thể loại";
-            thểLoạiToolStripMenuItem.Click += thểLoạiToolStripMenuItem_Click;
+            btnQuanLySach.BackColor = Color.FromArgb(192, 255, 255);
+            btnQuanLySach.Dock = DockStyle.Top;
+            btnQuanLySach.FlatAppearance.BorderSize = 0;
+            btnQuanLySach.FlatStyle = FlatStyle.Flat;
+            btnQuanLySach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnQuanLySach.ForeColor = SystemColors.Desktop;
+            btnQuanLySach.Location = new Point(0, 190);
+            btnQuanLySach.Name = "btnQuanLySach";
+            btnQuanLySach.Padding = new Padding(30, 0, 0, 0);
+            btnQuanLySach.Size = new Size(188, 34);
+            btnQuanLySach.TabIndex = 9;
+            btnQuanLySach.Text = "Quản lý sách";
+            btnQuanLySach.TextAlign = ContentAlignment.MiddleLeft;
+            btnQuanLySach.UseVisualStyleBackColor = false;
+            btnQuanLySach.Click += btnQuanLySach_Click;
             // 
             // btnNXB
             // 
-            nhàXuấtBảnToolStripMenuItem.Name = "nhàXuấtBảnToolStripMenuItem";
-            nhàXuấtBảnToolStripMenuItem.Size = new Size(213, 26);
-            nhàXuấtBảnToolStripMenuItem.Text = "Nhà xuất bản";
-            nhàXuấtBảnToolStripMenuItem.Click += nhàXuấtBảnToolStripMenuItem_Click;
+            btnNXB.BackColor = Color.FromArgb(192, 255, 255);
+            btnNXB.Dock = DockStyle.Top;
+            btnNXB.FlatAppearance.BorderSize = 0;
+            btnNXB.FlatStyle = FlatStyle.Flat;
+            btnNXB.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNXB.ForeColor = SystemColors.Desktop;
+            btnNXB.Location = new Point(0, 152);
+            btnNXB.Name = "btnNXB";
+            btnNXB.Padding = new Padding(30, 0, 0, 0);
+            btnNXB.Size = new Size(188, 38);
+            btnNXB.TabIndex = 15;
+            btnNXB.Text = "Nhà xuất bản";
+            btnNXB.TextAlign = ContentAlignment.MiddleLeft;
+            btnNXB.UseVisualStyleBackColor = false;
+            btnNXB.Click += btnNXB_Click;
             // 
             // btnTheLoaiSach
             // 
-            muonSach_StripMenu.DropDownItems.AddRange(new ToolStripItem[] { mượnSáchToolStripMenuItem, trảSáchToolStripMenuItem });
-            muonSach_StripMenu.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            muonSach_StripMenu.Name = "muonSach_StripMenu";
-            muonSach_StripMenu.Size = new Size(130, 25);
-            muonSach_StripMenu.Text = "Mượn trả sách";
+            btnTheLoaiSach.BackColor = Color.FromArgb(192, 255, 255);
+            btnTheLoaiSach.Dock = DockStyle.Top;
+            btnTheLoaiSach.FlatAppearance.BorderSize = 0;
+            btnTheLoaiSach.FlatStyle = FlatStyle.Flat;
+            btnTheLoaiSach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTheLoaiSach.ForeColor = SystemColors.Desktop;
+            btnTheLoaiSach.Location = new Point(0, 114);
+            btnTheLoaiSach.Name = "btnTheLoaiSach";
+            btnTheLoaiSach.Padding = new Padding(30, 0, 0, 0);
+            btnTheLoaiSach.Size = new Size(188, 38);
+            btnTheLoaiSach.TabIndex = 14;
+            btnTheLoaiSach.Text = "Thể loại sách";
+            btnTheLoaiSach.TextAlign = ContentAlignment.MiddleLeft;
+            btnTheLoaiSach.UseVisualStyleBackColor = false;
+            btnTheLoaiSach.Click += btnTheLoaiSach_Click;
             // 
             // btnTacGia
             // 
-            mượnSáchToolStripMenuItem.Name = "mượnSáchToolStripMenuItem";
-            mượnSáchToolStripMenuItem.Size = new Size(164, 26);
-            mượnSáchToolStripMenuItem.Text = "Mượn sách";
-            mượnSáchToolStripMenuItem.Click += mượnSáchToolStripMenuItem_Click_1;
+            btnTacGia.BackColor = Color.FromArgb(192, 255, 255);
+            btnTacGia.Dock = DockStyle.Top;
+            btnTacGia.FlatAppearance.BorderSize = 0;
+            btnTacGia.FlatStyle = FlatStyle.Flat;
+            btnTacGia.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTacGia.ForeColor = SystemColors.Desktop;
+            btnTacGia.Location = new Point(0, 76);
+            btnTacGia.Name = "btnTacGia";
+            btnTacGia.Padding = new Padding(30, 0, 0, 0);
+            btnTacGia.Size = new Size(188, 38);
+            btnTacGia.TabIndex = 10;
+            btnTacGia.Text = "Quản lý tác giả";
+            btnTacGia.TextAlign = ContentAlignment.MiddleLeft;
+            btnTacGia.UseVisualStyleBackColor = false;
+            btnTacGia.Click += btnTacGia_Click;
             // 
             // btnNhanVien
             // 
-            trảSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
-            trảSáchToolStripMenuItem.Size = new Size(164, 26);
-            trảSáchToolStripMenuItem.Text = "Trả sách";
-            trảSáchToolStripMenuItem.Click += trảSáchToolStripMenuItem_Click;
+            btnNhanVien.BackColor = Color.FromArgb(192, 255, 255);
+            btnNhanVien.Dock = DockStyle.Top;
+            btnNhanVien.FlatAppearance.BorderSize = 0;
+            btnNhanVien.FlatStyle = FlatStyle.Flat;
+            btnNhanVien.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNhanVien.ForeColor = SystemColors.Desktop;
+            btnNhanVien.Location = new Point(0, 38);
+            btnNhanVien.Name = "btnNhanVien";
+            btnNhanVien.Padding = new Padding(30, 0, 0, 0);
+            btnNhanVien.Size = new Size(188, 38);
+            btnNhanVien.TabIndex = 12;
+            btnNhanVien.Text = "Quản lý nhân viên";
+            btnNhanVien.TextAlign = ContentAlignment.MiddleLeft;
+            btnNhanVien.UseVisualStyleBackColor = false;
+            btnNhanVien.Click += btnNhanVien_Click;
             // 
             // btnDocGia
             // 
-            timKiem_StripMenu.DropDownItems.AddRange(new ToolStripItem[] { btnTimKiemDocGia });
-            timKiem_StripMenu.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            timKiem_StripMenu.Name = "timKiem_StripMenu";
-            timKiem_StripMenu.Size = new Size(94, 25);
-            timKiem_StripMenu.Text = "Tìm kiếm";
+            btnDocGia.BackColor = Color.FromArgb(192, 255, 255);
+            btnDocGia.Dock = DockStyle.Top;
+            btnDocGia.FlatAppearance.BorderSize = 0;
+            btnDocGia.FlatStyle = FlatStyle.Flat;
+            btnDocGia.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDocGia.ForeColor = SystemColors.Desktop;
+            btnDocGia.Location = new Point(0, 0);
+            btnDocGia.Name = "btnDocGia";
+            btnDocGia.Padding = new Padding(30, 0, 0, 0);
+            btnDocGia.Size = new Size(188, 38);
+            btnDocGia.TabIndex = 11;
+            btnDocGia.Text = "Quản lý độc giả";
+            btnDocGia.TextAlign = ContentAlignment.MiddleLeft;
+            btnDocGia.UseVisualStyleBackColor = false;
+            btnDocGia.Click += button5_Click;
             // 
-            // btnTimKiemDocGia
+            // btnDanhMuc
             // 
-            btnTimKiemDocGia.Name = "btnTimKiemDocGia";
-            btnTimKiemDocGia.Size = new Size(212, 26);
-            btnTimKiemDocGia.Text = "Tìm kiếm độc giả";
-            btnTimKiemDocGia.Click += tìmKiếmĐộcGiảToolStripMenuItem_Click;
+            btnDanhMuc.BackColor = Color.PaleTurquoise;
+            btnDanhMuc.Dock = DockStyle.Top;
+            btnDanhMuc.FlatAppearance.BorderSize = 0;
+            btnDanhMuc.FlatStyle = FlatStyle.Flat;
+            btnDanhMuc.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDanhMuc.ForeColor = SystemColors.ControlText;
+            btnDanhMuc.Location = new Point(0, 88);
+            btnDanhMuc.Name = "btnDanhMuc";
+            btnDanhMuc.Padding = new Padding(10, 0, 0, 0);
+            btnDanhMuc.Size = new Size(188, 38);
+            btnDanhMuc.TabIndex = 26;
+            btnDanhMuc.Text = "Danh Mục";
+            btnDanhMuc.TextAlign = ContentAlignment.MiddleLeft;
+            btnDanhMuc.UseVisualStyleBackColor = false;
+            btnDanhMuc.Click += btnDanhMuc_Click;
             // 
-            // baoCao_StripMenu
+            // panelLogoUTH
             // 
-            baoCao_StripMenu.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            baoCao_StripMenu.Name = "baoCao_StripMenu";
-            baoCao_StripMenu.Size = new Size(84, 25);
-            baoCao_StripMenu.Text = "Báo cáo";
-            baoCao_StripMenu.Click += baoCao_StripMenu_Click;
+            panelLogoUTH.BackColor = Color.White;
+            panelLogoUTH.Controls.Add(pictureBox1);
+            panelLogoUTH.Dock = DockStyle.Top;
+            panelLogoUTH.Location = new Point(0, 0);
+            panelLogoUTH.Name = "panelLogoUTH";
+            panelLogoUTH.Size = new Size(188, 88);
+            panelLogoUTH.TabIndex = 25;
             // 
             // pictureBox1
             // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { heThong_StripMenu, danhMuc_toolStripMenu, muonSach_StripMenu, timKiem_StripMenu, baoCao_StripMenu, toolStripTextBox1 });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 2, 0, 2);
-            menuStrip1.Size = new Size(1222, 29);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
-            menuStrip1.UseWaitCursor = true;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-1, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(189, 86);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // panelMain
             // 
-            toolStripTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            toolStripTextBox1.Name = "toolStripTextBox1";
-            toolStripTextBox1.Size = new Size(100, 25);
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(190, 0);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(1079, 614);
+            panelMain.TabIndex = 1;
             // 
             // formGiaoDien
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1222, 660);
-            Controls.Add(panel1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
+            ClientSize = new Size(1269, 614);
+            Controls.Add(panelMain);
+            Controls.Add(panelMenu);
             Margin = new Padding(4);
             Name = "formGiaoDien";
             StartPosition = FormStartPosition.CenterScreen;
@@ -264,27 +414,31 @@ namespace QLTV
         }
 
         #endregion
-        private DateTimePicker dateTimePicker1;
-        private ToolStripMenuItem btnMuonSach;
-        private Panel panel1;
-        private ToolStripMenuItem heThong_StripMenu;
-        private ToolStripMenuItem btnTaiKhoan;
-        private ToolStripMenuItem btnDangXuat;
-        private ToolStripMenuItem btnThoat;
-        private ToolStripMenuItem danhMuc_toolStripMenu;
-        private ToolStripMenuItem btnQuanLySach;
-        private ToolStripMenuItem btnQuanLyTacGia;
-        private ToolStripMenuItem btnQuanLyDocGia;
-        private ToolStripMenuItem btnQuanLyNhanVien;
-        private ToolStripMenuItem thểLoạiToolStripMenuItem;
-        private ToolStripMenuItem nhàXuấtBảnToolStripMenuItem;
-        private ToolStripMenuItem muonSach_StripMenu;
-        private ToolStripMenuItem mượnSáchToolStripMenuItem;
-        private ToolStripMenuItem trảSáchToolStripMenuItem;
-        private ToolStripMenuItem timKiem_StripMenu;
-        private ToolStripMenuItem btnTimKiemDocGia;
-        private ToolStripMenuItem baoCao_StripMenu;
-        private MenuStrip menuStrip1;
-        private ToolStripTextBox toolStripTextBox1;
+        private Panel panelMenu;
+        private Panel panel2;
+        private Button button10;
+        private Button button11;
+        private Button button12;
+        private Panel panelDanhMucCon;
+        private Button btnQuanLySach;
+        private Button btnNXB;
+        private Button btnTheLoaiSach;
+        private Button btnTacGia;
+        private Button btnNhanVien;
+        private Button btnDocGia;
+        private Button btnDanhMuc;
+        private Panel panelLogoUTH;
+        private Panel panelOut;
+        private Button btnThoat;
+        private Button btnDangXuat;
+        private TextBox txtPhanQuyen;
+        private Button btnBaoCao;
+        private Panel panelMuonSachCon;
+        private Button btnTraSach;
+        private Button btnMuonSach;
+        private Button btnMTSach;
+        private Panel panelMain;
+        private PictureBox pictureBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

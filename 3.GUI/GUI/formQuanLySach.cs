@@ -118,7 +118,7 @@ namespace QLTV
             cBox_Caterogy.Enabled =
             cBox_Author.Enabled =
             cBox_Publisher.Enabled =
-            cBox_Status.Enabled =
+            cBox_Status.Enabled =         
 
             btnHuy.Enabled = bl_add || bl_upd_del;
 
