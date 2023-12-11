@@ -137,17 +137,6 @@
             panel1.Size = new Size(1235, 257);
             panel1.TabIndex = 51;
             // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(txtTimKiem);
-            groupBox2.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox2.Location = new Point(880, 13);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(329, 49);
-            groupBox2.TabIndex = 39;
-            groupBox2.TabStop = false;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -353,7 +342,6 @@
             Controls.Add(panel1);
             Name = "formNXB";
             Text = "Nhà xuất bản";
-            Load += formNXB_Load;
             ((System.ComponentModel.ISupportInitialize)dgvNXB).EndInit();
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();

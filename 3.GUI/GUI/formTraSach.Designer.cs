@@ -149,72 +149,6 @@
             panel1.Size = new Size(1235, 252);
             panel1.TabIndex = 49;
             // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(txt_search);
-            groupBox2.Location = new Point(890, -6);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(322, 46);
-            groupBox2.TabIndex = 36;
-            groupBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(15, 17);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(82, 21);
-            label5.TabIndex = 24;
-            label5.Text = "Tìm kiếm";
-            // 
-            // txt_search
-            // 
-            txt_search.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_search.Location = new Point(105, 11);
-            txt_search.Margin = new Padding(4, 3, 4, 3);
-            txt_search.Name = "txt_search";
-            txt_search.Size = new Size(204, 27);
-            txt_search.TabIndex = 23;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(txt_book_name);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txt_user_id);
-            groupBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(138, 36);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(390, 158);
-            groupBox1.TabIndex = 35;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Trả sách";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(15, 32);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(121, 21);
-            label6.TabIndex = 36;
-            label6.Text = "Mã mượn sách";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(141, 23);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(158, 29);
-            comboBox1.TabIndex = 35;
-            // 
             // btnHuy
             // 
             btnHuy.Enabled = false;
@@ -407,7 +341,6 @@
             Controls.Add(panel1);
             Name = "formTraSach";
             Text = "formTraSach";
-            Load += formTraSach_Load;
             ((System.ComponentModel.ISupportInitialize)book_dataGridView).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

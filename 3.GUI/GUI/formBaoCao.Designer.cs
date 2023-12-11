@@ -228,7 +228,6 @@ namespace QLTV
         private Button btnPrePage;
         private DataGridView dgvBaoCao;
         private Panel panelTop;
-        private GroupBox groupBox2;
         private Label label4;
         private TextBox textBox1;
         private Button btnPDF;

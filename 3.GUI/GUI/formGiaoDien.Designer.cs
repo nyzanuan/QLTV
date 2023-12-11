@@ -101,21 +101,6 @@ namespace QLTV
             panel1.Size = new Size(1228, 845);
             panel1.TabIndex = 2;
             // 
-            // heThong_StripMenu
-            // 
-            heThong_StripMenu.DropDownItems.AddRange(new ToolStripItem[] { btnTaiKhoan, btnDangXuat, btnThoat });
-            heThong_StripMenu.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            heThong_StripMenu.Name = "heThong_StripMenu";
-            heThong_StripMenu.Size = new Size(90, 25);
-            heThong_StripMenu.Text = "Hệ thống";
-            // 
-            // btnTaiKhoan
-            // 
-            btnTaiKhoan.Name = "btnTaiKhoan";
-            btnTaiKhoan.Size = new Size(160, 26);
-            btnTaiKhoan.Text = "Tài khoản";
-            btnTaiKhoan.Click += btnTaiKhoan_Click;
-            // 
             // btnDangXuat
             // 
             btnDangXuat.BackColor = Color.PaleTurquoise;

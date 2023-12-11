@@ -113,14 +113,12 @@ namespace QLTV
         private void setting(bool bl_readOnly, bool bl_add, bool bl_upd_del)
         {
             txt_book_name.ReadOnly =
-            txt_title.ReadOnly =
             txt_quantity.ReadOnly = bl_readOnly;
             cBox_language.Enabled =
             cBox_Caterogy.Enabled =
             cBox_Author.Enabled =
             cBox_Publisher.Enabled =
             cBox_Status.Enabled =
-            btnChonAnh.Enabled = !bl_readOnly;
 
             btnHuy.Enabled = bl_add || bl_upd_del;
 
@@ -141,7 +139,6 @@ namespace QLTV
             cBox_Caterogy.SelectedValue = -1;
             cBox_Publisher.SelectedValue = -1;
             cBox_Status.SelectedItem = BookStatus.Active;
-            ptbChonAnh.Image = null;
             dgvSach.SelectedRows.Clear();
             dgvSach.SelectedCells.Clear();
         }
