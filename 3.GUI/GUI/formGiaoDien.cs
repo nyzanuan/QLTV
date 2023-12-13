@@ -22,14 +22,14 @@ namespace QLTV
             {
                 currentChildForm.Dispose();
                 currentChildForm = null;
-                panelMain.Controls.Clear();
+                panelChild.Controls.Clear();
             }
 
             currentChildForm = ChildForm;
             ChildForm.TopLevel = false;
             ChildForm.FormBorderStyle = FormBorderStyle.None;
             ChildForm.Dock = DockStyle.Fill;
-            panelMain.Controls.Add(ChildForm);
+            panelChild.Controls.Add(ChildForm);
             ChildForm.Show();
 
         }
@@ -163,6 +163,21 @@ namespace QLTV
             formBaoCao formBaoCao = new formBaoCao();
             OpenForm(formBaoCao);
             hideMenuCon();
+        }
+
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if (isClose)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DangXuat(this, new EventArgs());
+
         }
     }
 }

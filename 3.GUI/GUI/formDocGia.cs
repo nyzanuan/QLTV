@@ -22,6 +22,7 @@ namespace QLTV
             InitializeComponent();
             _customerService = new CustomerService();
             cBox_gioiTinh.DataSource = Enum.GetValues(typeof(Gender));
+            cBox_gioiTinh.SelectedIndex = -1;
             searchTimer = new Timer();
             searchTimer.Interval = 500;
             searchTimer.Tick += SearchTimer_Tick;
@@ -70,6 +71,7 @@ namespace QLTV
         private void formDocGia_Load(object sender, EventArgs e)
         {
             loadData();
+
 
         }
         private void setting(bool bl_readOnly, bool bl_add, bool bl_upd_del)
