@@ -1,6 +1,7 @@
 ﻿using _1.DAL.Model;
 using _2.BUS.IService;
 using _2.BUS.Service;
+using _3.GUI.Helper;
 using Sharing.Model;
 using Sharing.ReturnModel;
 using Timer = System.Windows.Forms.Timer;
@@ -112,12 +113,14 @@ namespace QLTV
         private void setting(bool bl_readOnly, bool bl_add, bool bl_upd_del)
         {
             txt_book_name.ReadOnly =
+            txt_title.ReadOnly =
             txt_quantity.ReadOnly = bl_readOnly;
             cBox_language.Enabled =
-            cBox_Caterogy.Enabled =
+            cBox_Status.Enabled =
             cBox_Author.Enabled =
             cBox_Publisher.Enabled =
-            cBox_Status.Enabled =
+            cBox_Caterogy.Enabled =
+            btnChonAnh.Enabled = !bl_readOnly;
 
             btnHuy.Enabled = bl_add || bl_upd_del;
 
@@ -131,15 +134,17 @@ namespace QLTV
         private void refreshField()
         {
             txt_book_id.Text =
+            txt_title.Text=
             txt_book_name.Text =
             txt_quantity.Text = "";
             cBox_language.SelectedValue = -1;
             cBox_Author.SelectedValue = -1;
             cBox_Caterogy.SelectedValue = -1;
             cBox_Publisher.SelectedValue = -1;
-            cBox_Status.SelectedItem = BookStatus.Active;
-            dgvSach.SelectedRows.Clear();
-            dgvSach.SelectedCells.Clear();
+            cBox_Caterogy.SelectedItem = BookStatus.Active;
+            ptbChonAnh.Image = null;
+            //dgvSach.SelectedRows.Clear();
+            //dgvSach.SelectedCells.Clear();
         }
         private void txt_quantity_TextChanged(object sender, EventArgs e)
         {
@@ -151,6 +156,202 @@ namespace QLTV
             setting(false, true, false);
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            var book = new Book()
+            {
+                BookId = int.Parse(txt_book_id.Text),
+                Name = txt_book_name.Text,
+                Title = txt_title.Text,
+                AvailableCopies = Convert.ToInt16(txt_quantity.Text),
+                TotalCopies = Convert.ToInt16(txt_quantity.Text) + borrowedCopies,
+                Status = (BookStatus)cBox_Status.SelectedItem,
+                AuthorId = Convert.ToInt16(cBox_Author.SelectedValue),
+                LanguageId = Convert.ToInt16(cBox_language.SelectedValue),
+                CategoryId = Convert.ToInt16(cBox_Caterogy.SelectedValue),
+                PublisherId = Convert.ToInt16(cBox_Publisher.SelectedValue),
+                Image = HelperImage.ChangeImageToByte(ptbChonAnh)
+            };
+            bool result = _bookService.UpdateBook(book);
+            if (result)
+            {
+                MessageBox.Show("Cập nhật thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                loadData();
+                refreshField();
+                setting(true, false, false);
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại, có thể do lỗi hoặc do không có ựu thay đổi ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn rầng bạn muốn xóa không", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                if (int.TryParse(txt_book_id.Text, out int id))
+                {
+                    bool result = _bookService.DeleteBook(id);
+                    if (result)
+                    {
+                        MessageBox.Show("Xóa thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadData();
+                        setting(true, false, false);
+                        refreshField();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Kiểm tra lại Id", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            Book book = new Book()
+            {
+                Name = txt_book_name.Text,
+                Title = txt_title.Text,
+                AvailableCopies = Convert.ToInt16(txt_quantity.Text != "" ? txt_quantity.Text : "0"),
+                TotalCopies = Convert.ToInt16(txt_quantity.Text != "" ? txt_quantity.Text : "0"),
+                Status = (BookStatus)cBox_Status.SelectedItem,
+                AuthorId = Convert.ToInt16(cBox_Author.SelectedValue.ToString()),
+                PublisherId = Convert.ToInt16(cBox_Publisher.SelectedValue.ToString()),
+                CategoryId = Convert.ToInt16(cBox_Caterogy.SelectedValue.ToString()),
+                LanguageId = Convert.ToInt16(cBox_language.SelectedValue.ToString()),
+            };
+            if (ptbChonAnh.Image != null)
+            {
+                book.Image = HelperImage.ChangeImageToByte(ptbChonAnh);
+            }
+            bool result = _bookService.AddBook(book);
+            if (result)
+            {
+                MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                loadData();
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            setting(true, false, false);
+            refreshField();
+        }
+
+        private void btnChonAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Title = "Chọn hình ảnh";
+            openFileDialog.Filter = "Tệp hình ảnh|*.bmp;*.jpg;*.jpeg;*.png;*.gif|Tất cả các tệp|*.*";
+            openFileDialog.FilterIndex = 1;
+            openFileDialog.RestoreDirectory = true;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (!string.IsNullOrWhiteSpace(openFileDialog.FileName))
+                {
+                    string[] imageExtensions = { ".bmp", ".jpg", ".jpeg", ".png", ".gif" };
+                    if (Array.Exists(imageExtensions, ext => ext.Equals(System.IO.Path.GetExtension(openFileDialog.FileName), StringComparison.OrdinalIgnoreCase)))
+                    {
+                        ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
+                        ptbChonAnh.Image = Image.FromFile(openFileDialog.FileName);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng chọn một tệp hình ảnh.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+        }
+
+        private void btnFirstPage_Click(object sender, EventArgs e)
+        {
+            if (pageNow != 1)
+            {
+                pageNow = 1;
+                loadData();
+            }
+        }
+
+        private void btnPrePage_Click(object sender, EventArgs e)
+        {
+            if (pageNow - 1 > 0)
+            {
+                pageNow = pageNow - 1;
+                loadData();
+            }
+        }
+
+        private void btnNextPage_Click(object sender, EventArgs e)
+        {
+            if (pageNow + 1 <= totalPage)
+            {
+                pageNow = pageNow + 1;
+                loadData();
+            }
+        }
+
+        private void btnLastPage_Click(object sender, EventArgs e)
+        {
+            if (pageNow != totalPage)
+            {
+                pageNow = totalPage;
+                loadData();
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            searchTimer.Stop();
+            searchTimer.Start();
+        }
+
+        private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dgvSach.Rows.Count)
+            {
+                int id = Convert.ToInt16(dgvSach.Rows[e.RowIndex].Cells[0].Value.ToString());
+                Book book = _bookService.GetBook(id);
+
+                if (book.Image != null && book.Image.Length > 0)
+                {
+                    if (book.Image is byte[] imageBytes)
+                    {
+                        using (MemoryStream stream = new MemoryStream(imageBytes))
+                        {
+                            stream.Seek(0, SeekOrigin.Begin);
+                            ptbChonAnh.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                else
+                {
+                    ptbChonAnh.Image = null;
+                }
+                txt_book_id.Text = id.ToString();
+                txt_book_name.Text = book.Name;
+                txt_title.Text = book.Title;
+                txt_quantity.Text = book.AvailableCopies.ToString();
+                cBox_Author.SelectedValue = book.AuthorId;
+                cBox_Caterogy.SelectedValue = book.CategoryId;
+                cBox_language.SelectedValue = book.LanguageId;
+                cBox_Publisher.SelectedValue = book.PublisherId;
+                cBox_Status.SelectedItem = book.Status;
+                borrowedCopies = book.BorrowedCopies;
+                setting(false, false, true);
+
+            }
+        }
     }
 }
