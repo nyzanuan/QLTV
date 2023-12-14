@@ -1,7 +1,6 @@
 ﻿using _1.DAL.Model;
 using _2.BUS.IService;
 using _2.BUS.Service;
-using _3.GUI.Helper;
 using Sharing.ReturnModel;
 using Timer = System.Windows.Forms.Timer;
 
@@ -71,7 +70,7 @@ namespace _3.GUI.GUI
         private void setting(bool bl_readOnly, bool bl_add, bool bl_upd_del)
         {
             txt_name.ReadOnly = bl_readOnly;
-           
+
 
             btnHuy.Enabled = bl_add || bl_upd_del;
 
@@ -85,7 +84,7 @@ namespace _3.GUI.GUI
         {
             txt_id.Text =
             txt_name.Text = "";
-            
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -99,7 +98,7 @@ namespace _3.GUI.GUI
             {
                 CategoryId = int.Parse(txt_id.Text),
                 Name = txt_name.Text,
-                
+
             };
             bool result = _categoryService.UpdateCategory(category);
             if (result)
@@ -144,7 +143,7 @@ namespace _3.GUI.GUI
             {
                 Name = txt_name.Text,
             };
-            
+
             bool result = _categoryService.AddCategory(category);
             if (result)
             {
@@ -163,7 +162,7 @@ namespace _3.GUI.GUI
             refreshField();
         }
 
-        
+
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
@@ -221,11 +220,11 @@ namespace _3.GUI.GUI
                         using (MemoryStream stream = new MemoryStream(imageBytes))
                         {
                             stream.Seek(0, SeekOrigin.Begin);
-                           
+
                         }
                     }
                 }
-                
+
                 txt_id.Text = id.ToString();
                 txt_name.Text = category.Name;
                 setting(false, false, true);
