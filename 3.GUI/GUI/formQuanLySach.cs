@@ -134,7 +134,7 @@ namespace QLTV
         private void refreshField()
         {
             txt_book_id.Text =
-            txt_title.Text=
+            txt_title.Text =
             txt_book_name.Text =
             txt_quantity.Text = "";
             cBox_language.SelectedValue = -1;
