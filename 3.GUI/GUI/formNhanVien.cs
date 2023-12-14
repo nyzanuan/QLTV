@@ -6,7 +6,7 @@ using Sharing.Model;
 using Sharing.ReturnModel;
 using Timer = System.Windows.Forms.Timer;
 
-namespace QLTV
+namespace _3.GUI.GUI
 {
     public partial class formNhanVien : Form
     {
@@ -25,7 +25,6 @@ namespace QLTV
             searchTimer.Interval = 500;
             searchTimer.Tick += SearchTimer_Tick;
         }
-
         private void SearchTimer_Tick(object? sender, EventArgs e)
         {
             searchTimer.Stop();
@@ -363,7 +362,5 @@ namespace QLTV
             searchTimer.Stop();
             searchTimer.Start();
         }
-
-
     }
 }
