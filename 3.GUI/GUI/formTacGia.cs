@@ -5,11 +5,11 @@ using _3.GUI.Helper;
 using Sharing.ReturnModel;
 using Timer = System.Windows.Forms.Timer;
 
-namespace QLTV
+namespace _3.GUI.GUI
 {
-
     public partial class formTacGia : Form
     {
+
         int pageNow = 1;
         int pageSize = 2;
         int totalPage = 0;
@@ -290,9 +290,5 @@ namespace QLTV
             }
         }
 
-        private void btnUpdate_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

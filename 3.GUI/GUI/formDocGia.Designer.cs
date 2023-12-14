@@ -44,7 +44,6 @@ namespace QLTV
             btnPrePage = new Button();
             panelMid = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            ptbChonAnh = new _3.GUI.Helper.RoundedPictureBox();
             cBox_gioiTinh = new ComboBox();
             label6 = new Label();
             btnChonAnh = new Button();
@@ -56,6 +55,7 @@ namespace QLTV
             txt_phone = new TextBox();
             label3 = new Label();
             txt_id = new TextBox();
+            ptbChonAnh = new _3.GUI.Helper.RoundedPictureBox();
             btnHuy = new Button();
             btnLuu = new Button();
             btnThem = new Button();
@@ -157,10 +157,10 @@ namespace QLTV
             // 
             // txtNumberPage
             // 
-            txtNumberPage.Anchor = AnchorStyles.None;
+            txtNumberPage.Anchor = AnchorStyles.Bottom;
             txtNumberPage.Enabled = false;
             txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            txtNumberPage.Location = new Point(503, 288);
+            txtNumberPage.Location = new Point(492, 289);
             txtNumberPage.Margin = new Padding(5);
             txtNumberPage.Multiline = true;
             txtNumberPage.Name = "txtNumberPage";
@@ -171,9 +171,9 @@ namespace QLTV
             // 
             // btnLastPage
             // 
-            btnLastPage.Anchor = AnchorStyles.None;
+            btnLastPage.Anchor = AnchorStyles.Bottom;
             btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLastPage.Location = new Point(691, 285);
+            btnLastPage.Location = new Point(680, 286);
             btnLastPage.Margin = new Padding(5);
             btnLastPage.Name = "btnLastPage";
             btnLastPage.Size = new Size(91, 31);
@@ -183,9 +183,9 @@ namespace QLTV
             // 
             // btnNextPage
             // 
-            btnNextPage.Anchor = AnchorStyles.None;
+            btnNextPage.Anchor = AnchorStyles.Bottom;
             btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNextPage.Location = new Point(592, 285);
+            btnNextPage.Location = new Point(581, 286);
             btnNextPage.Margin = new Padding(5);
             btnNextPage.Name = "btnNextPage";
             btnNextPage.Size = new Size(91, 31);
@@ -195,9 +195,9 @@ namespace QLTV
             // 
             // btnFirstPage
             // 
-            btnFirstPage.Anchor = AnchorStyles.None;
+            btnFirstPage.Anchor = AnchorStyles.Bottom;
             btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFirstPage.Location = new Point(293, 285);
+            btnFirstPage.Location = new Point(282, 286);
             btnFirstPage.Margin = new Padding(5);
             btnFirstPage.Name = "btnFirstPage";
             btnFirstPage.Size = new Size(91, 31);
@@ -207,9 +207,9 @@ namespace QLTV
             // 
             // btnPrePage
             // 
-            btnPrePage.Anchor = AnchorStyles.None;
+            btnPrePage.Anchor = AnchorStyles.Bottom;
             btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPrePage.Location = new Point(393, 285);
+            btnPrePage.Location = new Point(382, 286);
             btnPrePage.Margin = new Padding(5);
             btnPrePage.Name = "btnPrePage";
             btnPrePage.Size = new Size(91, 31);
@@ -242,7 +242,6 @@ namespace QLTV
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.0000038F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 127F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.0000038F));
-            tableLayoutPanel1.Controls.Add(ptbChonAnh, 0, 0);
             tableLayoutPanel1.Controls.Add(cBox_gioiTinh, 6, 0);
             tableLayoutPanel1.Controls.Add(label6, 5, 0);
             tableLayoutPanel1.Controls.Add(btnChonAnh, 0, 1);
@@ -254,6 +253,7 @@ namespace QLTV
             tableLayoutPanel1.Controls.Add(txt_phone, 2, 1);
             tableLayoutPanel1.Controls.Add(label3, 3, 0);
             tableLayoutPanel1.Controls.Add(txt_id, 2, 0);
+            tableLayoutPanel1.Controls.Add(ptbChonAnh, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Top;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(0);
@@ -263,17 +263,6 @@ namespace QLTV
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(1051, 291);
             tableLayoutPanel1.TabIndex = 66;
-            // 
-            // ptbChonAnh
-            // 
-            ptbChonAnh.Anchor = AnchorStyles.None;
-            ptbChonAnh.BackColor = Color.Transparent;
-            ptbChonAnh.Location = new Point(11, 6);
-            ptbChonAnh.Name = "ptbChonAnh";
-            ptbChonAnh.Size = new Size(145, 133);
-            ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
-            ptbChonAnh.TabIndex = 64;
-            ptbChonAnh.TabStop = false;
             // 
             // cBox_gioiTinh
             // 
@@ -405,6 +394,16 @@ namespace QLTV
             txt_id.ReadOnly = true;
             txt_id.Size = new Size(157, 32);
             txt_id.TabIndex = 58;
+            // 
+            // ptbChonAnh
+            // 
+            ptbChonAnh.BackColor = Color.Transparent;
+            ptbChonAnh.Location = new Point(3, 3);
+            ptbChonAnh.Name = "ptbChonAnh";
+            ptbChonAnh.Size = new Size(150, 134);
+            ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
+            ptbChonAnh.TabIndex = 66;
+            ptbChonAnh.TabStop = false;
             // 
             // btnHuy
             // 
@@ -600,7 +599,6 @@ namespace QLTV
         private DataGridViewTextBoxColumn COL_PHONE;
         private DataGridViewTextBoxColumn COL_EMAIL;
         private DataGridViewTextBoxColumn COL_CREATEAT;
-        private _3.GUI.Helper.RoundedPictureBox ptbChonAnh;
         private ComboBox cBox_gioiTinh;
         private Label label6;
         private Button btnChonAnh;
@@ -613,5 +611,6 @@ namespace QLTV
         private TextBox txt_phone;
         private Label label3;
         private TableLayoutPanel tableLayoutPanel1;
+        private _3.GUI.Helper.RoundedPictureBox ptbChonAnh;
     }
 }
