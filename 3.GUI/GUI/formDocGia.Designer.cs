@@ -180,6 +180,7 @@ namespace QLTV
             btnLastPage.TabIndex = 54;
             btnLastPage.Text = ">|";
             btnLastPage.UseVisualStyleBackColor = true;
+            btnLastPage.Click += btnLastPage_Click;
             // 
             // btnNextPage
             // 
@@ -192,6 +193,7 @@ namespace QLTV
             btnNextPage.TabIndex = 53;
             btnNextPage.Text = ">>";
             btnNextPage.UseVisualStyleBackColor = true;
+            btnNextPage.Click += btnNextPage_Click;
             // 
             // btnFirstPage
             // 
@@ -204,6 +206,7 @@ namespace QLTV
             btnFirstPage.TabIndex = 51;
             btnFirstPage.Text = "|<";
             btnFirstPage.UseVisualStyleBackColor = true;
+            btnFirstPage.Click += btnFirstPage_Click;
             // 
             // btnPrePage
             // 
@@ -216,6 +219,7 @@ namespace QLTV
             btnPrePage.TabIndex = 52;
             btnPrePage.Text = "<<";
             btnPrePage.UseVisualStyleBackColor = true;
+            btnPrePage.Click += btnPrePage_Click;
             // 
             // panelMid
             // 
@@ -271,7 +275,7 @@ namespace QLTV
             cBox_gioiTinh.Font = new Font("Times New Roman", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point);
             cBox_gioiTinh.ForeColor = SystemColors.MenuText;
             cBox_gioiTinh.FormattingEnabled = true;
-            cBox_gioiTinh.Location = new Point(887, 55);
+            cBox_gioiTinh.Location = new Point(887, 56);
             cBox_gioiTinh.Margin = new Padding(5);
             cBox_gioiTinh.Name = "cBox_gioiTinh";
             cBox_gioiTinh.Size = new Size(159, 33);
@@ -397,8 +401,9 @@ namespace QLTV
             // 
             // ptbChonAnh
             // 
+            ptbChonAnh.Anchor = AnchorStyles.None;
             ptbChonAnh.BackColor = Color.Transparent;
-            ptbChonAnh.Location = new Point(3, 3);
+            ptbChonAnh.Location = new Point(8, 5);
             ptbChonAnh.Name = "ptbChonAnh";
             ptbChonAnh.Size = new Size(150, 134);
             ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
@@ -530,6 +535,7 @@ namespace QLTV
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.Size = new Size(351, 35);
             txtTimKiem.TabIndex = 39;
+            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
             // 
             // panelBot
             // 
