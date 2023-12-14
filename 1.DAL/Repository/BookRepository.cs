@@ -1,6 +1,7 @@
 ﻿using _1.DAL.Data;
 using _1.DAL.IRepository;
 using _1.DAL.Model;
+using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Bcpg;
 using Sharing.ReturnModel;
 using System;
@@ -54,7 +55,7 @@ namespace _1.DAL.Repository
         {
             try
             {
-                var query = _dataContext.Book.AsQueryable();
+                var query = _dataContext.Book.Include(p=>p.Category).AsQueryable();
                 if (!string.IsNullOrEmpty(search))
                 {
                     string searchWithoutDiacritics = search.ToLower();
@@ -93,8 +94,6 @@ namespace _1.DAL.Repository
 
         public Book GetBook(int id)
         {
-
-
             var rs = _dataContext.Book
                     .Join(_dataContext.Category, b => b.CategoryId, c => c.CategoryId,
                             (b, c) => new { Book = b, Category = c })

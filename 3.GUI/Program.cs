@@ -1,5 +1,3 @@
-using _3.GUI.GUI;
-
 namespace _3.GUI
 {
     internal static class Program
