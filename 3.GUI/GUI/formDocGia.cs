@@ -22,7 +22,6 @@ namespace QLTV
             InitializeComponent();
             _customerService = new CustomerService();
             cBox_gioiTinh.DataSource = Enum.GetValues(typeof(Gender));
-            cBox_gioiTinh.SelectedIndex = -1;
             searchTimer = new Timer();
             searchTimer.Interval = 500;
             searchTimer.Tick += SearchTimer_Tick;
@@ -107,7 +106,7 @@ namespace QLTV
             setting(false, true, false);
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        private async void btnLuu_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer()
             {
@@ -116,21 +115,21 @@ namespace QLTV
                 Email = txt_email.Text,
                 Gender = (Gender)cBox_gioiTinh.SelectedItem,
                 CreateAt = DateTime.Now,
-                UserIdCreate = UserInfo.Instance.UserId,
+                UserIdCreate = UserInfo.Instance.UserId != 0 ? UserInfo.Instance.UserId : 1,
             };
             if (ptbChonAnh.Image != null)
             {
                 customer.Image = HelperImage.ChangeImageToByte(ptbChonAnh);
             }
-            bool result = _customerService.AddCustomer(customer);
-            if (result)
+            ValueReturn result = await _customerService.AddCustomer(customer);
+            if (result.Status)
             {
-                MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"{result.Message}", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loadData();
             }
             else
             {
-                MessageBox.Show("Thêm thất bại ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{result.Message}", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -172,7 +171,7 @@ namespace QLTV
             searchTimer.Start();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private async void btnUpdate_Click(object sender, EventArgs e)
         {
             var customer = new Customer()
             {
@@ -183,15 +182,15 @@ namespace QLTV
                 Gender = (Gender)cBox_gioiTinh.SelectedItem,
                 Image = HelperImage.ChangeImageToByte(ptbChonAnh)
             };
-            bool result = _customerService.UpdateCustomer(customer);
-            if (result)
+            ValueReturn result = await _customerService.UpdateCustomer(customer);
+            if (result.Status)
             {
                 MessageBox.Show("Cập nhật thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loadData();
             }
             else
             {
-                MessageBox.Show("Cập nhật thất bại, có thể do lỗi hoặc do không có ựu thay đổi ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{result.Message} ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -10,9 +10,9 @@ namespace _1.DAL.IRepository
 {
     public interface ICustomerRepository
     {
-        bool AddCustomer(Customer customer);
+        Task<ValueReturn> AddCustomer(Customer customer);
         bool DeleteCustomer(int id);
-        bool UpdateCustomer(Customer customer);
+        Task<ValueReturn> UpdateCustomer(Customer customer);
         Customer GetCustomer(int id);
         ValueReturn GetAllCustomer(int pageIndex, int pageSize, string? search);
     }

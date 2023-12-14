@@ -18,10 +18,25 @@ namespace _2.BUS.Service
         {
             _customerRepository = new CustomerRepository();
         }
-
-        public bool AddCustomer(Customer customer)
+        private ValueReturn check(Customer customer)
         {
-            return _customerRepository.AddCustomer(customer);
+            if (customer.Phone.Length!=10||!customer.Phone.StartsWith("0"))
+            {
+                return new ValueReturn { Message ="Số điện thoại gồm 10 số và bắt đầu bắt số 0.", Status=false};
+            }
+            if (!customer.Email.EndsWith("@gmail.com"))
+            {
+                return new ValueReturn { Message = "Email phải là dạng @gmail.com.", Status = false };
+            }
+            if (customer.Gender.ToString()=="")
+            {
+                return new ValueReturn { Message = "Chọn giới tính.", Status = false };
+            }
+            return new ValueReturn();
+        }
+        public async Task<ValueReturn> AddCustomer(Customer customer)
+        {
+            return !string.IsNullOrEmpty(check(customer).Message) ? check(customer) : await _customerRepository.AddCustomer(customer);
         }
 
         public bool DeleteCustomer(int id)
@@ -57,9 +72,10 @@ namespace _2.BUS.Service
             return _customerRepository.GetCustomer(id);
         }
 
-        public bool UpdateCustomer(Customer customer)
+        public async Task<ValueReturn> UpdateCustomer(Customer customer)
         {
-            return _customerRepository.UpdateCustomer(customer);
+            return !string.IsNullOrEmpty(check(customer).Message) ? check(customer) : await _customerRepository.UpdateCustomer(customer);
         }
     }
 }
+
