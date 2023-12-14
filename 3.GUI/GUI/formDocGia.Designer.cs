@@ -157,7 +157,7 @@ namespace QLTV
             // 
             // txtNumberPage
             // 
-            txtNumberPage.Anchor = AnchorStyles.Bottom;
+            txtNumberPage.Anchor = AnchorStyles.None;
             txtNumberPage.Enabled = false;
             txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             txtNumberPage.Location = new Point(503, 288);
@@ -171,7 +171,7 @@ namespace QLTV
             // 
             // btnLastPage
             // 
-            btnLastPage.Anchor = AnchorStyles.Bottom;
+            btnLastPage.Anchor = AnchorStyles.None;
             btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLastPage.Location = new Point(691, 286);
             btnLastPage.Margin = new Padding(5);
@@ -183,7 +183,7 @@ namespace QLTV
             // 
             // btnNextPage
             // 
-            btnNextPage.Anchor = AnchorStyles.Bottom;
+            btnNextPage.Anchor = AnchorStyles.None;
             btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnNextPage.Location = new Point(592, 286);
             btnNextPage.Margin = new Padding(5);
@@ -195,7 +195,7 @@ namespace QLTV
             // 
             // btnFirstPage
             // 
-            btnFirstPage.Anchor = AnchorStyles.Bottom;
+            btnFirstPage.Anchor = AnchorStyles.None;
             btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnFirstPage.Location = new Point(293, 286);
             btnFirstPage.Margin = new Padding(5);
@@ -207,7 +207,7 @@ namespace QLTV
             // 
             // btnPrePage
             // 
-            btnPrePage.Anchor = AnchorStyles.Bottom;
+            btnPrePage.Anchor = AnchorStyles.None;
             btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnPrePage.Location = new Point(393, 286);
             btnPrePage.Margin = new Padding(5);
