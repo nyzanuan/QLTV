@@ -1,7 +1,6 @@
 ﻿using _1.DAL.Model;
 using _2.BUS.IService;
 using _2.BUS.Service;
-using _3.GUI.Helper;
 using Sharing.Model;
 using Sharing.ReturnModel;
 using Timer = System.Windows.Forms.Timer;
@@ -118,7 +117,7 @@ namespace QLTV
             cBox_Caterogy.Enabled =
             cBox_Author.Enabled =
             cBox_Publisher.Enabled =
-            cBox_Status.Enabled =         
+            cBox_Status.Enabled =
 
             btnHuy.Enabled = bl_add || bl_upd_del;
 
@@ -152,6 +151,6 @@ namespace QLTV
             setting(false, true, false);
         }
 
-        
+
     }
 }

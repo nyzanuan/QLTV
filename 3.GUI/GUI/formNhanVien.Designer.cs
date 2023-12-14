@@ -1,7 +1,6 @@
-﻿
-using _3.GUI.Helper;
+﻿using _3.GUI.Helper;
 
-namespace QLTV
+namespace _3.GUI.GUI
 {
     partial class formNhanVien
     {
@@ -31,203 +30,436 @@ namespace QLTV
         /// </summary>
         private void InitializeComponent()
         {
-            dgvNhanVien = new DataGridView();
-            panelTop = new Panel();
-            label8 = new Label();
+            panelHeader = new Panel();
+            labelHeader = new Label();
+            panelBody = new Panel();
+            panelBodyButton = new Panel();
+            btnThem = new Button();
+            btnUpdate = new Button();
+            btnXoa = new Button();
             btnHuy = new Button();
             btnLuu = new Button();
-            btnThem = new Button();
-            btnXoa = new Button();
-            btnUpdate = new Button();
+            panelBodyInput = new Panel();
+            tableLayoutPanelMain = new TableLayoutPanel();
+            groupBoxBodyInput = new GroupBox();
+            tableLayoutPanelAllInput = new TableLayoutPanel();
+            cmbVaiTro = new ComboBox();
             txtMatKhau = new TextBox();
-            label11 = new Label();
+            txtUserName = new TextBox();
+            txtEmail = new TextBox();
             txtTenNhanVien = new TextBox();
-            label10 = new Label();
+            txtSoDienThoai = new TextBox();
+            labelMaNV = new Label();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            txtMaNhanVien = new TextBox();
+            cmbGioiTinh = new ComboBox();
+            tableLayoutBodyImage = new TableLayoutPanel();
             btnChonAnh = new Button();
             ptbChonAnh = new RoundedPictureBox();
-            label4 = new Label();
-            cmbVaiTro = new ComboBox();
-            label2 = new Label();
-            txtUserName = new TextBox();
-            label1 = new Label();
-            label3 = new Label();
-            label5 = new Label();
-            txtEmail = new TextBox();
-            label6 = new Label();
-            txtMaNhanVien = new TextBox();
-            txtSoDienThoai = new TextBox();
-            cmbGioiTinh = new ComboBox();
-            txtNumberPage = new TextBox();
-            btnLastPage = new Button();
-            btnNextPage = new Button();
-            btnFirstPage = new Button();
-            btnPrePage = new Button();
-            panelMid = new Panel();
-            cmbSearchRole = new ComboBox();
+            groupBoxBodySearch = new GroupBox();
+            tableLayoutPanelSearch = new TableLayoutPanel();
             label9 = new Label();
             txtSearch = new TextBox();
-            label7 = new Label();
-            panelBot = new Panel();
-            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
-            panelTop.SuspendLayout();
+            cmbSearchRole = new ComboBox();
+            label8 = new Label();
+            panelFooter = new Panel();
+            dgvNhanVien = new DataGridView();
+            txtNumberPage = new TextBox();
+            btnPrePage = new Button();
+            btnLastPage = new Button();
+            btnFirstPage = new Button();
+            btnNextPage = new Button();
+            panelHeader.SuspendLayout();
+            panelBody.SuspendLayout();
+            panelBodyButton.SuspendLayout();
+            panelBodyInput.SuspendLayout();
+            tableLayoutPanelMain.SuspendLayout();
+            groupBoxBodyInput.SuspendLayout();
+            tableLayoutPanelAllInput.SuspendLayout();
+            tableLayoutBodyImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbChonAnh).BeginInit();
-            panelMid.SuspendLayout();
-            panelBot.SuspendLayout();
+            groupBoxBodySearch.SuspendLayout();
+            tableLayoutPanelSearch.SuspendLayout();
+            panelFooter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
             SuspendLayout();
             // 
-            // dgvNhanVien
+            // panelHeader
             // 
-            dgvNhanVien.AllowUserToAddRows = false;
-            dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvNhanVien.BackgroundColor = SystemColors.ActiveCaption;
-            dgvNhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvNhanVien.Location = new Point(0, 0);
-            dgvNhanVien.Margin = new Padding(4);
-            dgvNhanVien.Name = "dgvNhanVien";
-            dgvNhanVien.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dgvNhanVien.RowTemplate.Height = 100;
-            dgvNhanVien.Size = new Size(1068, 287);
-            dgvNhanVien.TabIndex = 25;
-            dgvNhanVien.CellClick += dgvNhanVien_CellContentClick;
+            panelHeader.Controls.Add(labelHeader);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1147, 66);
+            panelHeader.TabIndex = 0;
             // 
-            // panelTop
+            // labelHeader
             // 
-            panelTop.Controls.Add(label8);
-            panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(0, 0);
-            panelTop.Margin = new Padding(4);
-            panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1063, 42);
-            panelTop.TabIndex = 24;
+            labelHeader.Anchor = AnchorStyles.None;
+            labelHeader.AutoSize = true;
+            labelHeader.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            labelHeader.Location = new Point(412, 5);
+            labelHeader.Name = "labelHeader";
+            labelHeader.Size = new Size(326, 41);
+            labelHeader.TabIndex = 0;
+            labelHeader.Text = "QUẢN LÝ NHÂN VIÊN";
             // 
-            // label8
+            // panelBody
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(375, 2);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(400, 36);
-            label8.TabIndex = 19;
-            label8.Text = "Quản lý thông tin nhân viên";
+            panelBody.Controls.Add(panelBodyButton);
+            panelBody.Controls.Add(panelBodyInput);
+            panelBody.Dock = DockStyle.Top;
+            panelBody.Location = new Point(0, 66);
+            panelBody.Name = "panelBody";
+            panelBody.Size = new Size(1147, 372);
+            panelBody.TabIndex = 1;
+            // 
+            // panelBodyButton
+            // 
+            panelBodyButton.Controls.Add(btnThem);
+            panelBodyButton.Controls.Add(btnUpdate);
+            panelBodyButton.Controls.Add(btnXoa);
+            panelBodyButton.Controls.Add(btnHuy);
+            panelBodyButton.Controls.Add(btnLuu);
+            panelBodyButton.Dock = DockStyle.Top;
+            panelBodyButton.Location = new Point(0, 279);
+            panelBodyButton.Name = "panelBodyButton";
+            panelBodyButton.Size = new Size(1147, 78);
+            panelBodyButton.TabIndex = 10;
+            // 
+            // btnThem
+            // 
+            btnThem.Anchor = AnchorStyles.None;
+            btnThem.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnThem.Location = new Point(324, 21);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(94, 36);
+            btnThem.TabIndex = 6;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Anchor = AnchorStyles.None;
+            btnUpdate.Enabled = false;
+            btnUpdate.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnUpdate.Location = new Point(433, 21);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 36);
+            btnUpdate.TabIndex = 7;
+            btnUpdate.Text = "Cập Nhật";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // btnXoa
+            // 
+            btnXoa.Anchor = AnchorStyles.None;
+            btnXoa.Enabled = false;
+            btnXoa.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnXoa.Location = new Point(533, 21);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(94, 36);
+            btnXoa.TabIndex = 10;
+            btnXoa.Text = "Xóa";
+            btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnHuy
             // 
+            btnHuy.Anchor = AnchorStyles.None;
             btnHuy.Enabled = false;
-            btnHuy.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnHuy.Location = new Point(687, 162);
-            btnHuy.Margin = new Padding(4);
+            btnHuy.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnHuy.Location = new Point(733, 21);
             btnHuy.Name = "btnHuy";
-            btnHuy.Size = new Size(80, 33);
-            btnHuy.TabIndex = 47;
+            btnHuy.Size = new Size(94, 36);
+            btnHuy.TabIndex = 8;
             btnHuy.Text = "Hủy";
             btnHuy.UseVisualStyleBackColor = true;
             btnHuy.Click += btnHuy_Click;
             // 
             // btnLuu
             // 
+            btnLuu.Anchor = AnchorStyles.None;
             btnLuu.Enabled = false;
-            btnLuu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLuu.Location = new Point(592, 162);
-            btnLuu.Margin = new Padding(4);
+            btnLuu.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLuu.Location = new Point(633, 21);
             btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(80, 33);
-            btnLuu.TabIndex = 46;
+            btnLuu.Size = new Size(94, 36);
+            btnLuu.TabIndex = 9;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = true;
             btnLuu.Click += btnLuu_Click;
             // 
-            // btnThem
+            // panelBodyInput
             // 
-            btnThem.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnThem.Location = new Point(319, 162);
-            btnThem.Margin = new Padding(4);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(80, 33);
-            btnThem.TabIndex = 43;
-            btnThem.Text = "Thêm";
-            btnThem.UseVisualStyleBackColor = true;
-            btnThem.Click += btnThem_Click;
+            panelBodyInput.Controls.Add(tableLayoutPanelMain);
+            panelBodyInput.Dock = DockStyle.Top;
+            panelBodyInput.Location = new Point(0, 0);
+            panelBodyInput.Name = "panelBodyInput";
+            panelBodyInput.Size = new Size(1147, 279);
+            panelBodyInput.TabIndex = 9;
             // 
-            // btnXoa
+            // tableLayoutPanelMain
             // 
-            btnXoa.Enabled = false;
-            btnXoa.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnXoa.Location = new Point(501, 162);
-            btnXoa.Margin = new Padding(4);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(80, 33);
-            btnXoa.TabIndex = 45;
-            btnXoa.Text = "Xóa";
-            btnXoa.UseVisualStyleBackColor = true;
-            btnXoa.Click += btnXoa_Click;
+            tableLayoutPanelMain.ColumnCount = 2;
+            tableLayoutPanelMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tableLayoutPanelMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tableLayoutPanelMain.Controls.Add(groupBoxBodyInput, 0, 0);
+            tableLayoutPanelMain.Controls.Add(groupBoxBodySearch, 1, 0);
+            tableLayoutPanelMain.Dock = DockStyle.Fill;
+            tableLayoutPanelMain.Location = new Point(0, 0);
+            tableLayoutPanelMain.Name = "tableLayoutPanelMain";
+            tableLayoutPanelMain.RowCount = 1;
+            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanelMain.Size = new Size(1147, 279);
+            tableLayoutPanelMain.TabIndex = 10;
             // 
-            // btnUpdate
+            // groupBoxBodyInput
             // 
-            btnUpdate.Enabled = false;
-            btnUpdate.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUpdate.Location = new Point(409, 162);
-            btnUpdate.Margin = new Padding(4);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(80, 33);
-            btnUpdate.TabIndex = 44;
-            btnUpdate.Text = "Cập nhật";
-            btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
+            groupBoxBodyInput.Controls.Add(tableLayoutPanelAllInput);
+            groupBoxBodyInput.Controls.Add(tableLayoutBodyImage);
+            groupBoxBodyInput.Dock = DockStyle.Fill;
+            groupBoxBodyInput.Location = new Point(3, 3);
+            groupBoxBodyInput.Name = "groupBoxBodyInput";
+            groupBoxBodyInput.Size = new Size(796, 273);
+            groupBoxBodyInput.TabIndex = 8;
+            groupBoxBodyInput.TabStop = false;
+            groupBoxBodyInput.Text = "Khu vực nhập liệu";
+            // 
+            // tableLayoutPanelAllInput
+            // 
+            tableLayoutPanelAllInput.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanelAllInput.ColumnCount = 4;
+            tableLayoutPanelAllInput.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanelAllInput.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanelAllInput.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanelAllInput.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanelAllInput.Controls.Add(cmbVaiTro, 3, 3);
+            tableLayoutPanelAllInput.Controls.Add(txtMatKhau, 1, 3);
+            tableLayoutPanelAllInput.Controls.Add(txtUserName, 1, 2);
+            tableLayoutPanelAllInput.Controls.Add(txtEmail, 3, 1);
+            tableLayoutPanelAllInput.Controls.Add(txtTenNhanVien, 1, 1);
+            tableLayoutPanelAllInput.Controls.Add(txtSoDienThoai, 3, 0);
+            tableLayoutPanelAllInput.Controls.Add(labelMaNV, 0, 0);
+            tableLayoutPanelAllInput.Controls.Add(label1, 2, 0);
+            tableLayoutPanelAllInput.Controls.Add(label2, 0, 1);
+            tableLayoutPanelAllInput.Controls.Add(label3, 0, 2);
+            tableLayoutPanelAllInput.Controls.Add(label4, 0, 3);
+            tableLayoutPanelAllInput.Controls.Add(label5, 2, 1);
+            tableLayoutPanelAllInput.Controls.Add(label6, 2, 2);
+            tableLayoutPanelAllInput.Controls.Add(label7, 2, 3);
+            tableLayoutPanelAllInput.Controls.Add(txtMaNhanVien, 1, 0);
+            tableLayoutPanelAllInput.Controls.Add(cmbGioiTinh, 3, 2);
+            tableLayoutPanelAllInput.Location = new Point(211, 23);
+            tableLayoutPanelAllInput.Name = "tableLayoutPanelAllInput";
+            tableLayoutPanelAllInput.RowCount = 4;
+            tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanelAllInput.Size = new Size(566, 244);
+            tableLayoutPanelAllInput.TabIndex = 1;
+            // 
+            // cmbVaiTro
+            // 
+            cmbVaiTro.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cmbVaiTro.FormattingEnabled = true;
+            cmbVaiTro.Location = new Point(406, 199);
+            cmbVaiTro.Name = "cmbVaiTro";
+            cmbVaiTro.Size = new Size(157, 28);
+            cmbVaiTro.TabIndex = 16;
             // 
             // txtMatKhau
             // 
-            txtMatKhau.BorderStyle = BorderStyle.FixedSingle;
-            txtMatKhau.Enabled = false;
-            txtMatKhau.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMatKhau.Location = new Point(252, 113);
-            txtMatKhau.Margin = new Padding(4);
+            txtMatKhau.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtMatKhau.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txtMatKhau.Location = new Point(126, 193);
+            txtMatKhau.Multiline = true;
             txtMatKhau.Name = "txtMatKhau";
-            txtMatKhau.Size = new Size(212, 26);
-            txtMatKhau.TabIndex = 53;
+            txtMatKhau.Size = new Size(157, 40);
+            txtMatKhau.TabIndex = 14;
             // 
-            // label11
+            // txtUserName
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(151, 118);
-            label11.Margin = new Padding(4, 0, 4, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(71, 19);
-            label11.TabIndex = 52;
-            label11.Text = "Mật khẩu";
+            txtUserName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtUserName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txtUserName.Location = new Point(126, 132);
+            txtUserName.Multiline = true;
+            txtUserName.Name = "txtUserName";
+            txtUserName.Size = new Size(157, 40);
+            txtUserName.TabIndex = 12;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtEmail.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txtEmail.Location = new Point(406, 71);
+            txtEmail.Multiline = true;
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(157, 40);
+            txtEmail.TabIndex = 11;
             // 
             // txtTenNhanVien
             // 
-            txtTenNhanVien.BorderStyle = BorderStyle.FixedSingle;
-            txtTenNhanVien.Enabled = false;
-            txtTenNhanVien.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTenNhanVien.Location = new Point(252, 48);
-            txtTenNhanVien.Margin = new Padding(4);
+            txtTenNhanVien.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtTenNhanVien.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txtTenNhanVien.Location = new Point(126, 71);
+            txtTenNhanVien.Multiline = true;
             txtTenNhanVien.Name = "txtTenNhanVien";
-            txtTenNhanVien.Size = new Size(212, 26);
-            txtTenNhanVien.TabIndex = 51;
+            txtTenNhanVien.Size = new Size(157, 40);
+            txtTenNhanVien.TabIndex = 10;
             // 
-            // label10
+            // txtSoDienThoai
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(151, 53);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(101, 19);
-            label10.TabIndex = 50;
-            label10.Text = "Tên nhân viên";
+            txtSoDienThoai.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtSoDienThoai.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txtSoDienThoai.Location = new Point(406, 10);
+            txtSoDienThoai.Multiline = true;
+            txtSoDienThoai.Name = "txtSoDienThoai";
+            txtSoDienThoai.Size = new Size(157, 40);
+            txtSoDienThoai.TabIndex = 9;
+            // 
+            // labelMaNV
+            // 
+            labelMaNV.Anchor = AnchorStyles.None;
+            labelMaNV.AutoSize = true;
+            labelMaNV.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            labelMaNV.Location = new Point(3, 19);
+            labelMaNV.Name = "labelMaNV";
+            labelMaNV.Size = new Size(116, 23);
+            labelMaNV.TabIndex = 0;
+            labelMaNV.Text = "Mã nhân viên";
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(289, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(111, 23);
+            label1.TabIndex = 1;
+            label1.Text = "Số điện thoại";
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(3, 80);
+            label2.Name = "label2";
+            label2.Size = new Size(117, 23);
+            label2.TabIndex = 2;
+            label2.Text = "Tên nhân viên";
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(18, 141);
+            label3.Name = "label3";
+            label3.Size = new Size(87, 23);
+            label3.TabIndex = 3;
+            label3.Text = "Username";
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.None;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(19, 202);
+            label4.Name = "label4";
+            label4.Size = new Size(84, 23);
+            label4.TabIndex = 4;
+            label4.Text = "Mật khẩu";
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.None;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(319, 80);
+            label5.Name = "label5";
+            label5.Size = new Size(51, 23);
+            label5.TabIndex = 5;
+            label5.Text = "Email";
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.None;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(307, 141);
+            label6.Name = "label6";
+            label6.Size = new Size(75, 23);
+            label6.TabIndex = 6;
+            label6.Text = "Giới tính";
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.None;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(314, 202);
+            label7.Name = "label7";
+            label7.Size = new Size(60, 23);
+            label7.TabIndex = 7;
+            label7.Text = "Vai trò";
+            // 
+            // txtMaNhanVien
+            // 
+            txtMaNhanVien.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtMaNhanVien.Enabled = false;
+            txtMaNhanVien.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            txtMaNhanVien.Location = new Point(126, 10);
+            txtMaNhanVien.Multiline = true;
+            txtMaNhanVien.Name = "txtMaNhanVien";
+            txtMaNhanVien.Size = new Size(157, 40);
+            txtMaNhanVien.TabIndex = 8;
+            // 
+            // cmbGioiTinh
+            // 
+            cmbGioiTinh.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cmbGioiTinh.FormattingEnabled = true;
+            cmbGioiTinh.Location = new Point(406, 138);
+            cmbGioiTinh.Name = "cmbGioiTinh";
+            cmbGioiTinh.Size = new Size(157, 28);
+            cmbGioiTinh.TabIndex = 15;
+            // 
+            // tableLayoutBodyImage
+            // 
+            tableLayoutBodyImage.ColumnCount = 1;
+            tableLayoutBodyImage.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutBodyImage.Controls.Add(btnChonAnh, 0, 1);
+            tableLayoutBodyImage.Controls.Add(ptbChonAnh, 0, 0);
+            tableLayoutBodyImage.Dock = DockStyle.Left;
+            tableLayoutBodyImage.Location = new Point(3, 23);
+            tableLayoutBodyImage.Name = "tableLayoutBodyImage";
+            tableLayoutBodyImage.RowCount = 2;
+            tableLayoutBodyImage.RowStyles.Add(new RowStyle(SizeType.Absolute, 207F));
+            tableLayoutBodyImage.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
+            tableLayoutBodyImage.Size = new Size(202, 247);
+            tableLayoutBodyImage.TabIndex = 0;
             // 
             // btnChonAnh
             // 
-            btnChonAnh.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            btnChonAnh.Location = new Point(29, 108);
-            btnChonAnh.Margin = new Padding(4);
+            btnChonAnh.Anchor = AnchorStyles.None;
+            btnChonAnh.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnChonAnh.Location = new Point(54, 210);
             btnChonAnh.Name = "btnChonAnh";
-            btnChonAnh.Size = new Size(80, 25);
-            btnChonAnh.TabIndex = 49;
-            btnChonAnh.Text = "Chọn Ảnh";
+            btnChonAnh.Size = new Size(94, 34);
+            btnChonAnh.TabIndex = 6;
+            btnChonAnh.Text = "Chọn ảnh";
             btnChonAnh.UseVisualStyleBackColor = true;
             btnChonAnh.Visible = false;
             btnChonAnh.Click += btnChonAnh_Click;
@@ -235,360 +467,257 @@ namespace QLTV
             // ptbChonAnh
             // 
             ptbChonAnh.BackColor = Color.Transparent;
-            ptbChonAnh.Location = new Point(28, 19);
-            ptbChonAnh.Margin = new Padding(3, 2, 3, 2);
+            ptbChonAnh.Location = new Point(3, 3);
             ptbChonAnh.Name = "ptbChonAnh";
-            ptbChonAnh.Size = new Size(95, 78);
-            ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
-            ptbChonAnh.TabIndex = 48;
+            ptbChonAnh.Size = new Size(181, 161);
+            ptbChonAnh.TabIndex = 7;
             ptbChonAnh.TabStop = false;
             // 
-            // label4
+            // groupBoxBodySearch
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(496, 116);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(54, 19);
-            label4.TabIndex = 41;
-            label4.Text = "Vai trò";
+            groupBoxBodySearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBoxBodySearch.Controls.Add(tableLayoutPanelSearch);
+            groupBoxBodySearch.Location = new Point(805, 3);
+            groupBoxBodySearch.Name = "groupBoxBodySearch";
+            groupBoxBodySearch.Size = new Size(339, 252);
+            groupBoxBodySearch.TabIndex = 9;
+            groupBoxBodySearch.TabStop = false;
+            groupBoxBodySearch.Text = "Khu vực tìm kiếm";
             // 
-            // cmbVaiTro
+            // tableLayoutPanelSearch
             // 
-            cmbVaiTro.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbVaiTro.Enabled = false;
-            cmbVaiTro.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbVaiTro.FormattingEnabled = true;
-            cmbVaiTro.Location = new Point(601, 111);
-            cmbVaiTro.Margin = new Padding(4);
-            cmbVaiTro.Name = "cmbVaiTro";
-            cmbVaiTro.Size = new Size(175, 27);
-            cmbVaiTro.TabIndex = 42;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(496, 48);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(49, 19);
-            label2.TabIndex = 40;
-            label2.Text = "Email";
-            // 
-            // txtUserName
-            // 
-            txtUserName.BorderStyle = BorderStyle.FixedSingle;
-            txtUserName.Enabled = false;
-            txtUserName.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUserName.Location = new Point(252, 82);
-            txtUserName.Margin = new Padding(4);
-            txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(212, 26);
-            txtUserName.TabIndex = 36;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(151, 20);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(98, 19);
-            label1.TabIndex = 31;
-            label1.Text = "Mã nhân viên";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(151, 87);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(86, 19);
-            label3.TabIndex = 32;
-            label3.Text = "User Name";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(495, 20);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 19);
-            label5.TabIndex = 33;
-            label5.Text = "Số điện thoại";
-            // 
-            // txtEmail
-            // 
-            txtEmail.BorderStyle = BorderStyle.FixedSingle;
-            txtEmail.Enabled = false;
-            txtEmail.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEmail.Location = new Point(601, 43);
-            txtEmail.Margin = new Padding(4);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(175, 26);
-            txtEmail.TabIndex = 39;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(495, 80);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(70, 19);
-            label6.TabIndex = 34;
-            label6.Text = "Giới tính";
-            // 
-            // txtMaNhanVien
-            // 
-            txtMaNhanVien.BorderStyle = BorderStyle.FixedSingle;
-            txtMaNhanVien.Enabled = false;
-            txtMaNhanVien.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMaNhanVien.Location = new Point(252, 14);
-            txtMaNhanVien.Margin = new Padding(4);
-            txtMaNhanVien.Name = "txtMaNhanVien";
-            txtMaNhanVien.Size = new Size(212, 26);
-            txtMaNhanVien.TabIndex = 35;
-            // 
-            // txtSoDienThoai
-            // 
-            txtSoDienThoai.BorderStyle = BorderStyle.FixedSingle;
-            txtSoDienThoai.Enabled = false;
-            txtSoDienThoai.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSoDienThoai.Location = new Point(601, 13);
-            txtSoDienThoai.Margin = new Padding(4);
-            txtSoDienThoai.Name = "txtSoDienThoai";
-            txtSoDienThoai.Size = new Size(175, 26);
-            txtSoDienThoai.TabIndex = 38;
-            // 
-            // cmbGioiTinh
-            // 
-            cmbGioiTinh.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbGioiTinh.Enabled = false;
-            cmbGioiTinh.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbGioiTinh.FormattingEnabled = true;
-            cmbGioiTinh.Location = new Point(601, 75);
-            cmbGioiTinh.Margin = new Padding(4);
-            cmbGioiTinh.Name = "cmbGioiTinh";
-            cmbGioiTinh.Size = new Size(175, 27);
-            cmbGioiTinh.TabIndex = 37;
-            // 
-            // txtNumberPage
-            // 
-            txtNumberPage.Enabled = false;
-            txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            txtNumberPage.Location = new Point(521, 296);
-            txtNumberPage.Margin = new Padding(4);
-            txtNumberPage.Multiline = true;
-            txtNumberPage.Name = "txtNumberPage";
-            txtNumberPage.Size = new Size(66, 21);
-            txtNumberPage.TabIndex = 48;
-            txtNumberPage.Text = "0/0";
-            txtNumberPage.TextAlign = HorizontalAlignment.Center;
-            // 
-            // btnLastPage
-            // 
-            btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLastPage.Location = new Point(686, 295);
-            btnLastPage.Margin = new Padding(4);
-            btnLastPage.Name = "btnLastPage";
-            btnLastPage.Size = new Size(80, 23);
-            btnLastPage.TabIndex = 47;
-            btnLastPage.Text = ">|";
-            btnLastPage.UseVisualStyleBackColor = true;
-            // 
-            // btnNextPage
-            // 
-            btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNextPage.Location = new Point(599, 295);
-            btnNextPage.Margin = new Padding(4);
-            btnNextPage.Name = "btnNextPage";
-            btnNextPage.Size = new Size(80, 23);
-            btnNextPage.TabIndex = 46;
-            btnNextPage.Text = ">>";
-            btnNextPage.UseVisualStyleBackColor = true;
-            // 
-            // btnFirstPage
-            // 
-            btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFirstPage.Location = new Point(337, 295);
-            btnFirstPage.Margin = new Padding(4);
-            btnFirstPage.Name = "btnFirstPage";
-            btnFirstPage.Size = new Size(80, 23);
-            btnFirstPage.TabIndex = 44;
-            btnFirstPage.Text = "|<";
-            btnFirstPage.UseVisualStyleBackColor = true;
-            // 
-            // btnPrePage
-            // 
-            btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPrePage.Location = new Point(425, 295);
-            btnPrePage.Margin = new Padding(4);
-            btnPrePage.Name = "btnPrePage";
-            btnPrePage.Size = new Size(80, 23);
-            btnPrePage.TabIndex = 45;
-            btnPrePage.Text = "<<";
-            btnPrePage.UseVisualStyleBackColor = true;
-            // 
-            // panelMid
-            // 
-            panelMid.Controls.Add(cmbSearchRole);
-            panelMid.Controls.Add(txtMatKhau);
-            panelMid.Controls.Add(label9);
-            panelMid.Controls.Add(btnHuy);
-            panelMid.Controls.Add(label11);
-            panelMid.Controls.Add(txtSearch);
-            panelMid.Controls.Add(label7);
-            panelMid.Controls.Add(btnUpdate);
-            panelMid.Controls.Add(txtTenNhanVien);
-            panelMid.Controls.Add(btnXoa);
-            panelMid.Controls.Add(txtUserName);
-            panelMid.Controls.Add(btnThem);
-            panelMid.Controls.Add(label3);
-            panelMid.Controls.Add(btnLuu);
-            panelMid.Controls.Add(label10);
-            panelMid.Controls.Add(txtMaNhanVien);
-            panelMid.Controls.Add(btnChonAnh);
-            panelMid.Controls.Add(cmbGioiTinh);
-            panelMid.Controls.Add(ptbChonAnh);
-            panelMid.Controls.Add(txtSoDienThoai);
-            panelMid.Controls.Add(label4);
-            panelMid.Controls.Add(label6);
-            panelMid.Controls.Add(cmbVaiTro);
-            panelMid.Controls.Add(txtEmail);
-            panelMid.Controls.Add(label2);
-            panelMid.Controls.Add(label5);
-            panelMid.Controls.Add(label1);
-            panelMid.Dock = DockStyle.Top;
-            panelMid.Location = new Point(0, 42);
-            panelMid.Name = "panelMid";
-            panelMid.Size = new Size(1063, 204);
-            panelMid.TabIndex = 49;
-            // 
-            // cmbSearchRole
-            // 
-            cmbSearchRole.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbSearchRole.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbSearchRole.FormattingEnabled = true;
-            cmbSearchRole.Location = new Point(868, 44);
-            cmbSearchRole.Margin = new Padding(4);
-            cmbSearchRole.Name = "cmbSearchRole";
-            cmbSearchRole.Size = new Size(180, 27);
-            cmbSearchRole.TabIndex = 48;
-            cmbSearchRole.SelectedIndexChanged += cmbSearchRole_SelectedIndexChanged;
+            tableLayoutPanelSearch.ColumnCount = 1;
+            tableLayoutPanelSearch.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanelSearch.Controls.Add(label9, 0, 2);
+            tableLayoutPanelSearch.Controls.Add(txtSearch, 0, 1);
+            tableLayoutPanelSearch.Controls.Add(cmbSearchRole, 0, 3);
+            tableLayoutPanelSearch.Controls.Add(label8, 0, 0);
+            tableLayoutPanelSearch.Dock = DockStyle.Fill;
+            tableLayoutPanelSearch.Location = new Point(3, 23);
+            tableLayoutPanelSearch.Name = "tableLayoutPanelSearch";
+            tableLayoutPanelSearch.Padding = new Padding(10);
+            tableLayoutPanelSearch.RowCount = 4;
+            tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanelSearch.Size = new Size(333, 226);
+            tableLayoutPanelSearch.TabIndex = 0;
             // 
             // label9
             // 
+            label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
-            label9.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(795, 52);
-            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(68, 123);
             label9.Name = "label9";
-            label9.Size = new Size(49, 19);
-            label9.TabIndex = 39;
-            label9.Text = "Vai trò";
+            label9.Size = new Size(196, 28);
+            label9.TabIndex = 2;
+            label9.Text = "Chọn vai trò cần tìm";
             // 
             // txtSearch
             // 
-            txtSearch.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSearch.Location = new Point(868, 8);
-            txtSearch.Margin = new Padding(4);
+            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtSearch.Location = new Point(13, 64);
+            txtSearch.Multiline = true;
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(180, 26);
-            txtSearch.TabIndex = 38;
+            txtSearch.Size = new Size(307, 45);
+            txtSearch.TabIndex = 1;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
-            // label7
+            // cmbSearchRole
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(795, 15);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(65, 19);
-            label7.TabIndex = 37;
-            label7.Text = "Tìm kiếm";
+            cmbSearchRole.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cmbSearchRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSearchRole.FormattingEnabled = true;
+            cmbSearchRole.Location = new Point(13, 166);
+            cmbSearchRole.Name = "cmbSearchRole";
+            cmbSearchRole.Size = new Size(307, 28);
+            cmbSearchRole.TabIndex = 3;
+            cmbSearchRole.SelectedIndexChanged += cmbSearchRole_SelectedIndexChanged;
             // 
-            // panelBot
+            // label8
             // 
-            panelBot.Controls.Add(dgvNhanVien);
-            panelBot.Controls.Add(btnNextPage);
-            panelBot.Controls.Add(txtNumberPage);
-            panelBot.Controls.Add(btnPrePage);
-            panelBot.Controls.Add(btnLastPage);
-            panelBot.Controls.Add(btnFirstPage);
-            panelBot.Dock = DockStyle.Top;
-            panelBot.Location = new Point(0, 246);
-            panelBot.Name = "panelBot";
-            panelBot.Size = new Size(1063, 324);
-            panelBot.TabIndex = 50;
+            label8.Anchor = AnchorStyles.None;
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(81, 21);
+            label8.Name = "label8";
+            label8.Size = new Size(170, 28);
+            label8.TabIndex = 0;
+            label8.Text = "Nhập tên cần tìm";
+            // 
+            // panelFooter
+            // 
+            panelFooter.Controls.Add(dgvNhanVien);
+            panelFooter.Dock = DockStyle.Top;
+            panelFooter.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            panelFooter.Location = new Point(0, 438);
+            panelFooter.Name = "panelFooter";
+            panelFooter.Size = new Size(1147, 256);
+            panelFooter.TabIndex = 2;
+            // 
+            // dgvNhanVien
+            // 
+            dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvNhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvNhanVien.Dock = DockStyle.Top;
+            dgvNhanVien.Location = new Point(0, 0);
+            dgvNhanVien.Name = "dgvNhanVien";
+            dgvNhanVien.RowHeadersWidth = 51;
+            dgvNhanVien.RowTemplate.Height = 100;
+            dgvNhanVien.Size = new Size(1147, 253);
+            dgvNhanVien.TabIndex = 0;
+            dgvNhanVien.CellClick += dgvNhanVien_CellContentClick;
+            // 
+            // txtNumberPage
+            // 
+            txtNumberPage.Anchor = AnchorStyles.Bottom;
+            txtNumberPage.Enabled = false;
+            txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            txtNumberPage.Location = new Point(528, 702);
+            txtNumberPage.Margin = new Padding(5);
+            txtNumberPage.Multiline = true;
+            txtNumberPage.Name = "txtNumberPage";
+            txtNumberPage.Size = new Size(75, 27);
+            txtNumberPage.TabIndex = 63;
+            txtNumberPage.Text = "0/0";
+            txtNumberPage.TextAlign = HorizontalAlignment.Center;
+            // 
+            // btnPrePage
+            // 
+            btnPrePage.Anchor = AnchorStyles.Bottom;
+            btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPrePage.Location = new Point(418, 701);
+            btnPrePage.Margin = new Padding(5);
+            btnPrePage.Name = "btnPrePage";
+            btnPrePage.Size = new Size(91, 31);
+            btnPrePage.TabIndex = 60;
+            btnPrePage.Text = "<<";
+            btnPrePage.UseVisualStyleBackColor = true;
+            btnPrePage.Click += btnPrePage_Click;
+            // 
+            // btnLastPage
+            // 
+            btnLastPage.Anchor = AnchorStyles.Bottom;
+            btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLastPage.Location = new Point(717, 701);
+            btnLastPage.Margin = new Padding(5);
+            btnLastPage.Name = "btnLastPage";
+            btnLastPage.Size = new Size(91, 31);
+            btnLastPage.TabIndex = 62;
+            btnLastPage.Text = ">|";
+            btnLastPage.UseVisualStyleBackColor = true;
+            btnLastPage.Click += btnLastPage_Click;
+            // 
+            // btnFirstPage
+            // 
+            btnFirstPage.Anchor = AnchorStyles.Bottom;
+            btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnFirstPage.Location = new Point(318, 701);
+            btnFirstPage.Margin = new Padding(5);
+            btnFirstPage.Name = "btnFirstPage";
+            btnFirstPage.Size = new Size(91, 31);
+            btnFirstPage.TabIndex = 59;
+            btnFirstPage.Text = "|<";
+            btnFirstPage.UseVisualStyleBackColor = true;
+            btnFirstPage.Click += btnFirstPage_Click;
+            // 
+            // btnNextPage
+            // 
+            btnNextPage.Anchor = AnchorStyles.Bottom;
+            btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNextPage.Location = new Point(617, 701);
+            btnNextPage.Margin = new Padding(5);
+            btnNextPage.Name = "btnNextPage";
+            btnNextPage.Size = new Size(91, 31);
+            btnNextPage.TabIndex = 61;
+            btnNextPage.Text = ">>";
+            btnNextPage.UseVisualStyleBackColor = true;
+            btnNextPage.Click += btnNextPage_Click;
             // 
             // formNhanVien
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1063, 592);
-            Controls.Add(panelBot);
-            Controls.Add(panelMid);
-            Controls.Add(panelTop);
-            Margin = new Padding(4);
+            ClientSize = new Size(1147, 743);
+            Controls.Add(txtNumberPage);
+            Controls.Add(btnPrePage);
+            Controls.Add(btnLastPage);
+            Controls.Add(btnFirstPage);
+            Controls.Add(btnNextPage);
+            Controls.Add(panelFooter);
+            Controls.Add(panelBody);
+            Controls.Add(panelHeader);
             Name = "formNhanVien";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Nhân viên";
+            Text = "formNhanVien";
             Load += formNhanVien_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).EndInit();
-            panelTop.ResumeLayout(false);
-            panelTop.PerformLayout();
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            panelBody.ResumeLayout(false);
+            panelBodyButton.ResumeLayout(false);
+            panelBodyInput.ResumeLayout(false);
+            tableLayoutPanelMain.ResumeLayout(false);
+            groupBoxBodyInput.ResumeLayout(false);
+            tableLayoutPanelAllInput.ResumeLayout(false);
+            tableLayoutPanelAllInput.PerformLayout();
+            tableLayoutBodyImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)ptbChonAnh).EndInit();
-            panelMid.ResumeLayout(false);
-            panelMid.PerformLayout();
-            panelBot.ResumeLayout(false);
-            panelBot.PerformLayout();
+            groupBoxBodySearch.ResumeLayout(false);
+            tableLayoutPanelSearch.ResumeLayout(false);
+            tableLayoutPanelSearch.PerformLayout();
+            panelFooter.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dgvNhanVien;
-        private Panel panelTop;
-        private Label label8;
+        private Panel panelHeader;
+        private Label labelHeader;
+        private Panel panelBody;
+        private Panel panelBodyInput;
+        private GroupBox groupBoxBodySearch;
+        private GroupBox groupBoxBodyInput;
+        private TableLayoutPanel tableLayoutBodyImage;
+        private Button btnChonAnh;
+        private Panel panelBodyButton;
+        private Button btnThem;
+        private Button btnUpdate;
+        private Button btnXoa;
         private Button btnHuy;
         private Button btnLuu;
-        private Button btnThem;
-        private Button btnXoa;
-        private Button btnUpdate;
-        private Label label4;
-        private ComboBox cmbVaiTro;
-        private Label label2;
-        private TextBox txtUserName;
-        private Label label1;
-        private Label label3;
-        private Label label5;
-        private TextBox txtEmail;
-        private Label label6;
-        private TextBox txtMaNhanVien;
-        private TextBox txtSoDienThoai;
-        private ComboBox cmbGioiTinh;
         private RoundedPictureBox ptbChonAnh;
-        private Button btnChonAnh;
-        private TextBox txtTenNhanVien;
-        private Label label10;
+        private TableLayoutPanel tableLayoutPanelAllInput;
+        private Label labelMaNV;
+        private Label label1;
+        private ComboBox cmbVaiTro;
         private TextBox txtMatKhau;
-        private Label label11;
-        private TextBox txtNumberPage;
-        private Button btnLastPage;
-        private Button btnNextPage;
-        private Button btnFirstPage;
-        private Button btnPrePage;
-        private Panel panelMid;
-        private ComboBox cmbSearchRole;
-        private Label label9;
-        private TextBox txtSearch;
+        private TextBox txtUserName;
+        private TextBox txtEmail;
+        private TextBox txtTenNhanVien;
+        private TextBox txtSoDienThoai;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
         private Label label7;
-        private Panel panelBot;
+        private TextBox txtMaNhanVien;
+        private ComboBox cmbGioiTinh;
+        private TableLayoutPanel tableLayoutPanelMain;
+        private Panel panelFooter;
+        private DataGridView dgvNhanVien;
+        private TextBox txtNumberPage;
+        private Button btnPrePage;
+        private Button btnLastPage;
+        private Button btnFirstPage;
+        private Button btnNextPage;
+        private TableLayoutPanel tableLayoutPanelSearch;
+        private Label label9;
+        private Label label8;
+        private TextBox txtSearch;
+        private ComboBox cmbSearchRole;
     }
 }
