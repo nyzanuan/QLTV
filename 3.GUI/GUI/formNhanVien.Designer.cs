@@ -528,6 +528,7 @@ namespace _3.GUI.GUI
             // cmbSearchRole
             // 
             cmbSearchRole.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cmbSearchRole.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSearchRole.FormattingEnabled = true;
             cmbSearchRole.Location = new Point(13, 166);
             cmbSearchRole.Name = "cmbSearchRole";
