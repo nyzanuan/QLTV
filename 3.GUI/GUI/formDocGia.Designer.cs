@@ -275,7 +275,7 @@ namespace QLTV
             cBox_gioiTinh.Font = new Font("Times New Roman", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point);
             cBox_gioiTinh.ForeColor = SystemColors.MenuText;
             cBox_gioiTinh.FormattingEnabled = true;
-            cBox_gioiTinh.Location = new Point(887, 55);
+            cBox_gioiTinh.Location = new Point(887, 56);
             cBox_gioiTinh.Margin = new Padding(5);
             cBox_gioiTinh.Name = "cBox_gioiTinh";
             cBox_gioiTinh.Size = new Size(159, 33);

@@ -1,6 +1,7 @@
 ﻿using _1.DAL.Data;
 using _1.DAL.IRepository;
 using _1.DAL.Model;
+using Microsoft.EntityFrameworkCore;
 using Sharing.ReturnModel;
 using System;
 using System.Collections.Generic;
@@ -17,17 +18,25 @@ namespace _1.DAL.Repository
         {
             _dataContext = new DataContext();
         }
-
-        public bool AddCustomer(Customer customer)
+        public async Task<ValueReturn> AddCustomer(Customer customer)
         {
             try
             {
                 _dataContext.Customer.Add(customer);
-                return SaveData();
+                if (await _dataContext.SaveChangesAsync() > 0)
+                {
+                    return new ValueReturn { Status = true, Message = "Thêm thành công" };
+                }
+                return new ValueReturn { Status = false, Message = "Thêm thất bại" };
             }
-            catch(Exception e)
+            catch(DbUpdateException e)
             {
-                return false;
+                return new ValueReturn
+                {
+                    Status = false,
+                    Message = e.InnerException.Message,
+
+                };
             }
         }
         public bool SaveData()
@@ -98,7 +107,7 @@ namespace _1.DAL.Repository
             
         }
 
-        public bool UpdateCustomer(Customer customer)
+        public async Task<ValueReturn> UpdateCustomer(Customer customer)
         {
             try
             {
@@ -110,15 +119,38 @@ namespace _1.DAL.Repository
                     customerData.Phone = customer.Phone;
                     customerData.Gender = customer.Gender;
                     customerData.Image = customer.Image;
-                    return SaveData();
+                    _dataContext.Customer.Update(customerData);
+                    bool save = await _dataContext.SaveChangesAsync() > 0;
+                    if (save)
+                    {
+                        return new ValueReturn { Status = true, Message = "Cập nhật thành công" };
+                    }
+                    else
+                    {
+                        return new ValueReturn
+                        {
+                            Message = "Cập nhập thất bại",
+                            Status = false,
+                        };
+                    }
                 }
                 else
                 {
-                    return false;
+                    return new ValueReturn
+                    {
+                        Status = false,
+                        Message = "Đọc giả không tồn tại để chỉnh sửa"
+                    };
                 }
             }
 
-            catch { return false; }
+            catch(Exception e) {
+                return new ValueReturn
+                {
+                    Message = e.InnerException.Message,
+                    Status = false,
+                };
+            }
 
         }
     }
