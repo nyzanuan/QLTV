@@ -96,8 +96,9 @@ namespace _3.GUI.GUI
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             panelHeader.Location = new Point(0, 0);
+            panelHeader.Margin = new Padding(3, 2, 3, 2);
             panelHeader.Name = "panelHeader";
-            panelHeader.Size = new Size(1147, 66);
+            panelHeader.Size = new Size(1004, 50);
             panelHeader.TabIndex = 0;
             // 
             // labelHeader
@@ -105,9 +106,9 @@ namespace _3.GUI.GUI
             labelHeader.Anchor = AnchorStyles.None;
             labelHeader.AutoSize = true;
             labelHeader.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            labelHeader.Location = new Point(412, 5);
+            labelHeader.Location = new Point(360, 4);
             labelHeader.Name = "labelHeader";
-            labelHeader.Size = new Size(326, 41);
+            labelHeader.Size = new Size(261, 32);
             labelHeader.TabIndex = 0;
             labelHeader.Text = "QUẢN LÝ NHÂN VIÊN";
             // 
@@ -116,9 +117,10 @@ namespace _3.GUI.GUI
             panelBody.Controls.Add(panelBodyButton);
             panelBody.Controls.Add(panelBodyInput);
             panelBody.Dock = DockStyle.Top;
-            panelBody.Location = new Point(0, 66);
+            panelBody.Location = new Point(0, 50);
+            panelBody.Margin = new Padding(3, 2, 3, 2);
             panelBody.Name = "panelBody";
-            panelBody.Size = new Size(1147, 372);
+            panelBody.Size = new Size(1004, 279);
             panelBody.TabIndex = 1;
             // 
             // panelBodyButton
@@ -129,18 +131,20 @@ namespace _3.GUI.GUI
             panelBodyButton.Controls.Add(btnHuy);
             panelBodyButton.Controls.Add(btnLuu);
             panelBodyButton.Dock = DockStyle.Top;
-            panelBodyButton.Location = new Point(0, 279);
+            panelBodyButton.Location = new Point(0, 209);
+            panelBodyButton.Margin = new Padding(3, 2, 3, 2);
             panelBodyButton.Name = "panelBodyButton";
-            panelBodyButton.Size = new Size(1147, 78);
+            panelBodyButton.Size = new Size(1004, 58);
             panelBodyButton.TabIndex = 10;
             // 
             // btnThem
             // 
             btnThem.Anchor = AnchorStyles.None;
             btnThem.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThem.Location = new Point(324, 21);
+            btnThem.Location = new Point(284, 16);
+            btnThem.Margin = new Padding(3, 2, 3, 2);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(94, 36);
+            btnThem.Size = new Size(82, 27);
             btnThem.TabIndex = 6;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
@@ -151,9 +155,10 @@ namespace _3.GUI.GUI
             btnUpdate.Anchor = AnchorStyles.None;
             btnUpdate.Enabled = false;
             btnUpdate.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUpdate.Location = new Point(433, 21);
+            btnUpdate.Location = new Point(379, 16);
+            btnUpdate.Margin = new Padding(3, 2, 3, 2);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(94, 36);
+            btnUpdate.Size = new Size(82, 27);
             btnUpdate.TabIndex = 7;
             btnUpdate.Text = "Cập Nhật";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -164,9 +169,10 @@ namespace _3.GUI.GUI
             btnXoa.Anchor = AnchorStyles.None;
             btnXoa.Enabled = false;
             btnXoa.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnXoa.Location = new Point(533, 21);
+            btnXoa.Location = new Point(466, 16);
+            btnXoa.Margin = new Padding(3, 2, 3, 2);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(94, 36);
+            btnXoa.Size = new Size(82, 27);
             btnXoa.TabIndex = 10;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = true;
@@ -177,9 +183,10 @@ namespace _3.GUI.GUI
             btnHuy.Anchor = AnchorStyles.None;
             btnHuy.Enabled = false;
             btnHuy.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnHuy.Location = new Point(733, 21);
+            btnHuy.Location = new Point(641, 16);
+            btnHuy.Margin = new Padding(3, 2, 3, 2);
             btnHuy.Name = "btnHuy";
-            btnHuy.Size = new Size(94, 36);
+            btnHuy.Size = new Size(82, 27);
             btnHuy.TabIndex = 8;
             btnHuy.Text = "Hủy";
             btnHuy.UseVisualStyleBackColor = true;
@@ -190,9 +197,10 @@ namespace _3.GUI.GUI
             btnLuu.Anchor = AnchorStyles.None;
             btnLuu.Enabled = false;
             btnLuu.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLuu.Location = new Point(633, 21);
+            btnLuu.Location = new Point(554, 16);
+            btnLuu.Margin = new Padding(3, 2, 3, 2);
             btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(94, 36);
+            btnLuu.Size = new Size(82, 27);
             btnLuu.TabIndex = 9;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = true;
@@ -203,8 +211,9 @@ namespace _3.GUI.GUI
             panelBodyInput.Controls.Add(tableLayoutPanelMain);
             panelBodyInput.Dock = DockStyle.Top;
             panelBodyInput.Location = new Point(0, 0);
+            panelBodyInput.Margin = new Padding(3, 2, 3, 2);
             panelBodyInput.Name = "panelBodyInput";
-            panelBodyInput.Size = new Size(1147, 279);
+            panelBodyInput.Size = new Size(1004, 209);
             panelBodyInput.TabIndex = 9;
             // 
             // tableLayoutPanelMain
@@ -216,10 +225,11 @@ namespace _3.GUI.GUI
             tableLayoutPanelMain.Controls.Add(groupBoxBodySearch, 1, 0);
             tableLayoutPanelMain.Dock = DockStyle.Fill;
             tableLayoutPanelMain.Location = new Point(0, 0);
+            tableLayoutPanelMain.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanelMain.Name = "tableLayoutPanelMain";
             tableLayoutPanelMain.RowCount = 1;
             tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanelMain.Size = new Size(1147, 279);
+            tableLayoutPanelMain.Size = new Size(1004, 209);
             tableLayoutPanelMain.TabIndex = 10;
             // 
             // groupBoxBodyInput
@@ -227,9 +237,11 @@ namespace _3.GUI.GUI
             groupBoxBodyInput.Controls.Add(tableLayoutPanelAllInput);
             groupBoxBodyInput.Controls.Add(tableLayoutBodyImage);
             groupBoxBodyInput.Dock = DockStyle.Fill;
-            groupBoxBodyInput.Location = new Point(3, 3);
+            groupBoxBodyInput.Location = new Point(3, 2);
+            groupBoxBodyInput.Margin = new Padding(3, 2, 3, 2);
             groupBoxBodyInput.Name = "groupBoxBodyInput";
-            groupBoxBodyInput.Size = new Size(796, 273);
+            groupBoxBodyInput.Padding = new Padding(3, 2, 3, 2);
+            groupBoxBodyInput.Size = new Size(696, 205);
             groupBoxBodyInput.TabIndex = 8;
             groupBoxBodyInput.TabStop = false;
             groupBoxBodyInput.Text = "Khu vực nhập liệu";
@@ -258,74 +270,81 @@ namespace _3.GUI.GUI
             tableLayoutPanelAllInput.Controls.Add(label7, 2, 3);
             tableLayoutPanelAllInput.Controls.Add(txtMaNhanVien, 1, 0);
             tableLayoutPanelAllInput.Controls.Add(cmbGioiTinh, 3, 2);
-            tableLayoutPanelAllInput.Location = new Point(211, 23);
+            tableLayoutPanelAllInput.Location = new Point(185, 17);
+            tableLayoutPanelAllInput.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanelAllInput.Name = "tableLayoutPanelAllInput";
             tableLayoutPanelAllInput.RowCount = 4;
             tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanelAllInput.Size = new Size(566, 244);
+            tableLayoutPanelAllInput.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
+            tableLayoutPanelAllInput.Size = new Size(495, 183);
             tableLayoutPanelAllInput.TabIndex = 1;
             // 
             // cmbVaiTro
             // 
             cmbVaiTro.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             cmbVaiTro.FormattingEnabled = true;
-            cmbVaiTro.Location = new Point(406, 199);
+            cmbVaiTro.Location = new Point(351, 147);
+            cmbVaiTro.Margin = new Padding(3, 2, 3, 2);
             cmbVaiTro.Name = "cmbVaiTro";
-            cmbVaiTro.Size = new Size(157, 28);
+            cmbVaiTro.Size = new Size(141, 23);
             cmbVaiTro.TabIndex = 16;
             // 
             // txtMatKhau
             // 
             txtMatKhau.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtMatKhau.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtMatKhau.Location = new Point(126, 193);
+            txtMatKhau.Location = new Point(105, 143);
+            txtMatKhau.Margin = new Padding(3, 2, 3, 2);
             txtMatKhau.Multiline = true;
             txtMatKhau.Name = "txtMatKhau";
-            txtMatKhau.Size = new Size(157, 40);
+            txtMatKhau.Size = new Size(141, 31);
             txtMatKhau.TabIndex = 14;
             // 
             // txtUserName
             // 
             txtUserName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtUserName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtUserName.Location = new Point(126, 132);
+            txtUserName.Location = new Point(105, 97);
+            txtUserName.Margin = new Padding(3, 2, 3, 2);
             txtUserName.Multiline = true;
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(157, 40);
+            txtUserName.Size = new Size(141, 31);
             txtUserName.TabIndex = 12;
             // 
             // txtEmail
             // 
             txtEmail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtEmail.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtEmail.Location = new Point(406, 71);
+            txtEmail.Location = new Point(351, 52);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Multiline = true;
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(157, 40);
+            txtEmail.Size = new Size(141, 31);
             txtEmail.TabIndex = 11;
             // 
             // txtTenNhanVien
             // 
             txtTenNhanVien.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtTenNhanVien.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtTenNhanVien.Location = new Point(126, 71);
+            txtTenNhanVien.Location = new Point(105, 52);
+            txtTenNhanVien.Margin = new Padding(3, 2, 3, 2);
             txtTenNhanVien.Multiline = true;
             txtTenNhanVien.Name = "txtTenNhanVien";
-            txtTenNhanVien.Size = new Size(157, 40);
+            txtTenNhanVien.Size = new Size(141, 31);
             txtTenNhanVien.TabIndex = 10;
             // 
             // txtSoDienThoai
             // 
             txtSoDienThoai.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtSoDienThoai.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtSoDienThoai.Location = new Point(406, 10);
+            txtSoDienThoai.Location = new Point(351, 7);
+            txtSoDienThoai.Margin = new Padding(3, 2, 3, 2);
             txtSoDienThoai.Multiline = true;
             txtSoDienThoai.Name = "txtSoDienThoai";
-            txtSoDienThoai.Size = new Size(157, 40);
+            txtSoDienThoai.Size = new Size(141, 31);
             txtSoDienThoai.TabIndex = 9;
             // 
             // labelMaNV
@@ -333,9 +352,9 @@ namespace _3.GUI.GUI
             labelMaNV.Anchor = AnchorStyles.None;
             labelMaNV.AutoSize = true;
             labelMaNV.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            labelMaNV.Location = new Point(3, 19);
+            labelMaNV.Location = new Point(4, 13);
             labelMaNV.Name = "labelMaNV";
-            labelMaNV.Size = new Size(116, 23);
+            labelMaNV.Size = new Size(94, 19);
             labelMaNV.TabIndex = 0;
             labelMaNV.Text = "Mã nhân viên";
             // 
@@ -344,9 +363,9 @@ namespace _3.GUI.GUI
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(289, 19);
+            label1.Location = new Point(252, 13);
             label1.Name = "label1";
-            label1.Size = new Size(111, 23);
+            label1.Size = new Size(93, 19);
             label1.TabIndex = 1;
             label1.Text = "Số điện thoại";
             // 
@@ -355,9 +374,9 @@ namespace _3.GUI.GUI
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(3, 80);
+            label2.Location = new Point(3, 58);
             label2.Name = "label2";
-            label2.Size = new Size(117, 23);
+            label2.Size = new Size(96, 19);
             label2.TabIndex = 2;
             label2.Text = "Tên nhân viên";
             // 
@@ -366,9 +385,9 @@ namespace _3.GUI.GUI
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(18, 141);
+            label3.Location = new Point(15, 103);
             label3.Name = "label3";
-            label3.Size = new Size(87, 23);
+            label3.Size = new Size(71, 19);
             label3.TabIndex = 3;
             label3.Text = "Username";
             // 
@@ -377,9 +396,9 @@ namespace _3.GUI.GUI
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(19, 202);
+            label4.Location = new Point(17, 149);
             label4.Name = "label4";
-            label4.Size = new Size(84, 23);
+            label4.Size = new Size(68, 19);
             label4.TabIndex = 4;
             label4.Text = "Mật khẩu";
             // 
@@ -388,9 +407,9 @@ namespace _3.GUI.GUI
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(319, 80);
+            label5.Location = new Point(277, 58);
             label5.Name = "label5";
-            label5.Size = new Size(51, 23);
+            label5.Size = new Size(43, 19);
             label5.TabIndex = 5;
             label5.Text = "Email";
             // 
@@ -399,9 +418,9 @@ namespace _3.GUI.GUI
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(307, 141);
+            label6.Location = new Point(266, 103);
             label6.Name = "label6";
-            label6.Size = new Size(75, 23);
+            label6.Size = new Size(65, 19);
             label6.TabIndex = 6;
             label6.Text = "Giới tính";
             // 
@@ -410,9 +429,9 @@ namespace _3.GUI.GUI
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(314, 202);
+            label7.Location = new Point(273, 149);
             label7.Name = "label7";
-            label7.Size = new Size(60, 23);
+            label7.Size = new Size(50, 19);
             label7.TabIndex = 7;
             label7.Text = "Vai trò";
             // 
@@ -421,19 +440,21 @@ namespace _3.GUI.GUI
             txtMaNhanVien.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             txtMaNhanVien.Enabled = false;
             txtMaNhanVien.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtMaNhanVien.Location = new Point(126, 10);
+            txtMaNhanVien.Location = new Point(105, 7);
+            txtMaNhanVien.Margin = new Padding(3, 2, 3, 2);
             txtMaNhanVien.Multiline = true;
             txtMaNhanVien.Name = "txtMaNhanVien";
-            txtMaNhanVien.Size = new Size(157, 40);
+            txtMaNhanVien.Size = new Size(141, 31);
             txtMaNhanVien.TabIndex = 8;
             // 
             // cmbGioiTinh
             // 
             cmbGioiTinh.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             cmbGioiTinh.FormattingEnabled = true;
-            cmbGioiTinh.Location = new Point(406, 138);
+            cmbGioiTinh.Location = new Point(351, 101);
+            cmbGioiTinh.Margin = new Padding(3, 2, 3, 2);
             cmbGioiTinh.Name = "cmbGioiTinh";
-            cmbGioiTinh.Size = new Size(157, 28);
+            cmbGioiTinh.Size = new Size(141, 23);
             cmbGioiTinh.TabIndex = 15;
             // 
             // tableLayoutBodyImage
@@ -443,21 +464,23 @@ namespace _3.GUI.GUI
             tableLayoutBodyImage.Controls.Add(btnChonAnh, 0, 1);
             tableLayoutBodyImage.Controls.Add(ptbChonAnh, 0, 0);
             tableLayoutBodyImage.Dock = DockStyle.Left;
-            tableLayoutBodyImage.Location = new Point(3, 23);
+            tableLayoutBodyImage.Location = new Point(3, 18);
+            tableLayoutBodyImage.Margin = new Padding(3, 2, 3, 2);
             tableLayoutBodyImage.Name = "tableLayoutBodyImage";
             tableLayoutBodyImage.RowCount = 2;
-            tableLayoutBodyImage.RowStyles.Add(new RowStyle(SizeType.Absolute, 207F));
-            tableLayoutBodyImage.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutBodyImage.Size = new Size(202, 247);
+            tableLayoutBodyImage.RowStyles.Add(new RowStyle(SizeType.Absolute, 155F));
+            tableLayoutBodyImage.RowStyles.Add(new RowStyle(SizeType.Absolute, 6F));
+            tableLayoutBodyImage.Size = new Size(177, 185);
             tableLayoutBodyImage.TabIndex = 0;
             // 
             // btnChonAnh
             // 
             btnChonAnh.Anchor = AnchorStyles.None;
             btnChonAnh.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnChonAnh.Location = new Point(54, 210);
+            btnChonAnh.Location = new Point(47, 157);
+            btnChonAnh.Margin = new Padding(3, 2, 3, 2);
             btnChonAnh.Name = "btnChonAnh";
-            btnChonAnh.Size = new Size(94, 34);
+            btnChonAnh.Size = new Size(82, 26);
             btnChonAnh.TabIndex = 6;
             btnChonAnh.Text = "Chọn ảnh";
             btnChonAnh.UseVisualStyleBackColor = true;
@@ -467,9 +490,10 @@ namespace _3.GUI.GUI
             // ptbChonAnh
             // 
             ptbChonAnh.BackColor = Color.Transparent;
-            ptbChonAnh.Location = new Point(3, 3);
+            ptbChonAnh.Location = new Point(3, 2);
+            ptbChonAnh.Margin = new Padding(3, 2, 3, 2);
             ptbChonAnh.Name = "ptbChonAnh";
-            ptbChonAnh.Size = new Size(181, 161);
+            ptbChonAnh.Size = new Size(158, 121);
             ptbChonAnh.TabIndex = 7;
             ptbChonAnh.TabStop = false;
             // 
@@ -477,9 +501,11 @@ namespace _3.GUI.GUI
             // 
             groupBoxBodySearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBoxBodySearch.Controls.Add(tableLayoutPanelSearch);
-            groupBoxBodySearch.Location = new Point(805, 3);
+            groupBoxBodySearch.Location = new Point(705, 2);
+            groupBoxBodySearch.Margin = new Padding(3, 2, 3, 2);
             groupBoxBodySearch.Name = "groupBoxBodySearch";
-            groupBoxBodySearch.Size = new Size(339, 252);
+            groupBoxBodySearch.Padding = new Padding(3, 2, 3, 2);
+            groupBoxBodySearch.Size = new Size(296, 189);
             groupBoxBodySearch.TabIndex = 9;
             groupBoxBodySearch.TabStop = false;
             groupBoxBodySearch.Text = "Khu vực tìm kiếm";
@@ -493,15 +519,16 @@ namespace _3.GUI.GUI
             tableLayoutPanelSearch.Controls.Add(cmbSearchRole, 0, 3);
             tableLayoutPanelSearch.Controls.Add(label8, 0, 0);
             tableLayoutPanelSearch.Dock = DockStyle.Fill;
-            tableLayoutPanelSearch.Location = new Point(3, 23);
+            tableLayoutPanelSearch.Location = new Point(3, 18);
+            tableLayoutPanelSearch.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanelSearch.Name = "tableLayoutPanelSearch";
-            tableLayoutPanelSearch.Padding = new Padding(10);
+            tableLayoutPanelSearch.Padding = new Padding(9, 8, 9, 8);
             tableLayoutPanelSearch.RowCount = 4;
             tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanelSearch.Size = new Size(333, 226);
+            tableLayoutPanelSearch.Size = new Size(290, 169);
             tableLayoutPanelSearch.TabIndex = 0;
             // 
             // label9
@@ -509,19 +536,20 @@ namespace _3.GUI.GUI
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(68, 123);
+            label9.Location = new Point(67, 92);
             label9.Name = "label9";
-            label9.Size = new Size(196, 28);
+            label9.Size = new Size(155, 21);
             label9.TabIndex = 2;
             label9.Text = "Chọn vai trò cần tìm";
             // 
             // txtSearch
             // 
             txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtSearch.Location = new Point(13, 64);
+            txtSearch.Location = new Point(12, 48);
+            txtSearch.Margin = new Padding(3, 2, 3, 2);
             txtSearch.Multiline = true;
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(307, 45);
+            txtSearch.Size = new Size(266, 34);
             txtSearch.TabIndex = 1;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
@@ -530,9 +558,10 @@ namespace _3.GUI.GUI
             cmbSearchRole.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cmbSearchRole.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSearchRole.FormattingEnabled = true;
-            cmbSearchRole.Location = new Point(13, 166);
+            cmbSearchRole.Location = new Point(12, 124);
+            cmbSearchRole.Margin = new Padding(3, 2, 3, 2);
             cmbSearchRole.Name = "cmbSearchRole";
-            cmbSearchRole.Size = new Size(307, 28);
+            cmbSearchRole.Size = new Size(266, 23);
             cmbSearchRole.TabIndex = 3;
             cmbSearchRole.SelectedIndexChanged += cmbSearchRole_SelectedIndexChanged;
             // 
@@ -541,9 +570,9 @@ namespace _3.GUI.GUI
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(81, 21);
+            label8.Location = new Point(78, 16);
             label8.Name = "label8";
-            label8.Size = new Size(170, 28);
+            label8.Size = new Size(134, 21);
             label8.TabIndex = 0;
             label8.Text = "Nhập tên cần tìm";
             // 
@@ -552,9 +581,10 @@ namespace _3.GUI.GUI
             panelFooter.Controls.Add(dgvNhanVien);
             panelFooter.Dock = DockStyle.Top;
             panelFooter.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            panelFooter.Location = new Point(0, 438);
+            panelFooter.Location = new Point(0, 329);
+            panelFooter.Margin = new Padding(3, 2, 3, 2);
             panelFooter.Name = "panelFooter";
-            panelFooter.Size = new Size(1147, 256);
+            panelFooter.Size = new Size(1004, 192);
             panelFooter.TabIndex = 2;
             // 
             // dgvNhanVien
@@ -563,10 +593,11 @@ namespace _3.GUI.GUI
             dgvNhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvNhanVien.Dock = DockStyle.Top;
             dgvNhanVien.Location = new Point(0, 0);
+            dgvNhanVien.Margin = new Padding(3, 2, 3, 2);
             dgvNhanVien.Name = "dgvNhanVien";
             dgvNhanVien.RowHeadersWidth = 51;
             dgvNhanVien.RowTemplate.Height = 100;
-            dgvNhanVien.Size = new Size(1147, 253);
+            dgvNhanVien.Size = new Size(1004, 190);
             dgvNhanVien.TabIndex = 0;
             dgvNhanVien.CellClick += dgvNhanVien_CellContentClick;
             // 
@@ -575,11 +606,11 @@ namespace _3.GUI.GUI
             txtNumberPage.Anchor = AnchorStyles.Bottom;
             txtNumberPage.Enabled = false;
             txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            txtNumberPage.Location = new Point(528, 702);
-            txtNumberPage.Margin = new Padding(5);
+            txtNumberPage.Location = new Point(462, 526);
+            txtNumberPage.Margin = new Padding(4);
             txtNumberPage.Multiline = true;
             txtNumberPage.Name = "txtNumberPage";
-            txtNumberPage.Size = new Size(75, 27);
+            txtNumberPage.Size = new Size(66, 21);
             txtNumberPage.TabIndex = 63;
             txtNumberPage.Text = "0/0";
             txtNumberPage.TextAlign = HorizontalAlignment.Center;
@@ -588,10 +619,10 @@ namespace _3.GUI.GUI
             // 
             btnPrePage.Anchor = AnchorStyles.Bottom;
             btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPrePage.Location = new Point(418, 701);
-            btnPrePage.Margin = new Padding(5);
+            btnPrePage.Location = new Point(366, 526);
+            btnPrePage.Margin = new Padding(4);
             btnPrePage.Name = "btnPrePage";
-            btnPrePage.Size = new Size(91, 31);
+            btnPrePage.Size = new Size(80, 23);
             btnPrePage.TabIndex = 60;
             btnPrePage.Text = "<<";
             btnPrePage.UseVisualStyleBackColor = true;
@@ -601,10 +632,10 @@ namespace _3.GUI.GUI
             // 
             btnLastPage.Anchor = AnchorStyles.Bottom;
             btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLastPage.Location = new Point(717, 701);
-            btnLastPage.Margin = new Padding(5);
+            btnLastPage.Location = new Point(627, 526);
+            btnLastPage.Margin = new Padding(4);
             btnLastPage.Name = "btnLastPage";
-            btnLastPage.Size = new Size(91, 31);
+            btnLastPage.Size = new Size(80, 23);
             btnLastPage.TabIndex = 62;
             btnLastPage.Text = ">|";
             btnLastPage.UseVisualStyleBackColor = true;
@@ -614,10 +645,10 @@ namespace _3.GUI.GUI
             // 
             btnFirstPage.Anchor = AnchorStyles.Bottom;
             btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFirstPage.Location = new Point(318, 701);
-            btnFirstPage.Margin = new Padding(5);
+            btnFirstPage.Location = new Point(278, 526);
+            btnFirstPage.Margin = new Padding(4);
             btnFirstPage.Name = "btnFirstPage";
-            btnFirstPage.Size = new Size(91, 31);
+            btnFirstPage.Size = new Size(80, 23);
             btnFirstPage.TabIndex = 59;
             btnFirstPage.Text = "|<";
             btnFirstPage.UseVisualStyleBackColor = true;
@@ -627,10 +658,10 @@ namespace _3.GUI.GUI
             // 
             btnNextPage.Anchor = AnchorStyles.Bottom;
             btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNextPage.Location = new Point(617, 701);
-            btnNextPage.Margin = new Padding(5);
+            btnNextPage.Location = new Point(540, 526);
+            btnNextPage.Margin = new Padding(4);
             btnNextPage.Name = "btnNextPage";
-            btnNextPage.Size = new Size(91, 31);
+            btnNextPage.Size = new Size(80, 23);
             btnNextPage.TabIndex = 61;
             btnNextPage.Text = ">>";
             btnNextPage.UseVisualStyleBackColor = true;
@@ -638,9 +669,9 @@ namespace _3.GUI.GUI
             // 
             // formNhanVien
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1147, 743);
+            ClientSize = new Size(1004, 557);
             Controls.Add(txtNumberPage);
             Controls.Add(btnPrePage);
             Controls.Add(btnLastPage);
@@ -649,6 +680,7 @@ namespace _3.GUI.GUI
             Controls.Add(panelFooter);
             Controls.Add(panelBody);
             Controls.Add(panelHeader);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "formNhanVien";
             Text = "formNhanVien";
             Load += formNhanVien_Load;
