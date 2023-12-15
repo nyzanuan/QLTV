@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             dgvNXB = new DataGridView();
+            COL_ID = new DataGridViewTextBoxColumn();
+            COL_NAME = new DataGridViewTextBoxColumn();
+            COL_IMAGE = new DataGridViewImageColumn();
             label4 = new Label();
             txtTimKiem = new TextBox();
             label8 = new Label();
@@ -60,6 +63,8 @@
             label12 = new Label();
             panelHeader = new Panel();
             tableLayoutPanelBodyInput = new TableLayoutPanel();
+            btnChonAnh = new Button();
+            ptbChonAnh = new PictureBox();
             tableLayoutPanelBody = new TableLayoutPanel();
             panelBodyButton = new Panel();
             tableLooterButtoFooter = new TableLayoutPanel();
@@ -77,6 +82,7 @@
             tableLayoutPanel9.SuspendLayout();
             panelHeader.SuspendLayout();
             tableLayoutPanelBodyInput.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbChonAnh).BeginInit();
             tableLayoutPanelBody.SuspendLayout();
             panelBodyButton.SuspendLayout();
             tableLooterButtoFooter.SuspendLayout();
@@ -86,15 +92,46 @@
             // dgvNXB
             // 
             dgvNXB.AllowUserToAddRows = false;
+            dgvNXB.AllowUserToDeleteRows = false;
             dgvNXB.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvNXB.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvNXB.Columns.AddRange(new DataGridViewColumn[] { COL_ID, COL_NAME, COL_IMAGE });
             dgvNXB.Dock = DockStyle.Fill;
             dgvNXB.Location = new Point(5, 5);
             dgvNXB.Margin = new Padding(5);
             dgvNXB.Name = "dgvNXB";
+            dgvNXB.ReadOnly = true;
             dgvNXB.RowHeadersWidth = 51;
             dgvNXB.Size = new Size(1132, 320);
             dgvNXB.TabIndex = 52;
+            dgvNXB.CellClick += dgvNXB_CellClick;
+            // 
+            // COL_ID
+            // 
+            COL_ID.DataPropertyName = "PublisherId";
+            COL_ID.HeaderText = "Mã";
+            COL_ID.MinimumWidth = 6;
+            COL_ID.Name = "COL_ID";
+            COL_ID.ReadOnly = true;
+            // 
+            // COL_NAME
+            // 
+            COL_NAME.DataPropertyName = "Name";
+            COL_NAME.HeaderText = "Tên NXB";
+            COL_NAME.MinimumWidth = 6;
+            COL_NAME.Name = "COL_NAME";
+            COL_NAME.ReadOnly = true;
+            // 
+            // COL_IMAGE
+            // 
+            COL_IMAGE.DataPropertyName = "Image";
+            COL_IMAGE.HeaderText = "Hình";
+            COL_IMAGE.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            COL_IMAGE.MinimumWidth = 6;
+            COL_IMAGE.Name = "COL_IMAGE";
+            COL_IMAGE.ReadOnly = true;
+            COL_IMAGE.Resizable = DataGridViewTriState.True;
+            COL_IMAGE.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // label4
             // 
@@ -118,6 +155,7 @@
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.Size = new Size(272, 28);
             txtTimKiem.TabIndex = 37;
+            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
             // 
             // label8
             // 
@@ -150,6 +188,7 @@
             txtDiaChi.Margin = new Padding(5);
             txtDiaChi.Multiline = true;
             txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.ReadOnly = true;
             txtDiaChi.Size = new Size(371, 35);
             txtDiaChi.TabIndex = 36;
             // 
@@ -165,6 +204,7 @@
             btnHuy.TabIndex = 35;
             btnHuy.Text = "Hủy";
             btnHuy.UseVisualStyleBackColor = true;
+            btnHuy.Click += btnHuy_Click;
             // 
             // btnLuu
             // 
@@ -178,6 +218,7 @@
             btnLuu.TabIndex = 34;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = true;
+            btnLuu.Click += btnLuu_Click;
             // 
             // btnThem
             // 
@@ -190,6 +231,7 @@
             btnThem.TabIndex = 31;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // btnXoa
             // 
@@ -203,6 +245,7 @@
             btnXoa.TabIndex = 33;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnUpdate
             // 
@@ -216,6 +259,7 @@
             btnUpdate.TabIndex = 32;
             btnUpdate.Text = "Cập nhật";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // txtTen
             // 
@@ -225,6 +269,7 @@
             txtTen.Margin = new Padding(5);
             txtTen.Multiline = true;
             txtTen.Name = "txtTen";
+            txtTen.ReadOnly = true;
             txtTen.Size = new Size(372, 35);
             txtTen.TabIndex = 26;
             // 
@@ -260,6 +305,7 @@
             txtMa.Margin = new Padding(5);
             txtMa.Multiline = true;
             txtMa.Name = "txtMa";
+            txtMa.ReadOnly = true;
             txtMa.Size = new Size(371, 35);
             txtMa.TabIndex = 25;
             // 
@@ -365,7 +411,7 @@
             textBox3.Location = new Point(17, 3);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(31, 23);
+            textBox3.Size = new Size(31, 27);
             textBox3.TabIndex = 2;
             // 
             // label7
@@ -447,12 +493,15 @@
             tableLayoutPanelBodyInput.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanelBodyInput.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanelBodyInput.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanelBodyInput.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanelBodyInput.Controls.Add(label1, 0, 0);
             tableLayoutPanelBodyInput.Controls.Add(label2, 0, 1);
             tableLayoutPanelBodyInput.Controls.Add(txtTen, 3, 0);
             tableLayoutPanelBodyInput.Controls.Add(txtMa, 1, 0);
             tableLayoutPanelBodyInput.Controls.Add(label3, 2, 0);
             tableLayoutPanelBodyInput.Controls.Add(txtDiaChi, 1, 1);
+            tableLayoutPanelBodyInput.Controls.Add(btnChonAnh, 2, 1);
+            tableLayoutPanelBodyInput.Controls.Add(ptbChonAnh, 3, 1);
             tableLayoutPanelBodyInput.Dock = DockStyle.Fill;
             tableLayoutPanelBodyInput.Location = new Point(3, 3);
             tableLayoutPanelBodyInput.Name = "tableLayoutPanelBodyInput";
@@ -461,6 +510,30 @@
             tableLayoutPanelBodyInput.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanelBodyInput.Size = new Size(1136, 209);
             tableLayoutPanelBodyInput.TabIndex = 54;
+            // 
+            // btnChonAnh
+            // 
+            btnChonAnh.Anchor = AnchorStyles.None;
+            btnChonAnh.Enabled = false;
+            btnChonAnh.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChonAnh.Location = new Point(614, 134);
+            btnChonAnh.Margin = new Padding(5);
+            btnChonAnh.Name = "btnChonAnh";
+            btnChonAnh.Size = new Size(91, 44);
+            btnChonAnh.TabIndex = 66;
+            btnChonAnh.Text = "Chọn ảnh";
+            btnChonAnh.UseVisualStyleBackColor = true;
+            btnChonAnh.Click += btnChonAnh_Click;
+            // 
+            // ptbChonAnh
+            // 
+            ptbChonAnh.BorderStyle = BorderStyle.FixedSingle;
+            ptbChonAnh.Location = new Point(757, 107);
+            ptbChonAnh.Name = "ptbChonAnh";
+            ptbChonAnh.Size = new Size(125, 62);
+            ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
+            ptbChonAnh.TabIndex = 67;
+            ptbChonAnh.TabStop = false;
             // 
             // tableLayoutPanelBody
             // 
@@ -529,6 +602,7 @@
             btnLastPage.TabIndex = 54;
             btnLastPage.Text = ">|";
             btnLastPage.UseVisualStyleBackColor = true;
+            btnLastPage.Click += btnLastPage_Click;
             // 
             // btnNextPage
             // 
@@ -541,6 +615,7 @@
             btnNextPage.TabIndex = 53;
             btnNextPage.Text = ">>";
             btnNextPage.UseVisualStyleBackColor = true;
+            btnNextPage.Click += btnNextPage_Click;
             // 
             // btnPrePage
             // 
@@ -553,6 +628,7 @@
             btnPrePage.TabIndex = 52;
             btnPrePage.Text = "<<";
             btnPrePage.UseVisualStyleBackColor = true;
+            btnPrePage.Click += btnPrePage_Click;
             // 
             // txtNumberPage
             // 
@@ -579,6 +655,7 @@
             btnFirstPage.TabIndex = 51;
             btnFirstPage.Text = "|<";
             btnFirstPage.UseVisualStyleBackColor = true;
+            btnFirstPage.Click += btnFirstPage_Click;
             // 
             // formNXB
             // 
@@ -607,6 +684,7 @@
             panelHeader.PerformLayout();
             tableLayoutPanelBodyInput.ResumeLayout(false);
             tableLayoutPanelBodyInput.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbChonAnh).EndInit();
             tableLayoutPanelBody.ResumeLayout(false);
             panelBodyButton.ResumeLayout(false);
             tableLooterButtoFooter.ResumeLayout(false);
@@ -657,5 +735,10 @@
         private Button btnPrePage;
         private TextBox txtNumberPage;
         private Button btnFirstPage;
+        private Button btnChonAnh;
+        private PictureBox ptbChonAnh;
+        private DataGridViewTextBoxColumn COL_ID;
+        private DataGridViewTextBoxColumn COL_NAME;
+        private DataGridViewImageColumn COL_IMAGE;
     }
 }
