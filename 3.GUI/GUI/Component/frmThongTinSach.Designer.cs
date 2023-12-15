@@ -48,18 +48,18 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
             tableLayoutPanel1.Size = new Size(301, 365);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // lblTitle
             // 
-            lblTitle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            lblTitle.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 7.8F, FontStyle.Italic, GraphicsUnit.Point);
-            lblTitle.Location = new Point(20, 325);
+            lblTitle.Location = new Point(3, 326);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(261, 40);
+            lblTitle.Size = new Size(295, 17);
             lblTitle.TabIndex = 1;
             lblTitle.Text = "Sách về tình yêu tuổi học trò, xin chao cacac ";
             // 
@@ -69,7 +69,7 @@
             ptbHinhAnh.Image = (Image)resources.GetObject("ptbHinhAnh.Image");
             ptbHinhAnh.Location = new Point(3, 3);
             ptbHinhAnh.Name = "ptbHinhAnh";
-            ptbHinhAnh.Size = new Size(295, 319);
+            ptbHinhAnh.Size = new Size(295, 299);
             ptbHinhAnh.SizeMode = PictureBoxSizeMode.Zoom;
             ptbHinhAnh.TabIndex = 0;
             ptbHinhAnh.TabStop = false;
