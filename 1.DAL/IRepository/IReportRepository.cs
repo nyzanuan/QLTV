@@ -11,7 +11,7 @@ namespace _1.DAL.IRepository
     {
         List<ReceiptInfo> GetReceipt(DateTime startDate, DateTime endDate);
 
-        List<MaxBookInfo> GetBook();
+        List<MaxBookInfo> GetBook(DateTime startDate, DateTime endDate);
 
         List<QuantityInfo> GetQuantityBook();
     }

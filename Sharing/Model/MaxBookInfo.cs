@@ -11,7 +11,9 @@ namespace Sharing.Model
         public string BookName { get; set; }
         public string Category { get; set; }
         public string Publisher { get; set; }
-        public string Language { get; set; }
-        public int BorrowedCopies { get; set; }
+        public string Language { get; set; }    
+        public DateTime BorrowDate { get; set; } // Loan date field
+        public DateTime ReturnDate { get; set; } // Return date field
+        public int sumBorrowBook { get; set; }
     }
 }

@@ -18,9 +18,9 @@ namespace _2.BUS.Service
         {
             _reportRepository = new ReportRepository();
         }
-        public List<MaxBookInfo> GetBook()
+        public List<MaxBookInfo> GetBook(DateTime startDate, DateTime endDate)
         {
-            return _reportRepository.GetBook();
+            return _reportRepository.GetBook(startDate, endDate);
         }
 
         public List<QuantityInfo> GetQuantityBook()

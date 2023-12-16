@@ -50,7 +50,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(359, 9);
+            label1.Location = new Point(408, 9);
             label1.Name = "label1";
             label1.Size = new Size(182, 36);
             label1.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(80, 69);
+            label2.Location = new Point(129, 69);
             label2.Name = "label2";
             label2.Size = new Size(32, 21);
             label2.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(477, 69);
+            label3.Location = new Point(526, 69);
             label3.Name = "label3";
             label3.Size = new Size(41, 21);
             label3.TabIndex = 2;
@@ -79,7 +79,7 @@
             // dtpStart
             // 
             dtpStart.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dtpStart.Location = new Point(128, 61);
+            dtpStart.Location = new Point(177, 61);
             dtpStart.Name = "dtpStart";
             dtpStart.Size = new Size(275, 29);
             dtpStart.TabIndex = 3;
@@ -88,7 +88,7 @@
             // dtpEnd
             // 
             dtpEnd.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dtpEnd.Location = new Point(533, 61);
+            dtpEnd.Location = new Point(582, 61);
             dtpEnd.Name = "dtpEnd";
             dtpEnd.Size = new Size(275, 29);
             dtpEnd.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(159, 121);
+            label4.Location = new Point(237, 120);
             label4.Name = "label4";
             label4.Size = new Size(82, 21);
             label4.TabIndex = 5;
@@ -109,7 +109,7 @@
             cbxBaoCao.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbxBaoCao.FormattingEnabled = true;
             cbxBaoCao.Items.AddRange(new object[] { "Danh sách mượn sách", "Sách được mượn nhiều nhất", "Số lượng sách hiện có" });
-            cbxBaoCao.Location = new Point(247, 113);
+            cbxBaoCao.Location = new Point(325, 112);
             cbxBaoCao.Name = "cbxBaoCao";
             cbxBaoCao.Size = new Size(271, 27);
             cbxBaoCao.TabIndex = 6;
@@ -117,9 +117,9 @@
             // btnXemChiTiet
             // 
             btnXemChiTiet.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnXemChiTiet.Location = new Point(788, 115);
+            btnXemChiTiet.Location = new Point(881, 112);
             btnXemChiTiet.Name = "btnXemChiTiet";
-            btnXemChiTiet.Size = new Size(120, 32);
+            btnXemChiTiet.Size = new Size(120, 27);
             btnXemChiTiet.TabIndex = 7;
             btnXemChiTiet.Text = "Xem chi tiết";
             btnXemChiTiet.UseVisualStyleBackColor = true;
@@ -130,19 +130,20 @@
             dgvBaoCao.AllowUserToAddRows = false;
             dgvBaoCao.AllowUserToOrderColumns = true;
             dgvBaoCao.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvBaoCao.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dgvBaoCao.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBaoCao.Location = new Point(1, 161);
             dgvBaoCao.Name = "dgvBaoCao";
             dgvBaoCao.RowTemplate.Height = 25;
-            dgvBaoCao.Size = new Size(922, 433);
+            dgvBaoCao.Size = new Size(1029, 459);
             dgvBaoCao.TabIndex = 8;
             // 
             // btnBaoCao
             // 
             btnBaoCao.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBaoCao.Location = new Point(524, 113);
+            btnBaoCao.Location = new Point(602, 112);
             btnBaoCao.Name = "btnBaoCao";
-            btnBaoCao.Size = new Size(120, 32);
+            btnBaoCao.Size = new Size(120, 27);
             btnBaoCao.TabIndex = 9;
             btnBaoCao.Text = "Tạo báo cáo";
             btnBaoCao.UseVisualStyleBackColor = true;
@@ -162,11 +163,19 @@
             // 
             printCB0.PrintPage += printCB0_PrintPage;
             // 
+            // printCB1
+            // 
+            printCB1.PrintPage += printCB1_PrintPage;
+            // 
+            // printCB2
+            // 
+            printCB2.PrintPage += printCB2_PrintPage;
+            // 
             // formBaoCao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(920, 592);
+            ClientSize = new Size(1030, 617);
             Controls.Add(btnBaoCao);
             Controls.Add(dgvBaoCao);
             Controls.Add(btnXemChiTiet);

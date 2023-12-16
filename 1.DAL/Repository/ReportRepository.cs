@@ -19,18 +19,24 @@ namespace _1.DAL.Repository
         {
             _dataContext = new DataContext();
         }
-        public List<MaxBookInfo> GetBook()
+        public List<MaxBookInfo> GetBook(DateTime startDate, DateTime endDate)
         {
             try
-            {   
-                var result = _dataContext.Book.Select(max => new MaxBookInfo
+            { 
+                
+               
+                var result = _dataContext.Book.Join(_dataContext.LoanReceipt, b => b.BookId, l => l.BookId, (b,l) => new MaxBookInfo()
+
                 {
-                    BookName = max.Name,
-                    Category = max.Category.Name,
-                    Publisher = max.Publisher.Name,
-                    Language = max.Language.Name,
-                    BorrowedCopies = max.BorrowedCopies,
-                }).OrderByDescending(max => max.BorrowedCopies).ToList();
+                    BookName = b.Name,
+                    Category = b.Category.Name,
+                    Publisher = b.Publisher.Name,
+                    Language = b.Language.Name,                  
+                    BorrowDate = l.BorrowDate,
+                    ReturnDate = l.ReturnDate,
+                    sumBorrowBook = _dataContext.Book.Sum(p => p.BorrowedCopies),
+
+                }).Where(c => c.BorrowDate >= startDate && c.BorrowDate <= endDate).OrderByDescending(b => b.sumBorrowBook).ToList();
                 return result;
             }
             catch (Exception ex)

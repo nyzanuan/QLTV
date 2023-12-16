@@ -35,6 +35,9 @@
             btnPrePage = new Button();
             book_dataGridView = new DataGridView();
             panelTop = new Panel();
+            label5 = new Label();
+            label8 = new Label();
+            txt_search = new TextBox();
             btnHuy = new Button();
             btnTraSach = new Button();
             btnGiaHan = new Button();
@@ -46,8 +49,6 @@
             extend_dateTimePicker = new DateTimePicker();
             label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
-            txt_search = new TextBox();
             groupBox1 = new GroupBox();
             label6 = new Label();
             comboBox1 = new ComboBox();
@@ -55,7 +56,6 @@
             label1 = new Label();
             label2 = new Label();
             txt_user_id = new TextBox();
-            label8 = new Label();
             panelMid = new Panel();
             panelBot = new Panel();
             ((System.ComponentModel.ISupportInitialize)book_dataGridView).BeginInit();
@@ -145,11 +145,42 @@
             panelTop.Size = new Size(1063, 42);
             panelTop.TabIndex = 49;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(782, 12);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(82, 21);
+            label5.TabIndex = 24;
+            label5.Text = "Tìm kiếm";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(461, 0);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(241, 36);
+            label8.TabIndex = 19;
+            label8.Text = "Quản lý trả sách";
+            // 
+            // txt_search
+            // 
+            txt_search.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_search.Location = new Point(882, 4);
+            txt_search.Margin = new Padding(4, 3, 4, 3);
+            txt_search.Name = "txt_search";
+            txt_search.Size = new Size(168, 27);
+            txt_search.TabIndex = 23;
+            // 
             // btnHuy
             // 
             btnHuy.Enabled = false;
             btnHuy.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnHuy.Location = new Point(649, 178);
+            btnHuy.Location = new Point(637, 182);
             btnHuy.Margin = new Padding(4);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(77, 33);
@@ -161,7 +192,7 @@
             // 
             btnTraSach.Enabled = false;
             btnTraSach.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnTraSach.Location = new Point(359, 178);
+            btnTraSach.Location = new Point(347, 182);
             btnTraSach.Margin = new Padding(4);
             btnTraSach.Name = "btnTraSach";
             btnTraSach.Size = new Size(80, 33);
@@ -173,7 +204,7 @@
             // 
             btnGiaHan.Enabled = false;
             btnGiaHan.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGiaHan.Location = new Point(458, 178);
+            btnGiaHan.Location = new Point(446, 182);
             btnGiaHan.Margin = new Padding(4);
             btnGiaHan.Name = "btnGiaHan";
             btnGiaHan.Size = new Size(80, 33);
@@ -185,7 +216,7 @@
             // 
             btnLuu.Enabled = false;
             btnLuu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLuu.Location = new Point(554, 178);
+            btnLuu.Location = new Point(542, 182);
             btnLuu.Margin = new Padding(4);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(80, 33);
@@ -202,7 +233,7 @@
             groupBox3.Controls.Add(label3);
             groupBox3.Controls.Add(label4);
             groupBox3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox3.Location = new Point(585, 6);
+            groupBox3.Location = new Point(554, 6);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(475, 158);
             groupBox3.TabIndex = 37;
@@ -270,26 +301,6 @@
             label4.Size = new Size(73, 21);
             label4.TabIndex = 20;
             label4.Text = "Ngày trả";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(782, 12);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(82, 21);
-            label5.TabIndex = 24;
-            label5.Text = "Tìm kiếm";
-            // 
-            // txt_search
-            // 
-            txt_search.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_search.Location = new Point(882, 4);
-            txt_search.Margin = new Padding(4, 3, 4, 3);
-            txt_search.Name = "txt_search";
-            txt_search.Size = new Size(168, 27);
-            txt_search.TabIndex = 23;
             // 
             // groupBox1
             // 
@@ -366,17 +377,6 @@
             txt_user_id.Name = "txt_user_id";
             txt_user_id.Size = new Size(218, 29);
             txt_user_id.TabIndex = 8;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(461, 0);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(241, 36);
-            label8.TabIndex = 19;
-            label8.Text = "Quản lý trả sách";
             // 
             // panelMid
             // 
