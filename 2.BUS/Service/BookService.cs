@@ -3,11 +3,6 @@ using _1.DAL.Model;
 using _1.DAL.Repository;
 using _2.BUS.IService;
 using Sharing.ReturnModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _2.BUS.Service
 {
@@ -26,7 +21,7 @@ namespace _2.BUS.Service
 
         public bool DeleteBook(int id)
         {
-            return  _bookRepository.DeleteBook(id);
+            return _bookRepository.DeleteBook(id);
         }
 
 
@@ -54,7 +49,7 @@ namespace _2.BUS.Service
         }
         public List<Author> GetAllAuthor(string? search)
         {
-            return _bookRepository.GetAllAuthor(search);    
+            return _bookRepository.GetAllAuthor(search);
         }
         public List<Category> GetAllCategory(string? search)
         {
@@ -79,6 +74,11 @@ namespace _2.BUS.Service
         public bool UpdateBook(Book book)
         {
             return (_bookRepository.UpdateBook(book));
+        }
+
+        public List<Book> GetAllBook()
+        {
+            return _bookRepository.GetAllBook();
         }
     }
 }

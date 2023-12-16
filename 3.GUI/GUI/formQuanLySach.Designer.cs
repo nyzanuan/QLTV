@@ -29,6 +29,8 @@ namespace QLTV
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvSach = new DataGridView();
             COL_ID = new DataGridViewTextBoxColumn();
             COL_NAME = new DataGridViewTextBoxColumn();
@@ -63,7 +65,6 @@ namespace QLTV
             panelMid = new Panel();
             tableLayoutPanelMain = new TableLayoutPanel();
             panelImage = new Panel();
-            ptbChonAnh = new PictureBox();
             btnChonAnh = new Button();
             tableLayoutPanelMainInputAndButton = new TableLayoutPanel();
             panelMainButton = new Panel();
@@ -81,18 +82,19 @@ namespace QLTV
             panelBot = new Panel();
             tableLayoutPanelFooter = new TableLayoutPanel();
             panelFooterButton = new Panel();
+            ptbChonAnh = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvSach).BeginInit();
             panelTop.SuspendLayout();
             panelMid.SuspendLayout();
             tableLayoutPanelMain.SuspendLayout();
             panelImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ptbChonAnh).BeginInit();
             tableLayoutPanelMainInputAndButton.SuspendLayout();
             panelMainButton.SuspendLayout();
             tableLayoutPanelMainInput.SuspendLayout();
             panelBot.SuspendLayout();
             tableLayoutPanelFooter.SuspendLayout();
             panelFooterButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbChonAnh).BeginInit();
             SuspendLayout();
             // 
             // dgvSach
@@ -491,16 +493,6 @@ namespace QLTV
             panelImage.Size = new Size(214, 239);
             panelImage.TabIndex = 0;
             // 
-            // ptbChonAnh
-            // 
-            ptbChonAnh.BorderStyle = BorderStyle.FixedSingle;
-            ptbChonAnh.Location = new Point(26, 4);
-            ptbChonAnh.Name = "ptbChonAnh";
-            ptbChonAnh.Size = new Size(163, 163);
-            ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
-            ptbChonAnh.TabIndex = 35;
-            ptbChonAnh.TabStop = false;
-            // 
             // btnChonAnh
             // 
             btnChonAnh.Enabled = false;
@@ -731,6 +723,18 @@ namespace QLTV
             panelFooterButton.Size = new Size(654, 46);
             panelFooterButton.TabIndex = 55;
             // 
+            // ptbChonAnh
+            // 
+            ptbChonAnh.CustomizableEdges = customizableEdges1;
+            ptbChonAnh.ImageRotate = 0F;
+            ptbChonAnh.Location = new Point(43, 14);
+            ptbChonAnh.Name = "ptbChonAnh";
+            ptbChonAnh.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            ptbChonAnh.Size = new Size(137, 161);
+            ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
+            ptbChonAnh.TabIndex = 37;
+            ptbChonAnh.TabStop = false;
+            // 
             // formQuanLySach
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -749,7 +753,6 @@ namespace QLTV
             panelMid.ResumeLayout(false);
             tableLayoutPanelMain.ResumeLayout(false);
             panelImage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)ptbChonAnh).EndInit();
             tableLayoutPanelMainInputAndButton.ResumeLayout(false);
             panelMainButton.ResumeLayout(false);
             tableLayoutPanelMainInput.ResumeLayout(false);
@@ -758,6 +761,7 @@ namespace QLTV
             tableLayoutPanelFooter.ResumeLayout(false);
             panelFooterButton.ResumeLayout(false);
             panelFooterButton.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbChonAnh).EndInit();
             ResumeLayout(false);
         }
 
@@ -800,7 +804,6 @@ namespace QLTV
         private Label label9;
         private ComboBox cBox_Author;
         private Label label3;
-        private PictureBox ptbChonAnh;
         private Button btnChonAnh;
         private TextBox txt_title;
         private Label label10;
@@ -815,5 +818,6 @@ namespace QLTV
         private TableLayoutPanel tableLayoutPanelMainInput;
         private TableLayoutPanel tableLayoutPanelFooter;
         private Panel panelFooterButton;
+        private Guna.UI2.WinForms.Guna2PictureBox ptbChonAnh;
     }
 }

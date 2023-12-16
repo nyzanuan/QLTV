@@ -1,4 +1,6 @@
 ﻿
+using _3.GUI.GUI.Component;
+
 namespace QLTV
 {
     partial class formDocGia
@@ -29,6 +31,8 @@ namespace QLTV
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvDocGia = new DataGridView();
             COL_ID = new DataGridViewTextBoxColumn();
             COL_IMAGE = new DataGridViewImageColumn();
@@ -55,7 +59,7 @@ namespace QLTV
             txt_phone = new TextBox();
             label3 = new Label();
             txt_id = new TextBox();
-            ptbChonAnh = new _3.GUI.Helper.RoundedPictureBox();
+            ptbChonAnh = new PictureboxCustome();
             btnHuy = new Button();
             btnLuu = new Button();
             btnThem = new Button();
@@ -64,8 +68,7 @@ namespace QLTV
             label8 = new Label();
             panelTop = new Panel();
             panel1 = new Panel();
-            label4 = new Label();
-            txtTimKiem = new TextBox();
+            txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             panelBot = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgvDocGia).BeginInit();
             panelMid.SuspendLayout();
@@ -275,7 +278,7 @@ namespace QLTV
             cBox_gioiTinh.Font = new Font("Times New Roman", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point);
             cBox_gioiTinh.ForeColor = SystemColors.MenuText;
             cBox_gioiTinh.FormattingEnabled = true;
-            cBox_gioiTinh.Location = new Point(887, 56);
+            cBox_gioiTinh.Location = new Point(887, 55);
             cBox_gioiTinh.Margin = new Padding(5);
             cBox_gioiTinh.Name = "cBox_gioiTinh";
             cBox_gioiTinh.Size = new Size(159, 33);
@@ -403,9 +406,15 @@ namespace QLTV
             // 
             ptbChonAnh.Anchor = AnchorStyles.None;
             ptbChonAnh.BackColor = Color.Transparent;
-            ptbChonAnh.Location = new Point(8, 5);
+            ptbChonAnh.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            ptbChonAnh.BorderColor = Color.RoyalBlue;
+            ptbChonAnh.BorderColor2 = Color.HotPink;
+            ptbChonAnh.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            ptbChonAnh.BorderSize = 2;
+            ptbChonAnh.GradientAngle = 50F;
+            ptbChonAnh.Location = new Point(23, 12);
             ptbChonAnh.Name = "ptbChonAnh";
-            ptbChonAnh.Size = new Size(150, 134);
+            ptbChonAnh.Size = new Size(121, 121);
             ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
             ptbChonAnh.TabIndex = 66;
             ptbChonAnh.TabStop = false;
@@ -505,7 +514,6 @@ namespace QLTV
             // 
             // panel1
             // 
-            panel1.Controls.Add(label4);
             panel1.Controls.Add(txtTimKiem);
             panel1.Dock = DockStyle.Right;
             panel1.Location = new Point(553, 0);
@@ -514,27 +522,28 @@ namespace QLTV
             panel1.Size = new Size(498, 56);
             panel1.TabIndex = 20;
             // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(30, 16);
-            label4.Margin = new Padding(5, 0, 5, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(97, 25);
-            label4.TabIndex = 54;
-            label4.Text = "Tìm kiếm";
-            // 
             // txtTimKiem
             // 
-            txtTimKiem.Dock = DockStyle.Right;
-            txtTimKiem.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTimKiem.Location = new Point(137, 11);
-            txtTimKiem.Margin = new Padding(5);
+            txtTimKiem.AutoRoundedCorners = true;
+            txtTimKiem.BorderRadius = 20;
+            txtTimKiem.CustomizableEdges = customizableEdges1;
+            txtTimKiem.DefaultText = "";
+            txtTimKiem.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtTimKiem.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtTimKiem.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtTimKiem.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtTimKiem.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtTimKiem.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTimKiem.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtTimKiem.IconLeft = _3.GUI.Properties.Resources._8666693_search_icon;
+            txtTimKiem.Location = new Point(64, 7);
             txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.Size = new Size(351, 35);
-            txtTimKiem.TabIndex = 39;
+            txtTimKiem.PasswordChar = '\0';
+            txtTimKiem.PlaceholderText = "Tìm kiếm";
+            txtTimKiem.SelectedText = "";
+            txtTimKiem.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtTimKiem.Size = new Size(421, 42);
+            txtTimKiem.TabIndex = 55;
             txtTimKiem.TextChanged += txtTimKiem_TextChanged;
             // 
             // panelBot
@@ -573,7 +582,6 @@ namespace QLTV
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panelBot.ResumeLayout(false);
             panelBot.PerformLayout();
             ResumeLayout(false);
@@ -596,8 +604,6 @@ namespace QLTV
         private Panel panelTop;
         private Panel panelBot;
         private Panel panel1;
-        private Label label4;
-        private TextBox txtTimKiem;
         private DataGridViewTextBoxColumn COL_ID;
         private DataGridViewImageColumn COL_IMAGE;
         private DataGridViewTextBoxColumn COL_NAME;
@@ -617,6 +623,7 @@ namespace QLTV
         private TextBox txt_phone;
         private Label label3;
         private TableLayoutPanel tableLayoutPanel1;
-        private _3.GUI.Helper.RoundedPictureBox ptbChonAnh;
+        private PictureboxCustome ptbChonAnh;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
     }
 }

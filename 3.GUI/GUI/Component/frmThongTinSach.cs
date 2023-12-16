@@ -9,19 +9,11 @@ namespace _3.GUI.GUI.Component
             InitializeComponent();
 
 
-
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-
-
-
             ptbHinhAnh.SizeMode = PictureBoxSizeMode.Zoom;
 
 
             lblTitle.Text = title;
 
-            tableLayoutPanel1.Controls.Add(ptbHinhAnh, 0, 0);
-            tableLayoutPanel1.Controls.Add(lblTitle, 0, 1);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
             if (ImagePar != null && ImagePar.Length > 0)
             {
                 using (MemoryStream ms = new MemoryStream(ImagePar))
@@ -32,7 +24,6 @@ namespace _3.GUI.GUI.Component
             }
 
 
-            Controls.Add(tableLayoutPanel1);
 
 
             this.panelSize = panelSize;
@@ -41,6 +32,11 @@ namespace _3.GUI.GUI.Component
         }
 
         private void frmThongTinSach_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

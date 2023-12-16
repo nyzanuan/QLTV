@@ -19,5 +19,6 @@ namespace _2.BUS.IService
         List<Language> GetAllLanguage(string? search);
         List<Category> GetAllCategory(string? search);
         List<Publisher> GetAllPublisher(string? search);
+        List<Book> GetAllBook();
     }
 }

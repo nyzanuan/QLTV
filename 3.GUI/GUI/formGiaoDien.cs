@@ -35,6 +35,9 @@ namespace QLTV
         }
         private void formGiaoDien_Load(object sender, EventArgs e)
         {
+            frmDashBoard frmDashBoard = new frmDashBoard(panelChild.Width);
+
+            OpenForm(frmDashBoard);
 
         }
 

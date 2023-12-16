@@ -143,7 +143,7 @@ namespace QLTV
 
         private void formMuonSach_Load(object sender, EventArgs e)
         {
-
+            dgvMuonSach.RowHeadersVisible = true;
             LoadData();
 
 

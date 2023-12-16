@@ -63,9 +63,39 @@ namespace _3.GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8666693_search_icon {
+            get {
+                object obj = ResourceManager.GetObject("8666693_search_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9055212_bxs_category_icon {
+            get {
+                object obj = ResourceManager.GetObject("9055212_bxs_category_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap account_25 {
             get {
                 object obj = ResourceManager.GetObject("account-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-close-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +126,16 @@ namespace _3.GUI.Properties {
         internal static System.Drawing.Bitmap login1 {
             get {
                 object obj = ResourceManager.GetObject("login1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2023_12_15_234948 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2023-12-15 234948", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

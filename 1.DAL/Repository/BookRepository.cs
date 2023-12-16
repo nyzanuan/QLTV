@@ -2,13 +2,7 @@
 using _1.DAL.IRepository;
 using _1.DAL.Model;
 using Microsoft.EntityFrameworkCore;
-using Org.BouncyCastle.Bcpg;
 using Sharing.ReturnModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _1.DAL.Repository
 {
@@ -55,14 +49,14 @@ namespace _1.DAL.Repository
         {
             try
             {
-                var query = _dataContext.Book.Include(p=>p.Category).AsQueryable();
+                var query = _dataContext.Book.Include(p => p.Category).AsQueryable();
                 if (!string.IsNullOrEmpty(search))
                 {
                     string searchWithoutDiacritics = search.ToLower();
                     query = query.Where(p =>
                         p.Name.ToLower().Contains(searchWithoutDiacritics)
                     );
-                }      
+                }
 
 
                 return new ValueReturn()
@@ -118,7 +112,7 @@ namespace _1.DAL.Repository
                                 Image = bcpl.Book.Image,
                                 Status = bcpl.Book.Status,
                                 AvailableCopies = bcpl.Book.AvailableCopies,
-                                BorrowedCopies = bcpl.Book.BorrowedCopies,    
+                                BorrowedCopies = bcpl.Book.BorrowedCopies,
                             })
                     .Where(b => b.BookId == id)
                     .FirstOrDefault();
@@ -226,6 +220,11 @@ namespace _1.DAL.Repository
             {
                 return new List<Publisher>();
             }
+        }
+
+        public List<Book> GetAllBook()
+        {
+            return _dataContext.Book.Take(10).ToList();
         }
     }
 }

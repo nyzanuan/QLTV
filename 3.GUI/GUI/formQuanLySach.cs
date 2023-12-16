@@ -265,7 +265,24 @@ namespace QLTV
                     if (Array.Exists(imageExtensions, ext => ext.Equals(System.IO.Path.GetExtension(openFileDialog.FileName), StringComparison.OrdinalIgnoreCase)))
                     {
                         ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
-                        ptbChonAnh.Image = Image.FromFile(openFileDialog.FileName);
+
+                        try
+                        {
+                            // Mở FileStream
+                            using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                            {
+                                // Tạo hình ảnh từ FileStream
+                                using (Image image = Image.FromStream(fs))
+                                {
+                                    // Gán hình ảnh cho PictureBox
+                                    ptbChonAnh.Image = new Bitmap(image);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
@@ -274,6 +291,8 @@ namespace QLTV
                 }
             }
         }
+
+
 
         private void btnFirstPage_Click(object sender, EventArgs e)
         {

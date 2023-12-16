@@ -30,6 +30,30 @@ namespace _3.GUI.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panelHeader = new Panel();
             labelHeader = new Label();
             panelBody = new Panel();
@@ -43,12 +67,12 @@ namespace _3.GUI.GUI
             tableLayoutPanelMain = new TableLayoutPanel();
             groupBoxBodyInput = new GroupBox();
             tableLayoutPanelAllInput = new TableLayoutPanel();
-            cmbVaiTro = new ComboBox();
-            txtMatKhau = new TextBox();
-            txtUserName = new TextBox();
-            txtEmail = new TextBox();
-            txtTenNhanVien = new TextBox();
-            txtSoDienThoai = new TextBox();
+            cmbVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
+            cmbGioiTinh = new Guna.UI2.WinForms.Guna2ComboBox();
+            txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            txtSoDienThoai = new Guna.UI2.WinForms.Guna2TextBox();
+            txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
+            txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             labelMaNV = new Label();
             label1 = new Label();
             label2 = new Label();
@@ -57,19 +81,18 @@ namespace _3.GUI.GUI
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            txtMaNhanVien = new TextBox();
-            cmbGioiTinh = new ComboBox();
+            txtMaNhanVien = new Guna.UI2.WinForms.Guna2TextBox();
+            txtTenNhanVien = new Guna.UI2.WinForms.Guna2TextBox();
             tableLayoutBodyImage = new TableLayoutPanel();
             panelHinhAnh = new Panel();
+            ptbChonAnh = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             btnChonAnh = new Button();
-            ptbChonAnh = new RoundedPictureBox();
             groupBoxBodySearch = new GroupBox();
             tableLayoutPanelSearch = new TableLayoutPanel();
+            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             label9 = new Label();
-            txtSearch = new TextBox();
-            cmbSearchRole = new ComboBox();
+            cmbSearchRole = new Guna.UI2.WinForms.Guna2ComboBox();
             label8 = new Label();
-            dgvNhanVien = new DataGridView();
             tableLayoutPanelFooter = new TableLayoutPanel();
             panelFooter = new Panel();
             btnLastPage = new Button();
@@ -77,6 +100,7 @@ namespace _3.GUI.GUI
             txtNumberPage = new TextBox();
             btnFirstPage = new Button();
             btnPrePage = new Button();
+            dgvNhanVien = new Guna.UI2.WinForms.Guna2DataGridView();
             panelHeader.SuspendLayout();
             panelBody.SuspendLayout();
             panelBodyButton.SuspendLayout();
@@ -89,9 +113,9 @@ namespace _3.GUI.GUI
             ((System.ComponentModel.ISupportInitialize)ptbChonAnh).BeginInit();
             groupBoxBodySearch.SuspendLayout();
             tableLayoutPanelSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
             tableLayoutPanelFooter.SuspendLayout();
             panelFooter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
             SuspendLayout();
             // 
             // panelHeader
@@ -252,11 +276,11 @@ namespace _3.GUI.GUI
             tableLayoutPanelAllInput.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanelAllInput.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanelAllInput.Controls.Add(cmbVaiTro, 3, 3);
+            tableLayoutPanelAllInput.Controls.Add(cmbGioiTinh, 3, 2);
+            tableLayoutPanelAllInput.Controls.Add(txtEmail, 3, 1);
+            tableLayoutPanelAllInput.Controls.Add(txtSoDienThoai, 3, 0);
             tableLayoutPanelAllInput.Controls.Add(txtMatKhau, 1, 3);
             tableLayoutPanelAllInput.Controls.Add(txtUserName, 1, 2);
-            tableLayoutPanelAllInput.Controls.Add(txtEmail, 3, 1);
-            tableLayoutPanelAllInput.Controls.Add(txtTenNhanVien, 1, 1);
-            tableLayoutPanelAllInput.Controls.Add(txtSoDienThoai, 3, 0);
             tableLayoutPanelAllInput.Controls.Add(labelMaNV, 0, 0);
             tableLayoutPanelAllInput.Controls.Add(label1, 2, 0);
             tableLayoutPanelAllInput.Controls.Add(label2, 0, 1);
@@ -266,7 +290,7 @@ namespace _3.GUI.GUI
             tableLayoutPanelAllInput.Controls.Add(label6, 2, 2);
             tableLayoutPanelAllInput.Controls.Add(label7, 2, 3);
             tableLayoutPanelAllInput.Controls.Add(txtMaNhanVien, 1, 0);
-            tableLayoutPanelAllInput.Controls.Add(cmbGioiTinh, 3, 2);
+            tableLayoutPanelAllInput.Controls.Add(txtTenNhanVien, 1, 1);
             tableLayoutPanelAllInput.Location = new Point(211, 23);
             tableLayoutPanelAllInput.Name = "tableLayoutPanelAllInput";
             tableLayoutPanelAllInput.RowCount = 4;
@@ -281,64 +305,138 @@ namespace _3.GUI.GUI
             // cmbVaiTro
             // 
             cmbVaiTro.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            cmbVaiTro.FormattingEnabled = true;
-            cmbVaiTro.Location = new Point(468, 270);
-            cmbVaiTro.Margin = new Padding(3, 4, 3, 4);
+            cmbVaiTro.AutoRoundedCorners = true;
+            cmbVaiTro.BackColor = Color.Transparent;
+            cmbVaiTro.BorderRadius = 17;
+            cmbVaiTro.CustomizableEdges = customizableEdges1;
+            cmbVaiTro.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbVaiTro.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbVaiTro.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbVaiTro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbVaiTro.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            cmbVaiTro.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbVaiTro.ItemHeight = 30;
+            cmbVaiTro.Location = new Point(468, 266);
             cmbVaiTro.Name = "cmbVaiTro";
-            cmbVaiTro.Size = new Size(232, 28);
-            cmbVaiTro.TabIndex = 16;
+            cmbVaiTro.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cmbVaiTro.Size = new Size(232, 36);
+            cmbVaiTro.TabIndex = 25;
             // 
-            // txtMatKhau
+            // cmbGioiTinh
             // 
-            txtMatKhau.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtMatKhau.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtMatKhau.Location = new Point(119, 258);
-            txtMatKhau.Multiline = true;
-            txtMatKhau.Name = "txtMatKhau";
-            txtMatKhau.Size = new Size(232, 52);
-            txtMatKhau.TabIndex = 14;
-            // 
-            // txtUserName
-            // 
-            txtUserName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtUserName.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtUserName.Location = new Point(119, 176);
-            txtUserName.Multiline = true;
-            txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(232, 52);
-            txtUserName.TabIndex = 12;
+            cmbGioiTinh.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cmbGioiTinh.AutoRoundedCorners = true;
+            cmbGioiTinh.BackColor = Color.Transparent;
+            cmbGioiTinh.BorderRadius = 17;
+            cmbGioiTinh.CustomizableEdges = customizableEdges3;
+            cmbGioiTinh.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbGioiTinh.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbGioiTinh.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbGioiTinh.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbGioiTinh.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            cmbGioiTinh.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbGioiTinh.ItemHeight = 30;
+            cmbGioiTinh.Location = new Point(468, 184);
+            cmbGioiTinh.Name = "cmbGioiTinh";
+            cmbGioiTinh.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cmbGioiTinh.Size = new Size(232, 36);
+            cmbGioiTinh.TabIndex = 24;
             // 
             // txtEmail
             // 
             txtEmail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtEmail.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtEmail.Location = new Point(468, 95);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
-            txtEmail.Multiline = true;
+            txtEmail.AutoRoundedCorners = true;
+            txtEmail.BorderRadius = 23;
+            txtEmail.CustomizableEdges = customizableEdges5;
+            txtEmail.DefaultText = "";
+            txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEmail.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEmail.Location = new Point(469, 97);
+            txtEmail.Margin = new Padding(4, 3, 4, 3);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(232, 52);
-            txtEmail.TabIndex = 11;
-            // 
-            // txtTenNhanVien
-            // 
-            txtTenNhanVien.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtTenNhanVien.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtTenNhanVien.Location = new Point(119, 95);
-            txtTenNhanVien.Multiline = true;
-            txtTenNhanVien.Name = "txtTenNhanVien";
-            txtTenNhanVien.Size = new Size(232, 52);
-            txtTenNhanVien.TabIndex = 10;
+            txtEmail.PasswordChar = '\0';
+            txtEmail.PlaceholderText = "";
+            txtEmail.SelectedText = "";
+            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtEmail.Size = new Size(230, 49);
+            txtEmail.TabIndex = 20;
             // 
             // txtSoDienThoai
             // 
             txtSoDienThoai.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtSoDienThoai.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtSoDienThoai.Location = new Point(468, 14);
-            txtSoDienThoai.Margin = new Padding(3, 4, 3, 4);
-            txtSoDienThoai.Multiline = true;
+            txtSoDienThoai.AutoRoundedCorners = true;
+            txtSoDienThoai.BorderRadius = 23;
+            txtSoDienThoai.CustomizableEdges = customizableEdges7;
+            txtSoDienThoai.DefaultText = "";
+            txtSoDienThoai.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSoDienThoai.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSoDienThoai.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSoDienThoai.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSoDienThoai.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSoDienThoai.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txtSoDienThoai.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSoDienThoai.Location = new Point(469, 16);
+            txtSoDienThoai.Margin = new Padding(4, 3, 4, 3);
             txtSoDienThoai.Name = "txtSoDienThoai";
-            txtSoDienThoai.Size = new Size(232, 52);
-            txtSoDienThoai.TabIndex = 9;
+            txtSoDienThoai.PasswordChar = '\0';
+            txtSoDienThoai.PlaceholderText = "";
+            txtSoDienThoai.SelectedText = "";
+            txtSoDienThoai.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtSoDienThoai.Size = new Size(230, 49);
+            txtSoDienThoai.TabIndex = 21;
+            // 
+            // txtMatKhau
+            // 
+            txtMatKhau.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtMatKhau.AutoRoundedCorners = true;
+            txtMatKhau.BorderRadius = 23;
+            txtMatKhau.CustomizableEdges = customizableEdges9;
+            txtMatKhau.DefaultText = "";
+            txtMatKhau.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtMatKhau.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtMatKhau.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtMatKhau.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtMatKhau.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMatKhau.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txtMatKhau.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMatKhau.Location = new Point(120, 259);
+            txtMatKhau.Margin = new Padding(4, 3, 4, 3);
+            txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.PasswordChar = '\0';
+            txtMatKhau.PlaceholderText = "";
+            txtMatKhau.SelectedText = "";
+            txtMatKhau.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtMatKhau.Size = new Size(230, 49);
+            txtMatKhau.TabIndex = 22;
+            // 
+            // txtUserName
+            // 
+            txtUserName.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtUserName.AutoRoundedCorners = true;
+            txtUserName.BorderRadius = 23;
+            txtUserName.CustomizableEdges = customizableEdges11;
+            txtUserName.DefaultText = "";
+            txtUserName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtUserName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtUserName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtUserName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtUserName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUserName.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txtUserName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUserName.Location = new Point(120, 178);
+            txtUserName.Margin = new Padding(4, 3, 4, 3);
+            txtUserName.Name = "txtUserName";
+            txtUserName.PasswordChar = '\0';
+            txtUserName.PlaceholderText = "";
+            txtUserName.SelectedText = "";
+            txtUserName.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtUserName.Size = new Size(230, 49);
+            txtUserName.TabIndex = 19;
             // 
             // labelMaNV
             // 
@@ -431,23 +529,50 @@ namespace _3.GUI.GUI
             // txtMaNhanVien
             // 
             txtMaNhanVien.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtMaNhanVien.Enabled = false;
-            txtMaNhanVien.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            txtMaNhanVien.Location = new Point(119, 14);
-            txtMaNhanVien.Multiline = true;
+            txtMaNhanVien.AutoRoundedCorners = true;
+            txtMaNhanVien.BorderRadius = 26;
+            txtMaNhanVien.CustomizableEdges = customizableEdges13;
+            txtMaNhanVien.DefaultText = "";
+            txtMaNhanVien.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtMaNhanVien.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtMaNhanVien.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtMaNhanVien.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtMaNhanVien.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMaNhanVien.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txtMaNhanVien.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMaNhanVien.Location = new Point(120, 13);
+            txtMaNhanVien.Margin = new Padding(4, 3, 4, 3);
             txtMaNhanVien.Name = "txtMaNhanVien";
-            txtMaNhanVien.Size = new Size(232, 52);
-            txtMaNhanVien.TabIndex = 8;
+            txtMaNhanVien.PasswordChar = '\0';
+            txtMaNhanVien.PlaceholderText = "";
+            txtMaNhanVien.SelectedText = "";
+            txtMaNhanVien.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtMaNhanVien.Size = new Size(230, 54);
+            txtMaNhanVien.TabIndex = 17;
             // 
-            // cmbGioiTinh
+            // txtTenNhanVien
             // 
-            cmbGioiTinh.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            cmbGioiTinh.FormattingEnabled = true;
-            cmbGioiTinh.Location = new Point(468, 188);
-            cmbGioiTinh.Margin = new Padding(3, 4, 3, 4);
-            cmbGioiTinh.Name = "cmbGioiTinh";
-            cmbGioiTinh.Size = new Size(232, 28);
-            cmbGioiTinh.TabIndex = 15;
+            txtTenNhanVien.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtTenNhanVien.AutoRoundedCorners = true;
+            txtTenNhanVien.BorderRadius = 23;
+            txtTenNhanVien.CustomizableEdges = customizableEdges15;
+            txtTenNhanVien.DefaultText = "";
+            txtTenNhanVien.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtTenNhanVien.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtTenNhanVien.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtTenNhanVien.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtTenNhanVien.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtTenNhanVien.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            txtTenNhanVien.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtTenNhanVien.Location = new Point(120, 97);
+            txtTenNhanVien.Margin = new Padding(4, 3, 4, 3);
+            txtTenNhanVien.Name = "txtTenNhanVien";
+            txtTenNhanVien.PasswordChar = '\0';
+            txtTenNhanVien.PlaceholderText = "";
+            txtTenNhanVien.SelectedText = "";
+            txtTenNhanVien.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtTenNhanVien.Size = new Size(230, 49);
+            txtTenNhanVien.TabIndex = 18;
             // 
             // tableLayoutBodyImage
             // 
@@ -465,12 +590,25 @@ namespace _3.GUI.GUI
             // panelHinhAnh
             // 
             panelHinhAnh.Anchor = AnchorStyles.None;
-            panelHinhAnh.Controls.Add(btnChonAnh);
             panelHinhAnh.Controls.Add(ptbChonAnh);
+            panelHinhAnh.Controls.Add(btnChonAnh);
             panelHinhAnh.Location = new Point(22, 54);
             panelHinhAnh.Name = "panelHinhAnh";
             panelHinhAnh.Size = new Size(158, 230);
             panelHinhAnh.TabIndex = 0;
+            // 
+            // ptbChonAnh
+            // 
+            ptbChonAnh.BorderStyle = BorderStyle.FixedSingle;
+            ptbChonAnh.ImageRotate = 0F;
+            ptbChonAnh.Location = new Point(13, 12);
+            ptbChonAnh.Name = "ptbChonAnh";
+            ptbChonAnh.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            ptbChonAnh.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            ptbChonAnh.Size = new Size(132, 120);
+            ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
+            ptbChonAnh.TabIndex = 7;
+            ptbChonAnh.TabStop = false;
             // 
             // btnChonAnh
             // 
@@ -484,17 +622,6 @@ namespace _3.GUI.GUI
             btnChonAnh.UseVisualStyleBackColor = true;
             btnChonAnh.Visible = false;
             btnChonAnh.Click += btnChonAnh_Click;
-            // 
-            // ptbChonAnh
-            // 
-            ptbChonAnh.Anchor = AnchorStyles.None;
-            ptbChonAnh.BackColor = Color.Transparent;
-            ptbChonAnh.Location = new Point(13, 20);
-            ptbChonAnh.Name = "ptbChonAnh";
-            ptbChonAnh.Size = new Size(131, 129);
-            ptbChonAnh.SizeMode = PictureBoxSizeMode.Zoom;
-            ptbChonAnh.TabIndex = 7;
-            ptbChonAnh.TabStop = false;
             // 
             // groupBoxBodySearch
             // 
@@ -513,51 +640,75 @@ namespace _3.GUI.GUI
             // 
             tableLayoutPanelSearch.ColumnCount = 1;
             tableLayoutPanelSearch.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanelSearch.Controls.Add(label9, 0, 2);
             tableLayoutPanelSearch.Controls.Add(txtSearch, 0, 1);
-            tableLayoutPanelSearch.Controls.Add(cmbSearchRole, 0, 3);
+            tableLayoutPanelSearch.Controls.Add(label9, 0, 2);
             tableLayoutPanelSearch.Controls.Add(label8, 0, 0);
+            tableLayoutPanelSearch.Controls.Add(cmbSearchRole, 0, 3);
             tableLayoutPanelSearch.Dock = DockStyle.Fill;
             tableLayoutPanelSearch.Location = new Point(3, 24);
             tableLayoutPanelSearch.Name = "tableLayoutPanelSearch";
-            tableLayoutPanelSearch.Padding = new Padding(10, 11, 10, 11);
             tableLayoutPanelSearch.RowCount = 4;
-            tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanelSearch.RowStyles.Add(new RowStyle());
+            tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanelSearch.RowStyles.Add(new RowStyle());
+            tableLayoutPanelSearch.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanelSearch.Size = new Size(385, 308);
             tableLayoutPanelSearch.TabIndex = 0;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtSearch.AutoRoundedCorners = true;
+            txtSearch.BorderRadius = 20;
+            txtSearch.CustomizableEdges = customizableEdges18;
+            txtSearch.DefaultText = "";
+            txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearch.IconLeft = Properties.Resources._8666693_search_icon;
+            txtSearch.Location = new Point(3, 65);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PasswordChar = '\0';
+            txtSearch.PlaceholderText = "Tìm kiếm";
+            txtSearch.SelectedText = "";
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            txtSearch.Size = new Size(379, 42);
+            txtSearch.TabIndex = 57;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // label9
             // 
             label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(112, 179);
+            label9.Location = new Point(112, 154);
             label9.Name = "label9";
             label9.Size = new Size(160, 19);
             label9.TabIndex = 2;
             label9.Text = "Chọn vai trò cần tìm";
             // 
-            // txtSearch
-            // 
-            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtSearch.Location = new Point(13, 85);
-            txtSearch.Multiline = true;
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(359, 65);
-            txtSearch.TabIndex = 1;
-            txtSearch.TextChanged += txtSearch_TextChanged;
-            // 
             // cmbSearchRole
             // 
-            cmbSearchRole.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cmbSearchRole.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cmbSearchRole.AutoRoundedCorners = true;
+            cmbSearchRole.BackColor = Color.Transparent;
+            cmbSearchRole.BorderRadius = 17;
+            cmbSearchRole.CustomizableEdges = customizableEdges20;
+            cmbSearchRole.DrawMode = DrawMode.OwnerDrawFixed;
             cmbSearchRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSearchRole.FocusedColor = Color.Empty;
+            cmbSearchRole.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbSearchRole.ForeColor = Color.FromArgb(68, 88, 112);
             cmbSearchRole.FormattingEnabled = true;
-            cmbSearchRole.Location = new Point(13, 227);
+            cmbSearchRole.ItemHeight = 30;
+            cmbSearchRole.Location = new Point(3, 222);
             cmbSearchRole.Name = "cmbSearchRole";
-            cmbSearchRole.Size = new Size(359, 28);
+            cmbSearchRole.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            cmbSearchRole.Size = new Size(379, 36);
             cmbSearchRole.TabIndex = 3;
             cmbSearchRole.SelectedIndexChanged += cmbSearchRole_SelectedIndexChanged;
             // 
@@ -566,25 +717,11 @@ namespace _3.GUI.GUI
             label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(126, 37);
+            label8.Location = new Point(126, 0);
             label8.Name = "label8";
             label8.Size = new Size(133, 19);
             label8.TabIndex = 0;
             label8.Text = "Nhập tên cần tìm";
-            // 
-            // dgvNhanVien
-            // 
-            dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvNhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvNhanVien.Dock = DockStyle.Fill;
-            dgvNhanVien.Location = new Point(3, 4);
-            dgvNhanVien.Margin = new Padding(3, 4, 3, 4);
-            dgvNhanVien.Name = "dgvNhanVien";
-            dgvNhanVien.RowHeadersWidth = 51;
-            dgvNhanVien.RowTemplate.Height = 100;
-            dgvNhanVien.Size = new Size(1317, 260);
-            dgvNhanVien.TabIndex = 0;
-            dgvNhanVien.CellClick += dgvNhanVien_CellContentClick;
             // 
             // tableLayoutPanelFooter
             // 
@@ -682,6 +819,60 @@ namespace _3.GUI.GUI
             btnPrePage.UseVisualStyleBackColor = true;
             btnPrePage.Click += btnPrePage_Click;
             // 
+            // dgvNhanVien
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dgvNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvNhanVien.ColumnHeadersHeight = 28;
+            dgvNhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvNhanVien.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvNhanVien.Dock = DockStyle.Fill;
+            dgvNhanVien.GridColor = Color.FromArgb(231, 229, 255);
+            dgvNhanVien.Location = new Point(3, 3);
+            dgvNhanVien.Name = "dgvNhanVien";
+            dgvNhanVien.RowHeadersVisible = false;
+            dgvNhanVien.RowHeadersWidth = 51;
+            dgvNhanVien.RowTemplate.Height = 70;
+            dgvNhanVien.Size = new Size(1317, 262);
+            dgvNhanVien.TabIndex = 72;
+            dgvNhanVien.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            dgvNhanVien.ThemeStyle.AlternatingRowsStyle.Font = null;
+            dgvNhanVien.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            dgvNhanVien.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            dgvNhanVien.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            dgvNhanVien.ThemeStyle.BackColor = Color.White;
+            dgvNhanVien.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dgvNhanVien.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            dgvNhanVien.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvNhanVien.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dgvNhanVien.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            dgvNhanVien.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dgvNhanVien.ThemeStyle.HeaderStyle.Height = 28;
+            dgvNhanVien.ThemeStyle.ReadOnly = false;
+            dgvNhanVien.ThemeStyle.RowsStyle.BackColor = Color.White;
+            dgvNhanVien.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvNhanVien.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dgvNhanVien.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            dgvNhanVien.ThemeStyle.RowsStyle.Height = 70;
+            dgvNhanVien.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dgvNhanVien.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvNhanVien.CellClick += dgvNhanVien_CellContentClick;
+            // 
             // formNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -708,10 +899,10 @@ namespace _3.GUI.GUI
             groupBoxBodySearch.ResumeLayout(false);
             tableLayoutPanelSearch.ResumeLayout(false);
             tableLayoutPanelSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).EndInit();
             tableLayoutPanelFooter.ResumeLayout(false);
             panelFooter.ResumeLayout(false);
             panelFooter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).EndInit();
             ResumeLayout(false);
         }
 
@@ -731,31 +922,18 @@ namespace _3.GUI.GUI
         private Button btnXoa;
         private Button btnHuy;
         private Button btnLuu;
-        private RoundedPictureBox ptbChonAnh;
         private TableLayoutPanel tableLayoutPanelAllInput;
         private Label labelMaNV;
         private Label label1;
-        private ComboBox cmbVaiTro;
-        private TextBox txtMatKhau;
-        private TextBox txtUserName;
-        private TextBox txtEmail;
-        private TextBox txtTenNhanVien;
-        private TextBox txtSoDienThoai;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox txtMaNhanVien;
-        private ComboBox cmbGioiTinh;
         private TableLayoutPanel tableLayoutPanelMain;
-        private TableLayoutPanel tableLayoutPanelSearch;
         private Label label9;
         private Label label8;
-        private TextBox txtSearch;
-        private ComboBox cmbSearchRole;
-        private DataGridView dgvNhanVien;
         private TableLayoutPanel tableLayoutPanelFooter;
         private Panel panelFooter;
         private Button btnLastPage;
@@ -764,5 +942,19 @@ namespace _3.GUI.GUI
         private Button btnFirstPage;
         private Button btnPrePage;
         private Panel panelHinhAnh;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private TableLayoutPanel tableLayoutPanelSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaNhanVien;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvNhanVien;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbGioiTinh;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbSearchRole;
+
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2TextBox txtSoDienThoai;
+        private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
+        private Guna.UI2.WinForms.Guna2TextBox txtUserName;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenNhanVien;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbVaiTro;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox ptbChonAnh;
     }
 }

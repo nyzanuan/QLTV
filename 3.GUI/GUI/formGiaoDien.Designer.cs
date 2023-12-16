@@ -307,6 +307,7 @@ namespace QLTV
             btnDocGia.FlatStyle = FlatStyle.Flat;
             btnDocGia.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnDocGia.ForeColor = SystemColors.Info;
+            btnDocGia.ImageAlign = ContentAlignment.MiddleLeft;
             btnDocGia.Location = new Point(0, 0);
             btnDocGia.Margin = new Padding(3, 4, 3, 4);
             btnDocGia.Name = "btnDocGia";
@@ -325,6 +326,7 @@ namespace QLTV
             btnDanhMuc.FlatStyle = FlatStyle.Flat;
             btnDanhMuc.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnDanhMuc.ForeColor = SystemColors.ControlLightLight;
+            btnDanhMuc.ImageAlign = ContentAlignment.MiddleLeft;
             btnDanhMuc.Location = new Point(0, 142);
             btnDanhMuc.Name = "btnDanhMuc";
             btnDanhMuc.Padding = new Padding(10, 0, 0, 0);
