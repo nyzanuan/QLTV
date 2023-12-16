@@ -1,6 +1,4 @@
-﻿using _3.GUI.Helper;
-
-namespace _3.GUI.GUI
+﻿namespace _3.GUI.GUI
 {
     partial class formNhanVien
     {

@@ -1,7 +1,4 @@
-﻿
-using _3.GUI.GUI.Component;
-
-namespace QLTV
+﻿namespace QLTV
 {
     partial class formDocGia
     {
