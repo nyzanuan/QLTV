@@ -14,6 +14,29 @@ namespace _1.DAL.Repository
         {
             _dataContext = new DataContext();
         }
+        public async Task<bool> UpdateBookBorrowed(int bookId, int quantity)
+        {
+            try
+            {
+                var book = await _dataContext.Book.FindAsync( bookId );
+                if (book != null)
+                {
+                    if (book.AvailableCopies >= quantity)
+                    {
+                        book.AvailableCopies -= quantity;
+                        book.BorrowedCopies += quantity;
+                        _dataContext.Entry(book).State = EntityState.Modified;
+                        await _dataContext.SaveChangesAsync();
+                        return true;    
+                    }
+                    else { return false; }
+                }
+                return false;
+            }catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
         public async Task<ValueReturn> AddLoanReceipt(LoanReceipt newLoan)
         {
@@ -27,6 +50,7 @@ namespace _1.DAL.Repository
 
                 if (await _dataContext.SaveChangesAsync() > 0)
                 {
+                    await UpdateBookBorrowed(newLoan.BookId,1);
                     return new ValueReturn { Status = true, Message = "Thêm thành công" };
                 }
                 return new ValueReturn { Status = false, Message = "Thêm thất bại" };

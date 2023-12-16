@@ -49,6 +49,7 @@ namespace Sharing.Model
     {
         Borrowed,
         Returned,
+        extend,
         Overdue,
         Lost, 
     }
