@@ -50,6 +50,12 @@ namespace QLTV
             pictureBox1 = new PictureBox();
             panelMain = new Panel();
             panelChild = new Panel();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            ptbIntro = new PictureBox();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             panelMenu.SuspendLayout();
             panelMuonSachCon.SuspendLayout();
@@ -57,6 +63,8 @@ namespace QLTV
             panelLogoUTH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelMain.SuspendLayout();
+            panelChild.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbIntro).BeginInit();
             SuspendLayout();
             // 
             // panelMenu
@@ -366,12 +374,85 @@ namespace QLTV
             // 
             // panelChild
             // 
+            panelChild.BackColor = Color.FromArgb(248, 124, 100);
+            panelChild.Controls.Add(label5);
+            panelChild.Controls.Add(label4);
+            panelChild.Controls.Add(label3);
+            panelChild.Controls.Add(label2);
+            panelChild.Controls.Add(label1);
+            panelChild.Controls.Add(ptbIntro);
             panelChild.Dock = DockStyle.Fill;
             panelChild.Location = new Point(240, 0);
             panelChild.Margin = new Padding(3, 2, 3, 2);
             panelChild.Name = "panelChild";
             panelChild.Size = new Size(1029, 614);
             panelChild.TabIndex = 1;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(80, 160, 170);
+            label5.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(684, 145);
+            label5.Name = "label5";
+            label5.Size = new Size(151, 31);
+            label5.TabIndex = 4;
+            label5.Text = "Lý Gia Luân";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.FromArgb(80, 160, 170);
+            label4.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(397, 144);
+            label4.Name = "label4";
+            label4.Size = new Size(217, 31);
+            label4.TabIndex = 3;
+            label4.Text = "Từ Hồng Phi Long";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(80, 160, 170);
+            label3.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(144, 145);
+            label3.Name = "label3";
+            label3.Size = new Size(179, 31);
+            label3.TabIndex = 2;
+            label3.Text = "Trần Tuấn Anh";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.FromArgb(80, 160, 170);
+            label2.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(92, 92);
+            label2.Name = "label2";
+            label2.Size = new Size(131, 31);
+            label2.TabIndex = 1;
+            label2.Text = "Thực hiện:";
+            label2.Click += label2_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(80, 160, 170);
+            label1.Font = new Font("Times New Roman", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(287, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(496, 55);
+            label1.TabIndex = 0;
+            label1.Text = "QUẢN LÝ THƯ VIỆN";
+            // 
+            // ptbIntro
+            // 
+            ptbIntro.Image = (Image)resources.GetObject("ptbIntro.Image");
+            ptbIntro.Location = new Point(-1, 1);
+            ptbIntro.Name = "ptbIntro";
+            ptbIntro.Size = new Size(1030, 611);
+            ptbIntro.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbIntro.TabIndex = 6;
+            ptbIntro.TabStop = false;
             // 
             // formGiaoDien
             // 
@@ -392,6 +473,9 @@ namespace QLTV
             panelLogoUTH.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelMain.ResumeLayout(false);
+            panelChild.ResumeLayout(false);
+            panelChild.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptbIntro).EndInit();
             ResumeLayout(false);
         }
 
@@ -422,5 +506,11 @@ namespace QLTV
         private Button btnThoat;
         private Button btnDangXuat;
         private Panel panelChild;
+        private Label label1;
+        private Label label2;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private PictureBox ptbIntro;
     }
 }
