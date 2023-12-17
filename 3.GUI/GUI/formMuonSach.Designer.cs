@@ -97,11 +97,11 @@ namespace QLTV
             txtNumberPage.Anchor = AnchorStyles.None;
             txtNumberPage.Enabled = false;
             txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            txtNumberPage.Location = new Point(581, 5);
-            txtNumberPage.Margin = new Padding(5);
+            txtNumberPage.Location = new Point(507, 4);
+            txtNumberPage.Margin = new Padding(4, 4, 4, 4);
             txtNumberPage.Multiline = true;
             txtNumberPage.Name = "txtNumberPage";
-            txtNumberPage.Size = new Size(77, 39);
+            txtNumberPage.Size = new Size(68, 30);
             txtNumberPage.TabIndex = 48;
             txtNumberPage.Text = "0/0";
             txtNumberPage.TextAlign = HorizontalAlignment.Center;
@@ -110,10 +110,10 @@ namespace QLTV
             // 
             btnLastPage.Anchor = AnchorStyles.None;
             btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLastPage.Location = new Point(772, 5);
-            btnLastPage.Margin = new Padding(5);
+            btnLastPage.Location = new Point(675, 4);
+            btnLastPage.Margin = new Padding(4, 4, 4, 4);
             btnLastPage.Name = "btnLastPage";
-            btnLastPage.Size = new Size(77, 39);
+            btnLastPage.Size = new Size(67, 29);
             btnLastPage.TabIndex = 47;
             btnLastPage.Text = ">|";
             btnLastPage.UseVisualStyleBackColor = true;
@@ -123,10 +123,10 @@ namespace QLTV
             // 
             btnNextPage.Anchor = AnchorStyles.None;
             btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNextPage.Location = new Point(679, 2);
-            btnNextPage.Margin = new Padding(5);
+            btnNextPage.Location = new Point(593, 2);
+            btnNextPage.Margin = new Padding(4, 4, 4, 4);
             btnNextPage.Name = "btnNextPage";
-            btnNextPage.Size = new Size(77, 39);
+            btnNextPage.Size = new Size(67, 29);
             btnNextPage.TabIndex = 46;
             btnNextPage.Text = ">>";
             btnNextPage.UseVisualStyleBackColor = true;
@@ -136,10 +136,10 @@ namespace QLTV
             // 
             btnFirstPage.Anchor = AnchorStyles.None;
             btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnFirstPage.Location = new Point(404, 2);
-            btnFirstPage.Margin = new Padding(5);
+            btnFirstPage.Location = new Point(353, 2);
+            btnFirstPage.Margin = new Padding(4, 4, 4, 4);
             btnFirstPage.Name = "btnFirstPage";
-            btnFirstPage.Size = new Size(77, 39);
+            btnFirstPage.Size = new Size(67, 29);
             btnFirstPage.TabIndex = 44;
             btnFirstPage.Text = "|<";
             btnFirstPage.UseVisualStyleBackColor = true;
@@ -149,10 +149,10 @@ namespace QLTV
             // 
             btnPrePage.Anchor = AnchorStyles.None;
             btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPrePage.Location = new Point(494, 2);
-            btnPrePage.Margin = new Padding(5);
+            btnPrePage.Location = new Point(431, 2);
+            btnPrePage.Margin = new Padding(4, 4, 4, 4);
             btnPrePage.Name = "btnPrePage";
-            btnPrePage.Size = new Size(77, 39);
+            btnPrePage.Size = new Size(67, 29);
             btnPrePage.TabIndex = 45;
             btnPrePage.Text = "<<";
             btnPrePage.UseVisualStyleBackColor = true;
@@ -165,16 +165,16 @@ namespace QLTV
             panelTop.Controls.Add(label8);
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(0, 0);
-            panelTop.Margin = new Padding(5, 4, 5, 4);
+            panelTop.Margin = new Padding(4, 3, 4, 3);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1151, 55);
+            panelTop.Size = new Size(1007, 42);
             panelTop.TabIndex = 42;
             // 
             // txtSearch
             // 
             txtSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             txtSearch.AutoRoundedCorners = true;
-            txtSearch.BorderRadius = 20;
+            txtSearch.BorderRadius = 15;
             txtSearch.CustomizableEdges = customizableEdges1;
             txtSearch.DefaultText = "";
             txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -184,24 +184,24 @@ namespace QLTV
             txtSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearch.IconLeft = _3.GUI.Properties.Resources._8666693_search_icon;
-            txtSearch.Location = new Point(705, 6);
+            txtSearch.Location = new Point(617, 4);
+            txtSearch.Margin = new Padding(3, 2, 3, 2);
             txtSearch.Name = "txtSearch";
             txtSearch.PasswordChar = '\0';
             txtSearch.PlaceholderText = "Tìm kiếm";
             txtSearch.SelectedText = "";
             txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearch.Size = new Size(421, 42);
+            txtSearch.Size = new Size(368, 32);
             txtSearch.TabIndex = 56;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(22, 5);
-            label8.Margin = new Padding(5, 0, 5, 0);
+            label8.Location = new Point(19, 4);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(350, 45);
+            label8.Size = new Size(282, 36);
             label8.TabIndex = 19;
             label8.Text = "Quản lý mượn sách";
             // 
@@ -210,10 +210,10 @@ namespace QLTV
             btnLocSach.Anchor = AnchorStyles.Right;
             btnLocSach.Enabled = false;
             btnLocSach.Font = new Font("Times New Roman", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLocSach.Location = new Point(249, 7);
-            btnLocSach.Margin = new Padding(6, 7, 6, 7);
+            btnLocSach.Location = new Point(227, 9);
+            btnLocSach.Margin = new Padding(5, 5, 5, 5);
             btnLocSach.Name = "btnLocSach";
-            btnLocSach.Size = new Size(66, 31);
+            btnLocSach.Size = new Size(58, 32);
             btnLocSach.TabIndex = 41;
             btnLocSach.Text = "Lọc";
             btnLocSach.UseVisualStyleBackColor = true;
@@ -224,10 +224,10 @@ namespace QLTV
             btnLocDocGia.Anchor = AnchorStyles.Right;
             btnLocDocGia.Enabled = false;
             btnLocDocGia.Font = new Font("Times New Roman", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLocDocGia.Location = new Point(241, 13);
-            btnLocDocGia.Margin = new Padding(6, 7, 6, 7);
+            btnLocDocGia.Location = new Point(220, 18);
+            btnLocDocGia.Margin = new Padding(5, 5, 5, 5);
             btnLocDocGia.Name = "btnLocDocGia";
-            btnLocDocGia.Size = new Size(64, 31);
+            btnLocDocGia.Size = new Size(56, 29);
             btnLocDocGia.TabIndex = 40;
             btnLocDocGia.Text = "Lọc";
             btnLocDocGia.UseVisualStyleBackColor = true;
@@ -237,11 +237,10 @@ namespace QLTV
             // 
             panelHinhAnhSach.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelHinhAnhSach.BorderStyle = BorderStyle.FixedSingle;
-            panelHinhAnhSach.Location = new Point(1034, 4);
-            panelHinhAnhSach.Margin = new Padding(3, 4, 3, 4);
+            panelHinhAnhSach.Location = new Point(901, 3);
             panelHinhAnhSach.Name = "panelHinhAnhSach";
             tableLayoutPanelInput.SetRowSpan(panelHinhAnhSach, 2);
-            panelHinhAnhSach.Size = new Size(108, 141);
+            panelHinhAnhSach.Size = new Size(97, 106);
             panelHinhAnhSach.TabIndex = 39;
             // 
             // cmbSach
@@ -250,10 +249,9 @@ namespace QLTV
             cmbSach.Enabled = false;
             cmbSach.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmbSach.FormattingEnabled = true;
-            cmbSach.Location = new Point(0, 7);
-            cmbSach.Margin = new Padding(3, 4, 3, 4);
+            cmbSach.Location = new Point(0, 9);
             cmbSach.Name = "cmbSach";
-            cmbSach.Size = new Size(240, 31);
+            cmbSach.Size = new Size(219, 27);
             cmbSach.TabIndex = 37;
             cmbSach.SelectedIndexChanged += cmbSach_SelectedIndexChanged;
             cmbSach.TextChanged += cmbSach_TextChanged;
@@ -264,10 +262,9 @@ namespace QLTV
             cmbDocGia.Enabled = false;
             cmbDocGia.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             cmbDocGia.FormattingEnabled = true;
-            cmbDocGia.Location = new Point(3, 13);
-            cmbDocGia.Margin = new Padding(3, 4, 3, 4);
+            cmbDocGia.Location = new Point(3, 18);
             cmbDocGia.Name = "cmbDocGia";
-            cmbDocGia.Size = new Size(229, 31);
+            cmbDocGia.Size = new Size(210, 27);
             cmbDocGia.TabIndex = 36;
             cmbDocGia.SelectedIndexChanged += cmbDocGia_SelectedIndexChanged;
             cmbDocGia.TextChanged += cmbDocGia_TextChanged;
@@ -279,10 +276,10 @@ namespace QLTV
             dtpNgayTra.Enabled = false;
             dtpNgayTra.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             dtpNgayTra.Format = DateTimePickerFormat.Custom;
-            dtpNgayTra.Location = new Point(710, 95);
-            dtpNgayTra.Margin = new Padding(6, 5, 6, 5);
+            dtpNgayTra.Location = new Point(607, 70);
+            dtpNgayTra.Margin = new Padding(5, 4, 5, 4);
             dtpNgayTra.Name = "dtpNgayTra";
-            dtpNgayTra.Size = new Size(315, 32);
+            dtpNgayTra.Size = new Size(286, 27);
             dtpNgayTra.TabIndex = 22;
             // 
             // dtpNgayMuon
@@ -292,10 +289,10 @@ namespace QLTV
             dtpNgayMuon.Enabled = false;
             dtpNgayMuon.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             dtpNgayMuon.Format = DateTimePickerFormat.Custom;
-            dtpNgayMuon.Location = new Point(146, 95);
-            dtpNgayMuon.Margin = new Padding(6, 5, 6, 5);
+            dtpNgayMuon.Location = new Point(114, 70);
+            dtpNgayMuon.Margin = new Padding(5, 4, 5, 4);
             dtpNgayMuon.Name = "dtpNgayMuon";
-            dtpNgayMuon.Size = new Size(315, 32);
+            dtpNgayMuon.Size = new Size(286, 27);
             dtpNgayMuon.TabIndex = 21;
             // 
             // label4
@@ -303,10 +300,10 @@ namespace QLTV
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(602, 99);
-            label4.Margin = new Padding(6, 0, 6, 0);
+            label4.Location = new Point(524, 74);
+            label4.Margin = new Padding(5, 0, 5, 0);
             label4.Name = "label4";
-            label4.Size = new Size(88, 25);
+            label4.Size = new Size(66, 19);
             label4.TabIndex = 20;
             label4.Text = "Ngày trả";
             // 
@@ -315,10 +312,10 @@ namespace QLTV
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(6, 24);
-            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Location = new Point(5, 18);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(128, 25);
+            label1.Size = new Size(99, 19);
             label1.TabIndex = 0;
             label1.Text = "Chọn độc giả";
             // 
@@ -327,10 +324,10 @@ namespace QLTV
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(595, 24);
-            label2.Margin = new Padding(6, 0, 6, 0);
+            label2.Location = new Point(518, 18);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(103, 25);
+            label2.Size = new Size(79, 19);
             label2.TabIndex = 1;
             label2.Text = "Chọn sách";
             // 
@@ -339,10 +336,10 @@ namespace QLTV
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(12, 99);
-            label3.Margin = new Padding(6, 0, 6, 0);
+            label3.Location = new Point(11, 74);
+            label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
-            label3.Size = new Size(115, 25);
+            label3.Size = new Size(87, 19);
             label3.TabIndex = 2;
             label3.Text = "Ngày mượn";
             // 
@@ -350,10 +347,9 @@ namespace QLTV
             // 
             panelMid.Controls.Add(tableLayoutPanelMain);
             panelMid.Dock = DockStyle.Top;
-            panelMid.Location = new Point(0, 55);
-            panelMid.Margin = new Padding(3, 4, 3, 4);
+            panelMid.Location = new Point(0, 42);
             panelMid.Name = "panelMid";
-            panelMid.Size = new Size(1151, 311);
+            panelMid.Size = new Size(1007, 233);
             panelMid.TabIndex = 49;
             // 
             // tableLayoutPanelMain
@@ -364,14 +360,15 @@ namespace QLTV
             tableLayoutPanelMain.Controls.Add(panelBodyButton, 0, 1);
             tableLayoutPanelMain.Dock = DockStyle.Fill;
             tableLayoutPanelMain.Location = new Point(0, 0);
+            tableLayoutPanelMain.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanelMain.Name = "tableLayoutPanelMain";
             tableLayoutPanelMain.RowCount = 2;
             tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanelMain.Size = new Size(1151, 311);
+            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
+            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
+            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
+            tableLayoutPanelMain.Size = new Size(1007, 233);
             tableLayoutPanelMain.TabIndex = 45;
             // 
             // tableLayoutPanelInput
@@ -394,22 +391,24 @@ namespace QLTV
             tableLayoutPanelInput.Controls.Add(label4, 3, 1);
             tableLayoutPanelInput.Controls.Add(label2, 3, 0);
             tableLayoutPanelInput.Dock = DockStyle.Fill;
-            tableLayoutPanelInput.Location = new Point(3, 3);
+            tableLayoutPanelInput.Location = new Point(3, 2);
+            tableLayoutPanelInput.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanelInput.Name = "tableLayoutPanelInput";
             tableLayoutPanelInput.RowCount = 2;
             tableLayoutPanelInput.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanelInput.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanelInput.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanelInput.Size = new Size(1145, 149);
+            tableLayoutPanelInput.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
+            tableLayoutPanelInput.Size = new Size(1001, 112);
             tableLayoutPanelInput.TabIndex = 46;
             // 
             // panelHinhAnhDocGia
             // 
             panelHinhAnhDocGia.BorderStyle = BorderStyle.FixedSingle;
-            panelHinhAnhDocGia.Location = new Point(470, 3);
+            panelHinhAnhDocGia.Location = new Point(408, 2);
+            panelHinhAnhDocGia.Margin = new Padding(3, 2, 3, 2);
             panelHinhAnhDocGia.Name = "panelHinhAnhDocGia";
             tableLayoutPanelInput.SetRowSpan(panelHinhAnhDocGia, 2);
-            panelHinhAnhDocGia.Size = new Size(116, 142);
+            panelHinhAnhDocGia.Size = new Size(102, 107);
             panelHinhAnhDocGia.TabIndex = 57;
             // 
             // panelCmbDocGia
@@ -417,9 +416,10 @@ namespace QLTV
             panelCmbDocGia.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             panelCmbDocGia.Controls.Add(cmbDocGia);
             panelCmbDocGia.Controls.Add(btnLocDocGia);
-            panelCmbDocGia.Location = new Point(143, 13);
+            panelCmbDocGia.Location = new Point(112, 2);
+            panelCmbDocGia.Margin = new Padding(3, 2, 3, 2);
             panelCmbDocGia.Name = "panelCmbDocGia";
-            panelCmbDocGia.Size = new Size(321, 48);
+            panelCmbDocGia.Size = new Size(290, 52);
             panelCmbDocGia.TabIndex = 42;
             // 
             // panelCmbChonSach
@@ -427,9 +427,10 @@ namespace QLTV
             panelCmbChonSach.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             panelCmbChonSach.Controls.Add(cmbSach);
             panelCmbChonSach.Controls.Add(btnLocSach);
-            panelCmbChonSach.Location = new Point(707, 14);
+            panelCmbChonSach.Location = new Point(605, 6);
+            panelCmbChonSach.Margin = new Padding(3, 2, 3, 2);
             panelCmbChonSach.Name = "panelCmbChonSach";
-            panelCmbChonSach.Size = new Size(321, 45);
+            panelCmbChonSach.Size = new Size(290, 43);
             panelCmbChonSach.TabIndex = 43;
             // 
             // panelBodyButton
@@ -440,9 +441,10 @@ namespace QLTV
             panelBodyButton.Controls.Add(btnHuy);
             panelBodyButton.Controls.Add(btnXoa);
             panelBodyButton.Controls.Add(btnThem);
-            panelBodyButton.Location = new Point(3, 197);
+            panelBodyButton.Location = new Point(3, 147);
+            panelBodyButton.Margin = new Padding(3, 2, 3, 2);
             panelBodyButton.Name = "panelBodyButton";
-            panelBodyButton.Size = new Size(1145, 72);
+            panelBodyButton.Size = new Size(1001, 54);
             panelBodyButton.TabIndex = 44;
             // 
             // btnUpdate
@@ -459,10 +461,11 @@ namespace QLTV
             btnUpdate.FillColor2 = Color.FromArgb(255, 160, 0);
             btnUpdate.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(518, 16);
+            btnUpdate.Location = new Point(452, 12);
+            btnUpdate.Margin = new Padding(3, 2, 3, 2);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnUpdate.Size = new Size(112, 36);
+            btnUpdate.Size = new Size(98, 27);
             btnUpdate.TabIndex = 40;
             btnUpdate.Text = "Cập nhật";
             btnUpdate.Click += btnUpdate_Click;
@@ -481,10 +484,11 @@ namespace QLTV
             btnLuu.FillColor2 = Color.FromArgb(21, 101, 192);
             btnLuu.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLuu.ForeColor = Color.White;
-            btnLuu.Location = new Point(636, 16);
+            btnLuu.Location = new Point(555, 12);
+            btnLuu.Margin = new Padding(3, 2, 3, 2);
             btnLuu.Name = "btnLuu";
             btnLuu.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnLuu.Size = new Size(77, 36);
+            btnLuu.Size = new Size(67, 27);
             btnLuu.TabIndex = 39;
             btnLuu.Text = "Lưu";
             btnLuu.Click += btnLuu_Click;
@@ -503,10 +507,11 @@ namespace QLTV
             btnHuy.FillColor2 = Color.FromArgb(183, 28, 28);
             btnHuy.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnHuy.ForeColor = Color.White;
-            btnHuy.Location = new Point(722, 16);
+            btnHuy.Location = new Point(631, 12);
+            btnHuy.Margin = new Padding(3, 2, 3, 2);
             btnHuy.Name = "btnHuy";
             btnHuy.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnHuy.Size = new Size(77, 36);
+            btnHuy.Size = new Size(67, 27);
             btnHuy.TabIndex = 38;
             btnHuy.Text = "Hủy";
             btnHuy.Click += btnHuy_Click;
@@ -525,10 +530,11 @@ namespace QLTV
             btnXoa.FillColor2 = Color.FromArgb(211, 47, 47);
             btnXoa.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(435, 16);
+            btnXoa.Location = new Point(380, 12);
+            btnXoa.Margin = new Padding(3, 2, 3, 2);
             btnXoa.Name = "btnXoa";
             btnXoa.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnXoa.Size = new Size(77, 36);
+            btnXoa.Size = new Size(67, 27);
             btnXoa.TabIndex = 36;
             btnXoa.Text = "Xóa";
             btnXoa.Click += btnXoa_Click;
@@ -546,10 +552,11 @@ namespace QLTV
             btnThem.FillColor2 = Color.FromArgb(56, 142, 60);
             btnThem.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnThem.ForeColor = Color.White;
-            btnThem.Location = new Point(352, 16);
+            btnThem.Location = new Point(307, 12);
+            btnThem.Margin = new Padding(3, 2, 3, 2);
             btnThem.Name = "btnThem";
             btnThem.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnThem.Size = new Size(77, 36);
+            btnThem.Size = new Size(67, 27);
             btnThem.TabIndex = 35;
             btnThem.Text = "Thêm";
             btnThem.Click += btnThem_Click;
@@ -558,10 +565,9 @@ namespace QLTV
             // 
             panelBot.Controls.Add(tableLayoutPanelFooter);
             panelBot.Dock = DockStyle.Fill;
-            panelBot.Location = new Point(0, 366);
-            panelBot.Margin = new Padding(3, 4, 3, 4);
+            panelBot.Location = new Point(0, 275);
             panelBot.Name = "panelBot";
-            panelBot.Size = new Size(1151, 423);
+            panelBot.Size = new Size(1007, 317);
             panelBot.TabIndex = 50;
             // 
             // tableLayoutPanelFooter
@@ -572,11 +578,12 @@ namespace QLTV
             tableLayoutPanelFooter.Controls.Add(panelFooterButton, 0, 1);
             tableLayoutPanelFooter.Dock = DockStyle.Fill;
             tableLayoutPanelFooter.Location = new Point(0, 0);
+            tableLayoutPanelFooter.Margin = new Padding(3, 2, 3, 2);
             tableLayoutPanelFooter.Name = "tableLayoutPanelFooter";
             tableLayoutPanelFooter.RowCount = 2;
             tableLayoutPanelFooter.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanelFooter.RowStyles.Add(new RowStyle());
-            tableLayoutPanelFooter.Size = new Size(1151, 423);
+            tableLayoutPanelFooter.Size = new Size(1007, 317);
             tableLayoutPanelFooter.TabIndex = 49;
             // 
             // dgvMuonSach
@@ -605,13 +612,14 @@ namespace QLTV
             dgvMuonSach.DefaultCellStyle = dataGridViewCellStyle3;
             dgvMuonSach.Dock = DockStyle.Fill;
             dgvMuonSach.GridColor = Color.FromArgb(231, 229, 255);
-            dgvMuonSach.Location = new Point(3, 3);
+            dgvMuonSach.Location = new Point(3, 2);
+            dgvMuonSach.Margin = new Padding(3, 2, 3, 2);
             dgvMuonSach.Name = "dgvMuonSach";
             dgvMuonSach.ReadOnly = true;
             dgvMuonSach.RowHeadersVisible = false;
             dgvMuonSach.RowHeadersWidth = 51;
             dgvMuonSach.RowTemplate.Height = 80;
-            dgvMuonSach.Size = new Size(1145, 355);
+            dgvMuonSach.Size = new Size(1001, 267);
             dgvMuonSach.TabIndex = 41;
             dgvMuonSach.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvMuonSach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -644,20 +652,21 @@ namespace QLTV
             panelFooterButton.Controls.Add(btnFirstPage);
             panelFooterButton.Controls.Add(txtNumberPage);
             panelFooterButton.Controls.Add(btnPrePage);
-            panelFooterButton.Location = new Point(3, 364);
+            panelFooterButton.Location = new Point(3, 273);
+            panelFooterButton.Margin = new Padding(3, 2, 3, 2);
             panelFooterButton.Name = "panelFooterButton";
-            panelFooterButton.Size = new Size(1145, 56);
+            panelFooterButton.Size = new Size(1001, 42);
             panelFooterButton.TabIndex = 50;
             // 
             // formMuonSach
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1151, 789);
+            ClientSize = new Size(1007, 592);
             Controls.Add(panelBot);
             Controls.Add(panelMid);
             Controls.Add(panelTop);
-            Margin = new Padding(5, 4, 5, 4);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "formMuonSach";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "formMuonSach";

@@ -87,10 +87,10 @@ namespace _3.GUI.GUI
             book_dataGridView.DataSource = result.Value.ListElemnent;
             book_dataGridView.Columns["BookId"].Visible = false;
             book_dataGridView.Columns["CustomerId"].Visible = false;
-            book_dataGridView.Columns["ReceiveDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            book_dataGridView.Columns["ReceiveDate"].DefaultCellStyle.Format = "dd-MM-yyyy";
             book_dataGridView.Columns["ReceiveDate"].HeaderText = "Ngày đặt";
 
-            book_dataGridView.Columns["ReturnDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            book_dataGridView.Columns["ReturnDate"].DefaultCellStyle.Format = "dd-MM-yyyy";
             book_dataGridView.Columns["ReturnDate"].HeaderText = "Ngày trả";
 
             book_dataGridView.Columns["Status"].HeaderText = "Tình trạng";
@@ -98,7 +98,7 @@ namespace _3.GUI.GUI
             book_dataGridView.Columns["ImageBook"].HeaderText = "Hình ảnh sách";
             book_dataGridView.Columns["LoanId"].HeaderText = "Mã đơn mượn";
             book_dataGridView.Columns["BookName"].HeaderText = "Tên sách";
-            book_dataGridView.Columns["CustomerName"].HeaderText = "ID + Tên khách hàng";
+            book_dataGridView.Columns["CustomerName"].HeaderText = "Tên khách hàng";
 
             DataGridViewImageColumn column = new DataGridViewImageColumn();
             column = (DataGridViewImageColumn)book_dataGridView.Columns["ImageBook"];

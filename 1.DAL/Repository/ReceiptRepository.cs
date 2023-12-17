@@ -140,7 +140,7 @@ namespace _1.DAL.Repository
                 var data = query.Skip((pageIndex - 1) * pageSize).Take(pageSize).Select(p => new LoanReceiptReturn
                 {
                     LoanId = p.LoanReceiptId,
-                    CustomerName = "CustomerId: " + p.CustomerId + " CustomerName: " + p.Customer.Name,
+                    CustomerName = p.Customer.Name,
                     BookName = p.Book.Name,
                     Note = p.Note,
                     ReceiveDate = p.BorrowDate,

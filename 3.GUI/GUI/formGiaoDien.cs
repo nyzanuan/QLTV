@@ -43,8 +43,9 @@ namespace QLTV
             ChildForm.BringToFront();
             ChildForm.Show();
 
-        }
-        private void formGiaoDien_Load(object sender, EventArgs e)
+        }      
+
+            private void formGiaoDien_Load(object sender, EventArgs e)
         {
             frmDashBoard frmDashBoard = new frmDashBoard(panelChild.Width);
 
@@ -212,5 +213,6 @@ namespace QLTV
         {
 
         }
-    }
+
+            }
 }

@@ -108,10 +108,10 @@ namespace QLTV
             dgvMuonSach.DataSource = result.Value.ListElemnent;
             dgvMuonSach.Columns["BookId"].Visible = false;
             dgvMuonSach.Columns["CustomerId"].Visible = false;
-            dgvMuonSach.Columns["ReceiveDate"].DefaultCellStyle.Format = "HH:mm dd-MM-yyyy";
+            dgvMuonSach.Columns["ReceiveDate"].DefaultCellStyle.Format = "dd-MM-yyyy";
             dgvMuonSach.Columns["ReceiveDate"].HeaderText = "Ngày đặt";
 
-            dgvMuonSach.Columns["ReturnDate"].DefaultCellStyle.Format = "HH:mm dd-MM-yyyy";
+            dgvMuonSach.Columns["ReturnDate"].DefaultCellStyle.Format = "dd-MM-yyyy";
             dgvMuonSach.Columns["ReturnDate"].HeaderText = "Ngày trả";
 
             dgvMuonSach.Columns["Status"].HeaderText = "Tình trạng";
@@ -119,7 +119,7 @@ namespace QLTV
             dgvMuonSach.Columns["ImageBook"].HeaderText = "Hình ảnh sách";
             dgvMuonSach.Columns["LoanId"].HeaderText = "Mã đơn mượn";
             dgvMuonSach.Columns["BookName"].HeaderText = "Tên sách";
-            dgvMuonSach.Columns["CustomerName"].HeaderText = "ID + Tên khách hàng";
+            dgvMuonSach.Columns["CustomerName"].HeaderText = "Tên khách hàng";
 
             DataGridViewImageColumn column = new DataGridViewImageColumn();
             column = (DataGridViewImageColumn)dgvMuonSach.Columns["ImageBook"];

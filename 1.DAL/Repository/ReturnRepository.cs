@@ -111,7 +111,7 @@ namespace _1.DAL.Repository
                 var data = query.Skip((pageIndex - 1) * pageSize).Take(pageSize).Select(p => new LoanReceiptReturn
                 {
                     LoanId = p.Receipt.LoanReceiptId,
-                    CustomerName = "CustomerId: " + p.Receipt.CustomerId + " CustomerName: " + p.Receipt.Customer.Name,
+                    CustomerName = p.Receipt.Customer.Name,
                     BookName = p.Receipt.Book.Name,
                     Note = p.Receipt.Note,
                     ReceiveDate = p.Receipt.BorrowDate,
