@@ -18,7 +18,7 @@ namespace _1.DAL.Repository
         {
             try
             {
-                var book = await _dataContext.Book.FindAsync( bookId );
+                var book = await _dataContext.Book.FindAsync(bookId);
                 if (book != null)
                 {
                     if (book.AvailableCopies >= quantity)
@@ -27,12 +27,13 @@ namespace _1.DAL.Repository
                         book.BorrowedCopies += quantity;
                         _dataContext.Entry(book).State = EntityState.Modified;
                         await _dataContext.SaveChangesAsync();
-                        return true;    
+                        return true;
                     }
                     else { return false; }
                 }
                 return false;
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return false;
             }
@@ -50,7 +51,7 @@ namespace _1.DAL.Repository
 
                 if (await _dataContext.SaveChangesAsync() > 0)
                 {
-                    await UpdateBookBorrowed(newLoan.BookId,1);
+                    await UpdateBookBorrowed(newLoan.BookId, 1);
                     return new ValueReturn { Status = true, Message = "Thêm thành công" };
                 }
                 return new ValueReturn { Status = false, Message = "Thêm thất bại" };
