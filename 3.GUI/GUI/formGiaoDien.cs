@@ -15,7 +15,7 @@ namespace QLTV
         Form currentChildForm = null;
 
 
-        private void OpenForm(Form ChildForm)
+        private void OpenForm(Form ChildForm, PictureBox ptb)
         {
             // Đóng form con hiện tại (nếu có)
             if (currentChildForm != null)
@@ -24,12 +24,23 @@ namespace QLTV
                 currentChildForm = null;
                 panelChild.Controls.Clear();
             }
-
+            if (ptb.Controls.Count > 0)
+            {
+                foreach (Control control in ptb.Controls)
+                {
+                    if (control is Form form)
+                    {
+                        form.Close();
+                    }
+                }
+            }
+            
             currentChildForm = ChildForm;
             ChildForm.TopLevel = false;
             ChildForm.FormBorderStyle = FormBorderStyle.None;
             ChildForm.Dock = DockStyle.Fill;
             panelChild.Controls.Add(ChildForm);
+            ChildForm.BringToFront();
             ChildForm.Show();
 
         }
@@ -100,7 +111,7 @@ namespace QLTV
         {
 
             formDocGia formDocGia = new formDocGia();
-            OpenForm(formDocGia);
+            OpenForm(formDocGia, ptbIntro);
             hideMenuCon();
         }
 
@@ -108,7 +119,7 @@ namespace QLTV
         {
 
             formNhanVien formNhanVien = new formNhanVien();
-            OpenForm(formNhanVien);
+            OpenForm(formNhanVien, ptbIntro);
             hideMenuCon();
         }
 
@@ -116,14 +127,14 @@ namespace QLTV
         {
 
             formTacGia formTacGia = new formTacGia();
-            OpenForm(formTacGia);
+            OpenForm(formTacGia, ptbIntro);
             hideMenuCon();
         }
 
         private void btnTheLoaiSach_Click(object sender, EventArgs e)
         {
             formTheLoai formTheLoai = new formTheLoai();
-            OpenForm(formTheLoai);
+            OpenForm(formTheLoai, ptbIntro);
             hideMenuCon();
 
         }
@@ -131,28 +142,28 @@ namespace QLTV
         private void btnNXB_Click(object sender, EventArgs e)
         {
             formNXB formNXB = new formNXB();
-            OpenForm(formNXB);
+            OpenForm(formNXB, ptbIntro);
             hideMenuCon();
         }
 
         private void btnQuanLySach_Click(object sender, EventArgs e)
         {
             formQuanLySach formQuanLySach = new formQuanLySach();
-            OpenForm(formQuanLySach);
+            OpenForm(formQuanLySach, ptbIntro);
             hideMenuCon();
         }
 
         private void btnMuonSach_Click(object sender, EventArgs e)
         {
             formMuonSach formMuonSach = new formMuonSach();
-            OpenForm(formMuonSach);
+            OpenForm(formMuonSach, ptbIntro);
             hideMenuCon();
         }
 
         private void btnTraSach_Click(object sender, EventArgs e)
         {
             formTraSach formTraSach = new formTraSach();
-            OpenForm(formTraSach);
+            OpenForm(formTraSach, ptbIntro);
             hideMenuCon();
         }
 
@@ -164,7 +175,7 @@ namespace QLTV
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
             formBaoCao formBaoCao = new formBaoCao();
-            OpenForm(formBaoCao);
+            OpenForm(formBaoCao, ptbIntro);
             hideMenuCon();
         }
 
@@ -195,6 +206,11 @@ namespace QLTV
             formChart formBaoCao = new formChart();
             OpenForm(formBaoCao);
             hideMenuCon();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
