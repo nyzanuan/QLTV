@@ -33,6 +33,7 @@ namespace QLTV
             panelMenu = new Panel();
             btnThoat = new Button();
             btnDangXuat = new Button();
+            btnChart = new Button();
             btnBaoCao = new Button();
             panelMuonSachCon = new Panel();
             btnTraSach = new Button();
@@ -51,6 +52,7 @@ namespace QLTV
             panelMain = new Panel();
             panelChild = new Panel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             panelMenu.SuspendLayout();
             panelMuonSachCon.SuspendLayout();
             panelDanhMucCon.SuspendLayout();
@@ -66,6 +68,7 @@ namespace QLTV
             panelMenu.BorderStyle = BorderStyle.FixedSingle;
             panelMenu.Controls.Add(btnThoat);
             panelMenu.Controls.Add(btnDangXuat);
+            panelMenu.Controls.Add(btnChart);
             panelMenu.Controls.Add(btnBaoCao);
             panelMenu.Controls.Add(panelMuonSachCon);
             panelMenu.Controls.Add(btnMTSach);
@@ -75,7 +78,7 @@ namespace QLTV
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(240, 614);
+            panelMenu.Size = new Size(240, 819);
             panelMenu.TabIndex = 0;
             panelMenu.Paint += panelMenu_Paint;
             // 
@@ -84,13 +87,13 @@ namespace QLTV
             btnThoat.Dock = DockStyle.Top;
             btnThoat.FlatAppearance.BorderSize = 0;
             btnThoat.FlatStyle = FlatStyle.Flat;
-            btnThoat.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnThoat.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnThoat.ForeColor = SystemColors.ControlLightLight;
-            btnThoat.Location = new Point(0, 604);
+            btnThoat.Location = new Point(0, 699);
             btnThoat.Margin = new Padding(3, 2, 3, 2);
             btnThoat.Name = "btnThoat";
             btnThoat.Padding = new Padding(9, 0, 0, 0);
-            btnThoat.Size = new Size(221, 41);
+            btnThoat.Size = new Size(238, 41);
             btnThoat.TabIndex = 34;
             btnThoat.Text = "THOÁT";
             btnThoat.TextAlign = ContentAlignment.MiddleLeft;
@@ -102,31 +105,49 @@ namespace QLTV
             btnDangXuat.Dock = DockStyle.Top;
             btnDangXuat.FlatAppearance.BorderSize = 0;
             btnDangXuat.FlatStyle = FlatStyle.Flat;
-            btnDangXuat.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDangXuat.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnDangXuat.ForeColor = SystemColors.ControlLightLight;
-            btnDangXuat.Location = new Point(0, 563);
+            btnDangXuat.Location = new Point(0, 658);
             btnDangXuat.Margin = new Padding(3, 2, 3, 2);
             btnDangXuat.Name = "btnDangXuat";
             btnDangXuat.Padding = new Padding(9, 0, 0, 0);
-            btnDangXuat.Size = new Size(221, 41);
+            btnDangXuat.Size = new Size(238, 41);
             btnDangXuat.TabIndex = 33;
             btnDangXuat.Text = "ĐĂNG XUẤT";
             btnDangXuat.TextAlign = ContentAlignment.MiddleLeft;
             btnDangXuat.UseVisualStyleBackColor = true;
             btnDangXuat.Click += btnDangXuat_Click;
             // 
+            // btnChart
+            // 
+            btnChart.Dock = DockStyle.Top;
+            btnChart.FlatAppearance.BorderSize = 0;
+            btnChart.FlatStyle = FlatStyle.Flat;
+            btnChart.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnChart.ForeColor = SystemColors.ControlLightLight;
+            btnChart.Location = new Point(0, 617);
+            btnChart.Margin = new Padding(3, 2, 3, 2);
+            btnChart.Name = "btnChart";
+            btnChart.Padding = new Padding(9, 0, 0, 0);
+            btnChart.Size = new Size(238, 41);
+            btnChart.TabIndex = 35;
+            btnChart.Text = "BIỂU ĐỒ";
+            btnChart.TextAlign = ContentAlignment.MiddleLeft;
+            btnChart.UseVisualStyleBackColor = true;
+            btnChart.Click += btnChart_Click;
+            // 
             // btnBaoCao
             // 
             btnBaoCao.Dock = DockStyle.Top;
             btnBaoCao.FlatAppearance.BorderSize = 0;
             btnBaoCao.FlatStyle = FlatStyle.Flat;
-            btnBaoCao.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBaoCao.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnBaoCao.ForeColor = SystemColors.ControlLightLight;
-            btnBaoCao.Location = new Point(0, 522);
+            btnBaoCao.Location = new Point(0, 576);
             btnBaoCao.Margin = new Padding(3, 2, 3, 2);
             btnBaoCao.Name = "btnBaoCao";
             btnBaoCao.Padding = new Padding(9, 0, 0, 0);
-            btnBaoCao.Size = new Size(221, 41);
+            btnBaoCao.Size = new Size(238, 41);
             btnBaoCao.TabIndex = 32;
             btnBaoCao.Text = "BÁO CÁO";
             btnBaoCao.TextAlign = ContentAlignment.MiddleLeft;
@@ -139,10 +160,10 @@ namespace QLTV
             panelMuonSachCon.Controls.Add(btnTraSach);
             panelMuonSachCon.Controls.Add(btnMuonSach);
             panelMuonSachCon.Dock = DockStyle.Top;
-            panelMuonSachCon.Location = new Point(0, 428);
+            panelMuonSachCon.Location = new Point(0, 482);
             panelMuonSachCon.Margin = new Padding(3, 2, 3, 2);
             panelMuonSachCon.Name = "panelMuonSachCon";
-            panelMuonSachCon.Size = new Size(221, 94);
+            panelMuonSachCon.Size = new Size(238, 94);
             panelMuonSachCon.TabIndex = 31;
             // 
             // btnTraSach
@@ -150,12 +171,12 @@ namespace QLTV
             btnTraSach.Dock = DockStyle.Top;
             btnTraSach.FlatAppearance.BorderSize = 0;
             btnTraSach.FlatStyle = FlatStyle.Flat;
-            btnTraSach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTraSach.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnTraSach.ForeColor = SystemColors.Info;
             btnTraSach.Location = new Point(0, 44);
             btnTraSach.Name = "btnTraSach";
             btnTraSach.Padding = new Padding(30, 0, 0, 0);
-            btnTraSach.Size = new Size(221, 38);
+            btnTraSach.Size = new Size(238, 38);
             btnTraSach.TabIndex = 18;
             btnTraSach.Text = "Trả sách";
             btnTraSach.TextAlign = ContentAlignment.MiddleLeft;
@@ -167,12 +188,12 @@ namespace QLTV
             btnMuonSach.Dock = DockStyle.Top;
             btnMuonSach.FlatAppearance.BorderSize = 0;
             btnMuonSach.FlatStyle = FlatStyle.Flat;
-            btnMuonSach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMuonSach.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnMuonSach.ForeColor = SystemColors.ButtonHighlight;
             btnMuonSach.Location = new Point(0, 0);
             btnMuonSach.Name = "btnMuonSach";
             btnMuonSach.Padding = new Padding(30, 0, 0, 0);
-            btnMuonSach.Size = new Size(221, 44);
+            btnMuonSach.Size = new Size(238, 44);
             btnMuonSach.TabIndex = 17;
             btnMuonSach.Text = "Mượn sách";
             btnMuonSach.TextAlign = ContentAlignment.MiddleLeft;
@@ -184,13 +205,13 @@ namespace QLTV
             btnMTSach.Dock = DockStyle.Top;
             btnMTSach.FlatAppearance.BorderSize = 0;
             btnMTSach.FlatStyle = FlatStyle.Flat;
-            btnMTSach.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMTSach.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnMTSach.ForeColor = SystemColors.ControlLightLight;
-            btnMTSach.Location = new Point(0, 387);
+            btnMTSach.Location = new Point(0, 441);
             btnMTSach.Margin = new Padding(3, 2, 3, 2);
             btnMTSach.Name = "btnMTSach";
             btnMTSach.Padding = new Padding(9, 0, 0, 0);
-            btnMTSach.Size = new Size(221, 41);
+            btnMTSach.Size = new Size(238, 41);
             btnMTSach.TabIndex = 30;
             btnMTSach.Text = "MƯỢN TRẢ SÁCH";
             btnMTSach.TextAlign = ContentAlignment.MiddleLeft;
@@ -207,10 +228,10 @@ namespace QLTV
             panelDanhMucCon.Controls.Add(btnQuanLySach);
             panelDanhMucCon.Controls.Add(btnDocGia);
             panelDanhMucCon.Dock = DockStyle.Top;
-            panelDanhMucCon.Location = new Point(0, 143);
+            panelDanhMucCon.Location = new Point(0, 197);
             panelDanhMucCon.Margin = new Padding(3, 2, 3, 2);
             panelDanhMucCon.Name = "panelDanhMucCon";
-            panelDanhMucCon.Size = new Size(221, 244);
+            panelDanhMucCon.Size = new Size(238, 244);
             panelDanhMucCon.TabIndex = 29;
             // 
             // btnNXB
@@ -218,12 +239,12 @@ namespace QLTV
             btnNXB.Dock = DockStyle.Top;
             btnNXB.FlatAppearance.BorderSize = 0;
             btnNXB.FlatStyle = FlatStyle.Flat;
-            btnNXB.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNXB.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnNXB.ForeColor = SystemColors.Info;
             btnNXB.Location = new Point(0, 190);
             btnNXB.Name = "btnNXB";
             btnNXB.Padding = new Padding(30, 0, 0, 0);
-            btnNXB.Size = new Size(221, 38);
+            btnNXB.Size = new Size(238, 38);
             btnNXB.TabIndex = 15;
             btnNXB.Text = "Nhà xuất bản";
             btnNXB.TextAlign = ContentAlignment.MiddleLeft;
@@ -235,12 +256,12 @@ namespace QLTV
             btnTheLoaiSach.Dock = DockStyle.Top;
             btnTheLoaiSach.FlatAppearance.BorderSize = 0;
             btnTheLoaiSach.FlatStyle = FlatStyle.Flat;
-            btnTheLoaiSach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTheLoaiSach.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnTheLoaiSach.ForeColor = SystemColors.Info;
             btnTheLoaiSach.Location = new Point(0, 152);
             btnTheLoaiSach.Name = "btnTheLoaiSach";
             btnTheLoaiSach.Padding = new Padding(30, 0, 0, 0);
-            btnTheLoaiSach.Size = new Size(221, 38);
+            btnTheLoaiSach.Size = new Size(238, 38);
             btnTheLoaiSach.TabIndex = 14;
             btnTheLoaiSach.Text = "Thể loại sách";
             btnTheLoaiSach.TextAlign = ContentAlignment.MiddleLeft;
@@ -252,12 +273,12 @@ namespace QLTV
             btnTacGia.Dock = DockStyle.Top;
             btnTacGia.FlatAppearance.BorderSize = 0;
             btnTacGia.FlatStyle = FlatStyle.Flat;
-            btnTacGia.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnTacGia.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnTacGia.ForeColor = SystemColors.Info;
             btnTacGia.Location = new Point(0, 114);
             btnTacGia.Name = "btnTacGia";
             btnTacGia.Padding = new Padding(30, 0, 0, 0);
-            btnTacGia.Size = new Size(221, 38);
+            btnTacGia.Size = new Size(238, 38);
             btnTacGia.TabIndex = 10;
             btnTacGia.Text = "Quản lý tác giả";
             btnTacGia.TextAlign = ContentAlignment.MiddleLeft;
@@ -269,12 +290,12 @@ namespace QLTV
             btnNhanVien.Dock = DockStyle.Top;
             btnNhanVien.FlatAppearance.BorderSize = 0;
             btnNhanVien.FlatStyle = FlatStyle.Flat;
-            btnNhanVien.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnNhanVien.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnNhanVien.ForeColor = SystemColors.Info;
             btnNhanVien.Location = new Point(0, 76);
             btnNhanVien.Name = "btnNhanVien";
             btnNhanVien.Padding = new Padding(30, 0, 0, 0);
-            btnNhanVien.Size = new Size(221, 38);
+            btnNhanVien.Size = new Size(238, 38);
             btnNhanVien.TabIndex = 12;
             btnNhanVien.Text = "Quản lý nhân viên";
             btnNhanVien.TextAlign = ContentAlignment.MiddleLeft;
@@ -286,12 +307,12 @@ namespace QLTV
             btnQuanLySach.Dock = DockStyle.Top;
             btnQuanLySach.FlatAppearance.BorderSize = 0;
             btnQuanLySach.FlatStyle = FlatStyle.Flat;
-            btnQuanLySach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnQuanLySach.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnQuanLySach.ForeColor = SystemColors.Info;
             btnQuanLySach.Location = new Point(0, 38);
             btnQuanLySach.Name = "btnQuanLySach";
             btnQuanLySach.Padding = new Padding(30, 0, 0, 0);
-            btnQuanLySach.Size = new Size(221, 38);
+            btnQuanLySach.Size = new Size(238, 38);
             btnQuanLySach.TabIndex = 9;
             btnQuanLySach.Text = "Quản lý sách";
             btnQuanLySach.TextAlign = ContentAlignment.MiddleLeft;
@@ -303,13 +324,13 @@ namespace QLTV
             btnDocGia.Dock = DockStyle.Top;
             btnDocGia.FlatAppearance.BorderSize = 0;
             btnDocGia.FlatStyle = FlatStyle.Flat;
-            btnDocGia.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDocGia.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnDocGia.ForeColor = SystemColors.Info;
             btnDocGia.ImageAlign = ContentAlignment.MiddleLeft;
             btnDocGia.Location = new Point(0, 0);
             btnDocGia.Name = "btnDocGia";
             btnDocGia.Padding = new Padding(30, 0, 0, 0);
-            btnDocGia.Size = new Size(221, 38);
+            btnDocGia.Size = new Size(238, 38);
             btnDocGia.TabIndex = 11;
             btnDocGia.Text = "Quản lý độc giả";
             btnDocGia.TextAlign = ContentAlignment.MiddleLeft;
@@ -321,13 +342,13 @@ namespace QLTV
             btnDanhMuc.Dock = DockStyle.Top;
             btnDanhMuc.FlatAppearance.BorderSize = 0;
             btnDanhMuc.FlatStyle = FlatStyle.Flat;
-            btnDanhMuc.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDanhMuc.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnDanhMuc.ForeColor = SystemColors.ControlLightLight;
             btnDanhMuc.ImageAlign = ContentAlignment.MiddleLeft;
             btnDanhMuc.Location = new Point(0, 142);
             btnDanhMuc.Name = "btnDanhMuc";
             btnDanhMuc.Padding = new Padding(10, 0, 0, 0);
-            btnDanhMuc.Size = new Size(251, 55);
+            btnDanhMuc.Size = new Size(238, 55);
             btnDanhMuc.TabIndex = 28;
             btnDanhMuc.Text = "DANH MỤC";
             btnDanhMuc.TextAlign = ContentAlignment.MiddleLeft;
@@ -340,7 +361,7 @@ namespace QLTV
             panelLogoUTH.Dock = DockStyle.Top;
             panelLogoUTH.Location = new Point(0, 0);
             panelLogoUTH.Name = "panelLogoUTH";
-            panelLogoUTH.Size = new Size(251, 142);
+            panelLogoUTH.Size = new Size(238, 142);
             panelLogoUTH.TabIndex = 27;
             // 
             // pictureBox1
@@ -350,7 +371,7 @@ namespace QLTV
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(251, 142);
+            pictureBox1.Size = new Size(238, 142);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -369,10 +390,16 @@ namespace QLTV
             // panelChild
             // 
             panelChild.Dock = DockStyle.Fill;
-            panelChild.Location = new Point(274, 0);
+            panelChild.Location = new Point(240, 0);
             panelChild.Name = "panelChild";
-            panelChild.Size = new Size(1176, 819);
+            panelChild.Size = new Size(1210, 819);
             panelChild.TabIndex = 1;
+            // 
+            // sqlCommandBuilder1
+            // 
+            sqlCommandBuilder1.DataAdapter = null;
+            sqlCommandBuilder1.QuotePrefix = "[";
+            sqlCommandBuilder1.QuoteSuffix = "]";
             // 
             // formGiaoDien
             // 
@@ -420,8 +447,11 @@ namespace QLTV
         private Button btnTraSach;
         private Button btnMuonSach;
         private Button btnBaoCao;
+
         private Button btnThoat;
         private Button btnDangXuat;
         private Panel panelChild;
+        private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
+        private Button btnChart;
     }
 }

@@ -179,8 +179,22 @@ namespace QLTV
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            DangXuat(this, new EventArgs());
+            try
+            {
+                DangXuat(this, new EventArgs());
+            }
+            catch
+            {
 
+            }
+
+        }
+
+        private void btnChart_Click(object sender, EventArgs e)
+        {
+            formChart formBaoCao = new formChart();
+            OpenForm(formBaoCao);
+            hideMenuCon();
         }
     }
 }
