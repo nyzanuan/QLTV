@@ -119,7 +119,7 @@ namespace QLTV
             dgvMuonSach.Columns["ImageBook"].HeaderText = "Hình ảnh sách";
             dgvMuonSach.Columns["LoanId"].HeaderText = "Mã đơn mượn";
             dgvMuonSach.Columns["BookName"].HeaderText = "Tên sách";
-            dgvMuonSach.Columns["CustomerName"].HeaderText = "ID + Tên khách hàng";
+            dgvMuonSach.Columns["CustomerName"].HeaderText = "Tên khách hàng";
 
             DataGridViewImageColumn column = new DataGridViewImageColumn();
             column = (DataGridViewImageColumn)dgvMuonSach.Columns["ImageBook"];
@@ -131,8 +131,7 @@ namespace QLTV
             totalElement = result.Value.TotalElemnent;
             totalPage = (int)(Math.Ceiling((float)totalElement / pageSize));
             updateNumberPage();
-            LoadUser();
-            LoadBook();
+
         }
         private void ResetInput()
         {
@@ -146,6 +145,8 @@ namespace QLTV
         {
             dgvMuonSach.RowHeadersVisible = true;
             LoadData();
+            LoadUser();
+            LoadBook();
 
 
         }
@@ -263,7 +264,7 @@ namespace QLTV
         {
             if (cmbDocGia.Text.Length == 0)
             {
-                LoadData();
+                LoadUser();
             }
         }
         private void btnLocSach_Click(object sender, EventArgs e)
@@ -393,7 +394,7 @@ namespace QLTV
                 cmbDocGia.SelectedValue = CustomerId;
                 cmbSach.SelectedValue = BookId;
                 dtpNgayMuon.Value = ReceiveDate;
-                dtpNgayTra.Value = ReceiveDate;
+                dtpNgayTra.Value = ReturnDate;
                 btnUpdate.Enabled = true;
                 btnXoa.Enabled = true;
                 btnHuy.Enabled = true;
