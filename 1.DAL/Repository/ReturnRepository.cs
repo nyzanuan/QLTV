@@ -102,7 +102,7 @@ namespace _1.DAL.Repository
 
                 if (!string.IsNullOrEmpty(search))
                 {
-                    query = query.Where(p => p.Receipt.CustomerId.ToString() == search || p.Receipt.BookId.ToString() == search);
+                    query = query.Where(p => p.Receipt.CustomerId.ToString() == search || p.Receipt.BookId.ToString() == search||p.Receipt.LoanReceiptId.ToString()==search);
                 }
                 if (loanReceiptStatus != null)
                 {
