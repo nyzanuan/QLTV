@@ -87,10 +87,10 @@ namespace _3.GUI.GUI
             book_dataGridView.DataSource = result.Value.ListElemnent;
             book_dataGridView.Columns["BookId"].Visible = false;
             book_dataGridView.Columns["CustomerId"].Visible = false;
-            book_dataGridView.Columns["ReceiveDate"].DefaultCellStyle.Format = "HH:mm dd-MM-yyyy";
+            book_dataGridView.Columns["ReceiveDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             book_dataGridView.Columns["ReceiveDate"].HeaderText = "Ngày đặt";
 
-            book_dataGridView.Columns["ReturnDate"].DefaultCellStyle.Format = "HH:mm dd-MM-yyyy";
+            book_dataGridView.Columns["ReturnDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             book_dataGridView.Columns["ReturnDate"].HeaderText = "Ngày trả";
 
             book_dataGridView.Columns["Status"].HeaderText = "Tình trạng";
