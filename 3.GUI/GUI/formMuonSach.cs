@@ -54,6 +54,7 @@ namespace QLTV
             cmbDocGia.Enabled = status;
             cmbSach.Enabled = status;
             dtpNgayTra.Enabled = status;
+            dtpNgayMuon.Enabled = status;
 
         }
         void updateNumberPage()
@@ -207,7 +208,8 @@ namespace QLTV
             LoanReceipt newLoan = new LoanReceipt()
             {
                 BookId = Convert.ToInt16(cmbSach.SelectedValue),
-                BorrowDate = DateTime.Now,
+                //BorrowDate = DateTime.Now,
+                BorrowDate = dtpNgayMuon.Value,
                 ReturnDate = dtpNgayTra.Value,
                 CustomerId = Convert.ToInt16(cmbDocGia.SelectedValue),
                 BorrowerId = userInfo.UserId != null && userInfo.UserId != 0 ? userInfo.UserId : 1,
@@ -300,71 +302,6 @@ namespace QLTV
                 LoadBook();
             }
         }
-
-        private void dgvMuonSach_SelectionChanged(object sender, EventArgs e)
-        {
-
-            DataGridViewSelectedRowCollection rows = dgvMuonSach.SelectedRows;
-            if (rows.Count > 0)
-            {
-                DataGridViewRow selectedRow = rows[0];
-
-                int BookId = Convert.ToInt16(selectedRow.Cells["BookId"].Value);
-                int CustomerId = Convert.ToInt16(selectedRow.Cells["CustomerId"].Value);
-
-                DateTime ReceiveDate = (DateTime)selectedRow.Cells["ReceiveDate"].Value;
-                DateTime ReturnDate = (DateTime)selectedRow.Cells["ReturnDate"].Value;
-
-                string CustomerName = selectedRow.Cells["CustomerName"].Value.ToString();
-                string BookName = selectedRow.Cells["BookName"].Value.ToString();
-                byte[] ImageBook = (byte[])selectedRow.Cells["ImageBook"].Value;
-                byte[] ImageCustomer = (byte[])selectedRow.Cells["ImageCustomer"].Value;
-
-
-                cmbDocGia.SelectedValue = CustomerId;
-                cmbSach.SelectedValue = BookId;
-                dtpNgayMuon.Value = ReceiveDate;
-                dtpNgayTra.Value = ReceiveDate;
-                btnUpdate.Enabled = true;
-                btnXoa.Enabled = true;
-                btnHuy.Enabled = true;
-                btnThem.Enabled = false;
-                btnLocDocGia.Enabled = true;
-                btnLocSach.Enabled = true;
-                EditInput(true);
-
-                if (BookId != -1)
-                {
-                    frmThongTinSach frmThongTinSach = new frmThongTinSach(ImageBook, BookName, panelHinhAnhSach.Size);
-
-                    frmThongTinSach.TopLevel = false;
-                    panelHinhAnhDocGia.Controls.Clear();
-                    panelHinhAnhDocGia.Controls.Add(frmThongTinSach);
-                    frmThongTinSach.Show();
-                }
-                else
-                {
-                    panelHinhAnhDocGia.Controls.Clear();
-
-                }
-
-                if (CustomerId != -1)
-                {
-                    frmThongTinSach frmThongTinSach = new frmThongTinSach(ImageCustomer, CustomerName, panelHinhAnhDocGia.Size);
-
-                    frmThongTinSach.TopLevel = false;
-                    panelHinhAnhDocGia.Controls.Clear();
-                    panelHinhAnhDocGia.Controls.Add(frmThongTinSach);
-                    frmThongTinSach.Show();
-                }
-                else
-                {
-                    panelHinhAnhDocGia.Controls.Clear();
-
-                }
-
-            }
-        }
         private void btnFirstPage_Click(object sender, EventArgs e)
         {
             if (pageNow != 1)
@@ -432,6 +369,69 @@ namespace QLTV
             else
             {
                 MessageBox.Show("Hãy chọn hàng cần sửa ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvMuonSach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dgvMuonSach.Rows.Count)
+            {
+                DataGridViewRow selectedRow = dgvMuonSach.Rows[e.RowIndex];
+
+                int BookId = Convert.ToInt16(selectedRow.Cells["BookId"].Value);
+                int CustomerId = Convert.ToInt16(selectedRow.Cells["CustomerId"].Value);
+
+                DateTime ReceiveDate = (DateTime)selectedRow.Cells["ReceiveDate"].Value;
+                DateTime ReturnDate = (DateTime)selectedRow.Cells["ReturnDate"].Value;
+
+                string CustomerName = selectedRow.Cells["CustomerName"].Value.ToString();
+                string BookName = selectedRow.Cells["BookName"].Value.ToString();
+                byte[] ImageBook = (byte[])selectedRow.Cells["ImageBook"].Value;
+                byte[] ImageCustomer = (byte[])selectedRow.Cells["ImageCustomer"].Value;
+
+
+                cmbDocGia.SelectedValue = CustomerId;
+                cmbSach.SelectedValue = BookId;
+                dtpNgayMuon.Value = ReceiveDate;
+                dtpNgayTra.Value = ReceiveDate;
+                btnUpdate.Enabled = true;
+                btnXoa.Enabled = true;
+                btnHuy.Enabled = true;
+                btnThem.Enabled = false;
+                btnLocDocGia.Enabled = true;
+                btnLocSach.Enabled = true;
+                EditInput(true);
+
+                if (BookId != -1)
+                {
+                    frmThongTinSach frmThongTinSach = new frmThongTinSach(ImageBook, BookName, panelHinhAnhSach.Size);
+
+                    frmThongTinSach.TopLevel = false;
+                    panelHinhAnhDocGia.Controls.Clear();
+                    panelHinhAnhDocGia.Controls.Add(frmThongTinSach);
+                    frmThongTinSach.Show();
+                }
+                else
+                {
+                    panelHinhAnhDocGia.Controls.Clear();
+
+                }
+
+                if (CustomerId != -1)
+                {
+                    frmThongTinSach frmThongTinSach = new frmThongTinSach(ImageCustomer, CustomerName, panelHinhAnhDocGia.Size);
+
+                    frmThongTinSach.TopLevel = false;
+                    panelHinhAnhDocGia.Controls.Clear();
+                    panelHinhAnhDocGia.Controls.Add(frmThongTinSach);
+                    frmThongTinSach.Show();
+                }
+                else
+                {
+                    panelHinhAnhDocGia.Controls.Clear();
+
+                }
+
             }
         }
     }

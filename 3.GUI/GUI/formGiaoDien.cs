@@ -34,7 +34,7 @@ namespace QLTV
                     }
                 }
             }
-            
+
             currentChildForm = ChildForm;
             ChildForm.TopLevel = false;
             ChildForm.FormBorderStyle = FormBorderStyle.None;
@@ -48,7 +48,7 @@ namespace QLTV
         {
             frmDashBoard frmDashBoard = new frmDashBoard(panelChild.Width);
 
-            OpenForm(frmDashBoard);
+            OpenForm(frmDashBoard, ptbIntro);
 
         }
 
@@ -204,7 +204,7 @@ namespace QLTV
         private void btnChart_Click(object sender, EventArgs e)
         {
             formChart formBaoCao = new formChart();
-            OpenForm(formBaoCao);
+            OpenForm(formBaoCao, ptbIntro);
             hideMenuCon();
         }
 

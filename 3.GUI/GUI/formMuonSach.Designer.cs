@@ -94,6 +94,7 @@ namespace QLTV
             // 
             // txtNumberPage
             // 
+            txtNumberPage.Anchor = AnchorStyles.None;
             txtNumberPage.Enabled = false;
             txtNumberPage.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             txtNumberPage.Location = new Point(581, 5);
@@ -107,6 +108,7 @@ namespace QLTV
             // 
             // btnLastPage
             // 
+            btnLastPage.Anchor = AnchorStyles.None;
             btnLastPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLastPage.Location = new Point(772, 5);
             btnLastPage.Margin = new Padding(5);
@@ -119,6 +121,7 @@ namespace QLTV
             // 
             // btnNextPage
             // 
+            btnNextPage.Anchor = AnchorStyles.None;
             btnNextPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnNextPage.Location = new Point(679, 2);
             btnNextPage.Margin = new Padding(5);
@@ -131,6 +134,7 @@ namespace QLTV
             // 
             // btnFirstPage
             // 
+            btnFirstPage.Anchor = AnchorStyles.None;
             btnFirstPage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnFirstPage.Location = new Point(404, 2);
             btnFirstPage.Margin = new Padding(5);
@@ -143,6 +147,7 @@ namespace QLTV
             // 
             // btnPrePage
             // 
+            btnPrePage.Anchor = AnchorStyles.None;
             btnPrePage.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnPrePage.Location = new Point(494, 2);
             btnPrePage.Margin = new Padding(5);
@@ -167,6 +172,7 @@ namespace QLTV
             // 
             // txtSearch
             // 
+            txtSearch.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             txtSearch.AutoRoundedCorners = true;
             txtSearch.BorderRadius = 20;
             txtSearch.CustomizableEdges = customizableEdges1;
@@ -605,7 +611,6 @@ namespace QLTV
             dgvMuonSach.RowHeadersVisible = false;
             dgvMuonSach.RowHeadersWidth = 51;
             dgvMuonSach.RowTemplate.Height = 80;
-            dgvMuonSach.SelectionMode = DataGridViewSelectionMode.RowHeaderSelect;
             dgvMuonSach.Size = new Size(1145, 355);
             dgvMuonSach.TabIndex = 41;
             dgvMuonSach.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -629,7 +634,7 @@ namespace QLTV
             dgvMuonSach.ThemeStyle.RowsStyle.Height = 80;
             dgvMuonSach.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvMuonSach.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dgvMuonSach.SelectionChanged += dgvMuonSach_SelectionChanged;
+            dgvMuonSach.CellClick += dgvMuonSach_CellClick;
             // 
             // panelFooterButton
             // 
