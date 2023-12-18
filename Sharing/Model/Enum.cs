@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sharing.Model
+﻿namespace Sharing.Model
 {
     public enum Gender
     {
         Nam,
         Nữ,
-        
+
 
     }
     public enum GenderCheck
@@ -32,7 +26,7 @@ namespace Sharing.Model
     {
         User,
         Admin,
-        
+
     }
     public enum BookStatus
     {
@@ -49,8 +43,8 @@ namespace Sharing.Model
     {
         Borrowed,
         Returned,
-        extend,
+        Extend,
         Overdue,
-        Lost, 
+        Lost,
     }
 }

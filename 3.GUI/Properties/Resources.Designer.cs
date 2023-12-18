@@ -93,6 +93,16 @@ namespace _3.GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap booiconk {
+            get {
+                object obj = ResourceManager.GetObject("booiconk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap borrow {
             get {
                 object obj = ResourceManager.GetObject("borrow", resourceCulture);
@@ -126,16 +136,6 @@ namespace _3.GUI.Properties {
         internal static System.Drawing.Bitmap icons8_close_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-close-24", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_close_48 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-close-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

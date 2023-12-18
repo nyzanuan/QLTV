@@ -4,11 +4,6 @@ using _1.DAL.Model;
 using Microsoft.EntityFrameworkCore;
 using Sharing.Model;
 using Sharing.ReturnModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _1.DAL.Repository
 {
@@ -49,7 +44,7 @@ namespace _1.DAL.Repository
                 if (loanReceipt == null) { return false; }
                 else
                 {
-                    loanReceipt.Status = LoanReceiptStatus.extend;
+                    loanReceipt.Status = LoanReceiptStatus.Extend;
                     _dataContext.LoanReceipt.Update(newLoan);
                     _dataContext.LoanReceiptStatuse.Update(loanReceipt);
                     if (await _dataContext.SaveChangesAsync() > 0)
@@ -80,7 +75,7 @@ namespace _1.DAL.Repository
                     _dataContext.LoanReceiptStatuse.Update(loanReceipt);
                     if (await _dataContext.SaveChangesAsync() > 0)
                     {
-                        return await UpdateBookCopies(newLoan.BookId,1);
+                        return await UpdateBookCopies(newLoan.BookId, 1);
                     }
                     return false;
                 }
@@ -96,7 +91,7 @@ namespace _1.DAL.Repository
             {
                 var query = _dataContext.LoanReceipt
                     .Include(p => p.Book)
-                    .Join(_dataContext.LoanReceiptStatuse,receipt => receipt.LoanReceiptId,status => status.LoanReceiptId,
+                    .Join(_dataContext.LoanReceiptStatuse, receipt => receipt.LoanReceiptId, status => status.LoanReceiptId,
                         (receipt, status) => new { Receipt = receipt, Status = status }
                      ).AsQueryable();
 
@@ -106,7 +101,7 @@ namespace _1.DAL.Repository
                 }
                 if (loanReceiptStatus != null)
                 {
-                    query = query.Where(p => (p.Status.Status == LoanReceiptStatus.Borrowed|| p.Status.Status == LoanReceiptStatus.extend));
+                    query = query.Where(p => (p.Status.Status == LoanReceiptStatus.Borrowed || p.Status.Status == LoanReceiptStatus.Extend));
                 }
                 var data = query.Skip((pageIndex - 1) * pageSize).Take(pageSize).Select(p => new LoanReceiptReturn
                 {
@@ -137,6 +132,6 @@ namespace _1.DAL.Repository
             }
         }
 
-        
+
     }
 }

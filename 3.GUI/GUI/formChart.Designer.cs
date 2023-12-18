@@ -57,19 +57,23 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanelHeader = new TableLayoutPanel();
             guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            btnLast30Day = new Guna.UI2.WinForms.Guna2Button();
+            btnLast7Day = new Guna.UI2.WinForms.Guna2Button();
+            btnToday = new Guna.UI2.WinForms.Guna2Button();
+            dtpTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             label1 = new Label();
             dtpFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             btnCheck = new FontAwesome.Sharp.IconButton();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnCustom = new Guna.UI2.WinForms.Guna2Button();
             tableLayoutPanelCard = new TableLayoutPanel();
             guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -84,12 +88,19 @@
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label4 = new Label();
-            label3 = new Label();
+            lblTotak = new Label();
             label2 = new Label();
             tableLayoutPanelChart = new TableLayoutPanel();
             chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             tableLayoutPanelChartAndDgv = new TableLayoutPanel();
             chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            lblTongCus = new Label();
+            label14 = new Label();
+            lblTongUser = new Label();
+            lblTongUser1 = new Label();
+            lblTongSach = new Label();
+            lblTongSach1 = new Label();
             tableLayoutPanelHeader.SuspendLayout();
             tableLayoutPanelCard.SuspendLayout();
             guna2GradientPanel3.SuspendLayout();
@@ -102,6 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)chart2).BeginInit();
             tableLayoutPanelChartAndDgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
+            guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanelHeader
@@ -118,14 +130,14 @@
             tableLayoutPanelHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 125F));
             tableLayoutPanelHeader.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
             tableLayoutPanelHeader.Controls.Add(guna2Button5, 8, 0);
-            tableLayoutPanelHeader.Controls.Add(guna2Button4, 7, 0);
-            tableLayoutPanelHeader.Controls.Add(guna2Button3, 6, 0);
-            tableLayoutPanelHeader.Controls.Add(guna2Button2, 5, 0);
-            tableLayoutPanelHeader.Controls.Add(guna2DateTimePicker1, 2, 0);
+            tableLayoutPanelHeader.Controls.Add(btnLast30Day, 7, 0);
+            tableLayoutPanelHeader.Controls.Add(btnLast7Day, 6, 0);
+            tableLayoutPanelHeader.Controls.Add(btnToday, 5, 0);
+            tableLayoutPanelHeader.Controls.Add(dtpTo, 2, 0);
             tableLayoutPanelHeader.Controls.Add(label1, 0, 0);
             tableLayoutPanelHeader.Controls.Add(dtpFrom, 1, 0);
             tableLayoutPanelHeader.Controls.Add(btnCheck, 3, 0);
-            tableLayoutPanelHeader.Controls.Add(guna2Button1, 4, 0);
+            tableLayoutPanelHeader.Controls.Add(btnCustom, 4, 0);
             tableLayoutPanelHeader.Dock = DockStyle.Top;
             tableLayoutPanelHeader.Location = new Point(0, 0);
             tableLayoutPanelHeader.Margin = new Padding(200);
@@ -154,79 +166,83 @@
             guna2Button5.TabIndex = 8;
             guna2Button5.Text = "LastMonth";
             // 
-            // guna2Button4
+            // btnLast30Day
             // 
-            guna2Button4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            guna2Button4.AutoRoundedCorners = true;
-            guna2Button4.BorderRadius = 18;
-            guna2Button4.CustomizableEdges = customizableEdges3;
-            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button4.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(1063, 26);
-            guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button4.Size = new Size(119, 38);
-            guna2Button4.TabIndex = 7;
-            guna2Button4.Text = "Last 30 days";
+            btnLast30Day.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            btnLast30Day.AutoRoundedCorners = true;
+            btnLast30Day.BorderRadius = 18;
+            btnLast30Day.CustomizableEdges = customizableEdges3;
+            btnLast30Day.DisabledState.BorderColor = Color.DarkGray;
+            btnLast30Day.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLast30Day.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLast30Day.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLast30Day.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLast30Day.ForeColor = Color.White;
+            btnLast30Day.Location = new Point(1063, 26);
+            btnLast30Day.Name = "btnLast30Day";
+            btnLast30Day.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnLast30Day.Size = new Size(119, 38);
+            btnLast30Day.TabIndex = 7;
+            btnLast30Day.Text = "Last 30 days";
+            btnLast30Day.Click += btnLast30Day_Click;
             // 
-            // guna2Button3
+            // btnLast7Day
             // 
-            guna2Button3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            guna2Button3.AutoRoundedCorners = true;
-            guna2Button3.BorderRadius = 18;
-            guna2Button3.CustomizableEdges = customizableEdges5;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Location = new Point(943, 26);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button3.Size = new Size(114, 38);
-            guna2Button3.TabIndex = 6;
-            guna2Button3.Text = "Last 7 days";
+            btnLast7Day.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            btnLast7Day.AutoRoundedCorners = true;
+            btnLast7Day.BorderRadius = 18;
+            btnLast7Day.CustomizableEdges = customizableEdges5;
+            btnLast7Day.DisabledState.BorderColor = Color.DarkGray;
+            btnLast7Day.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLast7Day.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLast7Day.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLast7Day.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLast7Day.ForeColor = Color.White;
+            btnLast7Day.Location = new Point(943, 26);
+            btnLast7Day.Name = "btnLast7Day";
+            btnLast7Day.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnLast7Day.Size = new Size(114, 38);
+            btnLast7Day.TabIndex = 6;
+            btnLast7Day.Text = "Last 7 days";
+            btnLast7Day.Click += btnLast7Day_Click;
             // 
-            // guna2Button2
+            // btnToday
             // 
-            guna2Button2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            guna2Button2.AutoRoundedCorners = true;
-            guna2Button2.BorderRadius = 18;
-            guna2Button2.CustomizableEdges = customizableEdges7;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(823, 26);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.Size = new Size(114, 38);
-            guna2Button2.TabIndex = 5;
-            guna2Button2.Text = "Today";
+            btnToday.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            btnToday.AutoRoundedCorners = true;
+            btnToday.BorderRadius = 18;
+            btnToday.CustomizableEdges = customizableEdges7;
+            btnToday.DisabledState.BorderColor = Color.DarkGray;
+            btnToday.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnToday.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnToday.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnToday.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnToday.ForeColor = Color.White;
+            btnToday.Location = new Point(823, 26);
+            btnToday.Name = "btnToday";
+            btnToday.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnToday.Size = new Size(114, 38);
+            btnToday.TabIndex = 5;
+            btnToday.Text = "Today";
+            btnToday.Click += btnToday_Click;
             // 
-            // guna2DateTimePicker1
+            // dtpTo
             // 
-            guna2DateTimePicker1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges9;
-            guna2DateTimePicker1.FillColor = Color.White;
-            guna2DateTimePicker1.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(439, 22);
-            guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2DateTimePicker1.Size = new Size(212, 45);
-            guna2DateTimePicker1.TabIndex = 2;
-            guna2DateTimePicker1.Value = new DateTime(2023, 12, 16, 22, 59, 1, 683);
+            dtpTo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            dtpTo.Checked = true;
+            dtpTo.CustomFormat = "dd/MM/yyyy";
+            dtpTo.CustomizableEdges = customizableEdges9;
+            dtpTo.FillColor = Color.White;
+            dtpTo.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            dtpTo.Format = DateTimePickerFormat.Custom;
+            dtpTo.Location = new Point(439, 22);
+            dtpTo.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpTo.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpTo.Name = "dtpTo";
+            dtpTo.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            dtpTo.Size = new Size(212, 45);
+            dtpTo.TabIndex = 2;
+            dtpTo.Value = new DateTime(2023, 12, 16, 22, 59, 1, 683);
             // 
             // label1
             // 
@@ -243,10 +259,11 @@
             // 
             dtpFrom.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             dtpFrom.Checked = true;
+            dtpFrom.CustomFormat = "dd/MM/yyyy";
             dtpFrom.CustomizableEdges = customizableEdges11;
             dtpFrom.FillColor = Color.White;
             dtpFrom.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            dtpFrom.Format = DateTimePickerFormat.Long;
+            dtpFrom.Format = DateTimePickerFormat.Custom;
             dtpFrom.Location = new Point(221, 22);
             dtpFrom.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpFrom.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -268,25 +285,28 @@
             btnCheck.Size = new Size(40, 29);
             btnCheck.TabIndex = 3;
             btnCheck.UseVisualStyleBackColor = true;
+            btnCheck.Visible = false;
+            btnCheck.Click += btnCheck_Click;
             // 
-            // guna2Button1
+            // btnCustom
             // 
-            guna2Button1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            guna2Button1.AutoRoundedCorners = true;
-            guna2Button1.BorderRadius = 18;
-            guna2Button1.CustomizableEdges = customizableEdges13;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(703, 26);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Button1.Size = new Size(114, 38);
-            guna2Button1.TabIndex = 4;
-            guna2Button1.Text = "Custom";
+            btnCustom.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            btnCustom.AutoRoundedCorners = true;
+            btnCustom.BorderRadius = 18;
+            btnCustom.CustomizableEdges = customizableEdges13;
+            btnCustom.DisabledState.BorderColor = Color.DarkGray;
+            btnCustom.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCustom.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCustom.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCustom.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCustom.ForeColor = Color.White;
+            btnCustom.Location = new Point(703, 26);
+            btnCustom.Name = "btnCustom";
+            btnCustom.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnCustom.Size = new Size(114, 38);
+            btnCustom.TabIndex = 4;
+            btnCustom.Text = "Custom";
+            btnCustom.Click += btnCustom_Click;
             // 
             // tableLayoutPanelCard
             // 
@@ -450,7 +470,7 @@
             guna2GradientPanel1.BackColor = Color.White;
             guna2GradientPanel1.Controls.Add(guna2PictureBox1);
             guna2GradientPanel1.Controls.Add(label4);
-            guna2GradientPanel1.Controls.Add(label3);
+            guna2GradientPanel1.Controls.Add(lblTotak);
             guna2GradientPanel1.Controls.Add(label2);
             guna2GradientPanel1.CustomizableEdges = customizableEdges25;
             guna2GradientPanel1.Location = new Point(3, 7);
@@ -486,18 +506,18 @@
             label4.TabIndex = 2;
             label4.Text = "+10%";
             // 
-            // label3
+            // lblTotak
             // 
-            label3.Anchor = AnchorStyles.Left;
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(95, 49);
-            label3.Name = "label3";
-            label3.Size = new Size(60, 35);
-            label3.TabIndex = 1;
-            label3.Text = "100";
+            lblTotak.Anchor = AnchorStyles.Left;
+            lblTotak.AutoSize = true;
+            lblTotak.BackColor = Color.Transparent;
+            lblTotak.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTotak.ForeColor = SystemColors.ActiveCaptionText;
+            lblTotak.Location = new Point(95, 49);
+            lblTotak.Name = "lblTotak";
+            lblTotak.Size = new Size(60, 35);
+            lblTotak.TabIndex = 1;
+            lblTotak.Text = "100";
             // 
             // label2
             // 
@@ -532,18 +552,24 @@
             chartArea1.Name = "ChartArea1";
             chart2.ChartAreas.Add(chartArea1);
             chart2.Dock = DockStyle.Fill;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             legend1.Name = "Legend1";
             chart2.Legends.Add(legend1);
             chart2.Location = new Point(917, 3);
             chart2.Name = "chart2";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.IsXValueIndexed = true;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chart2.Series.Add(series1);
             chart2.Size = new Size(387, 473);
             chart2.TabIndex = 1;
             chart2.Text = "chart2";
+            title1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            title1.Name = "Title1";
+            title1.Text = "Biểu đồ top 5 sách được mượn nhiều nhất";
+            chart2.Titles.Add(title1);
             // 
             // tableLayoutPanelChartAndDgv
             // 
@@ -551,6 +577,7 @@
             tableLayoutPanelChartAndDgv.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanelChartAndDgv.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanelChartAndDgv.Controls.Add(chart1, 0, 0);
+            tableLayoutPanelChartAndDgv.Controls.Add(guna2Panel1, 0, 1);
             tableLayoutPanelChartAndDgv.Dock = DockStyle.Fill;
             tableLayoutPanelChartAndDgv.Location = new Point(3, 3);
             tableLayoutPanelChartAndDgv.Name = "tableLayoutPanelChartAndDgv";
@@ -571,12 +598,113 @@
             chart1.Location = new Point(3, 3);
             chart1.Name = "chart1";
             series2.ChartArea = "ChartArea1";
+            series2.IsValueShownAsLabel = true;
+            series2.IsXValueIndexed = true;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             chart1.Series.Add(series2);
             chart1.Size = new Size(902, 230);
             chart1.TabIndex = 1;
             chart1.Text = "chart1";
+            title2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            title2.Name = "Title1";
+            title2.Text = "Biểu đồ sô lượng sách";
+            chart1.Titles.Add(title2);
+            // 
+            // guna2Panel1
+            // 
+            guna2Panel1.BackColor = Color.White;
+            guna2Panel1.Controls.Add(lblTongCus);
+            guna2Panel1.Controls.Add(label14);
+            guna2Panel1.Controls.Add(lblTongUser);
+            guna2Panel1.Controls.Add(lblTongUser1);
+            guna2Panel1.Controls.Add(lblTongSach);
+            guna2Panel1.Controls.Add(lblTongSach1);
+            guna2Panel1.CustomizableEdges = customizableEdges27;
+            guna2Panel1.Dock = DockStyle.Fill;
+            guna2Panel1.Location = new Point(3, 239);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            guna2Panel1.Size = new Size(448, 231);
+            guna2Panel1.TabIndex = 2;
+            // 
+            // lblTongCus
+            // 
+            lblTongCus.Anchor = AnchorStyles.Left;
+            lblTongCus.AutoSize = true;
+            lblTongCus.BackColor = Color.Transparent;
+            lblTongCus.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTongCus.ForeColor = SystemColors.ActiveCaptionText;
+            lblTongCus.Location = new Point(177, 176);
+            lblTongCus.Name = "lblTongCus";
+            lblTongCus.Size = new Size(60, 35);
+            lblTongCus.TabIndex = 6;
+            lblTongCus.Text = "100";
+            // 
+            // label14
+            // 
+            label14.Anchor = AnchorStyles.Left;
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.ForeColor = SystemColors.ActiveCaptionText;
+            label14.Location = new Point(114, 142);
+            label14.Name = "label14";
+            label14.Size = new Size(140, 23);
+            label14.TabIndex = 5;
+            label14.Text = "Tổng Customer";
+            // 
+            // lblTongUser
+            // 
+            lblTongUser.Anchor = AnchorStyles.Left;
+            lblTongUser.AutoSize = true;
+            lblTongUser.BackColor = Color.Transparent;
+            lblTongUser.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTongUser.ForeColor = SystemColors.ActiveCaptionText;
+            lblTongUser.Location = new Point(177, 107);
+            lblTongUser.Name = "lblTongUser";
+            lblTongUser.Size = new Size(60, 35);
+            lblTongUser.TabIndex = 4;
+            lblTongUser.Text = "100";
+            // 
+            // lblTongUser1
+            // 
+            lblTongUser1.Anchor = AnchorStyles.Left;
+            lblTongUser1.AutoSize = true;
+            lblTongUser1.BackColor = Color.Transparent;
+            lblTongUser1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTongUser1.ForeColor = SystemColors.ActiveCaptionText;
+            lblTongUser1.Location = new Point(114, 73);
+            lblTongUser1.Name = "lblTongUser1";
+            lblTongUser1.Size = new Size(98, 23);
+            lblTongUser1.TabIndex = 3;
+            lblTongUser1.Text = "Tổng User";
+            // 
+            // lblTongSach
+            // 
+            lblTongSach.Anchor = AnchorStyles.Left;
+            lblTongSach.AutoSize = true;
+            lblTongSach.BackColor = Color.Transparent;
+            lblTongSach.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTongSach.ForeColor = SystemColors.ActiveCaptionText;
+            lblTongSach.Location = new Point(177, 35);
+            lblTongSach.Name = "lblTongSach";
+            lblTongSach.Size = new Size(60, 35);
+            lblTongSach.TabIndex = 2;
+            lblTongSach.Text = "100";
+            // 
+            // lblTongSach1
+            // 
+            lblTongSach1.Anchor = AnchorStyles.Left;
+            lblTongSach1.AutoSize = true;
+            lblTongSach1.BackColor = Color.Transparent;
+            lblTongSach1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTongSach1.ForeColor = SystemColors.ActiveCaptionText;
+            lblTongSach1.Location = new Point(121, 12);
+            lblTongSach1.Name = "lblTongSach1";
+            lblTongSach1.Size = new Size(98, 23);
+            lblTongSach1.TabIndex = 1;
+            lblTongSach1.Text = "Tổng Sách";
             // 
             // formChart
             // 
@@ -590,6 +718,7 @@
             Name = "formChart";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "formChart";
+            Load += formChart_Load;
             tableLayoutPanelHeader.ResumeLayout(false);
             tableLayoutPanelHeader.PerformLayout();
             tableLayoutPanelCard.ResumeLayout(false);
@@ -606,6 +735,8 @@
             ((System.ComponentModel.ISupportInitialize)chart2).EndInit();
             tableLayoutPanelChartAndDgv.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -613,18 +744,18 @@
 
         private TableLayoutPanel tableLayoutPanelHeader;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpTo;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpFrom;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnLast30Day;
+        private Guna.UI2.WinForms.Guna2Button btnLast7Day;
+        private Guna.UI2.WinForms.Guna2Button btnToday;
         private FontAwesome.Sharp.IconButton btnCheck;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnCustom;
         private TableLayoutPanel tableLayoutPanelCard;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Label label4;
-        private Label label3;
+        private Label lblTotak;
         private Label label2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
@@ -641,5 +772,12 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private TableLayoutPanel tableLayoutPanelChartAndDgv;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Label lblTongCus;
+        private Label label14;
+        private Label lblTongUser;
+        private Label lblTongUser1;
+        private Label lblTongSach;
+        private Label lblTongSach1;
     }
 }

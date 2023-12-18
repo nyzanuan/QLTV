@@ -4,6 +4,7 @@ using _1.DAL.Model;
 using Microsoft.EntityFrameworkCore;
 using Sharing.Model;
 using Sharing.ReturnModel;
+using System.Globalization;
 
 namespace _1.DAL.Repository
 {
@@ -128,6 +129,16 @@ namespace _1.DAL.Repository
         {
             try
             {
+                var reloadData = _dataContext.LoanReceipt.Where(p => p.ReturnDate < DateTime.Now).ToList();
+                foreach (var item in reloadData)
+                {
+                    if (item.StatusList == null)
+                    {
+                        item.StatusList = new List<LoanStatus>();
+                    }
+                    item.StatusList.Add(new LoanStatus { CreateAt = DateTime.Now, Status = LoanReceiptStatus.Overdue });
+                }
+                _dataContext.SaveChanges();
                 var query = _dataContext.LoanReceipt.Include(p => p.Book).AsQueryable();
 
                 if (!string.IsNullOrEmpty(search))
@@ -199,6 +210,94 @@ namespace _1.DAL.Repository
                     Message = string.IsNullOrEmpty(ex.InnerException.Message) ? ex.Message : ex.InnerException.Message,
                 };
             }
+        }
+
+        public IEnumerable<BookData> GetLoanSummary(DateTime startDate, DateTime endDate)
+        {
+            startDate = startDate.Date;
+
+
+            endDate = endDate.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
+            var loanReceipts = _dataContext.LoanReceipt
+            .Where(lr => lr.BorrowDate >= startDate && lr.BorrowDate <= endDate)
+            .ToList();
+
+            var dateDiff = endDate - startDate;
+
+            var result = dateDiff.Days <= 1
+             ? loanReceipts.GroupBy(orderList => orderList.BorrowDate.ToString("hh tt"))
+                           .Select(order => new BookData
+                           {
+                               Date = order.Key,
+                               TotalBook = order.Count()
+                           })
+                           .ToList()
+             : dateDiff.Days <= 30
+                 ? loanReceipts.OrderBy(orderList => orderList.BorrowDate)
+                               .GroupBy(orderList => orderList.BorrowDate.ToString("dd MMM"))
+                               .Select(order => new BookData
+                               {
+                                   Date = order.Key,
+                                   TotalBook = order.Count()
+                               })
+                               .ToList()
+             : dateDiff.Days <= 92
+                 ? loanReceipts.GroupBy(orderList =>
+                       CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(orderList.BorrowDate, CalendarWeekRule.FirstDay, DayOfWeek.Monday))
+                               .Select(order => new BookData
+                               {
+                                   Date = "Week " + order.Key.ToString(),
+                                   TotalBook = order.Count()
+                               })
+                               .ToList()
+             : dateDiff.Days <= (365 * 2)
+                 ? loanReceipts.GroupBy(orderList => orderList.BorrowDate.ToString("MMM yyyy"))
+                               .Select(order => new BookData
+                               {
+                                   Date = dateDiff.Days <= 365
+                                          ? order.Key.Substring(0, order.Key.IndexOf(" "))
+                                          : order.Key,
+                                   TotalBook = order.Count()
+                               })
+                               .ToList()
+                 : loanReceipts.GroupBy(orderList => orderList.BorrowDate.ToString("yyyy"))
+                               .Select(order => new BookData
+                               {
+                                   Date = order.Key,
+                                   TotalBook = order.Count()
+                               })
+                               .ToList();
+            return result;
+        }
+
+        public int CountBook()
+        {
+            return _dataContext.Book.Count();
+        }
+
+        public int CountCustomer()
+        {
+            return _dataContext.Customer.Count();
+        }
+
+        public int CountUser()
+        {
+            return _dataContext.User.Count();
+        }
+
+        public IEnumerable<KeyValuePair<string, string>> getTopBook()
+        {
+            var list = new List<KeyValuePair<string, string>>();
+            var data = _dataContext.Book
+                    .Select(p => new { Key = p.Name, Value = p.LoanReceipts.Count() })
+                    .OrderByDescending(item => item.Value)
+                    .Take(5);
+            foreach (var item in data)
+            {
+                list.Add(new KeyValuePair<string, string>(item.Key, item.Value.ToString()));
+            }
+
+            return list;
         }
     }
 }

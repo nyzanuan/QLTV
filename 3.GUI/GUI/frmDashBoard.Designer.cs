@@ -56,7 +56,7 @@
             guna2CustomGradientPanel1.Location = new Point(0, 0);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            guna2CustomGradientPanel1.Size = new Size(800, 114);
+            guna2CustomGradientPanel1.Size = new Size(835, 114);
             guna2CustomGradientPanel1.TabIndex = 0;
             // 
             // label1
@@ -64,7 +64,7 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(643, 47);
+            label1.Location = new Point(678, 47);
             label1.Name = "label1";
             label1.Size = new Size(134, 23);
             label1.TabIndex = 2;
@@ -75,7 +75,7 @@
             guna2CirclePictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2CirclePictureBox1.Image = Properties.Resources.account_25;
             guna2CirclePictureBox1.ImageRotate = 0F;
-            guna2CirclePictureBox1.Location = new Point(597, 30);
+            guna2CirclePictureBox1.Location = new Point(632, 30);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -115,14 +115,14 @@
             flowLayout.Dock = DockStyle.Fill;
             flowLayout.Location = new Point(0, 114);
             flowLayout.Name = "flowLayout";
-            flowLayout.Size = new Size(800, 425);
+            flowLayout.Size = new Size(835, 425);
             flowLayout.TabIndex = 1;
             // 
             // frmDashBoard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 539);
+            ClientSize = new Size(835, 539);
             Controls.Add(flowLayout);
             Controls.Add(guna2CustomGradientPanel1);
             Name = "frmDashBoard";

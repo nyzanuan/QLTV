@@ -224,7 +224,7 @@ namespace _1.DAL.Repository
 
         public List<Book> GetAllBook()
         {
-            return _dataContext.Book.Take(10).ToList();
+            return _dataContext.Book.Take(20).ToList();
         }
     }
 }

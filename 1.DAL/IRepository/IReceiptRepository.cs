@@ -12,5 +12,10 @@ namespace _1.DAL.IRepository
         List<Customer> getAllCustomer(string? search);
         ValueReturn GetAllReceipt(int pageIndex, int pageSize, string? search, LoanReceiptStatus? loanReceiptStatus);
         Task<ValueReturn> UpdateLoanReceipt(LoanReceipt newLoan);
+        IEnumerable<BookData> GetLoanSummary(DateTime startDate, DateTime endDate);
+        int CountBook();
+        int CountCustomer();
+        int CountUser();
+        IEnumerable<KeyValuePair<string, string>> getTopBook();
     }
 }
