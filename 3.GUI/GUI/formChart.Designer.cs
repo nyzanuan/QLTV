@@ -101,6 +101,7 @@
             lblTongUser1 = new Label();
             lblTongSach = new Label();
             lblTongSach1 = new Label();
+            pictureBox1 = new PictureBox();
             tableLayoutPanelHeader.SuspendLayout();
             tableLayoutPanelCard.SuspendLayout();
             guna2GradientPanel3.SuspendLayout();
@@ -114,6 +115,7 @@
             tableLayoutPanelChartAndDgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanelHeader
@@ -614,6 +616,7 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.White;
+            guna2Panel1.Controls.Add(pictureBox1);
             guna2Panel1.Controls.Add(lblTongCus);
             guna2Panel1.Controls.Add(label14);
             guna2Panel1.Controls.Add(lblTongUser);
@@ -700,11 +703,20 @@
             lblTongSach1.BackColor = Color.Transparent;
             lblTongSach1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblTongSach1.ForeColor = SystemColors.ActiveCaptionText;
-            lblTongSach1.Location = new Point(121, 12);
+            lblTongSach1.Location = new Point(114, 12);
             lblTongSach1.Name = "lblTongSach1";
             lblTongSach1.Size = new Size(98, 23);
             lblTongSach1.TabIndex = 1;
             lblTongSach1.Text = "Tổng Sách";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.booiconk;
+            pictureBox1.Location = new Point(43, 20);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(56, 50);
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
             // 
             // formChart
             // 
@@ -737,6 +749,7 @@
             ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -779,5 +792,6 @@
         private Label lblTongUser1;
         private Label lblTongSach;
         private Label lblTongSach1;
+        private PictureBox pictureBox1;
     }
 }

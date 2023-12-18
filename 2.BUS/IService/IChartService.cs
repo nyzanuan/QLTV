@@ -10,5 +10,6 @@ namespace _2.BUS.IService
         int CountCustomer();
         int CountBook();
         IEnumerable<KeyValuePair<string, string>> getTopBook();
+
     }
 }

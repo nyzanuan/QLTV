@@ -10,6 +10,9 @@ namespace Sharing.Model
         private DateTime startDate;
         private DateTime endDate;
         private int numberDays;
+        public int TongSachMuon { get; set; }
+        public int TongSachTra { get; set; }
+        public int TongSachChuatra { get; set; }
         public int NumCustomers { get; private set; }
         public int NumBook { get; private set; }
         public int NumUser { get; private set; }
@@ -33,6 +36,7 @@ namespace Sharing.Model
                 this.numberDays = (endDate - startDate).Days;
                 this.ListBookWithDay = _chartService.getListBookWithDay(startDate, endDate);
                 this.TopBook = new List<KeyValuePair<string, string>>(_chartService.getTopBook());
+
             }
 
 

@@ -23,6 +23,8 @@ namespace _2.BUS.Service
             return _receiptRepository.CountCustomer();
         }
 
+
+
         public int CountUser()
         {
             return _receiptRepository.CountUser();

@@ -1,17 +1,5 @@
 ﻿using _2.BUS.IService;
 using _2.BUS.Service;
-using iTextSharp.text.pdf;
-using iTextSharp.text;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace _3.GUI.GUI
 {
@@ -98,7 +86,7 @@ namespace _3.GUI.GUI
                 dgvBaoCao.Columns["BookName"].HeaderText = "Tên sách";
                 dgvBaoCao.Columns["Category"].HeaderText = "Thể loại";
                 dgvBaoCao.Columns["Publisher"].HeaderText = "Nhà xuất bản";
-                dgvBaoCao.Columns["Language"].HeaderText = "Ngôn ngữ";                
+                dgvBaoCao.Columns["Language"].HeaderText = "Ngôn ngữ";
                 dgvBaoCao.Columns["AvailableCopies"].HeaderText = "Số lượng hiện có";
             }
         }
@@ -138,8 +126,8 @@ namespace _3.GUI.GUI
             12, FontStyle.Bold), Brushes.Black, new Point(160, y));
             e.Graphics.DrawString("Tên sách", new System.Drawing.Font("Times new roman",
             12, FontStyle.Bold), Brushes.Black, new Point(300, y));
-            e.Graphics.DrawString("Trạng thái", new System.Drawing.Font("Times new roman",
-            12, FontStyle.Bold), Brushes.Black, new Point(440, y));
+            // e.Graphics.DrawString("Trạng thái", new System.Drawing.Font("Times new roman",
+            // 12, FontStyle.Bold), Brushes.Black, new Point(440, y));
             e.Graphics.DrawString("Ngày mượn", new System.Drawing.Font("Times new roman",
             12, FontStyle.Bold), Brushes.Black, new Point(560, y));
             e.Graphics.DrawString("Ngày trả", new System.Drawing.Font("Times new roman",
@@ -164,8 +152,8 @@ namespace _3.GUI.GUI
                 12, FontStyle.Regular), Brushes.Black, new Point(160, y));
                 e.Graphics.DrawString(tenSach, new System.Drawing.Font("Times new roman",
                 12, FontStyle.Regular), Brushes.Black, new Point(300, y));
-                e.Graphics.DrawString(trangThai, new System.Drawing.Font("Times new roman",
-                12, FontStyle.Regular), Brushes.Black, new Point(440, y));
+                // e.Graphics.DrawString(trangThai, new System.Drawing.Font("Times new roman",
+                // 12, FontStyle.Regular), Brushes.Black, new Point(440, y));
                 e.Graphics.DrawString(ngayMuon, new System.Drawing.Font("Times new roman",
                 10, FontStyle.Regular), Brushes.Black, new Point(560, y));
                 e.Graphics.DrawString(ngayTra, new System.Drawing.Font("Times new roman",
@@ -211,17 +199,17 @@ namespace _3.GUI.GUI
             e.Graphics.DrawString("Tên sách", new System.Drawing.Font("Times new roman",
             11, FontStyle.Bold), Brushes.Black, new Point(20, y));
             e.Graphics.DrawString("Thể loại", new System.Drawing.Font("Times new roman",
-            11, FontStyle.Bold), Brushes.Black, new Point(180, y));
+            11, FontStyle.Bold), Brushes.Black, new Point(260, y));
             e.Graphics.DrawString("Nhà xuất bản", new System.Drawing.Font("Times new roman",
-            11, FontStyle.Bold), Brushes.Black, new Point(380, y));
+            11, FontStyle.Bold), Brushes.Black, new Point(400, y));
             e.Graphics.DrawString("Ngôn ngữ", new System.Drawing.Font("Times new roman",
-            11, FontStyle.Bold), Brushes.Black, new Point(560, y));
+            11, FontStyle.Bold), Brushes.Black, new Point(600, y));
             //e.Graphics.DrawString("Ngày mượn", new System.Drawing.Font("Times new roman",
             // 11, FontStyle.Bold), Brushes.Black, new Point(560, y));
             //e.Graphics.DrawString("Ngày trả", new System.Drawing.Font("Times new roman",
             //11, FontStyle.Bold), Brushes.Black, new Point(700, y));
             e.Graphics.DrawString("Số lượt mượn", new System.Drawing.Font("Times new roman",
-            11, FontStyle.Bold), Brushes.Black, new Point(650, y));
+            11, FontStyle.Bold), Brushes.Black, new Point(750, y));
 
             //DSSanPham
             for (int i = 0; i < dgvBaoCao.RowCount; i++)
@@ -237,16 +225,16 @@ namespace _3.GUI.GUI
                 string tongMuon = dgvBaoCao.Rows[i].Cells["sumBorrowBook"].Value.ToString();
 
 
-                 e.Graphics.DrawString(tenSach, new System.Drawing.Font("Times new roman",
-                 11, FontStyle.Regular), Brushes.Black, new Point(20, y));
-                 e.Graphics.DrawString(theLoai, new System.Drawing.Font("Times new roman",
-                 11, FontStyle.Regular), Brushes.Black, new Point(180, y));
-                 e.Graphics.DrawString(NXB, new System.Drawing.Font("Times new roman",
-                 11, FontStyle.Regular), Brushes.Black, new Point(380, y));
-                 e.Graphics.DrawString(ngonNgu, new System.Drawing.Font("Times new roman",
-                 11, FontStyle.Regular), Brushes.Black, new Point(560, y));                
-                 e.Graphics.DrawString(tongMuon, new System.Drawing.Font("Times new roman",
-                 11, FontStyle.Bold), Brushes.Black, new Point(650, y));
+                e.Graphics.DrawString(tenSach, new System.Drawing.Font("Times new roman",
+                11, FontStyle.Regular), Brushes.Black, new Point(20, y));
+                e.Graphics.DrawString(theLoai, new System.Drawing.Font("Times new roman",
+                11, FontStyle.Regular), Brushes.Black, new Point(260, y));
+                e.Graphics.DrawString(NXB, new System.Drawing.Font("Times new roman",
+                11, FontStyle.Regular), Brushes.Black, new Point(400, y));
+                e.Graphics.DrawString(ngonNgu, new System.Drawing.Font("Times new roman",
+                11, FontStyle.Regular), Brushes.Black, new Point(600, y));
+                e.Graphics.DrawString(tongMuon, new System.Drawing.Font("Times new roman",
+                11, FontStyle.Bold), Brushes.Black, new Point(750, y));
 
             }
             y += 70;
@@ -290,7 +278,7 @@ namespace _3.GUI.GUI
             e.Graphics.DrawString("Nhà xuất bản", new System.Drawing.Font("Times new roman",
             11, FontStyle.Bold), Brushes.Black, new Point(380, y));
             e.Graphics.DrawString("Ngôn ngữ", new System.Drawing.Font("Times new roman",
-            11, FontStyle.Bold), Brushes.Black, new Point(560, y));           
+            11, FontStyle.Bold), Brushes.Black, new Point(560, y));
             e.Graphics.DrawString("Số lượng hiện có", new System.Drawing.Font("Times new roman",
             11, FontStyle.Bold), Brushes.Black, new Point(650, y));
             //DSSanPham
@@ -301,7 +289,7 @@ namespace _3.GUI.GUI
                 string tenSach = dgvBaoCao.Rows[i].Cells["BookName"].Value.ToString();
                 string theLoai = dgvBaoCao.Rows[i].Cells["Category"].Value.ToString();
                 string NXB = dgvBaoCao.Rows[i].Cells["Publisher"].Value.ToString();
-                string ngonNgu = dgvBaoCao.Rows[i].Cells["Language"].Value.ToString();                
+                string ngonNgu = dgvBaoCao.Rows[i].Cells["Language"].Value.ToString();
                 string hienCo = dgvBaoCao.Rows[i].Cells["AvailableCopies"].Value.ToString();
 
 
@@ -322,6 +310,15 @@ namespace _3.GUI.GUI
             Point p4 = new Point(840, y);
             e.Graphics.DrawLine(blackPen, p3, p4);
 
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formBaoCao_Load(object sender, EventArgs e)
+        {
         }
     }
 

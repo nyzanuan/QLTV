@@ -50,9 +50,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(408, 9);
+            label1.Location = new Point(466, 12);
             label1.Name = "label1";
-            label1.Size = new Size(182, 36);
+            label1.Size = new Size(227, 45);
             label1.TabIndex = 0;
             label1.Text = "Lập báo cáo";
             // 
@@ -60,9 +60,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(129, 69);
+            label2.Location = new Point(147, 92);
             label2.Name = "label2";
-            label2.Size = new Size(32, 21);
+            label2.Size = new Size(39, 27);
             label2.TabIndex = 1;
             label2.Text = "Từ";
             // 
@@ -70,27 +70,29 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(526, 69);
+            label3.Location = new Point(601, 92);
             label3.Name = "label3";
-            label3.Size = new Size(41, 21);
+            label3.Size = new Size(52, 27);
             label3.TabIndex = 2;
             label3.Text = "Đến";
             // 
             // dtpStart
             // 
             dtpStart.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dtpStart.Location = new Point(177, 61);
+            dtpStart.Location = new Point(202, 81);
+            dtpStart.Margin = new Padding(3, 4, 3, 4);
             dtpStart.Name = "dtpStart";
-            dtpStart.Size = new Size(275, 29);
+            dtpStart.Size = new Size(314, 35);
             dtpStart.TabIndex = 3;
             dtpStart.Value = new DateTime(2023, 12, 15, 0, 0, 0, 0);
             // 
             // dtpEnd
             // 
             dtpEnd.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dtpEnd.Location = new Point(582, 61);
+            dtpEnd.Location = new Point(665, 81);
+            dtpEnd.Margin = new Padding(3, 4, 3, 4);
             dtpEnd.Name = "dtpEnd";
-            dtpEnd.Size = new Size(275, 29);
+            dtpEnd.Size = new Size(314, 35);
             dtpEnd.TabIndex = 4;
             dtpEnd.Value = new DateTime(2023, 12, 15, 0, 0, 0, 0);
             // 
@@ -98,9 +100,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(237, 120);
+            label4.Location = new Point(271, 160);
             label4.Name = "label4";
-            label4.Size = new Size(82, 21);
+            label4.Size = new Size(105, 27);
             label4.TabIndex = 5;
             label4.Text = "Chọn loại";
             // 
@@ -109,17 +111,19 @@
             cbxBaoCao.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbxBaoCao.FormattingEnabled = true;
             cbxBaoCao.Items.AddRange(new object[] { "Danh sách mượn sách", "Sách được mượn nhiều nhất", "Số lượng sách hiện có" });
-            cbxBaoCao.Location = new Point(325, 112);
+            cbxBaoCao.Location = new Point(371, 149);
+            cbxBaoCao.Margin = new Padding(3, 4, 3, 4);
             cbxBaoCao.Name = "cbxBaoCao";
-            cbxBaoCao.Size = new Size(271, 27);
+            cbxBaoCao.Size = new Size(309, 30);
             cbxBaoCao.TabIndex = 6;
             // 
             // btnXemChiTiet
             // 
             btnXemChiTiet.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnXemChiTiet.Location = new Point(881, 112);
+            btnXemChiTiet.Location = new Point(1007, 149);
+            btnXemChiTiet.Margin = new Padding(3, 4, 3, 4);
             btnXemChiTiet.Name = "btnXemChiTiet";
-            btnXemChiTiet.Size = new Size(120, 27);
+            btnXemChiTiet.Size = new Size(137, 36);
             btnXemChiTiet.TabIndex = 7;
             btnXemChiTiet.Text = "Xem chi tiết";
             btnXemChiTiet.UseVisualStyleBackColor = true;
@@ -132,18 +136,21 @@
             dgvBaoCao.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvBaoCao.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dgvBaoCao.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBaoCao.Location = new Point(1, 161);
+            dgvBaoCao.Location = new Point(1, 215);
+            dgvBaoCao.Margin = new Padding(3, 4, 3, 4);
             dgvBaoCao.Name = "dgvBaoCao";
+            dgvBaoCao.RowHeadersWidth = 51;
             dgvBaoCao.RowTemplate.Height = 25;
-            dgvBaoCao.Size = new Size(1046, 459);
+            dgvBaoCao.Size = new Size(1195, 612);
             dgvBaoCao.TabIndex = 8;
             // 
             // btnBaoCao
             // 
             btnBaoCao.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBaoCao.Location = new Point(602, 112);
+            btnBaoCao.Location = new Point(688, 149);
+            btnBaoCao.Margin = new Padding(3, 4, 3, 4);
             btnBaoCao.Name = "btnBaoCao";
-            btnBaoCao.Size = new Size(120, 27);
+            btnBaoCao.Size = new Size(137, 36);
             btnBaoCao.TabIndex = 9;
             btnBaoCao.Text = "Tạo báo cáo";
             btnBaoCao.UseVisualStyleBackColor = true;
@@ -173,9 +180,9 @@
             // 
             // formBaoCao
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1043, 575);
+            ClientSize = new Size(1192, 767);
             Controls.Add(btnBaoCao);
             Controls.Add(dgvBaoCao);
             Controls.Add(btnXemChiTiet);
@@ -186,8 +193,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "formBaoCao";
             Text = "Báo cáo";
+            Load += formBaoCao_Load;
             ((System.ComponentModel.ISupportInitialize)dgvBaoCao).EndInit();
             ResumeLayout(false);
             PerformLayout();

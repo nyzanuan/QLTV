@@ -1,4 +1,6 @@
-﻿using _3.GUI.GUI;
+﻿using _3.GUI.Data;
+using _3.GUI.GUI;
+using Sharing.Model;
 
 namespace QLTV
 {
@@ -34,14 +36,17 @@ namespace QLTV
             ChildForm.BringToFront();
             ChildForm.Show();
 
-        }      
+        }
 
-            private void formGiaoDien_Load(object sender, EventArgs e)
+        private void formGiaoDien_Load(object sender, EventArgs e)
         {
             frmDashBoard frmDashBoard = new frmDashBoard(panelChild.Width);
 
             OpenForm(frmDashBoard);
-
+            if (UserInfo.Instance.Role != UserRole.Admin)
+            {
+                btnDanhMuc.Visible = false;
+            }
         }
 
         public event EventHandler DangXuat;
@@ -207,7 +212,9 @@ namespace QLTV
 
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
-
+            formAboutUs formAboutUs = new formAboutUs();
+            OpenForm(formAboutUs);
+            hideMenuCon();
         }
     }
 }
