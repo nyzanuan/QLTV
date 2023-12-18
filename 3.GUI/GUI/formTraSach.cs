@@ -87,10 +87,10 @@ namespace _3.GUI.GUI
             book_dataGridView.DataSource = result.Value.ListElemnent;
             book_dataGridView.Columns["BookId"].Visible = false;
             book_dataGridView.Columns["CustomerId"].Visible = false;
-            book_dataGridView.Columns["ReceiveDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            book_dataGridView.Columns["ReceiveDate"].DefaultCellStyle.Format = "dd-MM-yyyy";
             book_dataGridView.Columns["ReceiveDate"].HeaderText = "Ngày đặt";
 
-            book_dataGridView.Columns["ReturnDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            book_dataGridView.Columns["ReturnDate"].DefaultCellStyle.Format = "dd-MM-yyyy";
             book_dataGridView.Columns["ReturnDate"].HeaderText = "Ngày trả";
 
             book_dataGridView.Columns["Status"].HeaderText = "Tình trạng";
@@ -98,7 +98,7 @@ namespace _3.GUI.GUI
             book_dataGridView.Columns["ImageBook"].HeaderText = "Hình ảnh sách";
             book_dataGridView.Columns["LoanId"].HeaderText = "Mã đơn mượn";
             book_dataGridView.Columns["BookName"].HeaderText = "Tên sách";
-            book_dataGridView.Columns["CustomerName"].HeaderText = "ID + Tên khách hàng";
+            book_dataGridView.Columns["CustomerName"].HeaderText = "Tên khách hàng";
 
             DataGridViewImageColumn column = new DataGridViewImageColumn();
             column = (DataGridViewImageColumn)book_dataGridView.Columns["ImageBook"];
@@ -186,7 +186,8 @@ namespace _3.GUI.GUI
 
         private void txt_search_TextChanged(object sender, EventArgs e)
         {
-
+            searchTimer.Stop();
+            searchTimer.Start();
         }
 
         private void book_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -194,7 +195,7 @@ namespace _3.GUI.GUI
             if (e.RowIndex >= 0 && e.RowIndex < book_dataGridView.Rows.Count)
             {
                 DataGridViewRow selectedRow = book_dataGridView.Rows[e.RowIndex];
-                cmb_loan_id.Text = selectedRow.Cells["LoanId"].Value.ToString();
+                txt_loan_id.Text = selectedRow.Cells["LoanId"].Value.ToString();
                 txt_user_id.Text = selectedRow.Cells["CustomerId"].Value.ToString();
                 txt_book_name.Text = selectedRow.Cells["BookName"].Value.ToString();
                 borrow_dateTimePicker.Value = (DateTime)selectedRow.Cells["ReceiveDate"].Value;
@@ -238,6 +239,11 @@ namespace _3.GUI.GUI
                 pageNow = totalPage;
                 loadData();
             }
+        }
+
+        private void cmb_loan_id_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -108,10 +108,10 @@ namespace QLTV
             dgvMuonSach.DataSource = result.Value.ListElemnent;
             dgvMuonSach.Columns["BookId"].Visible = false;
             dgvMuonSach.Columns["CustomerId"].Visible = false;
-            dgvMuonSach.Columns["ReceiveDate"].DefaultCellStyle.Format = "HH:mm dd-MM-yyyy";
+            dgvMuonSach.Columns["ReceiveDate"].DefaultCellStyle.Format = "dd-MM-yyyy";
             dgvMuonSach.Columns["ReceiveDate"].HeaderText = "Ngày đặt";
 
-            dgvMuonSach.Columns["ReturnDate"].DefaultCellStyle.Format = "HH:mm dd-MM-yyyy";
+            dgvMuonSach.Columns["ReturnDate"].DefaultCellStyle.Format = "dd-MM-yyyy";
             dgvMuonSach.Columns["ReturnDate"].HeaderText = "Ngày trả";
 
             dgvMuonSach.Columns["Status"].HeaderText = "Tình trạng";

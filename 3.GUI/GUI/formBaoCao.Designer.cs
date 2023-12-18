@@ -135,7 +135,7 @@
             dgvBaoCao.Location = new Point(1, 161);
             dgvBaoCao.Name = "dgvBaoCao";
             dgvBaoCao.RowTemplate.Height = 25;
-            dgvBaoCao.Size = new Size(1029, 459);
+            dgvBaoCao.Size = new Size(1046, 459);
             dgvBaoCao.TabIndex = 8;
             // 
             // btnBaoCao
@@ -175,7 +175,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1030, 617);
+            ClientSize = new Size(1043, 575);
             Controls.Add(btnBaoCao);
             Controls.Add(dgvBaoCao);
             Controls.Add(btnXemChiTiet);
